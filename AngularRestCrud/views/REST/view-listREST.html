@@ -1,0 +1,34 @@
+﻿<form class="form-inline" role="form">
+	<div class="form-group">
+		<label for="myTaskName">Select Task List Name:</label>
+		<select id="myTaskName" name="myTaskName" class="form-control" data-ng-model="Item.jobName" 
+					data-ng-options="job as job.jobAddress for job in jobs" 
+					value="{{job.jobAddress}}" required>
+			<option style="display:none" value="">Select a Task</option>
+		</select>
+	</div>
+	<div class="form-group">
+		<label></label>
+	</div>
+	<div class="form-group">
+		<label for="mySupervisor">Select Supervisor:</label>
+		<select id="mySupervisor" name="mySupervisor" class="form-control" data-ng-model="Item.supervisorName" 
+					data-ng-options="siteSupervisor as siteSupervisor.siteSupervisorName for siteSupervisor in siteSupervisors" 
+					value="{{siteSupervisor.siteSupervisorName}}" required>
+			<option style="display:none" value="">Select a Supervisor</option>
+		</select>
+	</div>
+	<div class="form-group">
+		<label></label>
+	</div>
+	<div class="form-group">
+		<label for="myTasksCat">Select Category:</label>
+		<select id="myTasksCat" name="myTasksCat" class="form-control" data-ng-model="Item.taskName"
+					data-ng-options="taskCategory as taskCategory.taskCategoryName for taskCategory in taskCategories" 
+					value="{{taskCategory.taskCategoryName}}" required>
+			<option style="display:none" value="">Select a Category</option>
+		</select>
+	</div>
+	<!--<button type="button" id="createListBtn" data-ng-click="createTask()" class="btn btn-default">Create Task List</button>-->
+	<a href="" class="btn btn-primary" data-ng-click="createTask()">Create Task List</a>
+</form>

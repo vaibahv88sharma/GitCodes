@@ -1,0 +1,34 @@
+﻿<div class="form-group">
+    <label for="txtName">Artist Name:</label>
+    <input type="text" id="txtName" class="form-control" placeholder="Enter Here" data-ng-model="Item.name">
+</div>
+
+<div class="form-group">
+    <label for="cboGenre">Artist Genre:</label>
+    <select name="cboGenre" id="cboGenre" class="form-control" data-ng-model="Item.genre">
+        <option></option>
+        <option value="Rock">Rock</option>
+        <option value="Comedy">Comedy</option>			
+        <option value="Alternative">Alternative</option>
+        <option value="Rap">Rap</option>
+        <option value="SciFi">SciFi</option>			
+    </select>
+</div>
+
+<div class="form-group">
+    <label for="cboRating">Artist Genre:</label>
+    <select name="cboRating" id="cboRating" class="form-control" data-ng-model="Item.rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>		
+    </select>
+</div>
+
+<div class="form-group">
+<!--    <button class="btn btn-primary" data-ng-click="save()">Save</button>
+    <button class="btn btn-primary" data-ng-click="cancel()">Cancel</button>-->
+	<a href="" class="btn btn-primary" data-ng-click="save()">Save</a>
+	<a href="" class="btn btn-primary" data-ng-click="cancel()">Cancel</a>	
+</div>

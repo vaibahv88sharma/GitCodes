@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Item (0x01) -->
+  <ContentType ID="0x01001F91966B2F4248078ADD69E53E8DDB4C" Name="ElectronicDevice" Group="Custom Content Types" Description="My Content Type" Inherits="TRUE" Version="0">
+    <FieldRefs>
+      <FieldRef ID="{485ca521-b27f-4611-b9df-0f18cd8a3bbc}" DisplayName="Laptop" Required="TRUE" Name="Laptop" />
+    </FieldRefs>
+  </ContentType>
+</Elements>

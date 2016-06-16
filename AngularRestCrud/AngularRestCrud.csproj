@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{d2f2c4b8-0391-4b72-ba22-07ef481e6a45}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AngularRestCrud</RootNamespace>
+    <AssemblyName>AngularRestCrud</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <IncludeAssemblyInPackage>False</IncludeAssemblyInPackage>
+    <ProjectMode>SharePointApp</ProjectMode>
+    <AppFeaturePartId>{6d4ff5f9-6b2b-43c9-a72d-27335beb657b}</AppFeaturePartId>
+    <WspPartId>{aba52ed6-5de9-4a93-a2fa-d897998a08bb}</WspPartId>
+    <CspkgPartId>{41bba949-2ca1-49bd-b505-5cf3b551e530}</CspkgPartId>
+    <SqlPackagePartId>{53deb459-3032-4449-b4b2-c9499c84305c}</SqlPackagePartId>
+    <ActiveDeploymentConfiguration>Deploy SharePoint Add-in</ActiveDeploymentConfiguration>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="ClientWebPart1\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5b3fd6e3-3094-4dc9-8d27-ed511f3d6e0a}</SharePointProjectItemId>
+    </None>
+    <Content Include="ClientWebPart1\Elements.xml">
+      <SubType>ParentWebElementManifest</SubType>
+      <OpcRelationship>feature-elementmanifest</OpcRelationship>
+    </Content><None Include="Content\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f9d49379-7f8d-45ee-8170-26ab23a15399}</SharePointProjectItemId>
+    </None><None Include="fonts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e638ab75-24d7-4d56-919e-ce68ce53c7bd}</SharePointProjectItemId>
+    </None><None Include="Images\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{caa2ae7e-1d28-4f5f-bb3b-01bef2250fd1}</SharePointProjectItemId>
+    </None><None Include="Pages\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{1c2f2c81-19fc-4f86-949c-b89be4df2fcd}</SharePointProjectItemId>
+    </None><None Include="Scripts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{2d81722d-eaa9-478e-842f-245dcfb8e504}</SharePointProjectItemId>
+    </None><None Include="Templates\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{32f55c40-8af0-4d59-9f0f-0887b02520e8}</SharePointProjectItemId>
+    </None><None Include="views\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{156fc0ea-54ed-4c93-be52-cd3dcc75559b}</SharePointProjectItemId>
+    </None><Content Include="Content\Elements.xml" /><Content Include="fonts\Elements.xml" /><Content Include="Images\Elements.xml" /><Content Include="Pages\Elements.xml" /><Content Include="Scripts\Elements.xml" /><Content Include="Templates\Elements.xml" /><Content Include="views\Elements.xml" />  </ItemGroup>  <ItemGroup><Content Include="Content\App.css" />
+<Content Include="Content\bootstrap-theme.css.map" />
+<Content Include="Content\bootstrap-theme.min.css" />
+<Content Include="Content\bootstrap.min.css" />
+<Content Include="fonts\glyphicons-halflings-regular.eot" />
+<Content Include="fonts\glyphicons-halflings-regular.svg" />
+<Content Include="fonts\glyphicons-halflings-regular.ttf" />
+<Content Include="fonts\glyphicons-halflings-regular.woff" />
+<Content Include="fonts\glyphicons-halflings-regular.woff2" />
+<Content Include="Images\AppIcon.png">
+      <OpcRelationship>manifest-icon</OpcRelationship>
+    </Content>
+<Content Include="Pages\ClientWebPart.aspx" />
+<Content Include="Pages\Default.aspx" />
+<Content Include="Pages\Index.aspx" />
+<Content Include="Pages\ItemsREST.aspx" />
+<Content Include="Scripts\angular.min.js" />
+<Content Include="Scripts\angular.min.js.map" />
+<Content Include="Scripts\App.js" />
+<Content Include="Scripts\bootstrap.min.js" />
+<Content Include="Scripts\Controllers\controller.js" />
+<Content Include="Scripts\Module\module.js" />
+<Content Include="Scripts\MyScripts\myController.js" />
+<Content Include="Scripts\MyScripts\myModule.js" />
+<Content Include="Scripts\MyScripts\myService.js" />
+<Content Include="Scripts\REST\ControllerREST\myControllerREST.js" />
+<Content Include="Scripts\REST\ModuleREST\myModuleREST.js" />
+<Content Include="Scripts\REST\ServiceREST\myServiceREST.js" />
+<Content Include="Scripts\REST\ServiceREST\myServiceREST1.js" />
+<Content Include="Scripts\REST\ServiceREST\myServiceRestNew.js" />
+<Content Include="Scripts\Services\service.js" />
+<Content Include="Scripts\ui-bootstrap-tpls.min.js" />
+<Content Include="Scripts\_references.js" />
+<Content Include="Templates\Pages\add.html" />
+<Content Include="Templates\Pages\all.html" />
+<Content Include="views\REST\view-detailREST.html" />
+<Content Include="views\REST\view-listREST.html" />
+<Content Include="views\view-detail.html" />
+<Content Include="views\view-list.html" />
+  </ItemGroup><ItemGroup>
+    <None Include="Package\Package.package">
+      <PackageId>{5abaf506-d623-45a6-98e8-3fc6ab54be1f}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="Features\Feature1\Feature1.feature">
+      <FeatureId>{15c42fc3-c343-43c8-8cc1-c6de91acccb4}</FeatureId>
+    </None>
+    <None Include="Features\Feature1\Feature1.Template.xml">
+      <DependentUpon>Feature1.feature</DependentUpon>
+    </None>
+  </ItemGroup>
+<ItemGroup>
+    <AppManifestFile Include="AppManifest.xml">
+      <SubType>Designer</SubType>
+    </AppManifestFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

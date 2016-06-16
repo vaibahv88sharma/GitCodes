@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Templates xmlns:ows="Microsoft SharePoint">
+  <Template Name="DemoSiteDefs" ID="10006">
+    <Configuration ID="0" Title="DemoSiteDefs" Hidden="FALSE" ImageUrl="/_layouts/images/CPVW.gif" 
+                   Description="DemoSiteDefs" DisplayCategory="SharePoint Customizations">
+    </Configuration>
+  </Template>
+</Templates>

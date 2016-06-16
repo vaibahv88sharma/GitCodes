@@ -1,0 +1,30 @@
+﻿<form class="form-inline" role="form">
+	<div class="form-group">
+		<label for="myTaskName">Select Task List Name:</label>
+		<select id="myTaskName" name="myTaskName" class="form-control">
+			<option></option>
+			<option ng-repeat="job in jobs">{{job.jobAddress}}</option>
+		</select>
+	</div>
+	<div class="form-group">
+		<label></label>
+	</div>
+	<div class="form-group">
+		<label for="mySupervisor">Select Supervisor:</label>
+		<select id="mySupervisor" name="mySupervisor" class="form-control">
+			<option></option>
+			<option ng-repeat="siteSupervisor in siteSupervisors">{{siteSupervisor.siteSupervisorName}}</option>
+		</select>
+	</div>
+	<div class="form-group">
+		<label></label>
+	</div>
+	<div class="form-group">
+		<label for="myTasksCat">Select Supervisor:</label>
+		<select id="myTasksCat" name="myTasksCat" class="form-control">
+			<option></option>
+			<option ng-repeat="taskCategory in taskCategories">{{taskCategory.taskCategoryName}}</option>
+		</select>
+	</div>
+
+</form>

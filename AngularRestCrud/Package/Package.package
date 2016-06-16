@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="5abaf506-d623-45a6-98e8-3fc6ab54be1f" 
+        solutionId="5abaf506-d623-45a6-98e8-3fc6ab54be1f" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="AngularRestCrud"
+        sharePointProductVersion="15.0">
+  <features>
+        <featureReference itemId="15c42fc3-c343-43c8-8cc1-c6de91acccb4" />
+  </features>
+</package>

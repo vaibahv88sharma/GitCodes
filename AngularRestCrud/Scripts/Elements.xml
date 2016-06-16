@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Scripts">
+    <File Path="Scripts\angular.min.js" Url="Scripts/angular.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular.min.js.map" Url="Scripts/angular.min.js.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\App.js" Url="Scripts/App.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\bootstrap.min.js" Url="Scripts/bootstrap.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\Controllers\controller.js" Url="Scripts/Controllers/controller.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\Module\module.js" Url="Scripts/Module/module.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\MyScripts\myController.js" Url="Scripts/MyScripts/myController.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\MyScripts\myModule.js" Url="Scripts/MyScripts/myModule.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\MyScripts\myService.js" Url="Scripts/MyScripts/myService.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\REST\ControllerREST\myControllerREST.js" Url="Scripts/REST/ControllerREST/myControllerREST.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\REST\ModuleREST\myModuleREST.js" Url="Scripts/REST/ModuleREST/myModuleREST.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\REST\ServiceREST\myServiceREST.js" Url="Scripts/REST/ServiceREST/myServiceREST.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\REST\ServiceREST\myServiceREST1.js" Url="Scripts/REST/ServiceREST/myServiceREST1.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\REST\ServiceREST\myServiceRestNew.js" Url="Scripts/REST/ServiceREST/myServiceRestNew.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\Services\service.js" Url="Scripts/Services/service.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\ui-bootstrap-tpls.min.js" Url="Scripts/ui-bootstrap-tpls.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\_references.js" Url="Scripts/_references.js" ReplaceContent="TRUE" />
+</Module>
+</Elements>

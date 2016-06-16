@@ -1,0 +1,23 @@
+﻿<div class="form-group">
+    <input type="text" class="form-control" placeholder="Enter Here" data-ng-model="itemName" />
+    <p>Hello {{itemName}}!</p>
+</div>
+<table class="table table-stripped table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Genre</th>
+            <th>Rating</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr data-ng-repeat="item in data | filter:itemName" data-ng-click="editItem($index)">
+            <td>{{item.name}}</td>
+            <td>{{item.genre}}</td>
+            <td>{{item.rating}}</td>
+        </tr>
+    </tbody>
+</table>
+<div class="form-group">
+    <button data-ng-click="addArtist()" class="btn btn-primary">Add Article</button>
+</div>

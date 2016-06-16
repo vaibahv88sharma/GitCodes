@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Templates">
+    <File Path="Templates\Pages\add.html" Url="Templates/Pages/add.html" ReplaceContent="TRUE" />
+    <File Path="Templates\Pages\all.html" Url="Templates/Pages/all.html" ReplaceContent="TRUE" />
+</Module>
+</Elements>

@@ -1,0 +1,4 @@
+﻿
+
+<%@ Assembly Name=<span style="color: #006080">"JavaScriptFarmDemos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=21a8ef6ba764ab91"</span>%>
+<%@ ServiceHost Service=<span style="color: #006080">"JavaScriptFarmDemos.Services.TasksService"</span> %>
