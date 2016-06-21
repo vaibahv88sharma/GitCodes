@@ -16,7 +16,7 @@
     <script src="../Scripts/ui-bootstrap-tpls.min.js"></script>
 		
     <script type="text/javascript" src="/_layouts/15/sp.runtime.js"></script>
-    <script type="text/javascript" src="/_layouts/15/sp.js"></script>
+    <script type="text/javascript" src="/_layouts/15/sp.js"></script>	
 	<script type="text/javascript" src="/_layouts/15/SP.RequestExecutor.js"></script>	
 	<script type="text/javascript" src="/_layouts/15/SP.workflowservices.js"></script>
     <meta name="WebPartPageExpansion" content="full" />
@@ -24,6 +24,7 @@
     <script src="../Scripts/REST/ModuleREST/myModuleREST.js" type="text/javascript"></script>
 	<script src="../Scripts/REST/ServiceREST/myServiceRestNew.js" type="text/javascript"></script>
     <script src="../Scripts/REST/ControllerREST/myControllerREST.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../Scripts/App.js"></script>
 
     <link rel="Stylesheet" type="text/css" href="../Content/App.css" />
     <link href="../Content/bootstrap-theme.min.css" rel="stylesheet" />
@@ -34,13 +35,18 @@
 
 <%-- The markup in the following Content element will be placed in the TitleArea of the page --%>
 <asp:Content ContentPlaceHolderID="PlaceHolderPageTitleInTitleArea" runat="server">
-    Page Title
+    Scheduling Application
 </asp:Content>
 
 <%-- The markup and script in the following Content element will be placed in the <body> of the page --%>
 <asp:Content ContentPlaceHolderID="PlaceHolderMain" runat="server">
 
-
+<br></br>
+    <div>
+        <p id="message">
+            initializing...
+        </p>
+    </div>
 <br></br>
 <div data-ng-app="moduleRest">
 	<div>
