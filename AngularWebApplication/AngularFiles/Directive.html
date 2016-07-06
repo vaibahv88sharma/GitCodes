@@ -1,0 +1,18 @@
+﻿<div>
+    <b>Test Directive</b>
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            {{student.name}} {{student.age}}
+        </div>
+        <div ng-show='!!student.subject'>
+            Subjects:
+            <ul ng-repeat="s in student.subject">
+                <li>{{s}}</li>
+            </ul>
+        </div>
+        <div ng-show='!student.grade'>
+            <button class="btn btn-success" ng-click="setGrade(student)">Set Grade</button>
+        </div>
+    </div>
+</div>
