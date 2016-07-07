@@ -11,8 +11,12 @@
                 <li>{{s}}</li>
             </ul>
         </div>
+        <div ng-show='!!student.grade'>
+            {{student.grade}}
+        </div>
         <div ng-show='!student.grade'>
-            <button class="btn btn-success" ng-click="setGrade(student)">Set Grade</button>
+            <!--<button class="btn btn-success" ng-click="setGrade(student)">Set Grade</button>-->
+            <a class="btn btn-default glyphicon glyphicon-search" ng-click="setGrade(student)">Set Grade</a>
         </div>
     </div>
 </div>
