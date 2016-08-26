@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{f94e78d4-c9f6-46ba-8cf6-560d3e6390cf}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AngNoteApp</RootNamespace>
+    <AssemblyName>AngNoteApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <IncludeAssemblyInPackage>False</IncludeAssemblyInPackage>
+    <ProjectMode>SharePointApp</ProjectMode>
+    <AppFeaturePartId>{39639b72-c05a-485a-ba58-c53de1b78c56}</AppFeaturePartId>
+    <WspPartId>{690ae0ef-9ed1-4a3d-88bf-d8088b96fa0a}</WspPartId>
+    <CspkgPartId>{4613cead-0b64-429c-ab7f-9eec5c6440f9}</CspkgPartId>
+    <SqlPackagePartId>{77762d9e-60f7-4d1c-9b71-20d680b15457}</SqlPackagePartId>
+    <ActiveDeploymentConfiguration>Deploy SharePoint Add-in</ActiveDeploymentConfiguration>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="ClientWebPart1\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5b3fd6e3-3094-4dc9-8d27-ed511f3d6e0a}</SharePointProjectItemId>
+    </None>
+    <Content Include="ClientWebPart1\Elements.xml">
+      <SubType>ParentWebElementManifest</SubType>
+      <OpcRelationship>feature-elementmanifest</OpcRelationship>
+    </Content><None Include="Content\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{161a1b47-e22d-4629-883e-d4964f6d6b3c}</SharePointProjectItemId>
+    </None><None Include="fonts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{fca91fd3-ba8d-4a23-9d66-f5bebb672bc5}</SharePointProjectItemId>
+    </None><None Include="HTML\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{48291693-1348-446c-a464-50f1f19aef0b}</SharePointProjectItemId>
+    </None><None Include="Images\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{42d31354-e7d7-439f-a364-65a1a2f59c2b}</SharePointProjectItemId>
+    </None><None Include="Pages\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{df4cd0ca-d93a-4934-89bb-f43545a6d82b}</SharePointProjectItemId>
+    </None><None Include="Scripts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{607928a6-6c4f-4838-bc63-37c2774618ce}</SharePointProjectItemId>
+    </None><Content Include="Content\Elements.xml" /><Content Include="fonts\Elements.xml" /><Content Include="HTML\Elements.xml" /><Content Include="Images\Elements.xml" /><Content Include="Pages\Elements.xml" /><Content Include="Scripts\Elements.xml" />  </ItemGroup>  <ItemGroup><Content Include="Content\App.css" />
+<Content Include="Content\bootstrap-theme.css.map" />
+<Content Include="Content\bootstrap-theme.min.css" />
+<Content Include="Content\bootstrap.min.css" />
+<Content Include="fonts\glyphicons-halflings-regular.eot" />
+<Content Include="fonts\glyphicons-halflings-regular.svg" />
+<Content Include="fonts\glyphicons-halflings-regular.ttf" />
+<Content Include="fonts\glyphicons-halflings-regular.woff" />
+<Content Include="fonts\glyphicons-halflings-regular.woff2" />
+<Content Include="HTML\index.html" />
+<Content Include="HTML\Templates\directives\nwCategorySelector.html" />
+<Content Include="HTML\Templates\directives\nwPageNav.html" />
+<Content Include="HTML\Templates\notes\edit.html" />
+<Content Include="HTML\Templates\notes\index.html" />
+<Content Include="HTML\Templates\notes\new.html" />
+<Content Include="HTML\Templates\notes\show.html" />
+<Content Include="HTML\Templates\users\index.html" />
+<Content Include="HTML\Templates\users\show.html" />
+<Content Include="Images\AppIcon.png">
+      <OpcRelationship>manifest-icon</OpcRelationship>
+    </Content>
+<Content Include="Pages\ClientWebPart.aspx" />
+<Content Include="Pages\Default.aspx" />
+<Content Include="Scripts\angular-resource.js" />
+<Content Include="Scripts\angular-resource.min.js" />
+<Content Include="Scripts\angular-resource.min.js.map" />
+<Content Include="Scripts\angular-route.js" />
+<Content Include="Scripts\angular-route.min.js" />
+<Content Include="Scripts\angular-route.min.js.map" />
+<Content Include="Scripts\angular.min.js" />
+<Content Include="Scripts\angular.min.js.map" />
+<Content Include="Scripts\App.js" />
+<Content Include="Scripts\bootstrap.js" />
+<Content Include="Scripts\bootstrap.min.js" />
+<Content Include="Scripts\jquery-2.1.3.min.js" />
+<Content Include="Scripts\MyScript\controllers\noteCreateController.js" />
+<Content Include="Scripts\MyScript\controllers\noteEditController.js" />
+<Content Include="Scripts\MyScript\controllers\noteIndexController.js" />
+<Content Include="Scripts\MyScript\controllers\noteShowController.js" />
+<Content Include="Scripts\MyScript\controllers\usersIndexController.js" />
+<Content Include="Scripts\MyScript\controllers\usersShowController.js" />
+<Content Include="Scripts\MyScript\directives\nwCategorySelector.js" />
+<Content Include="Scripts\MyScript\directives\nwPageNav.js" />
+<Content Include="Scripts\MyScript\directives\title.js" />
+<Content Include="Scripts\MyScript\filters\categoryFilter.js" />
+<Content Include="Scripts\MyScript\module.js" />
+<Content Include="Scripts\MyScript\ngGravatar.js" />
+<Content Include="Scripts\MyScript\routes.js" />
+<Content Include="Scripts\MyScript\services\category.js" />
+<Content Include="Scripts\MyScript\services\note.js" />
+<Content Include="Scripts\MyScript\services\noteService.js" />
+<Content Include="Scripts\MyScript\services\user.js" />
+<Content Include="Scripts\ui-bootstrap-tpls.min.js" />
+<Content Include="Scripts\_references.js" />
+  </ItemGroup><ItemGroup>
+    <None Include="Package\Package.package">
+      <PackageId>{7f785d26-c91e-485c-82da-d51c2590756f}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="Features\Feature1\Feature1.feature">
+      <FeatureId>{abf400b9-6359-44ee-80f1-85c08ca84e24}</FeatureId>
+    </None>
+    <None Include="Features\Feature1\Feature1.Template.xml">
+      <DependentUpon>Feature1.feature</DependentUpon>
+    </None>
+  </ItemGroup>
+<ItemGroup>
+    <AppManifestFile Include="AppManifest.xml">
+      <SubType>Designer</SubType>
+    </AppManifestFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

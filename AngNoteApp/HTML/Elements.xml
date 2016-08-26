@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="HTML">
+    <File Path="HTML\index.html" Url="HTML/index.html" ReplaceContent="TRUE" />
+    <File Path="HTML\Templates\directives\nwCategorySelector.html" Url="HTML/Templates/directives/nwCategorySelector.html" ReplaceContent="TRUE" />
+    <File Path="HTML\Templates\directives\nwPageNav.html" Url="HTML/Templates/directives/nwPageNav.html" ReplaceContent="TRUE" />
+    <File Path="HTML\Templates\notes\edit.html" Url="HTML/Templates/notes/edit.html" ReplaceContent="TRUE" />
+    <File Path="HTML\Templates\notes\index.html" Url="HTML/Templates/notes/index.html" ReplaceContent="TRUE" />
+    <File Path="HTML\Templates\notes\new.html" Url="HTML/Templates/notes/new.html" ReplaceContent="TRUE" />
+    <File Path="HTML\Templates\notes\show.html" Url="HTML/Templates/notes/show.html" ReplaceContent="TRUE" />
+    <File Path="HTML\Templates\users\index.html" Url="HTML/Templates/users/index.html" ReplaceContent="TRUE" />
+    <File Path="HTML\Templates\users\show.html" Url="HTML/Templates/users/show.html" ReplaceContent="TRUE" />
+</Module>
+</Elements>

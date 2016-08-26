@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Scripts">
+    <File Path="Scripts\angular-resource.js" Url="Scripts/angular-resource.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular-resource.min.js" Url="Scripts/angular-resource.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular-resource.min.js.map" Url="Scripts/angular-resource.min.js.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular-route.js" Url="Scripts/angular-route.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular-route.min.js" Url="Scripts/angular-route.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular-route.min.js.map" Url="Scripts/angular-route.min.js.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular.min.js" Url="Scripts/angular.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular.min.js.map" Url="Scripts/angular.min.js.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\App.js" Url="Scripts/App.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\bootstrap.js" Url="Scripts/bootstrap.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\bootstrap.min.js" Url="Scripts/bootstrap.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery-2.1.3.min.js" Url="Scripts/jquery-2.1.3.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\MyScript\controllers\noteCreateController.js" Url="Scripts/MyScript/controllers/noteCreateController.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\MyScript\controllers\noteEditController.js" Url="Scripts/MyScript/controllers/noteEditController.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\MyScript\controllers\noteIndexController.js" Url="Scripts/MyScript/controllers/noteIndexController.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\MyScript\controllers\noteShowController.js" Url="Scripts/MyScript/controllers/noteShowController.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\MyScript\controllers\usersIndexController.js" Url="Scripts/MyScript/controllers/usersIndexController.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\MyScript\controllers\usersShowController.js" Url="Scripts/MyScript/controllers/usersShowController.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\MyScript\directives\nwCategorySelector.js" Url="Scripts/MyScript/directives/nwCategorySelector.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\MyScript\directives\nwPageNav.js" Url="Scripts/MyScript/directives/nwPageNav.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\MyScript\directives\title.js" Url="Scripts/MyScript/directives/title.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\MyScript\filters\categoryFilter.js" Url="Scripts/MyScript/filters/categoryFilter.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\MyScript\module.js" Url="Scripts/MyScript/module.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\MyScript\ngGravatar.js" Url="Scripts/MyScript/ngGravatar.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\MyScript\routes.js" Url="Scripts/MyScript/routes.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\MyScript\services\category.js" Url="Scripts/MyScript/services/category.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\MyScript\services\note.js" Url="Scripts/MyScript/services/note.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\MyScript\services\noteService.js" Url="Scripts/MyScript/services/noteService.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\MyScript\services\user.js" Url="Scripts/MyScript/services/user.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\ui-bootstrap-tpls.min.js" Url="Scripts/ui-bootstrap-tpls.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\_references.js" Url="Scripts/_references.js" ReplaceContent="TRUE" />
+</Module>
+</Elements>

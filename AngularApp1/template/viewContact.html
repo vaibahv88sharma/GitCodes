@@ -1,0 +1,20 @@
+﻿<h4>Contact Detail</h4>
+
+<div class="panel panel-default" ng-repeat="c in contact">
+    <div class="panel-heading">{{c.name}}</div>
+    <div class="panel-body">
+        <address>
+            <strong>Address</strong><br>
+            {{c.addrs1}}<br>
+            {{c.addrs2}}, {{c.city}}, {{c.state}} <br>
+			{{c.country}},{{c.zip}}<br></br> 
+            <strong>Phone</strong>
+            {{c.phone}}<br><br>
+            <strong>Email</strong>
+            <a href="mailto:{{c.email}}">{{c.email}}</a>
+        </address>
+
+        <a href="#/all-contacts" class="btn btn-primary">Back</a>
+
+    </div>
+</div>

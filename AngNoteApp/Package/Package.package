@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="7f785d26-c91e-485c-82da-d51c2590756f" 
+        solutionId="7f785d26-c91e-485c-82da-d51c2590756f" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="AngNoteApp"
+        sharePointProductVersion="15.0">
+  <features>
+        <featureReference itemId="abf400b9-6359-44ee-80f1-85c08ca84e24" />
+  </features>
+</package>

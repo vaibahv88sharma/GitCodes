@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="template">
+    <File Path="template\allContacts.html" Url="template/allContacts.html" ReplaceContent="TRUE" />
+    <File Path="template\manageContact.html" Url="template/manageContact.html" ReplaceContent="TRUE" />
+    <File Path="template\viewContact.html" Url="template/viewContact.html" ReplaceContent="TRUE" />
+</Module>
+</Elements>
