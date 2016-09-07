@@ -1,1 +1,12 @@
-<html></html>
+﻿<h1>Notes <a class="btn btn-default" href="#/notes/new">New Note</a></h1>
+<div class="container">
+	<div class="jumbotron">
+		<div class="row">
+			<div ng-repeat="note in notes" class ="col-sm-6">
+				<h2><a ng-href="#/notes/{{note.ID}}">{{note.Title}}</a></h2>
+				<p>{{note.Description}}</p>
+				<p><span class="label label-info">{{note.categoryName}}</span></p>
+			</div>
+		</div>
+	</div>
+</div>
