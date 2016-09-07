@@ -30,6 +30,7 @@ namespace ExportToSPList
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
+                GlobalLogic.ExceptionHandle(e, "dbConnection");
             }
         }
 
@@ -70,6 +71,7 @@ namespace ExportToSPList
             catch (SqlException e)
             {
                 Console.Write("Error - Connection.executeSelectQuery - Query: " + _query + " \nException: " + e.StackTrace.ToString());
+                GlobalLogic.ExceptionHandle(e, _query+ "--------------------------executeSelectNoParameter");
                 return null;
             }
             finally
@@ -106,7 +108,11 @@ namespace ExportToSPList
             }
             catch (SqlException e)
             {
-                Console.Write("Error - Connection.executeSelectQuery - Query: " + _query + " \nException: " + e.StackTrace.ToString());
+                Console.Write("Error - Connection.executeSelectQuery - Query: " + _query + " \nMessage: " + e.Message + " \nException: " + e.StackTrace.ToString());
+                string paramsVal = "";
+                foreach (SqlParameter p in sqlParameter)
+                { paramsVal += p.ParameterName + " --- " + p.Value + " ------- "; }
+                GlobalLogic.ExceptionHandle(e, _query + "------------------"+paramsVal+"executeSelectQuery");
                 return null;
             }
             finally
@@ -142,6 +148,10 @@ namespace ExportToSPList
             catch (SqlException e)
             {
                 Console.Write("Error - Connection.executeSelectQuery - Query: " + _query + " \nException: " + e.StackTrace.ToString());
+                string paramsVal = "";
+                foreach (SqlParameter p in sqlParameter)
+                { paramsVal += p.ParameterName + " --- " + p.Value + " ------- "; }
+                GlobalLogic.ExceptionHandle(e, _query + "------------------" + paramsVal + "executeSelectQueryWithSP");
                 return null;
             }
             finally
@@ -168,7 +178,11 @@ namespace ExportToSPList
             }
             catch (SqlException e)
             {
-                Console.Write("Error - Connection.executeInsertQuery - Query: " + _query + " \nException: \n" + e.StackTrace.ToString());
+                Console.Write("Error - Connection.executeInsertQuery - Query: " + _query + " \nMessage: \n" + e.Message+ " \nException: \n" + e.StackTrace.ToString());
+                string paramsVal = "";
+                foreach (SqlParameter p in sqlParameter)
+                { paramsVal += p.ParameterName + " --- " + p.Value + " ------- "; }
+                GlobalLogic.ExceptionHandle(e, _query + "------------------" + paramsVal + "executeInsertQuery");
                 return false;
             }
             finally
@@ -178,6 +192,39 @@ namespace ExportToSPList
             }
             return true;
         }
+
+        /// <method>
+        /// Insert Query
+        /// </method>
+        public bool executeInsertQuerySP(String _query, SqlParameter[] sqlParameter)
+        {
+            SqlCommand myCommand = new SqlCommand();
+            try
+            {
+                myCommand.CommandType = CommandType.StoredProcedure;                
+                myCommand.Connection = openConnection();
+                myCommand.CommandText = _query;
+                myCommand.Parameters.AddRange(sqlParameter);
+                myAdapter.InsertCommand = myCommand;
+                myCommand.ExecuteNonQuery();
+            }
+            catch (SqlException e)
+            {
+                Console.Write("Error - Connection.executeInsertQuery - Query: " + _query + " \nMessage: \n" + e.Message + " \nException: \n" + e.StackTrace.ToString());
+                string paramsVal = "";
+                foreach (SqlParameter p in sqlParameter)
+                { paramsVal += p.ParameterName + " --- " + p.Value + " ------- "; }
+                GlobalLogic.ExceptionHandle(e, _query + "------------------" + paramsVal + "executeInsertQuerySP");
+                return false;
+            }
+            finally
+            {
+                myCommand.Dispose();
+                myCommand.Connection = closeConnection();
+            }
+            return true;
+        }
+
 
         /// <method>
         /// Update Query
@@ -196,7 +243,11 @@ namespace ExportToSPList
             }
             catch (SqlException e)
             {
-                Console.Write("Error - Connection.executeUpdateQuery - Query: " + _query + " \nException: " + e.StackTrace.ToString());
+                Console.Write("Error - Connection.executeUpdateQuery - Query: " + _query + " \nMessage: " + e.Message + _query + " \nException: " + e.StackTrace.ToString());
+                string paramsVal = "";
+                foreach (SqlParameter p in sqlParameter)
+                { paramsVal += p.ParameterName + " --- " + p.Value + " ------- "; }
+                GlobalLogic.ExceptionHandle(e, _query + "------------------" + paramsVal + "executeUpdateQuery");
                 return false;
             }
             finally
@@ -206,6 +257,35 @@ namespace ExportToSPList
             }
             return true;
         }
-    
+
+        public bool executeUpdateQuerySP(String _query, SqlParameter[] sqlParameter)
+        {
+            SqlCommand myCommand = new SqlCommand();
+            try
+            {
+                myCommand.CommandType = CommandType.StoredProcedure;
+                myCommand.Connection = openConnection();
+                myCommand.CommandText = _query;
+                myCommand.Parameters.AddRange(sqlParameter);
+                myAdapter.UpdateCommand = myCommand;
+                myCommand.ExecuteNonQuery();
+            }
+            catch (SqlException e)
+            {
+                Console.Write("Error - Connection.executeUpdateQuerySP - Query: " + _query + " \nMessage: " + e.Message + _query + " \nException: " + e.StackTrace.ToString());
+                string paramsVal = "";
+                foreach (SqlParameter p in sqlParameter)
+                { paramsVal += p.ParameterName + " --- " + p.Value + " ------- "; }
+                GlobalLogic.ExceptionHandle(e, _query + "------------------" + paramsVal + "executeUpdateQuerySP");
+                return false;
+            }
+            finally
+            {
+                myCommand.Dispose();
+                myCommand.Connection = closeConnection();
+            }
+            return true;
+        }
+
     }
 }
