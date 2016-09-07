@@ -30,3 +30,39 @@ var user = context.get_web().get_currentUser();
     }
 
 })();
+
+
+//////////////////// Custom
+
+ function manageQueryStringParameter(paramToRetrieve) {
+     var params =
+     document.URL.split("?")[1].split("&");
+     //var strParams = "";
+     for (var i = 0; i < params.length; i = i + 1) {
+         var singleParam = params[i].split("=");
+         if (singleParam[0] == paramToRetrieve) {
+             return singleParam[1];
+         }
+     }
+ }
+
+function getItemTypeForListName (name) {
+    return "SP.Data." + name.charAt(0).toUpperCase() + name.split(" ").join("").slice(1) + "ListItem";
+}
+
+var hostweburl = decodeURIComponent(manageQueryStringParameter("SPHostUrl"));
+var appweburl = decodeURIComponent(manageQueryStringParameter("SPAppWebUrl"));	
+var appWebUrlNew1 = appweburl.split("#")[0];
+var fullUrlGet = appWebUrlNew1 + "/_api/SP.AppContextSite(@target)/web/lists/getbytitle('NoteList')/items?"+
+                "@target='" + hostweburl + "'";		
+	
+var itemType = getItemTypeForListName('NoteList');
+var data1 = {
+//var dataMeta = {
+    "__metadata": { "type": itemType }
+};
+
+var formDigest =  $('#__REQUESTDIGEST').val();
+
+var fullUrlGetUserDetails = appWebUrlNew1 + "/_api/SP.AppContextSite(@target)/web/lists/getbytitle('UserDetails')/items?"+
+                "@target='" + hostweburl + "'";	
