@@ -1,16 +1,16 @@
 ﻿angular.module('NoteWrangler').factory("Category", ["$http", "$q","$resource", function ($http, $q,$resource) {
 
-			function getNoteResource(id){
+			function getCategoryResource(id){
 				if(id){
 					return $resource(
-						appWebUrlNew1 + "/_api/SP.AppContextSite(@target)/web/lists/getbytitle('UserDetails')/items(':id')?"+ "@target='" + hostweburl + "'", 
+						appWebUrlNew1 + "/_api/SP.AppContextSite(@target)/web/lists/getbytitle('category')/items(':id')?"+ "@target='" + hostweburl + "'", 
 						{id: id}, 
 						{
 						    query: {
 								method: 'GET', isArray: false, 
 							    headers: { "Accept": "application/json; odata=verbose" },
 								params: {
-									'$select': 'Id,Title,site,name,bio'
+									'$select': 'Id,Title,category'
 								},
 						    }
 						}
@@ -18,14 +18,14 @@
 				}
 				else{					
 					return $resource(
-						fullUrlGetUserDetails, 
+						fullUrlGetCategoryDetails, 
 						{}, 
 						{
 						    query: {
 								method: 'GET',
 				                headers: { "Accept": "application/json; odata=verbose" },
 								params: {
-									'$select': 'Id,Title,site,name,bio'
+									'$select': 'Id,Title,category'
 								},
 						    }				
 						}
@@ -33,8 +33,8 @@
 				}
 			}	
 
-			function getAllNoteResource(){
-				var resource = getNoteResource();
+			function getAllCategoryResource(){
+				var resource = getCategoryResource();
 				var deferred = $q.defer();
 
 				resource.query({},
@@ -46,11 +46,11 @@
 				return  deferred.promise;
 			}
 			
-			function getSelNoteResource(id){
-				var resource = getAllNoteResource(id);
+			function getSelCategoryResource(id){
+				var resource = getCategoryResource(id);
 				var deferred = $q.defer();
 
-				resource.get({},
+				resource.query({},
 					function(data){
 						deferred.resolve(data);
 					},function(error){
@@ -60,7 +60,7 @@
 			}				
 			
             return {
-				getAllNoteResource : getAllNoteResource,
-				getSelNoteResource : getSelNoteResource
+				getAllCategoryResource : getAllCategoryResource,
+				getSelCategoryResource : getSelCategoryResource
             };		
 }]);

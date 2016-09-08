@@ -115,8 +115,9 @@ angular.module('NoteWrangler').factory("Note", ["$http", "$q","$resource", funct
 			function getAllResource(){
 				var resource = getAllResourceREST();
 				var deferred = $q.defer();
-
-				resource.get({},
+				
+				resource.query({},
+				//resource.get({},
 					function(data){
 						deferred.resolve(data);
 					},function(error){
@@ -150,7 +151,11 @@ angular.module('NoteWrangler').factory("Note", ["$http", "$q","$resource", funct
 				{
 				    query: {
 						method: 'GET', isArray: false, 
-					    headers: { "Accept": "application/json; odata=verbose" }
+					    headers: { "Accept": "application/json; odata=verbose" },
+						params: {
+							'$select': 'Id,Title,Description,userName,categoryName,categoryId,userId,content,user/Name,user/Title,category/category',
+							'$expand': 'user/Id,category'
+						},						
 				    },
 				    post: {
 		                method: "POST",
@@ -210,7 +215,9 @@ angular.module('NoteWrangler').factory("Note", ["$http", "$q","$resource", funct
 								
 			function gelSelResourceREST(id){
 				var fullUrlSelective = appWebUrlNew1 + "/_api/SP.AppContextSite(@target)/web/lists/getbytitle('NoteList')/items(':id')?"+
-						    "@target='" + hostweburl + "'";	
+						    "@target='" + hostweburl + "'"
+							//"&$select=Id,Title,Description,userName,categoryName,content,Author/Name,Author/Title&$expand=Author/Id";
+							//debugger;	
 			    return $resource(fullUrlSelective, 
 				{id: id},
 				{		
@@ -218,7 +225,10 @@ angular.module('NoteWrangler').factory("Note", ["$http", "$q","$resource", funct
 							method: 'GET',
 			                headers: { "Accept": "application/json; odata=verbose" },
 							params: {
-								'$select': 'Id,Title,Description,userName,categoryName,content'
+								'$select': 'Id,Title,Description,userName,userId,categoryName,categoryId,content,user/Name,user/Title,category/category',
+								'$expand': 'user/Id,category'								
+/*								'$select': 'Id,Title,Description,userName,categoryName,content,Author/Name,Author/Title',
+								'$expand': 'Author/Id'*/
 							},
 					},
 					post : {

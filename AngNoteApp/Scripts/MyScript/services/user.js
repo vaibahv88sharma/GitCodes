@@ -7,10 +7,12 @@
 						{id: id}, 
 						{
 						    query: {
-								method: 'GET', isArray: false, 
-							    headers: { "Accept": "application/json; odata=verbose" },
+								method: 'GET', //isArray: false, 
+				                headers: { "Accept": "application/json; odata=verbose" },
 								params: {
-									'$select': 'Id,Title,site,name,bio'
+									//'$select': 'Id,Title,site,name,bio'
+									'$select': 'Id,Title,site,name,bio,email,nameDetailsId,nameDetails/Name,nameDetails/Title',
+									'$expand': 'nameDetails/Id'
 								},
 						    }
 						}
@@ -25,7 +27,8 @@
 								method: 'GET',
 				                headers: { "Accept": "application/json; odata=verbose" },
 								params: {
-									'$select': 'Id,Title,site,name,bio'
+									'$select': 'Id,Title,site,name,bio,email,nameDetailsId,nameDetails/Name,nameDetails/Title',
+									'$expand': 'nameDetails/Id'
 								},
 						    }				
 						}
@@ -50,7 +53,7 @@
 				var resource = getAllUserResource(id);
 				var deferred = $q.defer();
 
-				resource.get({},
+				resource.query({},
 					function(data){
 						deferred.resolve(data);
 					},function(error){
