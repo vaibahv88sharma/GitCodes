@@ -3,7 +3,9 @@
 	<div class="jumbotron">
 		<div class="row">
 			<div ng-repeat="user in users" class ="col-sm-6">
-				<h2><a ng-href="#/users/{{user.Id}}">{{user.name}}</a></h2>
+<!--				<h2><gravatar email="user.email"></gravatar><a ng-href="#/users/{{user.Id}}">{{user.nameDetails.Title}}</a></h2>
+				<h2><a ng-href="#/users/{{user.Id}}">{{user.nameDetails.Title}}</a></h2>-->
+				<h2><gravatar email="user.email"></gravatar><a ng-href="#/users/{{user.Id}}">{{user.nameDetails.Title}}</a></h2>			
 				<p>{{user.site}}</p>
 			</div>
 		</div>
