@@ -66,3 +66,6 @@ var formDigest =  $('#__REQUESTDIGEST').val();
 
 var fullUrlGetUserDetails = appWebUrlNew1 + "/_api/SP.AppContextSite(@target)/web/lists/getbytitle('UserDetails')/items?"+
                 "@target='" + hostweburl + "'";	
+
+var fullUrlGetCategoryDetails = appWebUrlNew1 + "/_api/SP.AppContextSite(@target)/web/lists/getbytitle('category')/items?"+
+                "@target='" + hostweburl + "'";
