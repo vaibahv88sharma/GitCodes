@@ -7,7 +7,10 @@ angular.module('NoteWrangler').controller('NotesIndexController', function (Note
 				});	
 				
 	Note.getAllResource().then(function(data){
-		 $scope.notes = data.value;
+		 $scope.notes = data.d.results;
 	});
 		
+	$scope.search = {};
+	window.sc= $scope;	
+	
 });

@@ -7,7 +7,6 @@ angular.module('NoteWrangler').controller('NotesCreateController', function (Not
 		$scope.isSubmitting = true;
 			
 		Note.postNewResource(note).then(function(data){
-				debugger;
 				$scope.isSubmitting = false;
 				$location.path("/notes");
 		});

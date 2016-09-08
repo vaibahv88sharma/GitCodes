@@ -15,7 +15,7 @@
 					    //$scope.note = response.d;
 				});*/
 		Note.delSelResource($routeParams.id)
-					.then(function (response) {					
+					.then(function (response) {	
 						$location.path("/notes");
 					});
 	}
