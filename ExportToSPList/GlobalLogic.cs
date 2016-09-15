@@ -451,11 +451,11 @@ namespace ExportToSPList
                 xlWorkSheet.Cells[1, 2] = e.Message;
                 xlWorkSheet.Cells[1, 3] = "Exception Details :- ";
                 xlWorkSheet.Cells[1, 4] = e.ToString();
-                xlWorkSheet.Cells[1, 5] = "Exception GetHashCode";
+                xlWorkSheet.Cells[1, 5] = "Exception GetHashCode ";
                 xlWorkSheet.Cells[1, 6] = e.GetHashCode();
-                xlWorkSheet.Cells[1, 7] = "Additional Details";
+                xlWorkSheet.Cells[1, 7] = "Additional Details ";
                 xlWorkSheet.Cells[1, 8] = additionalDetails;
-                xlWorkSheet.Cells[1, 9] = "Time of Exception";
+                xlWorkSheet.Cells[1, 9] = "Error Occured at :- ";
                 xlWorkSheet.Cells[1, 10] = DateTime.Now;
 
                 //dd/MM/yyyy hh.mm.ss.fff tt

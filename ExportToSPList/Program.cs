@@ -31,54 +31,54 @@ namespace ExportToSPList
         static void Main(string[] args)
         {
             ReadAllSettings();
-            
+
             CallForward();
-            
+
             #region Working Call Forward
-//            string tenant = "https://networkintegration.sharepoint.com/sites/365Build/Watersun/WatersunJobs";
-//            string userName = "andrew@365build.com.au";
-//            string passwordString = "ch@lleng3r";
+            //            string tenant = "https://networkintegration.sharepoint.com/sites/365Build/Watersun/WatersunJobs";
+            //            string userName = "andrew@365build.com.au";
+            //            string passwordString = "ch@lleng3r";
 
-//            /*string sqlQuery = @"select JobNum,JobId,JobAddr, client,delay, week,overall, JobDelayLink,JobLink,Supervisor,ConstructionManager,JobsDelay,JobsDetail  from [WatersunData].[dbo].[vJobDelay]
-//                                            where JobNum ='5921'";//*/
-//            string sqlQuery = @"select JobNum,JobId,JobAddr, client,delay, week,overall, JobDelayLink,JobLink,Supervisor,ConstructionManager,JobsDelay,JobsDetail  from [WatersunData].[dbo].[vJobDelay]
-//                                                    where JobNum in (SELECT  cast([JobNumber] as varchar) FROM [WatersunData].[dbo].[vFrameworkJobs] where left(JobNumber,1) in (4,5))";//*/
+            //            /*string sqlQuery = @"select JobNum,JobId,JobAddr, client,delay, week,overall, JobDelayLink,JobLink,Supervisor,ConstructionManager,JobsDelay,JobsDetail  from [WatersunData].[dbo].[vJobDelay]
+            //                                            where JobNum ='5921'";//*/
+            //            string sqlQuery = @"select JobNum,JobId,JobAddr, client,delay, week,overall, JobDelayLink,JobLink,Supervisor,ConstructionManager,JobsDelay,JobsDetail  from [WatersunData].[dbo].[vJobDelay]
+            //                                                    where JobNum in (SELECT  cast([JobNumber] as varchar) FROM [WatersunData].[dbo].[vFrameworkJobs] where left(JobNumber,1) in (4,5))";//*/
 
-//            /*string sqlQuery = @"select JobNum,JobId,JobAddr, client,delay, week,overall, JobDelayLink,JobLink,Supervisor,ConstructionManager,JobsDelay,JobsDetail  
-//                                 from [WatersunData].[dbo].[vJobDelay]
-//                                 where JobNum in (SELECT  cast([JobNumber] as varchar) 
-//                                                    FROM [WatersunData].[dbo].[vFrameworkJobs] 
-//                                                    where JobNumber not in (select jobNum from [WatersunData].dbo.jobNmDemo) 
-//                                                            and left(JobNumber,1) in (4,5))
-//                                                        ";//*/
+            //            /*string sqlQuery = @"select JobNum,JobId,JobAddr, client,delay, week,overall, JobDelayLink,JobLink,Supervisor,ConstructionManager,JobsDelay,JobsDetail  
+            //                                 from [WatersunData].[dbo].[vJobDelay]
+            //                                 where JobNum in (SELECT  cast([JobNumber] as varchar) 
+            //                                                    FROM [WatersunData].[dbo].[vFrameworkJobs] 
+            //                                                    where JobNumber not in (select jobNum from [WatersunData].dbo.jobNmDemo) 
+            //                                                            and left(JobNumber,1) in (4,5))
+            //                                                        ";//*/
 
-//            dbConnection conn = new dbConnection();
-//            DataTable tempTable = conn.executeSelectNoParameter(sqlQuery);
-//            SqlToSpCreateJobsMetadata(tenant, userName, passwordString, "Call Forwards", "Call Forwards", "JobNum", tempTable);
-//            ///////////////////////////SqlToSpCreateJobsMetadata(tenant, userName, passwordString, "JobTasks", "JobTasks", "JobNum", tempTable);
+            //            dbConnection conn = new dbConnection();
+            //            DataTable tempTable = conn.executeSelectNoParameter(sqlQuery);
+            //            SqlToSpCreateJobsMetadata(tenant, userName, passwordString, "Call Forwards", "Call Forwards", "JobNum", tempTable);
+            //            ///////////////////////////SqlToSpCreateJobsMetadata(tenant, userName, passwordString, "JobTasks", "JobTasks", "JobNum", tempTable);
 
-//            #region Jobs Delay
-//            //Jobs Delay
-//            string queryJobsDelayItems = string.Concat("select Reason,Comments,DelayDate,ToDelayDate,DelayId,JobNumber,JobId,CstId,dateModified,timeModified From [WatersunData].[dbo].[vPerJobDelay]" +
-//                                     "WHERE JobNumber = @JobNumber");
-//            string queryJobsDelayItemsSpToSql = "SELECT [JobNumber] ,[Reason],[Comments],[JobId],[l_cst_id],[DelayId],[l_cst_dlyClass_id],[s_name],[DelayDate],[l_cst_dlyReas_id],[ToDelayDate],[Delay],[i_delAllowed_wD] FROM [WatersunData].[dbo].[v_JobDelaysNoCondition] where jobnumber = @JobNumber";
+            //            #region Jobs Delay
+            //            //Jobs Delay
+            //            string queryJobsDelayItems = string.Concat("select Reason,Comments,DelayDate,ToDelayDate,DelayId,JobNumber,JobId,CstId,dateModified,timeModified From [WatersunData].[dbo].[vPerJobDelay]" +
+            //                                     "WHERE JobNumber = @JobNumber");
+            //            string queryJobsDelayItemsSpToSql = "SELECT [JobNumber] ,[Reason],[Comments],[JobId],[l_cst_id],[DelayId],[l_cst_dlyClass_id],[s_name],[DelayDate],[l_cst_dlyReas_id],[ToDelayDate],[Delay],[i_delAllowed_wD] FROM [WatersunData].[dbo].[v_JobDelaysNoCondition] where jobnumber = @JobNumber";
 
-//            SqlToSpCreateJobsDelayData(tenant, userName, passwordString, "JobTasks", "JobTasks", "JobNum", tempTable, queryJobsDelayItems);
-//            //SpToSqlCreateJobsDelayData(tenant, userName, passwordString, "JobTasks", "JobTasks", "JobNum", tempTable, queryJobsDelayItemsSpToSql);
+            //            SqlToSpCreateJobsDelayData(tenant, userName, passwordString, "JobTasks", "JobTasks", "JobNum", tempTable, queryJobsDelayItems);
+            //            //SpToSqlCreateJobsDelayData(tenant, userName, passwordString, "JobTasks", "JobTasks", "JobNum", tempTable, queryJobsDelayItemsSpToSql);
 
-//            #endregion
+            //            #endregion
 
-//            #region Jobs Data
-//            //Jobs Data
-//            string queryJobsItems = string.Concat("select ReqDays,s_costCentreCode,SupplierId,JobId, JobNum, CstCallId, Activity, called, calledfor, start, complete, Supervisor, ISNULL(Supplier,'[NULL]') as Supplier, Duration, calledBest,calledforBest, startBest,completeBest,b_complete,dateModified,timeModified " +
-//                                                             "from [WatersunData].[dbo].[vJobsCalledForDates] " +
-//                                                             "WHERE JobNum = @JobNum order by l_order");
-//            //SqlToSpCreateJobsData(tenant, userName, passwordString, "JobTasks", "JobTasks", "JobNum", tempTable, queryJobsItems);
-//            //SpToSqlCreateJobsData(tenant, userName, passwordString, "JobTasks", "JobTasks", "JobNum", tempTable, queryJobsItems);
-//            #endregion
+            //            #region Jobs Data
+            //            //Jobs Data
+            //            string queryJobsItems = string.Concat("select ReqDays,s_costCentreCode,SupplierId,JobId, JobNum, CstCallId, Activity, called, calledfor, start, complete, Supervisor, ISNULL(Supplier,'[NULL]') as Supplier, Duration, calledBest,calledforBest, startBest,completeBest,b_complete,dateModified,timeModified " +
+            //                                                             "from [WatersunData].[dbo].[vJobsCalledForDates] " +
+            //                                                             "WHERE JobNum = @JobNum order by l_order");
+            //            //SqlToSpCreateJobsData(tenant, userName, passwordString, "JobTasks", "JobTasks", "JobNum", tempTable, queryJobsItems);
+            //            //SpToSqlCreateJobsData(tenant, userName, passwordString, "JobTasks", "JobTasks", "JobNum", tempTable, queryJobsItems);
+            //            #endregion
 
 
-//            queryId = string.Concat("SELECT [ID],[jobNumber],[jobId] ,[cstId] ,[SpId],[delayId] ,[dCreated] FROM [WatersunData].[dbo].[CounterDelay]" +
+            //            queryId = string.Concat("SELECT [ID],[jobNumber],[jobId] ,[cstId] ,[SpId],[delayId] ,[dCreated] FROM [WatersunData].[dbo].[CounterDelay]" +
             //                                                             "WHERE jobNumber = @JobNum");
 
             #endregion
@@ -96,8 +96,8 @@ namespace ExportToSPList
                 ////////string userName = "officeuser@enterpriseuser.onmicrosoft.com";
                 ////////string passwordString = "india@123";
                 string tenant = appSettings.Get("URL");
-                string userName = appSettings.Get("UserName");
-                string passwordString = appSettings.Get("Password");
+                string userName = appSettings.Get("UserName2");
+                string passwordString = appSettings.Get("Password2");
 
                 if (appSettings.Count == 0)
                 {
@@ -204,17 +204,22 @@ namespace ExportToSPList
         /// <summary>
         /// Inserts and Updates the Call Forward and Delay delays
         /// </summary>
-        static void CallForward() 
+        static void CallForward()
         {
-            string tenant = "https://networkintegration.sharepoint.com/sites/365Build/Watersun/WatersunJobs";
-            string userName = "andrew@365build.com.au";
-            string passwordString = "ch@lleng3r";
+            var appSettings = ConfigurationManager.AppSettings;
+            string tenant = appSettings.Get("URLJobs");
+            string userName = appSettings.Get("UserName2");
+            string passwordString = appSettings.Get("Password2");
+
+            //string tenant = "https://networkintegration.sharepoint.com/sites/365Build/Watersun/WatersunJobs";
+            //string userName = "andrew@365build.com.au";
+            //string passwordString = "ch@lleng3r";
 
             /*string sqlQuery = @"select JobNum,JobId,JobAddr, client,delay, week,overall, JobDelayLink,JobLink,Supervisor,ConstructionManager,JobsDelay,JobsDetail  from [WatersunData].[dbo].[vJobDelay]
-                                            where JobNum ='5921'";//*/
+                                            where JobNum ='5826'";//*/
             /*string sqlQuery = @"select JobNum,JobId,JobAddr, client,delay, week,overall, JobDelayLink,JobLink,Supervisor,ConstructionManager,JobsDelay,JobsDetail  from [WatersunData].[dbo].[vJobDelay]
                                                     where JobNum in (SELECT  cast([JobNumber] as varchar) FROM [WatersunData].[dbo].[vFrameworkJobs] where left(JobNumber,1) in (4,5))";//*/
-            
+
             string sqlQuery = ConfigurationManager.AppSettings.Get("qryGetAllJobs");
 
             /*string sqlQuery = @"select JobNum,JobId,JobAddr, client,delay, week,overall, JobDelayLink,JobLink,Supervisor,ConstructionManager,JobsDelay,JobsDetail  
@@ -229,6 +234,15 @@ namespace ExportToSPList
             DataTable tempTable = conn.executeSelectNoParameter(sqlQuery);
             SqlToSpCreateJobsMetadata(tenant, userName, passwordString, "Call Forwards", "Call Forwards", "JobNum", tempTable);
             ///////////////////////////SqlToSpCreateJobsMetadata(tenant, userName, passwordString, "JobTasks", "JobTasks", "JobNum", tempTable);
+
+            #region Jobs Data
+            //Jobs Data
+            string queryJobsItems = string.Concat("select ReqDays,s_costCentreCode,SupplierId,JobId, JobNum, CstCallId, Activity, called, calledfor, start, complete, Supervisor, ISNULL(Supplier,'[NULL]') as Supplier, Duration, calledBest,calledforBest, startBest,completeBest,b_complete,dateModified,timeModified " +
+                                                             "from [WatersunData].[dbo].[vJobsCalledForDates] " +
+                                                             "WHERE JobNum = @JobNum order by l_order");
+            SqlToSpCreateJobsData(tenant, userName, passwordString, "JobTasks", "JobTasks", "JobNum", tempTable, queryJobsItems);
+            SpToSqlCreateJobsData(tenant, userName, passwordString, "JobTasks", "JobTasks", "JobNum", tempTable, queryJobsItems);
+            #endregion
 
             #region Jobs Delay
             //Jobs Delay
@@ -246,12 +260,12 @@ namespace ExportToSPList
             #endregion
 
             #region Jobs Data
-            //Jobs Data
-            string queryJobsItems = string.Concat("select ReqDays,s_costCentreCode,SupplierId,JobId, JobNum, CstCallId, Activity, called, calledfor, start, complete, Supervisor, ISNULL(Supplier,'[NULL]') as Supplier, Duration, calledBest,calledforBest, startBest,completeBest,b_complete,dateModified,timeModified " +
-                                                             "from [WatersunData].[dbo].[vJobsCalledForDates] " +
-                                                             "WHERE JobNum = @JobNum order by l_order");
-            SqlToSpCreateJobsData(tenant, userName, passwordString, "JobTasks", "JobTasks", "JobNum", tempTable, queryJobsItems);
-            SpToSqlCreateJobsData(tenant, userName, passwordString, "JobTasks", "JobTasks", "JobNum", tempTable, queryJobsItems);
+            ////Jobs Data
+            //string queryJobsItems = string.Concat("select ReqDays,s_costCentreCode,SupplierId,JobId, JobNum, CstCallId, Activity, called, calledfor, start, complete, Supervisor, ISNULL(Supplier,'[NULL]') as Supplier, Duration, calledBest,calledforBest, startBest,completeBest,b_complete,dateModified,timeModified " +
+            //                                                 "from [WatersunData].[dbo].[vJobsCalledForDates] " +
+            //                                                 "WHERE JobNum = @JobNum order by l_order");
+            //SqlToSpCreateJobsData(tenant, userName, passwordString, "JobTasks", "JobTasks", "JobNum", tempTable, queryJobsItems);
+            //SpToSqlCreateJobsData(tenant, userName, passwordString, "JobTasks", "JobTasks", "JobNum", tempTable, queryJobsItems);
             #endregion
 
 
@@ -519,10 +533,11 @@ namespace ExportToSPList
                                 job = dt.Rows[i][0].ToString();
                                 eTSId = dt.Rows[i][1].ToString();
 
-                                if (Int32.Parse(eTSId) > 999) { eTSNo = "E0000" + eTSId; }
-                                else if (Int32.Parse(eTSId) > 99) { eTSNo = "E00000" + eTSId; }
-                                else if (Int32.Parse(eTSId) > 9) { eTSNo = "E00000" + eTSId; }
-                                else { eTSNo = "E" + eTSId; }
+                                eTSNo = "E" + eTSId;
+                                //if (Int32.Parse(eTSId) > 999) { eTSNo = "E0000" + eTSId; }
+                                //else if (Int32.Parse(eTSId) > 99) { eTSNo = "E00000" + eTSId; }
+                                //else if (Int32.Parse(eTSId) > 9) { eTSNo = "E00000" + eTSId; }
+                                //else { eTSNo = "E" + eTSId; }
                                 itemsDescription = dt.Rows[i][2].ToString();
                                 selectedJob = dt.Rows[i][3].ToString();
                                 costCentre = dt.Rows[i][4].ToString();
@@ -593,6 +608,7 @@ namespace ExportToSPList
                             catch (Exception e)
                             {
                                 Console.WriteLine(e.Message);
+                                GlobalLogic.ExceptionHandle(e, "SqlSpConnect" + "---" + "Export ETS to DB");
                             }
                         }
                     }
@@ -608,6 +624,7 @@ namespace ExportToSPList
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
+                GlobalLogic.ExceptionHandle(e, "SqlSpConnect");
             }
             finally
             {
@@ -777,6 +794,7 @@ namespace ExportToSPList
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
+                GlobalLogic.ExceptionHandle(e, "Update ETS / ETS-Suppliers");
             }
             finally
             {
@@ -1233,7 +1251,7 @@ namespace ExportToSPList
             }
         }
         */
-        
+
         /// <summary>
         /// Updates and Inserts Call Forward Job queue
         /// </summary>
@@ -1436,7 +1454,7 @@ namespace ExportToSPList
                                     oListItem["ConstructionManager"] = userValue;
                                     break;
                                 }
-                            }	 
+                            }
                             oListItem["JobsDelay"] = tempTable.Rows[i]["JobsDelay"].ToString();
                             oListItem["JobsDetail"] = tempTable.Rows[i]["JobsDetail"].ToString();
 
@@ -1528,7 +1546,7 @@ namespace ExportToSPList
                     {
                         bool listCreated = false;
                         try
-                        {                            
+                        {
                             string listDelayName = tempTable.Rows[j][0].ToString() + "_Delay";
 
                             listCreated = false;
@@ -1545,7 +1563,7 @@ namespace ExportToSPList
 
                                 #region Create Columns
                                 try
-                                {                                    
+                                {
                                     Field field1 = list.Fields.AddFieldAsXml("<Field DisplayName='" + "DelayId" + "' Type='Text' />", true, AddFieldOptions.DefaultValue);
                                     FieldText fld1 = ctx.CastTo<FieldText>(field1);
                                     fld1.Update();
@@ -1594,7 +1612,7 @@ namespace ExportToSPList
                                     FieldText fld8 = ctx.CastTo<FieldText>(field8);
                                     fld8.Update();
 
-                                    ctx.ExecuteQuery();                                    
+                                    ctx.ExecuteQuery();
                                 }
                                 catch (Exception e)
                                 {
@@ -1602,7 +1620,7 @@ namespace ExportToSPList
                                     GlobalLogic.ExceptionHandle(e, "Sql To Sp Create Delay Data" + "---" + "Create Delay List Columns");
                                 }
                                 #endregion
-                                
+
                                 #region Rename Title Column
                                 try
                                 {
@@ -1778,8 +1796,12 @@ namespace ExportToSPList
                                             if (delayJobsSQLData.Rows[i]["Comments"].ToString() == "") { comments = "No Title"; }
                                             else { comments = delayJobsSQLData.Rows[i]["Comments"].ToString(); }
 
+                                            Console.WriteLine("-------------------------------------------------------------------------------------0");
+
+
+
                                             var rowExists = dt.AsEnumerable().Where(x => x.Field<string>("DelayId") == delayJobsSQLData.Rows[i]["DelayId"].ToString()
-                                                                                            && x.Field<string>("Title") == comments
+                                                //&& x.Field<string>("Title") == comments
                                                                                             && x.Field<string>("ReasonValue") == delayJobsSQLData.Rows[i]["Reason"].ToString()
                                                                                             && Convert.ToDateTime((Convert.ToDateTime(x.Field<string>("DelayDate"))).ToString("dd/MM/yyyy")) ==
                                                                                                     Convert.ToDateTime((Convert.ToDateTime(delayJobsSQLData.Rows[i]["DelayDate"].ToString())).ToString("dd/MM/yyyy"))
@@ -1788,14 +1810,33 @@ namespace ExportToSPList
                                                                                                     Convert.ToDateTime((Convert.ToDateTime(delayJobsSQLData.Rows[i]["ToDelayDate"].ToString())).ToString("dd/MM/yyyy"))
                                                                                          );
 
+                                            Console.WriteLine("DelayId :-" + dt.Rows[i]["DelayId"]);
+                                            Console.WriteLine("Title :-" + dt.Rows[i]["Title"]);
+                                            Console.WriteLine("ReasonValue :-" + dt.Rows[i]["ReasonValue"]);
+                                            Console.WriteLine("DelayDate :-" + dt.Rows[i]["DelayDate"]);
+                                            Console.WriteLine("ToDelayDate :-" + dt.Rows[i]["ToDelayDate"]);
+
+                                            Console.WriteLine("DelayId :-" + delayJobsSQLData.Rows[i]["DelayId"]);
+                                            Console.WriteLine("Title :-" + comments);
+                                            Console.WriteLine("ReasonValue :-" + delayJobsSQLData.Rows[i]["Reason"]);
+                                            Console.WriteLine("DelayDate :-" + delayJobsSQLData.Rows[i]["DelayDate"]);
+                                            Console.WriteLine("ToDelayDate :-" + delayJobsSQLData.Rows[i]["ToDelayDate"]);
+                                            Console.WriteLine("-------------------------------------------------------------------------------------1");
+
                                             DataTable drExists1 = null;
+                                            Console.WriteLine("-------------------------------------------------------------------------------------2");
                                             if (rowExists.Any())
-                                            { drExists1 = rowExists.CopyToDataTable(); }
+                                            {
+                                                drExists1 = rowExists.CopyToDataTable();
+                                                Console.WriteLine("-------------------------------------------------------------------------------------3");
+                                            }
 
                                             if (drExists1 != null && drExists1.Rows.Count > 0)
                                             //if (drExists1 != null && drExists1.Length > 0)
                                             {
-                                                Console.WriteLine("Found Delay List :- " + listDelayName + " and Delay :- "+delayJobsSQLData.Rows[i]["DelayId"].ToString());
+                                                Console.WriteLine("-------------------------------------------------------------------------------------4");
+                                                Console.WriteLine("Found Delay List :- " + listDelayName + " and Delay :- " + delayJobsSQLData.Rows[i]["DelayId"].ToString());
+                                                Console.WriteLine("-------------------------------------------------------------------------------------5");
                                                 //////////////////////xlWorkSheet.Cells[i + 1, 1] = "Found Job Number - ";
                                                 //////////////////////xlWorkSheet.Cells[i + 1, 2] = delayJobsSQLData.Rows[i]["JobNumber"].ToString();
                                                 //////////////////////xlWorkSheet.Cells[i + 1, 3] = "Found Delay :- ";
@@ -1868,10 +1909,10 @@ namespace ExportToSPList
                                     catch (Exception e)
                                     {
                                         Console.WriteLine(e.Message);
-                                        GlobalLogic.ExceptionHandle(e, "Sql To Sp Create Delay Data" + "---" + listDelayName );
+                                        GlobalLogic.ExceptionHandle(e, "Sql To Sp Create Delay Data" + "---" + listDelayName);
                                     }
                                 }
-                                xlWorkBook.SaveAs("C:\\Log\\SqlToSpLog_Delay_" +listDelayName+ DateTime.Now.ToString("_ddMMyyyy_HHmmss") + ".xls", Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue);
+                                xlWorkBook.SaveAs("C:\\Log\\SqlToSpLog_Delay_" + listDelayName + DateTime.Now.ToString("_ddMMyyyy_HHmmss") + ".xls", Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue);
                                 xlWorkBook.Close(true, misValue, misValue);
                                 xlApp.Quit();
 
@@ -1897,7 +1938,7 @@ namespace ExportToSPList
 
                             #endregion
                         }
-                        catch (Exception e) 
+                        catch (Exception e)
                         {
                             Console.WriteLine(e.Message);
                             GlobalLogic.ExceptionHandle(e, "Sql To Sp Create Delay Data" + "---" + "Starting operation on Delay List");
@@ -1972,15 +2013,15 @@ namespace ExportToSPList
                             string listDelayName = tempTable.Rows[j][0].ToString() + "_Data";
                             if (gl.createList(ctx, listDelayName, (int)ListTemplateType.TasksWithTimelineAndHierarchy))
                             {
-                                    Web web = ctx.Web;
-                                    List list = web.Lists.GetByTitle(listDelayName);
-                                    List listLkp = web.Lists.GetByTitle("SuppliersList");
-                                    ctx.Load(listLkp);
-                                    ctx.ExecuteQuery();
+                                Web web = ctx.Web;
+                                List list = web.Lists.GetByTitle(listDelayName);
+                                List listLkp = web.Lists.GetByTitle("SuppliersList");
+                                ctx.Load(listLkp);
+                                ctx.ExecuteQuery();
 
                                 #region Create Columns
                                 try
-                                {                                    
+                                {
                                     //JobId, JobNum, CstCallId, Activity, called, calledfor, start, complete, Supervisor, Supplier, Duration
                                     Field field1 = list.Fields.AddFieldAsXml("<Field DisplayName='" + "CstCallId" + "' Type='Text' />", true, AddFieldOptions.DefaultValue);
                                     FieldText fld1 = ctx.CastTo<FieldText>(field1);
@@ -2056,7 +2097,7 @@ namespace ExportToSPList
                                     fld14.DisplayFormat = DateTimeFieldFormatType.DateOnly;
                                     fld14.Update();
 
-                                    ctx.ExecuteQuery();                                    
+                                    ctx.ExecuteQuery();
                                 }
                                 catch (Exception e)
                                 {
@@ -2132,7 +2173,7 @@ namespace ExportToSPList
                                     GlobalLogic.ExceptionHandle(e, "Sql To Sp Create Jobs Data" + "---" + "Create Jobs List View for Actual Possible Dates");
                                 }
                                 #endregion
-                                
+
                             }
                             #region Create and Update Task list Items
                             try
@@ -2591,8 +2632,8 @@ namespace ExportToSPList
 
                             #endregion
                         }
-                        catch (Exception e) 
-                        { 
+                        catch (Exception e)
+                        {
                             Console.WriteLine(e.Message);
                             GlobalLogic.ExceptionHandle(e, "Sql To Sp Create Jobs Data" + "---" + "Starting operation on Delay List");
                         }
@@ -2677,7 +2718,7 @@ namespace ExportToSPList
                                 ////DataTable dt = new DataTable();                                
 
                                 //TimeZoneInfo cstZone = TimeZoneInfo.FindSystemTimeZoneById("E. Australia Standard Time");
-                                TimeZoneInfo cstZone = TimeZoneInfo.FindSystemTimeZoneById("AUS Eastern Standard Time");                                
+                                TimeZoneInfo cstZone = TimeZoneInfo.FindSystemTimeZoneById("AUS Eastern Standard Time");
                                 //DateTime cstTime;
 
                                 dt.Columns.Add("ID");
@@ -2831,7 +2872,7 @@ namespace ExportToSPList
                                                                                                     (Convert.ToDateTime(dt.Rows[i]["DelayDate"].ToString())).ToString("dd/MM/yyyy")
                                                                                             && x.Field<DateTime>("ToDelayDate").ToString("dd/MM/yyyy") ==
                                                                                                     (Convert.ToDateTime(dt.Rows[i]["ToDelayDate"].ToString())).ToString("dd/MM/yyyy")
-                                                                                                );                                 
+                                                                                                );
 
                                             DataTable drExists1 = null;
                                             if (rowExists.Any())
@@ -2858,12 +2899,15 @@ namespace ExportToSPList
                                                     compareSQLDate = Convert.ToDateTime(delayJobsSQLData.Rows[i]["dateModified"].ToString());
                                                 }
 
+                                                Console.WriteLine("SP Time:- " + Convert.ToDateTime(dt.Rows[i]["timeModified"].ToString()).ToString());
+                                                Console.WriteLine("SQL Time:- " + compareSQLDate);
+
                                                 if (Convert.ToDateTime(dt.Rows[i]["timeModified"].ToString()) > compareSQLDate)
                                                 //if (Convert.ToDateTime(dt.Rows[i]["timeModified"].ToString()) > Convert.ToDateTime(delayJobsSQLData.Rows[i]["timeModified"].ToString()))
                                                 {
                                                     #region update delay from SP to SQL
 
-                                                    Console.WriteLine("SP - Updating Delay List :- " + listDelayName + " and Delay :- " + dt.Rows[i]["DelayId"].ToString());
+                                                    Console.WriteLine("SP - Updating Delay List :- " + listDelayName + " and Delay :- " + dt.Rows[i]["Delay - Id"].ToString());
 
                                                     userComments = dt.Rows[i]["Title"].ToString();
                                                     delayDate = (Convert.ToDateTime(dt.Rows[i]["DelayDate"].ToString())).ToString("dd'/'MM'/'yyyy");
@@ -2904,12 +2948,16 @@ namespace ExportToSPList
                                                     xlWorkSheet.Cells[i + 1, 2] = dt.Rows[i]["JobNumber"].ToString();
                                                     xlWorkSheet.Cells[i + 1, 3] = "Updating Delay :- ";
                                                     xlWorkSheet.Cells[i + 1, 4] = dt.Rows[i]["DelayId"].ToString();
+                                                    xlWorkSheet.Cells[i + 1, 5] = "SP Time:- ";
+                                                    xlWorkSheet.Cells[i + 1, 6] = Convert.ToDateTime(dt.Rows[i]["timeModified"].ToString()).ToString();
+                                                    xlWorkSheet.Cells[i + 1, 5] = "SQL Time:- ";
+                                                    xlWorkSheet.Cells[i + 1, 6] = compareSQLDate;
 
                                                     #endregion
                                                 }
-                                                else 
+                                                else
                                                 {
-                                                    Console.WriteLine("Updating Best Possible dates and Supplier into SP for CstCallId - " + dt.Rows[i]["CstCallId"].ToString() + "Job Number" + dt.Rows[i]["JobNum"].ToString());
+                                                    Console.WriteLine("Updating Best Possible dates and Supplier into SP for DelayId - " + dt.Rows[i]["DelayId"].ToString() + "Job Number" + dt.Rows[i]["JobNumber"].ToString());
 
                                                     oListItem = oList.GetItemById(dt.Rows[i]["ID"].ToString());
 
@@ -2920,7 +2968,7 @@ namespace ExportToSPList
                                                     DataTable delayDateExistsdt = null;
                                                     if (delayDateExists.Any())
                                                     { delayDateExistsdt = delayDateExists.CopyToDataTable(); }
-                                                    if (delayDateExistsdt != null && delayDateExistsdt.Rows.Count > 0){}
+                                                    if (delayDateExistsdt != null && delayDateExistsdt.Rows.Count > 0) { }
                                                     else
                                                     {
                                                         oListItem["DelayDate"] = Convert.ToDateTime(delayJobsSQLData.Rows[i]["DelayDate"].ToString());
@@ -2938,7 +2986,7 @@ namespace ExportToSPList
                                                     else
                                                     {
                                                         oListItem["DelayDate"] = Convert.ToDateTime(delayJobsSQLData.Rows[i]["DelayDate"].ToString());
-                                                    }                                                    
+                                                    }
 
 
 
@@ -2946,15 +2994,19 @@ namespace ExportToSPList
                                                     ctx.ExecuteQuery();
 
                                                     xlWorkSheet.Cells[i + 1, 1] = "Update Job Number - ";
-                                                    xlWorkSheet.Cells[i + 1, 2] = dt.Rows[i]["JobNum"].ToString();
-                                                    xlWorkSheet.Cells[i + 1, 3] = "Update CstCallId :- ";
-                                                    xlWorkSheet.Cells[i + 1, 4] = dt.Rows[i]["CstCallId"].ToString();
+                                                    xlWorkSheet.Cells[i + 1, 2] = dt.Rows[i]["JobNumber"].ToString();
+                                                    xlWorkSheet.Cells[i + 1, 3] = "Update DelayId :- ";
+                                                    xlWorkSheet.Cells[i + 1, 4] = dt.Rows[i]["DelayId"].ToString();
+                                                    xlWorkSheet.Cells[i + 1, 5] = "SP Time:- ";
+                                                    xlWorkSheet.Cells[i + 1, 6] = Convert.ToDateTime(dt.Rows[i]["timeModified"].ToString()).ToString();
+                                                    xlWorkSheet.Cells[i + 1, 5] = "SQL Time:- ";
+                                                    xlWorkSheet.Cells[i + 1, 6] = compareSQLDate;
                                                 }
                                             }
                                         }
                                         else
                                         {
-                                            if( ! String.IsNullOrEmpty(dt.Rows[i]["Id"].ToString()) )
+                                            if (!String.IsNullOrEmpty(dt.Rows[i]["Id"].ToString()))
                                             {
                                                 //Console.WriteLine("Inserting - " + listDelayName + "-----" + dt.Rows[i]["ID"].ToString());
                                                 Console.WriteLine("SP - Inserting Delay List :- " + listDelayName + " and Id :- " + dt.Rows[i]["Id"].ToString());
@@ -3063,7 +3115,7 @@ namespace ExportToSPList
                                                 bool isInsert = conn.executeInsertQuerySP(sclearsqlIns, parameterUpd);
 
                                                 sendEmail(ctx, listDelayName, dt.Rows[i]["JobNumber"].ToString());
-                                               
+
                                                 xlWorkSheet.Cells[i + 1, 1] = "Updating Job Number - ";
                                                 xlWorkSheet.Cells[i + 1, 2] = dt.Rows[i]["JobNumber"].ToString();
                                                 xlWorkSheet.Cells[i + 1, 3] = "Updating Delay :- ";
@@ -3071,7 +3123,7 @@ namespace ExportToSPList
 
                                                 #endregion
                                             }
-                                          
+
 
                                             #region Old Code Date comparison LINQ LAMBDA
                                             ////////toDelayDate = string.IsNullOrEmpty(dt.Rows[i]["ToDelayDate"].ToString()) ? dt.Rows[i]["DelayDate"].ToString() : dt.Rows[i]["ToDelayDate"].ToString();
@@ -3092,7 +3144,7 @@ namespace ExportToSPList
                                         GlobalLogic.ExceptionHandle(e, "Sp To Sql Create Jobs Delay Data" + "---" + listDelayName + "---" + dt.Rows[i]["Id"].ToString());
                                     }
                                 }
-                                xlWorkBook.SaveAs("C:\\Log\\SqlToSpLog_" + listDelayName  +DateTime.Now.ToString("_ddMMyyyy_HHmmss") + ".xls", Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue);
+                                xlWorkBook.SaveAs("C:\\Log\\SpToSqlLog_" + listDelayName + DateTime.Now.ToString("_ddMMyyyy_HHmmss") + ".xls", Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue);
                                 xlWorkBook.Close(true, misValue, misValue);
                                 xlApp.Quit();
 
@@ -3108,7 +3160,8 @@ namespace ExportToSPList
                             }
                             #endregion
                         }
-                        catch (Exception e) { 
+                        catch (Exception e)
+                        {
                             Console.WriteLine(e.Message);
                             GlobalLogic.ExceptionHandle(e, "Sp To Sql Create Jobs Delay Data" + "---" + "Starting operation on Delay List");
                         }
@@ -3310,7 +3363,7 @@ namespace ExportToSPList
                                 //DataTable jobsSQLData = conn.executeSelectQuery(queryJobsDelayItems, parameter);
                                 DataTable jobsSQLDataWithRows = conn.executeSelectQuery(queryJobsDelayItems, parameter);
 
-                                DataTable jobsSQLData =  new DataTable();;
+                                DataTable jobsSQLData = new DataTable(); ;
 
                                 jobsSQLData.Columns.Add("cstCallId");
                                 jobsSQLData.Columns.Add("called");
@@ -3362,7 +3415,7 @@ namespace ExportToSPList
                                     dr["start"] = "";
                                     dr["complete"] = "";
                                     dr["dateModified"] = "";
-                                    dr["timeModified"] = ""; 
+                                    dr["timeModified"] = "";
 
                                     jobsSQLData.Rows.Add(dr);
                                 }
@@ -3393,7 +3446,7 @@ namespace ExportToSPList
 
                                             //if (string.IsNullOrEmpty(dt.Rows[i]["start"].ToString())) { s = ""; }
                                             //else { s = (Convert.ToDateTime(dt.Rows[i]["start"].ToString())).ToString("dd/MM/yyyy"); }
-                                            
+
                                             //if (string.IsNullOrEmpty(dt.Rows[i]["complete"].ToString())) { cm = ""; }
                                             //else { cm = (Convert.ToDateTime(dt.Rows[i]["complete"].ToString())).ToString("dd/MM/yyyy"); }
 
@@ -3635,7 +3688,7 @@ namespace ExportToSPList
                                             if (rowExistsComplete.Any())
                                             { drExistsComplete = rowExistsComplete.CopyToDataTable(); }
                                             if (drExistsComplete != null && drExistsComplete.Rows.Count > 0)
-                                            { existsComplete = 1; }                                                                                        
+                                            { existsComplete = 1; }
 
                                             //Compare 4 Dates and Supplier
                                             DataTable drExists1 = null;
@@ -3668,7 +3721,7 @@ namespace ExportToSPList
                                                 //if (Convert.ToDateTime(dt.Rows[i]["timeModified"].ToString()) > Convert.ToDateTime(jobsSQLData.Rows[i]["timeModified"].ToString()))
                                                 {
                                                     #region Update SP to SQL
-                                                    Console.WriteLine("Updating Jobs Data - " + listDelayName + "------" + dt.Rows[i]["CstCallId"].ToString());
+                                                    Console.WriteLine("Updating Jobs Data - " + listDelayName + "------" + dt.Rows[i]["Cst - Call - Id"].ToString());
 
                                                     cstCallId = Int32.Parse(dt.Rows[i]["CstCallId"].ToString());
                                                     called = c;
@@ -3758,9 +3811,13 @@ namespace ExportToSPList
                                                     xlWorkSheet.Cells[i + 1, 3] = "Update CstCallId :- ";
                                                     xlWorkSheet.Cells[i + 1, 4] = dt.Rows[i]["CstCallId"].ToString();
                                                     xlWorkSheet.Cells[i + 1, 5] = "Update Call Forwards SP to SQL";
+                                                    xlWorkSheet.Cells[i + 1, 6] = "SP Time:- ";
+                                                    xlWorkSheet.Cells[i + 1, 7] = Convert.ToDateTime(dt.Rows[i]["timeModified"].ToString()).ToString();
+                                                    xlWorkSheet.Cells[i + 1, 8] = "SQL Time:- ";
+                                                    xlWorkSheet.Cells[i + 1, 9] = compareSQLDate;
                                                     #endregion
                                                 }
-                                                else 
+                                                else
                                                 {
                                                     Console.WriteLine("Updating Best Possible dates and Supplier into SP for CstCallId - " + dt.Rows[i]["CstCallId"].ToString() + " Job Number " + dt.Rows[i]["JobNum"].ToString());
 
@@ -3776,14 +3833,14 @@ namespace ExportToSPList
                                                         else { oListItem["Called"] = Convert.ToDateTime(jobsSQLData.Rows[i]["called"].ToString()); }
 
                                                         //else { oListItem["Called"] = (Convert.ToDateTime(jobsSQLData.Rows[i]["called"].ToString())).ToString("dd/MM/yyyy"); }
-                                                        
+
                                                         //oListItem["Called"] = Convert.ToDateTime(jobsSQLData.Rows[i]["called"].ToString());
                                                     }
                                                     if (existsCalledFor == 0)
                                                     {
                                                         if (string.IsNullOrEmpty(jobsSQLData.Rows[i]["calledfor"].ToString())) { oListItem["CalledFor"] = null; }
                                                         else { oListItem["CalledFor"] = Convert.ToDateTime(jobsSQLData.Rows[i]["calledfor"].ToString()); }
-                                                                                                                                                                       
+
                                                         //else { oListItem["CalledFor"] = (Convert.ToDateTime(jobsSQLData.Rows[i]["calledfor"].ToString())).ToString("dd/MM/yyyy"); }
 
                                                         //oListItem["CalledFor"] = Convert.ToDateTime(jobsSQLData.Rows[i]["calledfor"].ToString());
@@ -3792,7 +3849,7 @@ namespace ExportToSPList
                                                     {
                                                         if (string.IsNullOrEmpty(jobsSQLData.Rows[i]["start"].ToString())) { oListItem["Start"] = null; }
                                                         else { oListItem["Start"] = Convert.ToDateTime(jobsSQLData.Rows[i]["start"].ToString()); }
-                                                        
+
                                                         //else { oListItem["Start"] = (Convert.ToDateTime(jobsSQLData.Rows[i]["start"].ToString())).ToString("dd/MM/yyyy"); }
 
                                                         //oListItem["Start"] = Convert.ToDateTime(jobsSQLData.Rows[i]["start"].ToString());
@@ -3801,19 +3858,19 @@ namespace ExportToSPList
                                                     {
                                                         if (string.IsNullOrEmpty(jobsSQLData.Rows[i]["complete"].ToString())) { oListItem["Complete"] = null; }
                                                         else { oListItem["Complete"] = Convert.ToDateTime(jobsSQLData.Rows[i]["complete"].ToString()); }
-                                                        
+
                                                         //else { oListItem["Complete"] = (Convert.ToDateTime(jobsSQLData.Rows[i]["complete"].ToString())).ToString("dd/MM/yyyy"); }
 
                                                         //oListItem["Complete"] = Convert.ToDateTime(jobsSQLData.Rows[i]["complete"].ToString());
 
                                                         #region Update 100 Percent field
 
-                                                            //Console.WriteLine("updating 100 percent filed for :- " + dt.Rows[i]["CstCallId"].ToString());
-                                                            //oListItem = oList.GetItemById(dt.Rows[i]["ID"].ToString());
-                                                            ////oListItem["Checkmark"] = 1;
-                                                            //oListItem["PercentComplete"] = 1;
-                                                            //oListItem.Update();
-                                                            //ctx.ExecuteQuery();
+                                                        //Console.WriteLine("updating 100 percent filed for :- " + dt.Rows[i]["CstCallId"].ToString());
+                                                        //oListItem = oList.GetItemById(dt.Rows[i]["ID"].ToString());
+                                                        ////oListItem["Checkmark"] = 1;
+                                                        //oListItem["PercentComplete"] = 1;
+                                                        //oListItem.Update();
+                                                        //ctx.ExecuteQuery();
 
                                                         #endregion
                                                     }
@@ -3840,11 +3897,15 @@ namespace ExportToSPList
                                                     xlWorkSheet.Cells[i + 1, 3] = "Update CstCallId :- ";
                                                     xlWorkSheet.Cells[i + 1, 4] = dt.Rows[i]["CstCallId"].ToString();
                                                     xlWorkSheet.Cells[i + 1, 5] = "Update Call Forwards SQL to SP";
+                                                    xlWorkSheet.Cells[i + 1, 6] = "SP Time:- ";
+                                                    xlWorkSheet.Cells[i + 1, 7] = Convert.ToDateTime(dt.Rows[i]["timeModified"].ToString()).ToString();
+                                                    xlWorkSheet.Cells[i + 1, 8] = "SQL Time:- ";
+                                                    xlWorkSheet.Cells[i + 1, 9] = compareSQLDate;
                                                 }
                                             }
                                             #endregion
 
-                                        }                                            
+                                        }
                                         else
                                         {
                                             if (!String.IsNullOrEmpty(dt.Rows[i]["Id"].ToString()))
@@ -3892,11 +3953,11 @@ namespace ExportToSPList
                                                 //xlWorkSheet.Cells[i + 1, 1] = "Inserting - ";
                                                 //xlWorkSheet.Cells[i + 1, 2] = dt.Rows[i]["CstCallId"].ToString();
                                                 //xlWorkSheet.Cells[i + 1, 2] = listDelayName;
-                                                xlWorkSheet.Cells[i + 1, 1] = "Update Job Number - ";
+                                                xlWorkSheet.Cells[i + 1, 1] = "Insert Job Number - ";
                                                 xlWorkSheet.Cells[i + 1, 2] = dt.Rows[i]["JobNum"].ToString();
-                                                xlWorkSheet.Cells[i + 1, 3] = "Update SP Id:- ";
+                                                xlWorkSheet.Cells[i + 1, 3] = "Insert SP Id:- ";
                                                 xlWorkSheet.Cells[i + 1, 4] = dt.Rows[i]["ID"].ToString();
-                                                xlWorkSheet.Cells[i + 1, 5] = "Update Job :- ";
+                                                xlWorkSheet.Cells[i + 1, 5] = "Insert Job :- ";
                                                 xlWorkSheet.Cells[i + 1, 6] = dt.Rows[i]["ID"].ToString();
                                             }
                                         }
@@ -3908,7 +3969,7 @@ namespace ExportToSPList
                                         GlobalLogic.ExceptionHandle(e, "Sp To Sql Update Jobs Data" + "---" + listDelayName + "---" + dt.Rows[i]["ID"].ToString());
                                     }
                                 }
-                                xlWorkBook.SaveAs("C:\\Log\\SqlToSpJobsLog_" + listDelayName + DateTime.Now.ToString("_ddMMyyyy_HHmmss") + ".xls", Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue);
+                                xlWorkBook.SaveAs("C:\\Log\\SpToSqlJobsLog_" + listDelayName + DateTime.Now.ToString("_ddMMyyyy_HHmmss") + ".xls", Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue);
                                 xlWorkBook.Close(true, misValue, misValue);
                                 xlApp.Quit();
 
@@ -3925,7 +3986,7 @@ namespace ExportToSPList
                             #endregion
                         }
                         catch (Exception e)
-                        { 
+                        {
                             Console.WriteLine(e.Message);
                             GlobalLogic.ExceptionHandle(e, "Sp To Sql Update Jobs Data" + "---" + "Starting operation on Jobs List");
                         }
@@ -4146,7 +4207,7 @@ namespace ExportToSPList
                                                   };
                 DataTable delayJobsSQLData = conn.executeSelectQuery(queryJobsDelayItems, parameter);
                 ListItem oListItem = null;
-                List oList = ctx.Web.Lists.GetByTitle(listDelayName);                
+                List oList = ctx.Web.Lists.GetByTitle(listDelayName);
 
                 for (int i = 0; i < delayJobsSQLData.Rows.Count; i++)
                 {
@@ -4444,29 +4505,29 @@ namespace ExportToSPList
                 dt.Columns.Add("SupName");
                 dt.Columns.Add("SupNameRef");
                 dt.Columns.Add("SupId");
-                dt.Columns.Add("ID");                
+                dt.Columns.Add("ID");
 
-               if (getListItemsCol != null)
-               {
-                   foreach (ListItem listItemsCol in getListItemsCol)
-                   {
-                       DataRow dr = dt.NewRow();
-                       dr["SupName"] = listItemsCol["SupName"];
-                       dr["SupNameRef"] = listItemsCol["SupNameRef"];
-                       dr["SupId"] = listItemsCol["SupId"];
-                       dr["ID"] = listItemsCol["ID"];
-                       dt.Rows.Add(dr);
-                   }
-               }
-               else
-               {
-                   DataRow dr = dt.NewRow();
-                   dr["SupName"] = "";
-                   dr["SupNameRef"] = "";
-                   dr["SupId"] = "";
-                   dr["ID"] = "";
-                   dt.Rows.Add(dr);
-               }                
+                if (getListItemsCol != null)
+                {
+                    foreach (ListItem listItemsCol in getListItemsCol)
+                    {
+                        DataRow dr = dt.NewRow();
+                        dr["SupName"] = listItemsCol["SupName"];
+                        dr["SupNameRef"] = listItemsCol["SupNameRef"];
+                        dr["SupId"] = listItemsCol["SupId"];
+                        dr["ID"] = listItemsCol["ID"];
+                        dt.Rows.Add(dr);
+                    }
+                }
+                else
+                {
+                    DataRow dr = dt.NewRow();
+                    dr["SupName"] = "";
+                    dr["SupNameRef"] = "";
+                    dr["SupId"] = "";
+                    dr["ID"] = "";
+                    dt.Rows.Add(dr);
+                }
 
                 dbConnection conn = new dbConnection();
                 DataTable tempTable = null;
@@ -4474,80 +4535,80 @@ namespace ExportToSPList
                 ListItemCreationInformation itemCreateInfo = null;
                 ListItem oListItem = null;
                 List oList = ctx.Web.Lists.GetByTitle(appSettingsKey);
-               
-                    Excel.Application xlApp;
-                    Excel.Workbook xlWorkBook;
-                    Excel.Worksheet xlWorkSheet;
-                    object misValue = System.Reflection.Missing.Value;
 
-                    xlApp = new Excel.Application();
-                    xlWorkBook = xlApp.Workbooks.Add(misValue);
-                    xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
+                Excel.Application xlApp;
+                Excel.Workbook xlWorkBook;
+                Excel.Worksheet xlWorkSheet;
+                object misValue = System.Reflection.Missing.Value;
 
-                    for (int i = 0; i < tempTable.Rows.Count; i++)
+                xlApp = new Excel.Application();
+                xlWorkBook = xlApp.Workbooks.Add(misValue);
+                xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
+
+                for (int i = 0; i < tempTable.Rows.Count; i++)
+                {
+                    DataRow[] drExists = dt.Select("SupId = '" + tempTable.Rows[i]["l_entity_id"].ToString() + "'");
+                    if (drExists != null && drExists.Length > 0)
                     {
-                        DataRow[] drExists = dt.Select("SupId = '" + tempTable.Rows[i]["l_entity_id"].ToString() + "'");
-                        if (drExists != null && drExists.Length > 0)
+                        //Console.WriteLine("Found - " + tempTable.Rows[i]["l_entity_id"].ToString());
+                        //xlWorkSheet.Cells[i + 1, 1] = "Found Supplier Code - ";
+                        //xlWorkSheet.Cells[i + 1, 2] = tempTable.Rows[i][0].ToString();
+
+                        var rowExists = dt.AsEnumerable().Where(x => x.Field<string>("SupId") == tempTable.Rows[i]["l_entity_id"].ToString()
+                                                                        && x.Field<string>("SupName") == tempTable.Rows[i]["s_name"].ToString()
+                                                                        && x.Field<string>("SupNameRef") == tempTable.Rows[i]["s_name_ref"].ToString()
+                                                                     );
+
+                        DataTable drExists1 = null;
+                        if (rowExists.Any())
+                        { drExists1 = rowExists.CopyToDataTable(); }
+
+                        if (drExists1 != null && drExists1.Rows.Count > 0)
                         {
-                            //Console.WriteLine("Found - " + tempTable.Rows[i]["l_entity_id"].ToString());
-                            //xlWorkSheet.Cells[i + 1, 1] = "Found Supplier Code - ";
-                            //xlWorkSheet.Cells[i + 1, 2] = tempTable.Rows[i][0].ToString();
-
-                            var rowExists = dt.AsEnumerable().Where(x => x.Field<string>("SupId") == tempTable.Rows[i]["l_entity_id"].ToString()
-                                                                            && x.Field<string>("SupName") == tempTable.Rows[i]["s_name"].ToString()
-                                                                            && x.Field<string>("SupNameRef") == tempTable.Rows[i]["s_name_ref"].ToString()
-                                                                         );
-
-                            DataTable drExists1 = null;
-                            if (rowExists.Any())
-                            { drExists1 = rowExists.CopyToDataTable(); }
-
-                            if (drExists1 != null && drExists1.Rows.Count > 0)
-                            {
-                                Console.WriteLine("Found - " + tempTable.Rows[i]["l_entity_id"].ToString());
-                                xlWorkSheet.Cells[i + 1, 1] = "Found Enity - ";
-                                xlWorkSheet.Cells[i + 1, 2] = tempTable.Rows[i]["l_entity_id"].ToString();
-                            }
-                            else
-                            {
-                                #region Original Code
-                                Console.WriteLine("Updating - " + tempTable.Rows[i]["l_entity_id"].ToString());
-                                oListItem = oList.GetItemById(drExists[0]["ID"].ToString());
-
-                                oListItem["SupName"] = tempTable.Rows[i]["s_name"].ToString();
-                                oListItem["SupNameRef"] = tempTable.Rows[i]["s_name_ref"].ToString();
-
-                                oListItem.Update();
-                                ctx.ExecuteQuery();
-
-                                xlWorkSheet.Cells[i + 1, 1] = "Updating - ";
-                                xlWorkSheet.Cells[i + 1, 2] = tempTable.Rows[i]["l_entity_id"].ToString();
-                                #endregion
-                            }
+                            Console.WriteLine("Found - " + tempTable.Rows[i]["l_entity_id"].ToString());
+                            xlWorkSheet.Cells[i + 1, 1] = "Found Enity - ";
+                            xlWorkSheet.Cells[i + 1, 2] = tempTable.Rows[i]["l_entity_id"].ToString();
                         }
                         else
                         {
-                            Console.WriteLine("Inserting - " + tempTable.Rows[i]["l_entity_id"].ToString());
-                            itemCreateInfo = new ListItemCreationInformation();
-                            oListItem = oList.AddItem(itemCreateInfo);                                                        
-                            oListItem["SupId"] = Int32.Parse(tempTable.Rows[i]["l_entity_id"].ToString());
+                            #region Original Code
+                            Console.WriteLine("Updating - " + tempTable.Rows[i]["l_entity_id"].ToString());
+                            oListItem = oList.GetItemById(drExists[0]["ID"].ToString());
+
                             oListItem["SupName"] = tempTable.Rows[i]["s_name"].ToString();
                             oListItem["SupNameRef"] = tempTable.Rows[i]["s_name_ref"].ToString();
-                            xlWorkSheet.Cells[i + 1, 1] = "Inserting Supplier Code - ";
-                            xlWorkSheet.Cells[i + 1, 2] = tempTable.Rows[i][0].ToString();
 
                             oListItem.Update();
                             ctx.ExecuteQuery();
+
+                            xlWorkSheet.Cells[i + 1, 1] = "Updating - ";
+                            xlWorkSheet.Cells[i + 1, 2] = tempTable.Rows[i]["l_entity_id"].ToString();
+                            #endregion
                         }
                     }
-                    xlWorkBook.SaveAs("C:\\Log\\SqlToSpLog_Entity" + DateTime.Now.ToString("_ddMMyyyy_HHmmss") + ".xls", Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue);
-                    xlWorkBook.Close(true, misValue, misValue);
-                    xlApp.Quit();
+                    else
+                    {
+                        Console.WriteLine("Inserting - " + tempTable.Rows[i]["l_entity_id"].ToString());
+                        itemCreateInfo = new ListItemCreationInformation();
+                        oListItem = oList.AddItem(itemCreateInfo);
+                        oListItem["SupId"] = Int32.Parse(tempTable.Rows[i]["l_entity_id"].ToString());
+                        oListItem["SupName"] = tempTable.Rows[i]["s_name"].ToString();
+                        oListItem["SupNameRef"] = tempTable.Rows[i]["s_name_ref"].ToString();
+                        xlWorkSheet.Cells[i + 1, 1] = "Inserting Supplier Code - ";
+                        xlWorkSheet.Cells[i + 1, 2] = tempTable.Rows[i][0].ToString();
 
-                    gl.releaseObject(xlWorkSheet);
-                    gl.releaseObject(xlWorkBook);
-                    gl.releaseObject(xlApp);
-                                
+                        oListItem.Update();
+                        ctx.ExecuteQuery();
+                    }
+                }
+                xlWorkBook.SaveAs("C:\\Log\\SqlToSpLog_Entity" + DateTime.Now.ToString("_ddMMyyyy_HHmmss") + ".xls", Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue);
+                xlWorkBook.Close(true, misValue, misValue);
+                xlApp.Quit();
+
+                gl.releaseObject(xlWorkSheet);
+                gl.releaseObject(xlWorkBook);
+                gl.releaseObject(xlApp);
+
             }
             catch (Exception e)
             {
@@ -4636,8 +4697,9 @@ namespace ExportToSPList
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
+                GlobalLogic.ExceptionHandle(e, "Send Delay Email");
             }
-            #endregion 
+            #endregion
         }
 
         #region old code
