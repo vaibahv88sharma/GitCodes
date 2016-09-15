@@ -6,9 +6,10 @@
     <script src="Scripts/jquery-1.11.0.min.js"></script>
     <script src="Scripts/bootstrap.js"></script>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
-
+    <link href="Content/pdsa-sidebar.css" rel="stylesheet" />
+	
     <style>
-        .container {
+ <!--        .container {
             width: 100%;
         }
 
@@ -74,12 +75,7 @@
                             color: #fff;
                         }
 
-                        /*.pdsa-sn-wrapper ul li a:active,
-        .pdsa-sn-wrapper ul li a:focus {
-            text-decoration: none;
-            outline:none;
-            color:red;
-        }*/
+
 
                         .pdsa-sn-wrapper ul li a:active {
                             text-decoration: none;
@@ -115,6 +111,12 @@
                     padding-top: -1em;
                     padding-bottom: -1em;
                 }
+				
+				.pdsa-sn-wrapper ul li ul {
+					list-style:none;
+					margin-top:1em;
+					margin-left:1em;
+				}
 
         @media all and (max-width: 768px) {
             .pdsa-sn-wrapper {
@@ -130,7 +132,7 @@
             .body-content {
                 margin-left: 3em;
             }
-        }
+        } -->
     </style>
 
 </head>
@@ -158,7 +160,7 @@
                         <a href="#"
                            data-toggle="collapse"
                            data-target="#ulGenres">
-                            <span class="visible-sm visible-md visible-lg">Genres</span>
+                            <span class="visible-sm visible-md visible-lg">Genres&nbsp;<b class="caret"></b></span>
                             <i class="glyphicon glyphicon-globe visible-xs"></i>
                         </a>
                         <div class="visible-sm visible-md visible-lg">
@@ -182,7 +184,7 @@
                         <a href="#"
                            data-toggle="collapse"
                            data-target="#ulPlaylists">
-                            <span class="visible-sm visible-md visible-lg">Playlists</span>
+                            <span class="visible-sm visible-md visible-lg">Playlists&nbsp;<b class="caret"></b></span>
                             <i class="glyphicon glyphicon-list-alt visible-xs"></i>
                         </a>
                         <div class="visible-sm visible-md visible-lg">
@@ -221,7 +223,7 @@
 
     <div class="container body-content">
         <div class="row">
-            <div class="col-xs-10 col-lg-12">
+            <div class="col-xs-12 col-sm-12">
                 <h1>My Music</h1>
                 <p>This is where you gather all of your music</p>
             </div>
