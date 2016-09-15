@@ -142,7 +142,7 @@
                 <a href="Default.html">My Tunes</a>
             </header>
         </div>
-            <nav class="pdsa-sn-wrapper">
+            <nav id="sideNavParent" class="pdsa-sn-wrapper">
                 <ul>
                     <li class="pdsa-sn-brand">
                         <a href="Default.html"
@@ -155,16 +155,52 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#"
+                           data-toggle="collapse"
+                           data-target="#ulGenres">
                             <span class="visible-sm visible-md visible-lg">Genres</span>
                             <i class="glyphicon glyphicon-globe visible-xs"></i>
                         </a>
+                        <div class="visible-sm visible-md visible-lg">
+                            <ul id="ulGenres" class="collapse" data-parent="#sideNavParent">
+                                <li>
+                                    <a href="#">All Genres</a>
+                                </li>
+                                <li>
+                                    <a href="#">Jazz</a>
+                                </li>
+                                <li>
+                                    <a href="#">Country</a>
+                                </li>
+                                <li>
+                                    <a href="#">Rock</a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#"
+                           data-toggle="collapse"
+                           data-target="#ulPlaylists">
                             <span class="visible-sm visible-md visible-lg">Playlists</span>
                             <i class="glyphicon glyphicon-list-alt visible-xs"></i>
                         </a>
+                        <div class="visible-sm visible-md visible-lg">
+                            <ul id="ulPlaylists" class="collapse" data-parent="#sideNavParent">
+                                <li>
+                                    <a href="#">All Playlists</a>
+                                </li>
+                                <li>
+                                    <a href="#">My Top Rated</a>
+                                </li>
+                                <li>
+                                    <a href="#">Top Country</a>
+                                </li>
+                                <li>
+                                    <a href="#">Top Classic</a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                     <li>
                         <a href="#">
