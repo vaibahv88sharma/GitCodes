@@ -61,6 +61,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngNoteApp", "AngNoteApp\An
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularApp1", "AngularApp1\AngularApp1.csproj", "{B726E45E-4B7B-4F54-9B34-BE839C7FF4C9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicSite", "MusicSite\MusicSite.csproj", "{4479C3D5-A279-4159-8235-15C5E72F9E68}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -223,6 +225,10 @@ Global
 		{B726E45E-4B7B-4F54-9B34-BE839C7FF4C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B726E45E-4B7B-4F54-9B34-BE839C7FF4C9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B726E45E-4B7B-4F54-9B34-BE839C7FF4C9}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{4479C3D5-A279-4159-8235-15C5E72F9E68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4479C3D5-A279-4159-8235-15C5E72F9E68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4479C3D5-A279-4159-8235-15C5E72F9E68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4479C3D5-A279-4159-8235-15C5E72F9E68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

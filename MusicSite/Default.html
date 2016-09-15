@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Work Site</title>
+
+    <script src="Scripts/jquery-1.11.0.min.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+        .container {
+            width: 100%;
+        }
+
+        .body-content {
+            margin-left: 14em;
+            margin-top: 1em;
+            width: 85%;
+            transition: margin-left 0.3s linear;
+            -moz-transition: margin-left 0.3s linear;
+            -webkit-transition: margin-left 0.3s linear;
+        }
+
+        header {
+            padding: 0.7em;
+            background-color: gray;
+            color: white;
+            font-size: large;
+        }
+
+            header a {
+                background-color: gray;
+                color: white;
+                text-decoration: none;
+            }
+
+                header a:hover {
+                    text-decoration: none;
+                }
+
+        .pdsa-sn-wrapper {
+            position: absolute;
+            top: 3.6em;
+            left: 0em;
+            width: 13em;
+            height: 100%;
+            background-color: black;
+            transition: left 0.3s linear;
+            -moz-transition: left 0.3s linear;
+            -webkit-transition: left 0.3s linear;
+        }
+
+            .pdsa-sn-wrapper ul {
+                width: 11em;
+                list-style: none;
+                margin-top: 2em;
+                margin-left: 1em;
+                padding: 0em;
+            }
+
+                .pdsa-sn-wrapper ul li {
+                    margin-top: 1em;
+                    margin-bottom: 0.5em;
+                }
+
+                    .pdsa-sn-wrapper ul li a {
+                        color: #999999;
+                        text-decoration: none;
+                        padding: 0.5em;
+                    }
+
+                        .pdsa-sn-wrapper ul li a:hover {
+                            text-decoration: none;
+                            color: #fff;
+                        }
+
+                        /*.pdsa-sn-wrapper ul li a:active,
+        .pdsa-sn-wrapper ul li a:focus {
+            text-decoration: none;
+            outline:none;
+            color:red;
+        }*/
+
+                        .pdsa-sn-wrapper ul li a:active {
+                            text-decoration: none;
+                            outline: none;
+                            color: red;
+                        }
+
+                        .pdsa-sn-wrapper ul li a:focus {
+                            text-decoration: none;
+                            outline: none;
+                            color: red;
+                        }
+
+                .pdsa-sn-wrapper ul .pdsa-sn-brand {
+                    margin-left: -0.5em;
+                    font-size: large;
+                    color: white;
+                }
+
+                    .pdsa-sn-wrapper ul .pdsa-sn-brand a {
+                        color: white;
+                    }
+
+                        .pdsa-sn-wrapper ul .pdsa-sn-brand a:hover {
+                            color: lightblue;
+                            background: none;
+                        }
+
+                .pdsa-sn-wrapper ul li a span {
+                    margin-top: -1em;
+                    margin-bottom: -1em;
+                    margin-left: 1em;
+                    padding-top: -1em;
+                    padding-bottom: -1em;
+                }
+
+        @media all and (max-width: 768px) {
+            .pdsa-sn-wrapper {
+                left: -10em;
+            }
+
+                .pdsa-sn-wrapper ul li a i {
+                    padding-left: 10em;
+                    margin-top: -1em;
+                    margin-bottom: -1em;
+                }
+
+            .body-content {
+                margin-left: 3em;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <header>
+                <a href="Default.html">My Tunes</a>
+            </header>
+        </div>
+            <nav class="pdsa-sn-wrapper">
+                <ul>
+                    <li class="pdsa-sn-brand">
+                        <a href="Default.html"
+                           class="visible-sm visible-md visible-lg">Music</a>
+                    </li>
+                    <li>
+                        <a href="Default.html">
+                            <span class="visible-sm visible-md visible-lg">Home</span>
+                            <i class="glyphicon glyphicon-home visible-xs"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="visible-sm visible-md visible-lg">Genres</span>
+                            <i class="glyphicon glyphicon-globe visible-xs"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="visible-sm visible-md visible-lg">Playlists</span>
+                            <i class="glyphicon glyphicon-list-alt visible-xs"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="visible-sm visible-md visible-lg">Songs</span>
+                            <i class="glyphicon glyphicon-music visible-xs"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="visible-sm visible-md visible-lg">Download</span>
+                            <i class="glyphicon glyphicon-download visible-xs"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        <!--</div>-->
+    </div>
+
+    <div class="container body-content">
+        <div class="row">
+            <div class="col-xs-10 col-lg-12">
+                <h1>My Music</h1>
+                <p>This is where you gather all of your music</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
