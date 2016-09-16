@@ -1,19 +1,20 @@
 ﻿/* Themes for Readme Boxes */
 .pdsa-readme-box-primary {
     border-color:#428bca;
+    /*border-color:#31708f;*/
 }
 .pdsa-readme-box-primary .readme-header{
-    border-color:#428bca;
+    background-color:#428bca;
 }
 .pdsa-readme-box-primary .readme-footer a{
-    color:white;
+    color:red;
 }
 
 .pdsa-readme-box-success {
     border-color:#3c763d;
 }
 .pdsa-readme-box-success .readme-header{
-    border-color:green;
+    background-color:green;
 }
 .pdsa-readme-box-success .readme-footer a{
     color:red;
@@ -23,7 +24,7 @@
     border-color:#31708f;
 }
 .pdsa-readme-box-info .readme-header{
-    border-color:#31708f;
+    background-color:#31708f;
 }
 .pdsa-readme-box-info .readme-footer a{
     color:red;
@@ -34,7 +35,7 @@
             position:relative;
             border-width:thin;
             border-style:solid;
-            border-color:#31708f;
+            /*border-color:#31708f;*/
             width:100%;
             padding: 1em;
             opacity:0.9;
@@ -50,7 +51,7 @@
         .pdsa-readme-box .readme-header {
             margin: -1em;
             padding: 0.5em;
-            background-color: #31708f;
+            /*background-color: #31708f;*/
             text-align:center;
         }
 
@@ -83,7 +84,7 @@
             font-size:small;
         }
 
-        .pdsa-readme-box .readme-footer {
+        .pdsa-readme-box .readme-footer a{
             text-decoration:none;
             /*color:red;*/
         }

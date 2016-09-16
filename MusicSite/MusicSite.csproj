@@ -61,11 +61,13 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\pdsa-readme-box.css" />
     <Content Include="Content\pdsa-sidebar.css" />
     <Content Include="Content\pdsa-summary-block.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="Default.html" />
+    <Content Include="Genres.html" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Default.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.11.0.min.js" />
