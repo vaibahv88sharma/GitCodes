@@ -7,132 +7,67 @@
     <script src="Scripts/bootstrap.js"></script>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/pdsa-sidebar.css" rel="stylesheet" />
-	
+    <link href="Content/pdsa-summary-block.css" rel="stylesheet" />
+    <link href="Content/pdsa-readme-box.css" rel="stylesheet" />
+
     <style>
- <!--        .container {
-            width: 100%;
+        /*.pdsa-readme-box {
+            position:relative;
+            border-width:thin;
+            border-style:solid;
+            border-color:#31708f;
+            width:100%;
+            padding: 1em;
+            opacity:0.9;
+            margin:0.3em;
+            min-height:16em;
         }
 
-        .body-content {
-            margin-left: 14em;
-            margin-top: 1em;
-            width: 85%;
-            transition: margin-left 0.3s linear;
-            -moz-transition: margin-left 0.3s linear;
-            -webkit-transition: margin-left 0.3s linear;
+        .pdsa-readme-box:hover {
+            opacity:1;
+            cursor:pointer;
         }
 
-        header {
-            padding: 0.7em;
-            background-color: gray;
-            color: white;
-            font-size: large;
+        .pdsa-readme-box .readme-header {
+            margin: -1em;
+            padding: 0.5em;
+            background-color: #31708f;
+            text-align:center;
         }
 
-            header a {
-                background-color: gray;
-                color: white;
-                text-decoration: none;
-            }
-
-                header a:hover {
-                    text-decoration: none;
-                }
-
-        .pdsa-sn-wrapper {
-            position: absolute;
-            top: 3.6em;
-            left: 0em;
-            width: 13em;
-            height: 100%;
-            background-color: black;
-            transition: left 0.3s linear;
-            -moz-transition: left 0.3s linear;
-            -webkit-transition: left 0.3s linear;
+        .pdsa-readme-box .readme-header i,
+        .pdsa-readme-box .readme-header div {
+            font-size:xx-large;
         }
 
-            .pdsa-sn-wrapper ul {
-                width: 11em;
-                list-style: none;
-                margin-top: 2em;
-                margin-left: 1em;
-                padding: 0em;
-            }
+        .pdsa-readme-box .readme-body {
+            position:relative;
+            margin-top:2em;
+            margin-bottom:2em;
+        }
 
-                .pdsa-sn-wrapper ul li {
-                    margin-top: 1em;
-                    margin-bottom: 0.5em;
-                }
+        .pdsa-readme-box .readme-body h1 {
+            font-size: x-large;
+        }
 
-                    .pdsa-sn-wrapper ul li a {
-                        color: #999999;
-                        text-decoration: none;
-                        padding: 0.5em;
-                    }
+        .pdsa-readme-box .readme-body p {
+            font-size: medium;
+        }
 
-                        .pdsa-sn-wrapper ul li a:hover {
-                            text-decoration: none;
-                            color: #fff;
-                        }
+        .pdsa-readme-box .readme-footer {
+            position:absolute;
+            bottom:0em;
+            right:0em;
+            width:100%;
+            text-align:center;
+            padding-bottom:0.5em;
+            font-size:small;
+        }
 
-
-
-                        .pdsa-sn-wrapper ul li a:active {
-                            text-decoration: none;
-                            outline: none;
-                            color: red;
-                        }
-
-                        .pdsa-sn-wrapper ul li a:focus {
-                            text-decoration: none;
-                            outline: none;
-                            color: red;
-                        }
-
-                .pdsa-sn-wrapper ul .pdsa-sn-brand {
-                    margin-left: -0.5em;
-                    font-size: large;
-                    color: white;
-                }
-
-                    .pdsa-sn-wrapper ul .pdsa-sn-brand a {
-                        color: white;
-                    }
-
-                        .pdsa-sn-wrapper ul .pdsa-sn-brand a:hover {
-                            color: lightblue;
-                            background: none;
-                        }
-
-                .pdsa-sn-wrapper ul li a span {
-                    margin-top: -1em;
-                    margin-bottom: -1em;
-                    margin-left: 1em;
-                    padding-top: -1em;
-                    padding-bottom: -1em;
-                }
-				
-				.pdsa-sn-wrapper ul li ul {
-					list-style:none;
-					margin-top:1em;
-					margin-left:1em;
-				}
-
-        @media all and (max-width: 768px) {
-            .pdsa-sn-wrapper {
-                left: -10em;
-            }
-
-                .pdsa-sn-wrapper ul li a i {
-                    padding-left: 10em;
-                    margin-top: -1em;
-                    margin-bottom: -1em;
-                }
-
-            .body-content {
-                margin-left: 3em;
-            }
-        } -->
+        .pdsa-readme-box .readme-footer {
+            text-decoration:none;
+            color:red;
+        }*/
     </style>
 
 </head>
@@ -166,7 +101,7 @@
                         <div class="visible-sm visible-md visible-lg">
                             <ul id="ulGenres" class="collapse" data-parent="#sideNavParent">
                                 <li>
-                                    <a href="#">All Genres</a>
+                                    <a href="Genres.html">All Genres</a>
                                 </li>
                                 <li>
                                     <a href="#">Jazz</a>
@@ -223,9 +158,90 @@
 
     <div class="container body-content">
         <div class="row">
-            <div class="col-xs-12 col-sm-12">
-                <h1>My Music</h1>
-                <p>This is where you gather all of your music</p>
+            <div class="col-xs-12 col-sm-4">
+                <div class="pdsa-summary-block pdsa-summary-block-primary">
+                    <div class="summary-background">
+                        <i class="glyphicon glyphicon-globe"></i>
+                    </div>
+                    <div class="summary-body">
+                        <div class="summary-line-1">14</div>
+                        <div class="summary-line-2">Genres</div>
+                    </div>
+                    <div class="summary-footer">
+                        <a href="#">View Genres
+                            <i class="glyphicon glyphicon-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <div class="pdsa-summary-block pdsa-summary-block-success">
+                    <div class="summary-background">
+                        <i class="glyphicon glyphicon-list-alt"></i>
+                    </div>
+                    <div class="summary-body">
+                        <div class="summary-line-1">5</div>
+                        <div class="summary-line-2">Playlists</div>
+                    </div>
+                    <div class="summary-footer">
+                        <a href="#">
+                            See Playlists...
+                            <i class="glyphicon glyphicon-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-4">
+                <div class="pdsa-summary-block pdsa-summary-block-info">
+                    <div class="summary-background">
+                        <i class="glyphicon glyphicon-music"></i>
+                    </div>
+                    <div class="summary-body">
+                        <div class="summary-line-1">2143</div>
+                        <div class="summary-line-2">Songs</div>
+                    </div>
+                    <div class="summary-footer">
+                        <a href="#">
+                            All Songs..
+                            <i class="glyphicon glyphicon-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <div class="pdsa-summary-block pdsa-summary-block-danger">
+                    <div class="summary-background">
+                        <i class="glyphicon glyphicon-download"></i>
+                    </div>
+                    <div class="summary-body">
+                        <div class="summary-line-1">1</div>
+                        <div class="summary-line-2">Downloads</div>
+                    </div>
+                    <div class="summary-footer">
+                        <a href="#">
+                            Get Downloads.. 
+                            <i class="glyphicon glyphicon-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-8">
+                <div class="pdsa-readme-box pdsa-readme-box-primary">
+                    <div class="readme-header">
+                        <i class="glyphicon glyphicon-music"></i>
+                    </div>
+                    <div class="readme-body">
+                        <h1>Free Music</h1>
+                        <p>Each day we have a free song selected espically for you!</p>
+                    </div>
+                    <div class="readme-footer">
+                        <a href="#">+ See My Song...</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

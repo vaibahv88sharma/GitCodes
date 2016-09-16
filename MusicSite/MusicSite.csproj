@@ -62,6 +62,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\pdsa-sidebar.css" />
+    <Content Include="Content\pdsa-summary-block.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.html" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
