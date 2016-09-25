@@ -1,0 +1,38 @@
+﻿<h1>Edit: {{note.Title}}</h1>
+<form name="editNotesForm">
+	<fieldset class="form-group">
+		<label for="title">Title</label>
+		<input class="form-control" type="text" id="title" name="title" ng-model="note.Title"></input>
+	</fieldset>
+	
+	<fieldset class="form-group">
+		<label for="category">Category</label>
+		<!--<input class="form-control" type="text" id="category" name="category" ng-model="note.Title"></input>-->
+		<select ng-options="category.Id as category.category for category in categories" ng-model="note.categoryId"></select>
+	</fieldset>
+	
+	<fieldset class="form-group">
+		<label for="user">User</label>
+		<select ng-options="user.nameDetailsId as user.nameDetails.Title for user in users" ng-model="note.userId"></select>
+		<!--<select ng-options="user.Id as user.name for user in users" ng-model="note.userId"></select>-->
+	</fieldset>
+	
+	<fieldset class="form-group">
+		<label for="description">Description</label>
+		<input class="form-control" type="text" id="description" name="description" ng-model="note.Description"></input>
+	</fieldset>	
+	
+	<fieldset class="form-group">
+		<label for="content">Content</label>
+		<textarea class="form-control" type="text" id="content" name="content" ng-model="note.content"></textarea>
+	</fieldset>	
+	
+	<input type="submit" value="{{isSubmitting ? 'saving...' : 'Save'}}" class="btn btn-default" ng-click="saveNote(note)" ng-disabled="isSubmitting" ></input>
+		
+</form>
+
+<script type="text/javascript">
+	$('#editNotesForm').submit(function () {
+		 return false;
+	});
+</script> 
