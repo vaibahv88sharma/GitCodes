@@ -63,7 +63,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularApp1", "AngularApp1\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicSite", "MusicSite\MusicSite.csproj", "{4479C3D5-A279-4159-8235-15C5E72F9E68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BootstrapAdminTemplate", "BootstrapAdminTemplate\BootstrapAdminTemplate.csproj", "{51CA26B5-AE3D-476E-BC12-5FED80BD4CDF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BootstrapProj", "BootstrapAdminTemplate\BootstrapProj.csproj", "{51CA26B5-AE3D-476E-BC12-5FED80BD4CDF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
