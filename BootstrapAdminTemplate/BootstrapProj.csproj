@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -135,6 +136,22 @@
     <Content Include="bootstrap3\sidebar.html" />
     <Content Include="bootstrap3\workspace.aspx" />
     <Content Include="bootstrap3\workspace.html" />
+    <Content Include="BootstrapAdminTemplate No SharePoint\categories.html" />
+    <Content Include="BootstrapAdminTemplate No SharePoint\category.html" />
+    <Content Include="BootstrapAdminTemplate No SharePoint\css\bootstrap.css" />
+    <Content Include="BootstrapAdminTemplate No SharePoint\css\style.css" />
+    <Content Include="BootstrapAdminTemplate No SharePoint\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="BootstrapAdminTemplate No SharePoint\index.html" />
+    <Content Include="BootstrapAdminTemplate No SharePoint\indexTemplate.html" />
+    <Content Include="BootstrapAdminTemplate No SharePoint\js\bootstrap.js" />
+    <Content Include="BootstrapAdminTemplate No SharePoint\js\bootstrap.min.js" />
+    <Content Include="BootstrapAdminTemplate No SharePoint\js\jquery.tablesorter.js" />
+    <Content Include="BootstrapAdminTemplate No SharePoint\js\npm.js" />
+    <Content Include="BootstrapAdminTemplate No SharePoint\login.html" />
+    <Content Include="BootstrapAdminTemplate No SharePoint\page.html" />
+    <Content Include="BootstrapAdminTemplate No SharePoint\pages.html" />
+    <Content Include="BootstrapAdminTemplate No SharePoint\user.html" />
+    <Content Include="BootstrapAdminTemplate No SharePoint\users.html" />
     <Content Include="BootstrapAdminTemplate\categories.html" />
     <Content Include="BootstrapAdminTemplate\category.html" />
     <Content Include="BootstrapAdminTemplate\css\bootstrap.css" />
@@ -175,6 +192,10 @@
     <Content Include="bootstrap3\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="bootstrap3\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="bootstrap3\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="BootstrapAdminTemplate No SharePoint\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="BootstrapAdminTemplate No SharePoint\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="BootstrapAdminTemplate No SharePoint\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="BootstrapAdminTemplate No SharePoint\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -183,6 +204,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="BootstrapAdminTemplate No SharePoint\img\" />
     <Folder Include="BootstrapAdminTemplate\img\" />
   </ItemGroup>
   <PropertyGroup>
