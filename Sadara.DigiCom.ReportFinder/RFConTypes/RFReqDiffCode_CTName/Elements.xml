@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Item (0x01) -->
+  <ContentType ID="0x01002CF038EC1441434D9E89523FF2F88919" Name="RFReqDiffCode_CTName" Group="Custom RFContent Types" Description="My Content Type" Inherits="FALSE" Overwrite="TRUE" Version="0">
+    <FieldRefs>
+      <RemoveFieldRef  ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" />
+      <FieldRef ID="{3056B102-038A-4A88-AECD-F5C4736C192A}" DisplayName="Requirement Differentiation Code" Required="TRUE" Name="ReqDiffCode" />
+      <FieldRef ID="{1B2DFB91-7EC3-4E51-8C58-3AB508A5B208}" DisplayName="Requirement Diff Code Description" Required="FALSE" Name="ReqDiffCodeDescription" />
+    </FieldRefs>
+  </ContentType>
+</Elements>

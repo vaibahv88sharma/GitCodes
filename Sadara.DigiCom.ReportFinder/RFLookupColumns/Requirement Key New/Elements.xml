@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+ <Field
+         ID="{37B0934A-6190-4447-8668-3A2DE904CCBE}"
+         Name="RequirementKey_Lookup"
+         DisplayName="Requirement Key Lookup"
+         Type="Lookup"
+         EnableLookup="TRUE"
+         IsRelationship="TRUE"
+         ReadOnly="FALSE"
+         List="Lists/ODMSRequirements"
+         ShowField="RequirementKey"
+         Overwrite="TRUE"
+         Required="FALSE"
+         Group="Custom RFLookup Columns">
+  </Field>
+
+ <Field
+       ID="{481d6b8e-7041-4d70-baea-dbc706a20a2e}"
+       Name="ReqDiffCode_Lookup"
+       DisplayName="Req Diff Code Lookup"
+       Type="Lookup"
+       EnableLookup="TRUE"
+       IsRelationship="TRUE"
+       ReadOnly="FALSE"
+       List="Lists/ODMSReqDiffCode"
+       ShowField="ReqDiffCode"
+       Overwrite="TRUE"
+       Required="FALSE"
+       Group="Custom RFLookup Columns">
+  </Field>
+  
+
+    <Field
+        ID="{A9AC5C4B-D397-483D-8975-2BA8FD6B0D60}"
+        Name="ApplicationKey_Lookup"
+        DisplayName="Application Key Lookup"
+        Type="Lookup"
+        EnableLookup="TRUE"
+        IsRelationship="TRUE"
+        ReadOnly="FALSE"
+        List="Lists/ODMSApplication"
+        ShowField="ApplicationKey"
+        Overwrite="TRUE"
+        Required="FALSE"
+        Group="Custom RFLookup Columns">
+  </Field>
+
+  <Field ID="{67B562C8-D23C-4C90-9184-8345FBE4AE41}"
+         FieldRef="{A9AC5C4B-D397-483D-8975-2BA8FD6B0D60}"
+    Name="ApplicationDescription_Lookup"
+    DisplayName="ApplicationKey:ApplicationDescription"
+    Type="Lookup"
+    Required="FALSE"
+    ShowField="ApplicationDescription"
+    List="Lists/ODMSApplication">
+  </Field>
+
+  <Field
+          ID="{C3A22E8D-912D-4475-8E8A-81D6185178F0}"
+          Name="DriverKey_Lookup"
+          DisplayName="Driver Key Lookup"
+          Type="Lookup"
+          EnableLookup="TRUE"
+          IsRelationship="TRUE"
+          ReadOnly="FALSE"
+          List="Lists/ODMSDriver"
+          ShowField="DriverKey"
+          Overwrite="TRUE"
+          Required="FALSE"
+          Group="Custom RFLookup Columns">
+  </Field>
+  <Field ID="{912D88B2-358A-4E92-8ABC-C87925A7DB22}"
+         FieldRef="{C3A22E8D-912D-4475-8E8A-81D6185178F0}"
+    Name="DriverDesription"
+    DisplayName="DriverKey:DriverDescription"
+   Type="Lookup"
+   Required="FALSE"
+    ShowField="DriverDescription"
+    List="Lists/ODMSDriver">
+  </Field>
+  
+</Elements>

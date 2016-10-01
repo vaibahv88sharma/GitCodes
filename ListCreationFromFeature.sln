@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListCreationFromFeature", "ListCreationFromFeature\ListCreationFromFeature.csproj", "{C029F9C6-E5AC-4593-B141-3734DD2AE78F}"
 EndProject
@@ -64,6 +64,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicSite", "MusicSite\MusicSite.csproj", "{4479C3D5-A279-4159-8235-15C5E72F9E68}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BootstrapProj", "BootstrapAdminTemplate\BootstrapProj.csproj", "{51CA26B5-AE3D-476E-BC12-5FED80BD4CDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sadara.DigiCom.ReportFinder", "Sadara.DigiCom.ReportFinder\Sadara.DigiCom.ReportFinder.csproj", "{221097E8-F123-49AA-9A61-B699F4DECAA6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -235,6 +237,12 @@ Global
 		{51CA26B5-AE3D-476E-BC12-5FED80BD4CDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51CA26B5-AE3D-476E-BC12-5FED80BD4CDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51CA26B5-AE3D-476E-BC12-5FED80BD4CDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{221097E8-F123-49AA-9A61-B699F4DECAA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{221097E8-F123-49AA-9A61-B699F4DECAA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{221097E8-F123-49AA-9A61-B699F4DECAA6}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{221097E8-F123-49AA-9A61-B699F4DECAA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{221097E8-F123-49AA-9A61-B699F4DECAA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{221097E8-F123-49AA-9A61-B699F4DECAA6}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

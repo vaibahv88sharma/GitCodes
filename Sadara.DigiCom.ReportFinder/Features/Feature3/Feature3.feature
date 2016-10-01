@@ -1,0 +1,2 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<feature xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="fa96a40e-3ad7-45f4-a2ca-d2998ed48b72" featureId="fa96a40e-3ad7-45f4-a2ca-d2998ed48b72" imageUrl="" solutionId="00000000-0000-0000-0000-000000000000" title="Sadara.DigiCom.ReportFinder Content Types" version="" deploymentPath="$SharePoint.Project.FileNameWithoutExtension$_$SharePoint.Feature.FileNameWithoutExtension$" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/FeatureModel" />

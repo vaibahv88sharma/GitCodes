@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="ODMSDriverMapping" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/ODMSDriverMapping" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/" EnableContentTypes="TRUE">
+  <MetaData>
+    <ContentTypes>
+      
+      
+    <ContentType ID="0x0100c3b7f9b92efb4ed99343ca890827fcb5" Name="ListFieldsContentType">
+ 
+    <FieldRefs><FieldRef ID="{C3A22E8D-912D-4475-8E8A-81D6185178F0}" Name="DriverKey_Lookup" />
+    <FieldRef ID="{37B0934A-6190-4447-8668-3A2DE904CCBE}" Name="RequirementKey_Lookup" /></FieldRefs></ContentType>
+    <ContentType ID="0x0100F9C606D9FBF94603B07336E4A4741EE4" Name="RFDriverMapping_CTName" Group="Custom Content Types" Description="My Content Type" Inherits="TRUE" Version="0"><FieldRefs><FieldRef ID="{C3A22E8D-912D-4475-8E8A-81D6185178F0}" DisplayName="Driver Key Lookup" Required="FALSE" Name="DriverKey_Lookup" ReadOnly="FALSE" /><FieldRef ID="{37B0934A-6190-4447-8668-3A2DE904CCBE}" DisplayName="Requirement Key Lookup" Required="FALSE" Name="RequirementKey_Lookup" ReadOnly="FALSE" /></FieldRefs></ContentType></ContentTypes>
+    <Fields>
+      
+    <Field ID="{C3A22E8D-912D-4475-8E8A-81D6185178F0}" Name="DriverKey_Lookup" DisplayName="Driver Key Lookup" Type="Lookup" EnableLookup="TRUE" IsRelationship="TRUE" ReadOnly="FALSE" List="Lists/ODMSDriver" ShowField="DriverKey" Overwrite="TRUE" Required="FALSE" Group="Custom RFLookup Columns"></Field><Field ID="{37B0934A-6190-4447-8668-3A2DE904CCBE}" Name="RequirementKey_Lookup" DisplayName="Requirement Key Lookup" Type="Lookup" EnableLookup="TRUE" IsRelationship="TRUE" ReadOnly="FALSE" List="Lists/ODMSRequirements" ShowField="RequirementKey" Overwrite="TRUE" Required="FALSE" Group="Custom RFLookup Columns"></Field></Fields>
+    <Views>
+      
+      
+    <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          
+        <FieldRef Name="LinkTitleNoMenu"></FieldRef></ViewFields>
+        <Query>
+          <OrderBy>
+            
+          <FieldRef Name="Modified" Ascending="FALSE"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View><View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>          
+        <FieldRef Name="DriverKey_Lookup" /><FieldRef Name="RequirementKey_Lookup" /></ViewFields>
+        <Query>
+          <OrderBy>
+            
+          <FieldRef Name="ID"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View></Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

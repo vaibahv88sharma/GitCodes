@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Item (0x01) -->
+  <ContentType ID="0x0100B9FDAC2D59BD4A6BBE345A3DCDB1C067" Name="RFReqDiffCodeMapping_CTName" Group="Custom RFContent Types" Description="My Content Type" Inherits="FALSE" Overwrite="TRUE" Version="0">
+    <FieldRefs>
+      <RemoveFieldRef  ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" />
+      <FieldRef ID="{37B0934A-6190-4447-8668-3A2DE904CCBE}" DisplayName="Requirement Key Lookup" Required="FALSE" Name="RequirementKey_Lookup" ReadOnly="FALSE" />
+      <FieldRef ID="{481d6b8e-7041-4d70-baea-dbc706a20a2e}" DisplayName="Req Diff Code Lookup" Required="FALSE" Name="ReqDiffCode_Lookup" ReadOnly="FALSE" />      
+      <FieldRef ID="{D2BC1125-FBF1-40B2-B015-06061E6A5675}" DisplayName="Geography Lookup" Required="FALSE" Name="Geography_Lookup" ReadOnly="FALSE" />
+      <FieldRef ID="{153A0A61-F055-4601-998B-7628F671C10A}" DisplayName="RD Key" Required="TRUE" Name="RDKey" />
+    </FieldRefs>
+  </ContentType>
+</Elements>

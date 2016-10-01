@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Receivers ListUrl="Lists/ODMSCoordinationCode">
+      <Receiver>
+        <Name>ERReqDiffCodeItemAdded</Name>
+        <Type>ItemAdded</Type>
+        <Assembly>$SharePoint.Project.AssemblyFullName$</Assembly>
+        <Class>Sadara.DigiCom.ReportFinder.EventReceiver.ERReqDiffCode.ERReqDiffCode</Class>
+        <SequenceNumber>10000</SequenceNumber>
+      </Receiver>
+  </Receivers>
+</Elements>

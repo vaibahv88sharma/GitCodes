@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{dfb000f0-a9df-42f0-9809-8b4ee676d7c0}"
+       Name="RequirementLevel_Lookup"
+        DisplayName="Requirement Level Lookup"
+       Type="Lookup"
+       EnableLookup="TRUE"
+       IsRelationship="TRUE"
+       ReadOnly="FALSE"
+       List="Lists/ODMSRequirementLevel"
+       ShowField="RequirementLevel"
+       Overwrite="TRUE"
+       Required="FALSE"
+       Group="Custom RFLookup Columns">
+  </Field>
+
+<Field
+       ID="{844AF003-6635-4F99-8CDD-E1D81647DABF}"
+       Name="RequirementReference_Lookup"
+       DisplayName="Requirement Reference Lookup"
+       Type="Lookup"
+       EnableLookup="TRUE"
+       IsRelationship="TRUE"
+       ReadOnly="FALSE"
+       List="Lists/ODMSRequirementReference"
+       ShowField="RequirementReference"
+       Overwrite="TRUE"
+       Required="FALSE"
+       Group="Custom RFLookup Columns">
+  </Field>
+
+
+  <Field
+         ID="{3FCBF88D-C675-445B-B6C1-705D87C2C6B5}"
+         Name="ApplicationCategory_Lookup"
+         DisplayName="Application Category Lookup"
+         Type="Lookup"
+         EnableLookup="TRUE"
+         IsRelationship="TRUE"
+         ReadOnly="FALSE"
+         List="Lists/ODMSApplicationCategory"
+         ShowField="ApplicationCategory"
+         Overwrite="TRUE"
+         Required="FALSE"
+         Group="Custom RFLookup Columns">
+  </Field>
+  
+  <Field
+         ID="{893BDC14-5352-4957-9A59-33465879B5D0}"
+         Name="DriverDescription_Lookup"
+         DisplayName="Driver Description"
+         Type="Lookup"
+         EnableLookup="TRUE"
+         IsRelationship="TRUE"
+         ReadOnly="FALSE"
+         List="Lists/ODMSDriverDescription"
+         ShowField="DriverDescription"
+         Overwrite="TRUE"
+         Required="FALSE"
+         Group="Custom RFLookup Columns">
+  </Field>
+
+
+  <Field
+         ID="{D2BC1125-FBF1-40B2-B015-06061E6A5675}"
+         Name="Geography_Lookup"
+         DisplayName="Geography Lookup"
+         Type="Lookup"
+         EnableLookup="TRUE"
+         IsRelationship="TRUE"
+         ReadOnly="FALSE"
+         List="Lists/ODMSGeography"
+         ShowField="Geography"
+         Overwrite="TRUE"
+         Required="FALSE"
+         Group="Custom RFLookup Columns">
+  </Field>
+  
+
+
+  
+</Elements>

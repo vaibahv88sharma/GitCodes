@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Item (0x01) -->
+  <ContentType ID="0x0100BDB3625156D54E118C2B3919F4346B32" Name="RFRequirementLevel_CTName" Group="Custom RFContent Types" Description="My Content Type" Inherits="FALSE" Overwrite="TRUE" Version="0">
+    <FieldRefs>
+      <RemoveFieldRef  ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" />
+      <FieldRef ID="{69865571-20b5-449b-a291-a9a6abca413d}" DisplayName="Requirement Level" Required="TRUE" Name="RequirementLevel" />
+    </FieldRefs>
+  </ContentType>
+ 
+</Elements>

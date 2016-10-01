@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="ODMSApplication" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/ODMSApplication" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/" EnableContentTypes="TRUE">
+  <MetaData>
+    <ContentTypes>     
+     
+      <ContentType ID="0x0100738CDC5744E44419A2B125FB9304F3FC" Name="RFApplication_CTName" Group="Custom RFContent Types" Description="My Content Type" Inherits="FALSE" Version="0"><FieldRefs>
+        <RemoveFieldRef  ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" />
+        <FieldRef ID="{7988ca94-4498-4986-acaa-198388fa07f6}" DisplayName="Application Key" Required="FALSE" ReadOnly="TRUE" Name="ApplicationKey" />
+        <FieldRef ID="{910E6424-A2FC-423E-8945-2A99BC33282D}" DisplayName="Application Description" Required="FALSE" Name="ApplicationDescription" />
+        <FieldRef ID="{3FCBF88D-C675-445B-B6C1-705D87C2C6B5}" DisplayName="ApplicationCategory" Required="FALSE" Name="ApplicationCategory_Lookup" ReadOnly="FALSE" />
+      </FieldRefs>
+    </ContentType>
+    <ContentTypeRef ID="0x01">
+        <FieldRef ID="{E53720F8-48C6-4EEF-9900-9D3D400E1102}" DisplayName="Tip Text" Required="FALSE" Name="TipText" />        
+        <Folder TargetName="Item" />
+      </ContentTypeRef><ContentTypeRef ID="0x0120" /></ContentTypes>
+    <Fields>
+      
+    <Field ID="{7988ca94-4498-4986-acaa-198388fa07f6}" Name="ApplicationKey" DisplayName="Application Key" Type="Number" Required="FALSE" ReadOnly="TRUE" Group="Custom ReportFinder Columns"></Field>
+    <Field ID="{910E6424-A2FC-423E-8945-2A99BC33282D}" Name="ApplicationDescription" DisplayName="Application Description" Type="Text" Required="FALSE" Group="Custom ReportFinder Columns"></Field><Field ID="{E53720F8-48C6-4EEF-9900-9D3D400E1102}" Name="TipText" DisplayName="Tip Text" Type="Note" RichText="TRUE" Required="FALSE" Group="Custom ReportFinder Columns"></Field>
+    <Field ID="{3FCBF88D-C675-445B-B6C1-705D87C2C6B5}" Name="ApplicationCategory_Lookup" DisplayName="ApplicationCategory" Type="Lookup" EnableLookup="TRUE" IsRelationship="TRUE" ReadOnly="FALSE" List="Lists/ODMSApplicationCategory" ShowField="ApplicationCategory" Overwrite="TRUE" Required="FALSE" Group="Custom RFLookup Columns"></Field></Fields>
+    <Views>
+      
+      
+    <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          
+        <FieldRef Name="LinkTitleNoMenu"></FieldRef></ViewFields>
+        <Query>
+          <OrderBy>
+            
+          <FieldRef Name="Modified" Ascending="FALSE"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View><View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>          
+        <FieldRef Name="ApplicationKey" /><FieldRef Name="ApplicationDescription" /><FieldRef Name="TipText" /><FieldRef Name="ApplicationCategory_Lookup" /></ViewFields>
+        <Query>
+          <OrderBy>
+            
+          <FieldRef Name="ID"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View></Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

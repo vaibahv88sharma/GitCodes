@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{f59c5380-c4e5-4402-b365-16b42adc966c}"
+       Name="RequirementKey"
+       DisplayName="Requirement Key"
+       Type="Number"
+       Required="TRUE"
+       EnforceUniqueValues = "TRUE"
+       Indexed="TRUE"
+       Group="Custom ReportFinder Columns">
+    
+  </Field>
+  <Field
+       ID="{D3C48FED-7523-4C35-B3E8-AFCF9F7B7BC0}"
+       Name="ValueKey"
+       DisplayName="Value Key"
+       Type="Number"
+       Required="TRUE"
+       EnforceUniqueValues = "TRUE"
+       Indexed="TRUE"
+       Group="Custom ReportFinder Columns">
+  </Field>
+  <Field
+       ID="{153A0A61-F055-4601-998B-7628F671C10A}"
+       Name="RDKey"
+       DisplayName="RD Key"
+       Type="Number"
+       Required="TRUE"
+       EnforceUniqueValues = "TRUE"
+       Indexed="TRUE"
+       Group="Custom ReportFinder Columns">
+  </Field>
+  <Field
+       ID="{9C64B182-92F1-4F45-BCAC-2F85AE399DE9}"
+       Name="CoOrdinationKey"
+       DisplayName="CoOrdination Key"
+       Type="Number"
+       Required="TRUE"
+       EnforceUniqueValues = "TRUE"
+       Indexed="TRUE"
+       Group="Custom ReportFinder Columns">
+  </Field>
+  <Field
+       ID="{7988ca94-4498-4986-acaa-198388fa07f6}"
+       Name="ApplicationKey"
+       DisplayName="Application Key"
+       Type="Number"
+       Required="TRUE"
+       EnforceUniqueValues = "TRUE"
+       Indexed="TRUE"
+       Group="Custom ReportFinder Columns">
+  </Field>
+  <Field
+      ID="{47a2c8bc-bbe9-467b-b883-5772d46d888c}"
+      Name="DriverKey"
+      DisplayName="Driver Key"
+      Type="Number"
+      Required="TRUE"
+      EnforceUniqueValues = "TRUE"
+      Indexed="TRUE"
+      Group="Custom ReportFinder Columns">
+  </Field>
+  <Field
+       ID="{69865571-20b5-449b-a291-a9a6abca413d}"
+       Name="RequirementLevel"
+       DisplayName="Requirement Level"
+       Type="Text"
+       Required="TRUE"
+       EnforceUniqueValues="TRUE"
+       Indexed="TRUE"
+       Group="Custom ReportFinder Columns">
+    
+  </Field>
+  <Field
+       ID="{835f1ac3-cb34-49e7-93d4-ac2514b36d79}"
+       Name="RequirementReference"
+       DisplayName="Requirement Reference"
+       Type="Text"
+       Required="FALSE"
+       EnforceUniqueValues="TRUE"
+       Indexed="TRUE"
+       Group="Custom ReportFinder Columns">
+  </Field>
+  <Field
+       ID="{16660267-fd39-441e-bce9-b77d613990ba}"
+       Name="RequirementReferenceName"
+       DisplayName="Requirement Reference Name"
+       Type="Text"
+       Required="FALSE"
+       Group="Custom ReportFinder Columns">
+  </Field>
+  <Field
+      ID="{476B0067-7179-4C10-BE34-881CEE54BA5C}"
+      Name="RequirementReferenceOwner"
+      DisplayName="Requirement Reference Owner"
+      Type="Text"
+      Required="FALSE"
+      Group="Custom ReportFinder Columns">
+  </Field>
+  <Field
+       ID="{3a3c1e3f-a3bd-4d1f-9f9d-e12e09145254}"
+       Name="DriverDescription"
+       DisplayName="Driver Description"
+       Type="Text"
+       Required="FALSE"
+       Group="Custom ReportFinder Columns">
+    
+  </Field>
+  <Field
+       ID="{925b5896-73b5-48d2-b4ff-18421f47f30d}"
+       Name="DetailedDriverDescription"
+       DisplayName="Detailed Driver Description"
+       Type="Text"
+       Required="FALSE"
+       Group="Custom ReportFinder Columns">
+  </Field>
+
+  <Field
+       ID="{3056B102-038A-4A88-AECD-F5C4736C192A}"
+       Name="ReqDiffCode"
+       DisplayName="Requirement Differentiation Code"
+       Type="Text"
+       Required="FALSE"
+       EnforceUniqueValues = "TRUE"
+       Indexed="TRUE"
+       Group="Custom ReportFinder Columns">
+  </Field>
+
+
+
+  <Field
+       ID="{F5AB071A-E1CC-4398-BDC2-0632340DCDBD}"
+       Name="ValueCode"
+       DisplayName="Value Code"
+       Type="Text"
+       Required="FALSE"
+       Group="Custom ReportFinder Columns">
+  </Field>
+
+  
+
+  <Field
+      ID="{32975971-1F47-40D0-AE50-18CB618EB32E}"
+      Name="AppCatKey"
+      DisplayName="Application Category Key"
+      Type="Number"
+      Required="TRUE"
+      Indexed="TRUE"
+      EnforceUniqueValues = "TRUE"
+      Group="Custom ReportFinder Columns">
+  </Field>
+
+  <Field
+        ID="{6E63F421-EA88-4ADB-861D-57CBD11805BF}"
+        Name="ApplicationCategory"
+        DisplayName="Application Category"
+        Type="Text"
+        Required="False"
+        EnforceUniqueValues="TRUE"
+        Indexed="TRUE"
+        Group="Custom ReportFinder Columns">
+  </Field>
+
+
+
+  <Field
+      ID="{910E6424-A2FC-423E-8945-2A99BC33282D}"
+      Name="ApplicationDescription"
+      DisplayName="Application Description"
+      Type="Text"
+      Required="FALSE"
+      Group="Custom ReportFinder Columns">
+  </Field>
+
+ 
+
+  <Field
+      ID="{C6E65373-DF68-49E7-99EA-DBAAAC0092AA}"
+      Name="CoordinationCodeDescription"
+      DisplayName="Coordination Code Description"
+      Type="Text"
+      Required="FALSE"
+      Group="Custom ReportFinder Columns">
+  </Field>
+
+  <Field
+     ID="{1B2DFB91-7EC3-4E51-8C58-3AB508A5B208}"
+     Name="ReqDiffCodeDescription"
+     DisplayName="Requirement Diff Code Description"
+     Type="Note"
+     Required="FALSE"
+     RichText="TRUE"
+     Group="Custom ReportFinder Columns">
+  </Field>
+
+  <Field
+         ID="{6E22D5D7-C682-4577-B30F-1CC0ACDEBE65}"
+         Name="ValueDescription"
+         DisplayName="Value Description"
+         Type="Note"
+         RichText="TRUE"
+         Required="FALSE"
+         Group="Custom ReportFinder Columns">
+  </Field>
+
+  <Field
+       ID="{D5921E9A-2BC6-4CDE-8543-CBBD7D21B736}"
+       Name="EvaluationQuestion"
+       DisplayName="Evaluation Question"
+       Type="Note"
+       RichText="TRUE"
+       Required="FALSE"
+       Group="Custom ReportFinder Columns">
+  </Field>
+
+  <Field
+       ID="{E53720F8-48C6-4EEF-9900-9D3D400E1102}"
+       Name="TipText"
+       DisplayName="Tip Text"
+       Type="Note"
+       RichText="TRUE"
+       Required="FALSE"
+       Group="Custom ReportFinder Columns">
+  </Field> 
+
+  <Field
+       ID="{20625A88-4983-42BE-905B-A05E68177B19}"
+       Name="RequirementDescription"
+       DisplayName="Requirement Description"
+       Type="Note"
+       RichText="TRUE"
+       Required="FALSE"
+       Group="Custom ReportFinder Columns">
+  </Field>
+
+  <Field
+      ID="{37F1B2A6-3590-4B8A-9AD2-8853CC115ADB}"
+      Name="ImplementationInstructionsLink"
+      DisplayName="Implementation Instructions Link"
+      Type="Text"
+      Required="FALSE"
+      Group="Custom ReportFinder Columns">
+  </Field>
+
+  <Field
+      ID="{42CBA67D-3E5A-4E83-BAC4-5E37E9512140}"
+      Name="ModelPracticesLink"
+      DisplayName="Model Practices Link"
+      Type="Text"
+      Required="FALSE"
+      Group="Custom ReportFinder Columns">
+  </Field>
+
+  <Field
+      ID="{76EBED37-52B8-4829-87CD-418570B6C3CC}"
+      Name="RequirementNumber"
+      DisplayName="Requirement Number"
+      Type="Text"
+      Required="FALSE"
+      Group="Custom ReportFinder Columns">
+  </Field>
+
+  <Field
+      ID="{8EC8B1C4-E38C-40C0-8F05-AAD9604F29BD}"
+      Name="RelatedStandards"
+      DisplayName="Related Standards"
+      Type="Text"
+      Required="FALSE"
+      Group="Custom ReportFinder Columns">
+  </Field>
+
+  <Field
+      ID="{BFE18E9B-BC01-4BFA-90EF-A2AEE55214AF}"
+      Name="SelfAssessmentLink1"
+      DisplayName="Self Assessment Link"
+      Type="Text"      
+      Required="FALSE"
+      Group="Custom ReportFinder Columns">
+  </Field>
+
+   <Field
+      ID="{3D3C5BFD-A8F8-418D-A88F-171FC823B210}"
+      Name="Geography"
+      DisplayName="Geography"
+      Type="Text"
+      Required="FALSE"
+      EnforceUniqueValues = "TRUE"
+      Indexed="TRUE"
+      Group="Custom ReportFinder Columns">
+  </Field>
+
+
+  
+  
+</Elements>

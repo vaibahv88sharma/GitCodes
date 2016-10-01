@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="ODMSValueMapping" OnQuickLaunch="TRUE" TemplateType="10031" Url="Lists/ODMSValueMapping" Description="My List Instance"></ListInstance>
+</Elements>

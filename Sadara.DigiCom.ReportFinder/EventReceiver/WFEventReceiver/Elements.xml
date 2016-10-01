@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Receivers ListUrl="Lists/ODMSRequirements">
+      <Receiver>
+        <Name>WFEventReceiverItemAdded</Name>
+        <Type>ItemAdded</Type>
+        <Assembly>$SharePoint.Project.AssemblyFullName$</Assembly>
+        <Class>Sadara.DigiCom.ReportFinder.EventReceiver.WFEventReceiver.WFEventReceiver</Class>
+        <SequenceNumber>10000</SequenceNumber>
+      </Receiver>
+  </Receivers>
+</Elements>

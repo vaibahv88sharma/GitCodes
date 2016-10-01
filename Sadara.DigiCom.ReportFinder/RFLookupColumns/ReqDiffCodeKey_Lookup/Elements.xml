@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/"> 
+
+  <Field
+        ID="{7F0792F1-7507-4963-97BE-0D6C0ADBDBAE}"
+        Name="CoOrdinationCodeKey_Lookup"
+        DisplayName="CoOrdination Code Key Lookup"
+        Type="Lookup"
+        EnableLookup="TRUE"
+        IsRelationship="TRUE"
+        ReadOnly="FALSE"
+        List="Lists/ODMSCoordinationCode"
+        ShowField="CoOrdinationKey"
+        Overwrite="TRUE"
+        Required="FALSE"
+        Group="Custom RFLookup Columns">
+  </Field>
+  
+  <Field ID="{8CE8FE60-C2DD-41C2-8C20-1EAD6E7C6E4B}"
+         FieldRef="{7F0792F1-7507-4963-97BE-0D6C0ADBDBAE}"
+    Name="CoordinationCodeDescription_Lookup"
+    DisplayName="CoOrdinationKey:CoordinationCodeDescription"
+    Type="Lookup"
+    Required="FALSE"
+    ShowField="CoordinationCodeDescription"
+    List="Lists/ODMSCoordinationCode">
+  </Field>
+
+  
+
+  <Field
+        ID="{61DA0039-E878-4EEC-8DE2-B86011C03D6D}"
+        Name="ValueKey_Lookup"
+        DisplayName="Value Key Lookup"
+        Type="Lookup"
+        EnableLookup="TRUE"
+        IsRelationship="TRUE"
+        ReadOnly="FALSE"
+        List="Lists/ODMSValue"
+        ShowField="ValueKey"
+        Overwrite="TRUE"
+        Required="FALSE"
+        Group="Custom RFLookup Columns">
+  </Field>
+  <Field ID="{49699C45-C65A-4489-A29E-63EAE216D041}"
+         FieldRef="{61DA0039-E878-4EEC-8DE2-B86011C03D6D}"
+    Name="ValueCode_Lookup"
+    DisplayName="ValueKey:ValueCode"
+    Type="Lookup"
+    Required="FALSE"
+    ShowField="ValueCode"
+    List="Lists/ODMSValue">
+  </Field>
+  
+</Elements>

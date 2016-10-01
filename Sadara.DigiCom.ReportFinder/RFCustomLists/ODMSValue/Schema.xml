@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="ODMSValue" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/ODMSValue" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/" EnableContentTypes="TRUE">
+  <MetaData>
+    <ContentTypes> 
+      
+      <ContentType ID="0x0100E8ED4128ABB7413795B9D9889EEC198B" Name="RFValue_CTName" Group="Custom RFContent Types" Description="My Content Type" Inherits="FALSE" Version="0">
+      <FieldRefs>
+        <RemoveFieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" />  
+      <FieldRef ID="{D3C48FED-7523-4C35-B3E8-AFCF9F7B7BC0}" DisplayName="Value Key" Required="FALSE" ReadOnly="TRUE" Name="ValueKey" />
+    <FieldRef ID="{F5AB071A-E1CC-4398-BDC2-0632340DCDBD}" DisplayName="Value Code" Required="FALSE" Name="ValueCode" />
+        <FieldRef ID="{6E22D5D7-C682-4577-B30F-1CC0ACDEBE65}" DisplayName="Value Description" Required="FALSE" Name="ValueDescription" /></FieldRefs>
+      </ContentType></ContentTypes>
+    <Fields>
+      
+    
+    
+    <Field ID="{D3C48FED-7523-4C35-B3E8-AFCF9F7B7BC0}" Name="ValueKey" DisplayName="Value Key" Type="Number" Required="FALSE" ReadOnly="TRUE" Group="Custom ReportFinder Columns"></Field>
+      <Field ID="{F5AB071A-E1CC-4398-BDC2-0632340DCDBD}" Name="ValueCode" DisplayName="Value Code" Type="Text" Required="TRUE" Group="Custom ReportFinder Columns"></Field><Field ID="{6E22D5D7-C682-4577-B30F-1CC0ACDEBE65}" Name="ValueDescription" DisplayName="Value Description" Type="Note" RichText="TRUE" Required="FALSE" Group="Custom ReportFinder Columns"></Field></Fields>
+    <Views>   
+      
+    
+      <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>          
+        <FieldRef Name="LinkTitleNoMenu"></FieldRef></ViewFields>
+        <Query>
+          <OrderBy>            
+          <FieldRef Name="Modified" Ascending="FALSE"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View><View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>          
+        <FieldRef Name="ValueKey" /><FieldRef Name="ValueCode" /><FieldRef Name="ValueDescription" /></ViewFields>
+        <Query>
+          <OrderBy>            
+          <FieldRef Name="ID"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View></Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

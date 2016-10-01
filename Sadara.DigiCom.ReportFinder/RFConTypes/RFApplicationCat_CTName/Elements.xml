@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Item (0x01) -->
+  <ContentType ID="0x010077793B10031A4D6B9E570C75A37FC1FB" Name="RFApplicationCat_CTName" Group="Custom RFContent Types" Description="My Content Type" Inherits="FALSE" Overwrite="TRUE" Version="0">
+    <FieldRefs>
+      <RemoveFieldRef  ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" />
+      <FieldRef ID="{32975971-1F47-40D0-AE50-18CB618EB32E}" DisplayName="Application Category Key" Required="TRUE" Name="AppCatKey" />
+      <FieldRef ID="{6E63F421-EA88-4ADB-861D-57CBD11805BF}" DisplayName="Application Category" Required="False" Name="ApplicationCategory" />
+      <FieldRef ID="{D5921E9A-2BC6-4CDE-8543-CBBD7D21B736}" DisplayName="Evaluation Question" Required="FALSE" Name="EvaluationQuestion" />
+    </FieldRefs>
+  </ContentType>
+</Elements>

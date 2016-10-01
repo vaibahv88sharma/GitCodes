@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Item (0x01) -->
+  <ContentType ID="0x0100D48AA484EEA6470696028A8902A459F3" Name="RFApplicationMapping_CTName" Group="Custom RFContent Types" Description="My Content Type" Inherits="FALSE" Overwrite="TRUE" Version="0">
+    <FieldRefs>
+      <RemoveFieldRef  ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" />
+      <FieldRef ID="{37B0934A-6190-4447-8668-3A2DE904CCBE}" DisplayName="Requirement Key Lookup" Required="FALSE" Name="RequirementKey_Lookup" ReadOnly="FALSE" />
+      <FieldRef ID="{A9AC5C4B-D397-483D-8975-2BA8FD6B0D60}" DisplayName="Application Key Lookup" Required="FALSE" Name="ApplicationKey_Lookup" ReadOnly="FALSE" />
+      <FieldRef ID="{67B562C8-D23C-4C90-9184-8345FBE4AE41}" DisplayName="ApplicationKey:ApplicationDescription" Required="FALSE" Name="ApplicationDescription_Lookup" />
+    </FieldRefs>
+  </ContentType>
+</Elements>

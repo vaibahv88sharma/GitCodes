@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="ODMSDriver" OnQuickLaunch="TRUE" TemplateType="10023" Url="Lists/ODMSDriver" Description="My List Instance"></ListInstance>
+</Elements>
