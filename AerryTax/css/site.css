@@ -1,0 +1,60 @@
+/*body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+*/
+
+
+/*  Nav Bar */
+body {
+    /*margin: 30px 0px;
+	margin: 0px 30px ;*/
+}
+.navbar-default .navbar-nav > li.dropdown:hover > a, 
+.navbar-default .navbar-nav > li.dropdown:hover > a:hover,
+.navbar-default .navbar-nav > li.dropdown:hover > a:focus {
+    background-color: rgb(231, 231, 231);
+    color: rgb(85, 85, 85);
+}
+li.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+/* Bootstrap Tabs*/
+
+#exTab3 .nav-pills > li > a {
+  /*border-radius: 4px 4px 0 0 ;*/
+}
+
+#exTab3 .tab-content {
+  /*color : white;
+  background-color: #428bca;
+  padding : 5px 15px;*/
+}
+
+.row > ul > li > a > img {
+    height: auto; 
+    width: auto; 
+    max-width: 300px; 
+    max-height: 300px;	
+}
+.aLogo {
+    background-color: white;	
+}
+.iLogo{
+    height: auto; 
+    width: auto; 	
+    max-width: 50px; 
+    max-height: 50px;	
+}
+.lastSection {
+
+}
+
+.lastSectionRow{
+	
+}
