@@ -1,10 +1,17 @@
 ﻿angular.module('homeModule').directive('homeThumbnails', function () {
     return {
-        replace: true,
+        //replace: true,
         restrict: "E",
         scope:false,
-        require: "?ngModel",
-        templateUrl: "../HTML/Templates/directives/nwCategorySelector.html",
+        //scope: {
+        //    image: "=",
+        //    title: "=",
+        //    description: "=",
+        //},
+        //require: "?ngModel",
+        templateUrl: "template/directive/homeThumbnails.html",
+
+
         //link: function (scope, element, attrs, ngModelCtrl) {
         //    var activeCategory = {};
 
@@ -42,5 +49,7 @@
         //    //</div>
 
         //}
+
+
     };
 });

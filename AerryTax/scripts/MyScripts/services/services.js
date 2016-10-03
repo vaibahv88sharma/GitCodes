@@ -21,7 +21,7 @@
         }
         else {
             return $resource(
-                "scripts/MyScripts/source.json",
+                "/scripts/MyScripts/source.json",
                 {},
                 {
                     query: {

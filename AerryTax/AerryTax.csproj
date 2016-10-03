@@ -15,7 +15,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AerryTax</RootNamespace>
     <AssemblyName>AerryTax</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -82,10 +83,6 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
@@ -94,6 +91,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="location.html" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -107,11 +105,13 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="scripts\MyScripts\controllers\contactController.js" />
     <Content Include="scripts\MyScripts\controllers\homeController.js" />
     <Content Include="scripts\MyScripts\default\angular-resource.min.js.map" />
     <Content Include="scripts\MyScripts\default\angular-route.min.js.map" />
     <Content Include="scripts\MyScripts\default\angular.min.js.map" />
     <Content Include="scripts\MyScripts\directives\homeThumbnails.js" />
+    <Content Include="scripts\MyScripts\default\ng-map.min.js" />
     <Content Include="scripts\MyScripts\services\services.js" />
     <Content Include="scripts\MyScripts\source.json" />
     <None Include="Web.Debug.config">
@@ -159,6 +159,7 @@
     <Content Include="scripts\MyScripts\module.js" />
     <Content Include="scripts\MyScripts\routes.js" />
     <Content Include="template\directive\homeThumbnails.html" />
+    <Content Include="template\view\contact.html" />
     <Content Include="template\view\home.html" />
     <Content Include="Web.config" />
   </ItemGroup>

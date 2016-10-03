@@ -20,11 +20,20 @@
       <script src="scripts/MyScripts/default/angular-resource.js"></script>
       <script src="scripts/MyScripts/default/bootstrap.min.js"></script>
       <!--    <script src="../Scripts/ui-bootstrap-tpls.min.js"></script>	-->
+      <!--<script src="http://maps.google.com/maps/api/js?sensor=false"></script>-->
+      <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAZiMjB-7vdiuQQ3_I7qRPtsHoOY9yGMKI"></script>
+      <script src="scripts/MyScripts/default/ng-map.min.js"></script>
+
+
       <script src="scripts/MyScripts/module.js"></script>
       <script src="scripts/MyScripts/routes.js"></script>
-      <!--<script src="scripts/MyScripts/directives/homeThumbnails.js"></script>-->
+
+      <script src="scripts/MyScripts/directives/homeThumbnails.js"></script>      
       <script src="scripts/MyScripts/controllers/homeController.js"></script>
+      <script src="scripts/MyScripts/controllers/contactController.js"></script>
+      <!--<script src="scripts/MyScripts/directives/homeThumbnails.js"></script>-->
       <script src="scripts/MyScripts/services/services.js"></script>
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -73,7 +82,7 @@
                               <li><a href="https://www.ato.gov.au/Individuals/Lodging-your-tax-return/Lodge-online/e-tax/">e-tax Essential</a></li>
                           </ul>
                       </li>
-                      <li><a href="contact.html">Contact</a></li>
+                      <li><a href="#/contact">Contact</a></li>
                   </ul>
               </div><!-- /.navbar-collapse -->
           </div><!-- /.container-fluid -->
@@ -84,7 +93,7 @@
 
               <div><ng-view></ng-view></div>
 
-              <hr />
+              <!--<hr />
               <div class="row">
                   <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                       <h2>Helpful Tools</h2>
@@ -152,7 +161,7 @@
                           <span class="fa fa-twitter"></span><div class="text-center">Connect with Twitter</div>
                       </a>
                   </div>
-              </div>
+              </div>-->
           </div>
       </section>
 
