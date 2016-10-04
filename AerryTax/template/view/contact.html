@@ -1,13 +1,13 @@
 ﻿<div class="row">
-    <h2>Contact Information</h2>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <h2>Contact Information</h2>
+    </div>
+</div>
+<div class="row">
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <h2>Contact</h2>
-            <!--<h3>Aerry Tax & Accounting Pty Ltd</h3>
-    <p>Unit 1-6E, Level 1, 77-79 Ashley Street</p>
-    <p>Braybrook, VIC, 3019</p>
-    <br />-->
-            <table class="table table-condensed">
+            <table class="table borderless">
                 <tr>
                     <th>Aerry Tax & Accounting Pty Ltd</th>
                 </tr>
@@ -18,39 +18,37 @@
                     <td>Braybrook, VIC, 3019</td>
                 </tr>
                 <tr>
-                    <td><br /></td>
+                    <!--<td><br /></td>-->
                 </tr>
                 <tr>
-                    <table class="table">
-                        <tr>
-                            <td>Phone :</td>
-                            <td>03 9687 0010 - 30</td>
-                        </tr>
-                        <tr>
-                            <td>Fax No:</td>
-                            <td>03 8676 1973</td>
-                        </tr>
-                        <tr>
-                            <td>Mobile :</td>
-                            <td>0401150578</td>
-                        </tr>
-                        <tr>
-                            <td>Email :</td>
-                            <td>info@ataccounting.com.au</td>
-                        </tr>
-                        <tr>
-                            <td><br /></td>
-                            <td><br /></td>
-                        </tr>
-                        <tr>
-                            <td>Office Hours:</td>
-                            <td>Monday to Friday 10 Am - 6 Pm</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>Weekends by Appointment only.</td>                            
-                        </tr>
-                    </table>
+                    <td>
+                        <table class="table borderless">
+                            <tr>
+                                <td>Phone :</td>
+                                <td>03 9687 0010 - 30</td>
+                            </tr>
+                            <tr>
+                                <td>Fax No:</td>
+                                <td>03 8676 1973</td>
+                            </tr>
+                            <tr>
+                                <td>Mobile :</td>
+                                <td>0401150578</td>
+                            </tr>
+                            <tr>
+                                <td>Email :</td>
+                                <td>info@ataccounting.com.au</td>
+                            </tr>
+                            <tr>
+                                <td>Office Hours:</td>
+                                <td>Monday to Friday 10 Am - 6 Pm</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Weekends by Appointment only.</td>
+                            </tr>
+                        </table>
+                    </td>
                 </tr>
                 <tr>
                     <td>
@@ -60,70 +58,74 @@
                             <control name="overviewMap" opened="true" />
                         </ng-map>
                         <!--<ng-map zoom="11" center="[-37.790437, 144.862211]">
-                        </ng-map>-->
+                </ng-map>-->
                     </td>
-                </tr>                
+                </tr>
             </table>
         </div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-        <form id="contact-form" method="post" action="contact.php" role="form">
-
-            <div class="messages"></div>
-
-            <div class="controls">
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="form_name">First Name *</label>
-                            <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
-                            <div class="help-block with-errors"></div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="form_lastname">Last Name *</label>
-                            <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
-                            <div class="help-block with-errors"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="form_email">Email *</label>
-                            <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
-                            <div class="help-block with-errors"></div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="form_phone">Phone</label>
-                            <input id="form_phone" type="number" min="1" max="9" name="phone" class="form-control" placeholder="Please enter your phone" required="required" data-error="Valid Phone is required.">
-                            <div class="help-block with-errors"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <label for="form_message">Message *</label>
-                            <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please,leave us a message."></textarea>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <input type="submit" class="btn btn-success btn-send" value="Send message">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <p class="text-muted"><strong>*</strong> These fields are required. Contact form template by <a href="http://bootstrapious.com" target="_blank">Bootstrapious</a>.</p>
-                    </div>
-                </div>
+        <h2>Send Email</h2>
+        <!--<div class="messages" style="border:5px solid #0e0e0e; padding:10px; border-radius: 25px;">-->
+        <div class="contactSendEmail">
+            <div class="contactContactUs">
+                <h3>Contact Us</h3>
             </div>
+            <form id="contact-form" method="post" action="contact.php" role="form">
 
-        </form>
+                <div class="controls">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="form_name">First Name *</label>
+                                <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="form_lastname">Last Name *</label>
+                                <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="form_email">Email *</label>
+                                <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="form_phone">Phone</label>
+                                <input id="form_phone" type="number" min="1" max="9" name="phone" class="form-control" placeholder="Please enter your phone" required="required" data-error="Valid Phone is required.">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="form_message">Message *</label>
+                                <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <input type="submit" class="btn btn-success btn-send" value="Send message">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p class="text-muted"><strong>*</strong> These fields are required.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
     </div>
 </div>

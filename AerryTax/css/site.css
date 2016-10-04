@@ -16,18 +16,37 @@ body {
 }
 .navbar-default .navbar-nav > li.dropdown:hover > a, 
 .navbar-default .navbar-nav > li.dropdown:hover > a:hover,
-.navbar-default .navbar-nav > li.dropdown:hover > a:focus {
-    background-color: rgb(231, 231, 231);
+.navbar-default .navbar-nav > li.dropdown:hover > a:focus,
+.navbar-default .navbar-nav > li:hover > a, 
+.navbar-default .navbar-nav > li:hover > a:focus, 
+.navbar-default .navbar-nav > li.dropdown > ul > li > a:hover {
+    /*background-color: rgb(231, 231, 231);*/
+    background-color: #178acc;
     color: rgb(85, 85, 85);
 }
 li.dropdown:hover > .dropdown-menu {
     display: block;
 }
 
+.navbar-default .navbar-nav > li.dropdown > ul > li > a{
+    color: black;
+}
+/*.navbar .navbar-default .navbar-static-top {
+    background-color:red;
+}*/
 /* Bootstrap Tabs*/
 
 #exTab3 .nav-pills > li > a {
   /*border-radius: 4px 4px 0 0 ;*/
+}
+
+/* Footer */
+footer {
+    background-color:#178acc;
+    margin-top: 2em;
+    padding: 1em;
+    position: relative;
+    color:white;    
 }
 
 #exTab3 .tab-content {
@@ -57,4 +76,29 @@ li.dropdown:hover > .dropdown-menu {
 
 .lastSectionRow{
 	
+}
+
+/*Contact Form*/
+/*.borderless tbody tr td, .borderless tbody tr th, .borderless thead tr th {
+    border: none;
+}*/
+    table.borderless td,table.borderless th{
+     border: none !important;
+}
+table table td:nth-child(odd) {
+    width: 25%;
+}
+table  table {
+    margin-left: -0.5em;
+}
+.contactSendEmail {
+    border:5px solid #0e0e0e; 
+    padding:10px; 
+    border-radius: 25px;
+}
+.contactContactUs {
+    padding:0 5px; 
+    margin:-45px 0 0 30px; 
+    background:#fff; 
+    width: 9.5em;
 }
