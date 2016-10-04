@@ -34,10 +34,26 @@ li.dropdown:hover > .dropdown-menu {
 /*.navbar .navbar-default .navbar-static-top {
     background-color:red;
 }*/
-/* Bootstrap Tabs*/
 
+/* Bootstrap Tabs*/
 #exTab3 .nav-pills > li > a {
   /*border-radius: 4px 4px 0 0 ;*/
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    color:black;
+    background-color:white;
+}
+.nav-pills > li > a > img {
+    zoom:35%
+}
+
+/*Index Page*/
+.homeContainer {
+    margin-left : 1em;
+    margin-right : 1em;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 /* Footer */
