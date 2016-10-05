@@ -91,6 +91,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="img\background1.jpg" />
+    <Content Include="img\background2.jpg" />
+    <Content Include="img\background3.jpg" />
     <Content Include="location.html" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
