@@ -61,6 +61,9 @@ li.dropdown:hover > .dropdown-menu {
 .nav-pills > li > a {
     height: 9.3em;
     background-color:#fdfdfd;
+    font-weight: bold;
+    color:black;
+    padding-top:9px;
 }
 .nav-pills > li > a > img {
     zoom:35%;
@@ -68,6 +71,10 @@ li.dropdown:hover > .dropdown-menu {
     border-radius: 25px;
     background: white;
     padding: 20px; 
+    margin-bottom: 15px;
+}
+.nav-pills {
+    padding: 0 18px !important;
 }
 
 /*Index Page*/
@@ -89,8 +96,8 @@ footer {
 
 #exTab3 .tab-content {
   /*color : white;
-  background-color: #428bca;
-  padding : 5px 15px;*/
+  background-color: #428bca;*/
+  padding : 5px 15px;
 }
 
 .row > ul > li > a > img {
@@ -100,14 +107,18 @@ footer {
     max-height: 300px;	
 }
 .aLogo {
-    background-color: white;	
+    background-color: white;
+    /*float: left; padding-top: 36px; padding-left:20px*/	
 }
 .iLogo{
     height: auto; 
     width: auto; 	
     max-width: 50px; 
     max-height: 50px;	
+    /*float: left*/
 }
+
+/*Home thumbnails Directive*/
 .lastSection {
     height: 28em;
     background-color: #333333;         
@@ -121,6 +132,8 @@ footer {
     border:none;
     border-bottom: thick dotted white;
     border-width: 2px;
+    padding-bottom:5px;
+    margin-bottom:5px;
     /*height: 4.3em;*/
     /*display: flex;
     align-items: center;*/
@@ -133,7 +146,6 @@ footer {
     background-color: #333333;
     color:red;
 }
-
 .lastSectionRow{	
 }
 
