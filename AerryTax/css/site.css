@@ -31,24 +31,61 @@ li.dropdown:hover > .dropdown-menu {
 .navbar-default .navbar-nav > li.dropdown > ul > li > a{
     color: black;
 }
+.navbar-default .navbar-nav > li > a{
+    /*color: white ;*/
+    height:110px ;
+    align-items: center;
+    display: flex;
+}
+#navBar1 .navbar-header,#navBar1 .navbar-header > a  {
+    height:110px ;
+}
 /*.navbar-default .navbar-nav > li.active > a{
     color: black ;
     background-color: white;
     border-bottom: thick  black;
-}
-.navbar-default .navbar-nav > li > a{
-    color: white ;
 }*/
+@media only screen and (max-width: 767px) {
+    .navbar-default .navbar-nav > li > a{
+        /*color: white ;*/
+        height:50px ;
+    }
+}
+
+.homeLogo {
+
+}
+.aLogo {
+    background-color: white;
+    /*float: left;  
+    padding-left:20px;
+    padding-top: 100px;
+    position: absolute;*/
+}
+.iLogo{
+    /*height: auto; 
+    width: auto;*/ 	
+    /*max-width: 100px; 
+    max-height: 100px;*/
+    /*float: left;
+    margin-top: -80px;*/
+}
+#bs-example-navbar-collapse-1 {
+    /*margin-left:165px;*/
+}
 
 /* Bootstrap Tabs*/
 #exTab3 .nav-pills > li > a {
   /*border-radius: 4px 4px 0 0 ;*/
 }
+#exTab3 {
+    /*margin-top:100px;*/
+}
 
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
     color:black;
     /*background-color:#6c7e89;*/
-    background-color:#8F979A;
+    background-color:white;
     cursor : pointer;
     border-bottom: thick  black;
     border-style: solid;
@@ -59,7 +96,7 @@ li.dropdown:hover > .dropdown-menu {
     cursor : pointer;
 }
 .nav-pills > li > a {
-    height: 9.3em;
+    height: 9.7em;
     background-color:#fdfdfd;
     font-weight: bold;
     color:black;
@@ -94,11 +131,22 @@ footer {
     color:white;    
 }
 
+/*Home thumbnails Directive*/
 #exTab3 .tab-content {
   /*color : white;
   background-color: #428bca;*/
   padding : 5px 15px;
 }
+#exTab3 .tab-pane >div > div > a {
+  background:url(/img/background1.jpg);
+  border:none;
+}
+#exTab3 .tab-pane >div > div > a > img{
+    border: 5px solid black;
+    padding: 3px;
+    border-radius: 25px;
+}
+
 
 .row > ul > li > a > img {
     height: auto; 
@@ -106,19 +154,6 @@ footer {
     max-width: 300px; 
     max-height: 300px;	
 }
-.aLogo {
-    background-color: white;
-    /*float: left; padding-top: 36px; padding-left:20px*/	
-}
-.iLogo{
-    height: auto; 
-    width: auto; 	
-    max-width: 50px; 
-    max-height: 50px;	
-    /*float: left*/
-}
-
-/*Home thumbnails Directive*/
 .lastSection {
     height: 28em;
     background-color: #333333;         
