@@ -115,8 +115,10 @@
     <Content Include="scripts\MyScripts\default\angular.min.js.map" />
     <Content Include="scripts\MyScripts\directives\homeThumbnails.js" />
     <Content Include="scripts\MyScripts\default\ng-map.min.js" />
+    <Content Include="scripts\MyScripts\services\contactService.js" />
     <Content Include="scripts\MyScripts\services\services.js" />
     <Content Include="scripts\MyScripts\source.json" />
+    <Content Include="scripts\MyScripts\sourceContact.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -71,51 +71,69 @@
             <div class="contactContactUs">
                 <h3>Contact Us</h3>
             </div>
-            <form id="contact-form" method="post" action="contact.php" role="form">
+            <!--< id="contact-form" method="post" action="contact.php" role="form">-->
+            <form name="ContactForm" id="ContactForm" method="post" role="form" novalidate ng-submit="submitForm(contact)">
 
                 <div class="controls">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="form_name">First Name *</label>
-                                <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
-                                <div class="help-block with-errors"></div>
+                            <div class="form-group" ng-class="{'has-error': ContactForm.txtName.$invalid && ContactForm.txtName.$dirty}">
+                                <label for="txtName" class="col-sm-2 control-label">First Name</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="txtName" maxlength="100" placeholder="Enter First Name *" required ng-model="contact.fName">
+                                    <span ng-show="ContactForm.txtName.$invalid && !ContactForm.txtName.$pristine" class="text-danger">Enter First name</span>
+                                    <!--<div class="help-block with-errors"></div>-->
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="form_lastname">Last Name *</label>
-                                <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
-                                <div class="help-block with-errors"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="form_email">Email *</label>
-                                <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
-                                <div class="help-block with-errors"></div>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="form_phone">Phone</label>
-                                <input id="form_phone" type="number" min="1" max="9" name="phone" class="form-control" placeholder="Please enter your phone" required="required" data-error="Valid Phone is required.">
-                                <div class="help-block with-errors"></div>
+                            <div class="form-group" ng-class="{'has-error': ContactForm.txtLastName.$invalid && ContactForm.txtLastName.$dirty}">
+                                <label for="txtLastName" class="col-sm-2 control-label">Last Name</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="txtLastName" maxlength="100" placeholder="Enter Last Name *" required ng-model="contact.lName">
+                                    <span ng-show="ContactForm.txtLastName.$invalid && !ContactForm.txtLastName.$pristine" class="text-danger">Enter First Last name</span>
+                                </div>
+                                <!--<div class="help-block with-errors"></div>-->
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="form_message">Message *</label>
-                                <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please,leave us a message."></textarea>
-                                <div class="help-block with-errors"></div>
+                            <div class="form-group" ng-class="{'has-error': ContactForm.txtEmail.$invalid && ContactForm.txtEmail.$dirty}">
+                                <label for="txtEmail" class="col-sm-2 control-label">Email</label>
+                                <div class="col-sm-10">
+                                    <input type="email" class="form-control" name="txtEmail" maxlength="100" placeholder="Enter Email *" required ng-model="contact.email">
+                                    <span ng-show="ContactForm.txtEmail.$invalid && !ContactForm.txtEmail.$pristine" class="text-danger">Enter valid email</span>
+                                </div>
+                                <!--<div class="help-block with-errors"></div>-->
                             </div>
                         </div>
                         <div class="col-md-12">
-                            <input type="submit" class="btn btn-success btn-send" value="Send message">
+                            <div class="form-group" ng-class="{'has-error': ContactForm.txtPhone.$invalid && ContactForm.txtPhone.$dirty}">
+                                <label for="txtPhone" class="col-sm-2 control-label">Phone</label>
+                                <div class="col-sm-10">
+                                    <input type="number" class="form-control" name="txtPhone" maxlength="20" placeholder="Enter Phone Number *" required ng-model="contact.phone">
+                                    <span ng-show="ContactForm.txtPhone.$invalid && !ContactForm.txtPhone.$pristine" class="text-danger">Enter a valid phone number</span>
+                                </div>
+                                <!--<div class="help-block with-errors"></div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group" ng-class="{'has-error': ContactForm.messageForm.$invalid && ContactForm.messageForm.$dirty}">
+                                <label for="messageForm" class="col-sm-2 control-label">Message</label>
+                                <div class="col-sm-10">
+                                    <textarea name="messageForm" class="form-control" placeholder="Message for me *" rows="4" required ng-model="contact.message"></textarea>
+                                    <span ng-show="ContactForm.messageForm.$invalid && !ContactForm.messageForm.$pristine" name="messageForm" class="text-danger">Enter a valid message</span>
+                                    <!--<div class="help-block with-errors"></div>-->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <!--<input type="submit" class="btn btn-success btn-send" value="Send message">-->
+                            <input type="submit" class="btn btn-success btn-send" value="Submit" ng-disabled="ContactForm.$invalid" />
                         </div>
                     </div>
                     <div class="row">
@@ -129,3 +147,13 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+	//alert("hi");
+	$('#ContactForm').submit(function () {
+		 //submitForm(contact);
+		 //alert("reached");
+		 return false;
+	});
+//alert("Hi2");
+</script> 

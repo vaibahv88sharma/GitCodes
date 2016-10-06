@@ -40,6 +40,9 @@ li.dropdown:hover > .dropdown-menu {
 #navBar1 .navbar-header,#navBar1 .navbar-header > a  {
     height:110px ;
 }
+#navBar1 .navbar-header > button {
+    margin-top: 35px;
+}
 /*.navbar-default .navbar-nav > li.active > a{
     color: black ;
     background-color: white;
@@ -51,6 +54,7 @@ li.dropdown:hover > .dropdown-menu {
         height:50px ;
     }
 }
+
 
 .homeLogo {
 
@@ -183,7 +187,11 @@ footer {
 }
 .lastSectionRow{	
 }
-
+@media only screen and (max-width: 300px) {
+    .social-buttons > a > div {
+        font-size: 0.9em !important;
+    }
+}
 /*Contact Form*/
 /*.borderless tbody tr td, .borderless tbody tr th, .borderless thead tr th {
     border: none;
