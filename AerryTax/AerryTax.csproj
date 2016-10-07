@@ -119,6 +119,7 @@
     <Content Include="scripts\MyScripts\services\services.js" />
     <Content Include="scripts\MyScripts\source.json" />
     <Content Include="scripts\MyScripts\sourceContact.json" />
+    <Content Include="scripts\MyScripts\data.php" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -166,7 +167,9 @@
     <Content Include="template\directive\homeThumbnails.html" />
     <Content Include="template\view\contact.html" />
     <Content Include="template\view\home.html" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />

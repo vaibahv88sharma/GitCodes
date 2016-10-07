@@ -1,5 +1,6 @@
 ﻿angular.module('homeModule').factory('contactService', ["$http", "$q", "$resource", function ($http, $q, $resource) {
 
+/* Resource */
     function getAllContactResource(id) {
         if (id) {
             return $resource(
@@ -21,7 +22,7 @@
         }
         else {
             return $resource(
-                "/scripts/MyScripts/sourceContact.json",
+                "/scripts/MyScripts/data.php",
                 {},
                 {
                     query: {
@@ -32,7 +33,8 @@
                         //},
                     },
                     post: {
-                        method: "POST",
+                        method: 'post',
+                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                     }
                 }
             );
@@ -73,16 +75,43 @@
             function (data) {
                 deferred.resolve(data);
             }, function (error) {
-                console.log(error.data.error.message.value);
+                console.log(error.data);
                 console.log(error);
                 deferred.reject(error);
             });
         return deferred.promise;
     }
 
+/* HTTP */
+
+    var postNewContactHttp = function (data) {
+										
+        var deferred = $q.defer();
+        $http({
+            url: "/scripts/MyScripts/data.php",
+            method: 'POST',
+            //processData: false,
+            data: JSON.stringify(data),
+            //transformRequest: angular.identity,
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            }
+        })
+            .success(function (result) {
+                deferred.resolve(result);
+            })
+            .error(function (result, status) {
+                deferred.reject(status);
+            });
+        return deferred.promise;
+    };
+
+/* Return Method */
+
     return {
         getAllResource: getAllResource,
         getSelContactResource: getSelContactResource,
-        postNewContactResource: postNewContactResource
+        postNewContactResource: postNewContactResource,
+        postNewContactHttp : postNewContactHttp
     };
 }]);

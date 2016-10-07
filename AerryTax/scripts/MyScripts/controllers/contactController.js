@@ -7,11 +7,13 @@
     $scope.map = { center: { latitude: -37.790437, longitude: 144.862211 }, zoom: 8 };
 
 
+
     $scope.submitForm = function (contact) {
-        debugger;
         if ($scope.ContactForm.$valid) {
-            debugger;
-            contactService.postNewContactResource(contact).then(function (data) {
+
+            contactService.postNewContactHttp(contact)
+            //contactService.postNewContactResource(contact)
+                .then(function (data) {
                 //$scope.isSubmitting = false;
                 //$location.path("/notes");
                 alert("Success");
