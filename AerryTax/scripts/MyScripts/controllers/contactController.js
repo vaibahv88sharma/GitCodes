@@ -6,9 +6,42 @@
     //});
     $scope.map = { center: { latitude: -37.790437, longitude: 144.862211 }, zoom: 8 };
 
-
+	$scope.contact={};
+	
 
     $scope.submitForm = function (contact) {
+	//$scope.submitForm = function (contact) {
+		//JsonSerializer serializer = new JsonSerializer();
+                $.ajax({
+                    url         : "//vaibahv88sharma.github.io/TarunAerry/scripts/MyScripts/data.php",//"./scripts/MyScripts/data.php",
+                    dataType    : "jsonp",
+                    crossDomain : true,
+                    cache       : false,
+                    type        : "POST",
+                    data: JSON.stringify(contact),//contact.serialize(),
+                    contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+                    processData : false,
+                    //contentType : 'application/json',
+                    success: function (data, textStatus, jqXHR){
+                        if(data){
+                            console.log(data.message);
+                        }
+                    },
+
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        console.log('The following error occurred: ' + textStatus, errorThrown);
+                    },
+
+                    complete: function (jqXHR, textStatus) {
+                    }
+                });        
+    };
+
+
+	
+	
+
+    $scope.submitForm1 = function (contact) {
         if ($scope.ContactForm.$valid) {
 
             contactService.postNewContactHttp(contact)
