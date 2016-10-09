@@ -216,3 +216,40 @@ table  table {
     background:#fff; 
     width: 9.5em;
 }
+
+/*Taxation View*/
+/*.taxation  {
+   border-top: 4px solid;
+   padding : 0px 5px;
+}
+.heading  {
+    border: thick  black;
+    width: 19.5em;
+    background:#fff;
+    margin:-45px 0 0 -10px; 
+    background-color: white;
+}*/
+.taxation  {
+    /*width: 300px;*/
+    border-top: 10px solid black;
+    position: relative;
+}
+
+.taxation:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 300px;
+    top: -10px;
+    right: 0px;
+    border: 10px solid white;
+}
+.heading {
+        margin:-3.1em 0 0 -1.1em;
+        background-color: white;
+        width: 100px;
+}
+.parra {
+    padding-left : 3em;
+    padding-right : 3em;
+}

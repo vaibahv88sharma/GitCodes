@@ -11,4 +11,8 @@
 		    templateUrl: "template/view/contact.html",
 		    controller: "contactController"
 		})
+		.when('/taxation', {
+		    templateUrl: "template/view/taxation.html",
+		    controller: "taxationController"
+		})
 });

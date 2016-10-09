@@ -109,10 +109,12 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="scripts\MyScripts\controllers\contactController.js" />
+    <Content Include="scripts\MyScripts\controllers\taxationController.js" />
     <Content Include="scripts\MyScripts\controllers\homeController.js" />
     <Content Include="scripts\MyScripts\default\angular-resource.min.js.map" />
     <Content Include="scripts\MyScripts\default\angular-route.min.js.map" />
     <Content Include="scripts\MyScripts\default\angular.min.js.map" />
+    <Content Include="scripts\MyScripts\directives\taxationThumbnails.js" />
     <Content Include="scripts\MyScripts\directives\homeThumbnails.js" />
     <Content Include="scripts\MyScripts\default\ng-map.min.js" />
     <Content Include="scripts\MyScripts\services\contactService.js" />
@@ -164,9 +166,11 @@
     <Content Include="scripts\MyScripts\default\ui-bootstrap-tpls.min.js" />
     <Content Include="scripts\MyScripts\module.js" />
     <Content Include="scripts\MyScripts\routes.js" />
+    <Content Include="template\directive\taxationThumbnails.html" />
     <Content Include="template\directive\homeThumbnails.html" />
     <Content Include="template\view\contact.html" />
     <Content Include="template\view\home.html" />
+    <Content Include="template\view\taxation.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
