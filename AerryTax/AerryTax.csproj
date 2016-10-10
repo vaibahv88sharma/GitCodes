@@ -117,11 +117,13 @@
     <Content Include="scripts\MyScripts\directives\taxationThumbnails.js" />
     <Content Include="scripts\MyScripts\directives\homeThumbnails.js" />
     <Content Include="scripts\MyScripts\default\ng-map.min.js" />
+    <Content Include="scripts\MyScripts\services\taxationService.js" />
     <Content Include="scripts\MyScripts\services\contactService.js" />
     <Content Include="scripts\MyScripts\services\services.js" />
     <Content Include="scripts\MyScripts\source.json" />
     <Content Include="scripts\MyScripts\sourceContact.json" />
     <Content Include="scripts\MyScripts\data.php" />
+    <Content Include="scripts\MyScripts\sourceTaxation.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

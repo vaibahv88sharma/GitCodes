@@ -1,7 +1,7 @@
 ﻿angular.module('homeModule').directive('taxationThumbnails', function () {
     return {
         //replace: true,
-        restrict: "E",
+        restrict: "AE",
         scope:false,
         //scope: {
         //    image: "=",
@@ -10,8 +10,6 @@
         //},
         //require: "?ngModel",
         templateUrl: "template/directive/taxationThumbnails.html",
-
-
 
     };
 });

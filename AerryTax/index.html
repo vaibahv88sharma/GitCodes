@@ -36,6 +36,7 @@
       <!--<script src="scripts/MyScripts/directives/homeThumbnails.js"></script>-->
       <script src="scripts/MyScripts/services/services.js"></script>
       <script src="scripts/MyScripts/services/contactService.js"></script>
+      <script src="scripts/MyScripts/services/taxationService.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -65,11 +66,11 @@
                               <li class="dropdown">
                                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services <span class="caret"></span></a>
                                   <ul class="dropdown-menu">
-                                      <li><a href="#/taxation">Taxation</a></li>
-                                      <li><a href="#/taxation">Business Structure <br>– Advice & Set up</a></li>
-                                      <li><a href="#/taxation">Accounting & Bookkeeping</a></li>
-                                      <li><a href="#/taxation">Payroll</a></li>
-                                      <li><a href="#/taxation">Planning & Valuation</a></li>
+                                      <li><a href="#/taxation/5001">Taxation</a></li>
+                                      <li><a href="#/taxation/5002">Business Structure <br>– Advice & Set up</a></li>
+                                      <li><a href="#/taxation/5003">Accounting & Bookkeeping</a></li>
+                                      <li><a href="#/taxation/5004">Payroll</a></li>
+                                      <li><a href="#/taxation/5005">Planning & Valuation</a></li>
                                   </ul>
                               </li>
                               <li><a href="about.html">About Us</a></li>
@@ -91,20 +92,20 @@
               </nav>
 
 
-      <section>
-              <div class="container-fluid homeContainer">
+        <section>
+            <div class="container-fluid homeContainer">
+    
+                <div><ng-view></ng-view></div>
+    
+            </div>
+        </section>
 
-                  <div><ng-view></ng-view></div>
-
-              </div>
-          </section>
-
-      <footer class="footer">
-              <div class="container text-center">
+    <footer class="footer">
+        <div class="container text-center">
                   <!--<p class="text-muted">Place sticky footer content here.</p>-->
-                  <small>© Copyright 2016, Aerry Tax & Accounting Pty Ltd</small>
-              </div>
-          </footer>
+            <small>© Copyright 2016, Aerry Tax & Accounting Pty Ltd</small>
+        </div>
+    </footer>
 
 </body>
 </html>

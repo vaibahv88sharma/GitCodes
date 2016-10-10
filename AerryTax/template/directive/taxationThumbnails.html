@@ -1,29 +1,11 @@
-﻿<div id="exTab3" class="row">
-    <div class="tab-content clearfix">
-        <div class="tab-pane fade in " id="tab{{$index + 1}}" ng-repeat="tab in tabs" ng-class="{active: $index == 0}">
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                <div class="row">
-                    <a href="#/home" class="thumbnail">
-                        <img ng-src="{{tab.image}}" alt="" />
-                    </a>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                <h2>{{tab.title}}</h2>
-                <p>
-                    {{tab.description}}
-                </p>
-                <a href="#" class="btn btn-primary pull-right" role="button">More Info</a>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="row">
-    <!--<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">-->
-        <ul class="nav nav-pills nav-justified">
-            <li ng-class="{active: $index == 0}" ng-repeat="tab in tabs">
-                <a data-target="#tab{{$index + 1}}" data-toggle="tab" class="thumbnail"><img ng-src="{{tab.image}}" alt="" />{{tab.title}}</a>
-            </li>
-        </ul>
-    <!--</div>-->
+﻿<div class="row">
+    <h1>{{title1}}</h1>
+    <br />
+    <p>{{description1}}</p>
+    <br />
+    <blockquote>
+        <p>Whether you’ve got a basic tax return with a single group certificate, or you’re at the other end of the scale with rental properties and complex investments… we can help you get it sorted, fast!</p>
+    </blockquote>
+    <br />
+    <p>{{description2}}</p>
 </div>
