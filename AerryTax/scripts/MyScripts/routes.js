@@ -11,6 +11,10 @@
 		    templateUrl: "template/view/contact.html",
 		    controller: "contactController"
 		})
+		.when('/about', {
+		    templateUrl: "template/view/about.html",
+		    controller: "aboutController"
+		})
 		.when('/taxation/:id', {
 		    templateUrl: "template/view/taxation.html",
 		    controller: "taxationController"
