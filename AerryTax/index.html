@@ -28,13 +28,15 @@
       <script src="scripts/MyScripts/module.js"></script>
       <script src="scripts/MyScripts/routes.js"></script>
 
-      <script src="scripts/MyScripts/directives/homeThumbnails.js"></script>      
+      <script src="scripts/MyScripts/directives/homeThumbnails.js"></script>     
+      <script src="scripts/MyScripts/directives/navPage.js"></script> 
       <script src="scripts/MyScripts/directives/taxationThumbnails.js"></script> 
+
       <script src="scripts/MyScripts/controllers/homeController.js"></script>
       <script src="scripts/MyScripts/controllers/contactController.js"></script>
       <script src="scripts/MyScripts/controllers/taxationController.js"></script>
-      <script src="scripts/MyScripts/controllers/aboutController.js"></script>
-      <!--<script src="scripts/MyScripts/directives/homeThumbnails.js"></script>-->
+      <script src="scripts/MyScripts/controllers/aboutController.js"></script>      
+
       <script src="scripts/MyScripts/services/services.js"></script>
       <script src="scripts/MyScripts/services/contactService.js"></script>
       <script src="scripts/MyScripts/services/taxationService.js"></script>
@@ -47,9 +49,8 @@
     <![endif]-->
   </head>
   <body>
-              <nav class="navbar navbar-default navbar-static-top" id="navBar1">
+              <!--<nav class="navbar navbar-default navbar-static-top" id="navBar1">
                   <div class="container-fluid">
-                      <!-- Brand and toggle get grouped for better mobile display -->
                       <div class="navbar-header">
                           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                               <span class="sr-only">Toggle navigation</span>
@@ -60,7 +61,6 @@
                           <a class="navbar-brand aLogo" href="#/home"><img class="iLogo" src="img/logo.png" alt="" /></a>
                       </div>
 
-                      <!-- Collect the nav links, forms, and other content for toggling -->
                       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                           <ul class="nav navbar-nav">
                               <li class="active"><a href="#/home">Home <span class="sr-only">(current)</span></a></li>
@@ -88,10 +88,11 @@
                               </li>
                               <li><a href="#/contact">Contact</a></li>
                           </ul>
-                      </div><!-- /.navbar-collapse -->
-                  </div><!-- /.container-fluid -->
-              </nav>
+                      </div>
+                  </div>
+              </nav>-->
 
+      <nav-page></nav-page>
 
         <section>
             <div class="container-fluid homeContainer">

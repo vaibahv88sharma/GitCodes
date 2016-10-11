@@ -115,6 +115,7 @@
     <Content Include="scripts\MyScripts\default\angular-resource.min.js.map" />
     <Content Include="scripts\MyScripts\default\angular-route.min.js.map" />
     <Content Include="scripts\MyScripts\default\angular.min.js.map" />
+    <Content Include="scripts\MyScripts\directives\navPage.js" />
     <Content Include="scripts\MyScripts\directives\taxationThumbnails.js" />
     <Content Include="scripts\MyScripts\directives\homeThumbnails.js" />
     <Content Include="scripts\MyScripts\default\ng-map.min.js" />
@@ -169,6 +170,7 @@
     <Content Include="scripts\MyScripts\default\ui-bootstrap-tpls.min.js" />
     <Content Include="scripts\MyScripts\module.js" />
     <Content Include="scripts\MyScripts\routes.js" />
+    <Content Include="template\directive\navPage.html" />
     <Content Include="template\directive\taxationThumbnails.html" />
     <Content Include="template\directive\homeThumbnails.html" />
     <Content Include="template\view\contact.html" />
