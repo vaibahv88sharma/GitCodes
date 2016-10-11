@@ -1,6 +1,6 @@
 ﻿angular.module('homeModule').directive('taxationThumbnails', function () {
     return {
-        //replace: true,
+        replace: true,
         restrict: "AE",
         scope:false,
         //scope: {
