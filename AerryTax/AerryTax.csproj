@@ -91,6 +91,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\style6.css" />
+    <Content Include="fonts\websymbols\websymbols-regular-webfont.svg" />
     <Content Include="img\background1.jpg" />
     <Content Include="img\background2.jpg" />
     <Content Include="img\background3.jpg" />
@@ -127,6 +129,9 @@
     <Content Include="scripts\MyScripts\sourceContact.json" />
     <Content Include="scripts\MyScripts\data.php" />
     <Content Include="scripts\MyScripts\sourceTaxation.json" />
+    <Content Include="fonts\websymbols\websymbols-regular-webfont.eot" />
+    <Content Include="fonts\websymbols\websymbols-regular-webfont.ttf" />
+    <Content Include="fonts\websymbols\websymbols-regular-webfont.woff" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
