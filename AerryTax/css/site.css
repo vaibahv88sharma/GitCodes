@@ -75,7 +75,8 @@ blockquote:after {
     /*background-color: rgb(231, 231, 231);*/
     background-color: #178acc;
     /*background-color: #50b3eb;*/
-    color: rgb(85, 85, 85);
+    /*color: rgb(85, 85, 85);*/
+    color: white;
 }
 li.dropdown:hover > .dropdown-menu {
     display: block;
