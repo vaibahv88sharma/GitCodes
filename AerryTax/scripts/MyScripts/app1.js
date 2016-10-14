@@ -16,7 +16,7 @@
 $(document).ready(function () {
     // Show or hide the sticky footer button
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 200) {
+        if ($(this).scrollTop() > 100) {
             $('.go-top').fadeIn(200);
         } else {
             $('.go-top').fadeOut(200);
