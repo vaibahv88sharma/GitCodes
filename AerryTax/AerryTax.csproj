@@ -132,6 +132,7 @@
     <Content Include="fonts\websymbols\websymbols-regular-webfont.eot" />
     <Content Include="fonts\websymbols\websymbols-regular-webfont.ttf" />
     <Content Include="fonts\websymbols\websymbols-regular-webfont.woff" />
+    <Content Include="scripts\MyScripts\data - Copy.php" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

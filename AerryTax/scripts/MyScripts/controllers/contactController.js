@@ -8,8 +8,36 @@
 
 	$scope.contact={};
 	
-
+    $scope.url = "/scripts/MyScripts/data.php";
     $scope.submitForm = function (contact) {
+
+        var config = {
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;',
+                //'dataType': 'jsonp',
+                'crossDomain': 'true',
+                'cache': 'false',
+                'processData': 'false',
+            }
+        }
+        //                data: JSON.stringify(contact),//contact.serialize(),
+	    $http.post(
+                    $scope.url,
+                    { "name": "Vaibhav", "email": "Vaibhav@gmail.com", "message": "Vaibhav sending Hi" },
+                    config
+                  ).
+                success(function (data, status) {
+                    console.log(data);
+                    $scope.status = status;
+                    $scope.data = data;
+                    $scope.result = data; // Show result from server in our <pre></pre> element
+                })
+                .error(function (data, status, headers, config, statusText) {
+                    $scope.error = "An error occurred while saving style: " + data + "|" + data.data + "|" + data.statusText + "|" + statusText;
+                });
+	};
+
+    $scope.submitForm2 = function (contact) {
 	//$scope.submitForm = function (contact) {
 		//JsonSerializer serializer = new JsonSerializer();
                 $.ajax({
@@ -36,10 +64,6 @@
                     }
                 });        
     };
-
-
-	
-	
 
     $scope.submitForm1 = function (contact) {
         if ($scope.ContactForm.$valid) {
