@@ -34,6 +34,7 @@ namespace ExportToSPList
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
+                GlobalLogic.ExceptionHandle(e, "Connect SP with Username and password");
             }
             return context;
         }
@@ -61,6 +62,7 @@ namespace ExportToSPList
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
+                GlobalLogic.ExceptionHandle(e, "getListData  ----   appSettingsKey");
             }
             return getListItemsCollection;
         }
@@ -354,6 +356,8 @@ namespace ExportToSPList
 
                             ExceptionHandle(e, listName + "---" + lookupFieldName + "---" + lookupFieldIdName + "-----"+ value);
 
+                            Environment.Exit(0);
+
                         }
                     }
                 }
@@ -452,15 +456,16 @@ namespace ExportToSPList
                 xlWorkSheet.Cells[1, 3] = "Exception Details :- ";
                 xlWorkSheet.Cells[1, 4] = e.ToString();
                 xlWorkSheet.Cells[1, 5] = "Exception GetHashCode ";
-                xlWorkSheet.Cells[1, 6] = e.GetHashCode();
-                xlWorkSheet.Cells[1, 7] = "Additional Details ";
+                //xlWorkSheet.Cells[1, 6] = e.GetHashCode();
+                //xlWorkSheet.Cells[1, 7] = "Additional Details ";
                 xlWorkSheet.Cells[1, 8] = additionalDetails;
                 xlWorkSheet.Cells[1, 9] = "Error Occured at :- ";
                 xlWorkSheet.Cells[1, 10] = DateTime.Now;
 
                 //dd/MM/yyyy hh.mm.ss.fff tt
                 //_ddMMyyyy_HHmmss
-                xlWorkBook.SaveAs("C:\\Log\\Exception" + DateTime.Now.ToString("dd_MM_yyyy hh.mm.ss.fff tt") + ".xls", Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue);
+                //xlWorkBook.SaveAs("C:\\Log\\Exception" + DateTime.Now.ToString("dd_MM_yyyy hh.mm.ss.fff tt") + ".xls", Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue);
+                xlWorkBook.SaveAs(ConfigurationManager.AppSettings.Get("LogLocation") + "\\Exception" + DateTime.Now.ToString("dd_MM_yyyy hh.mm.ss.fff tt") + ".xls", Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue);
                 xlWorkBook.Close(true, misValue, misValue);
                 xlApp.Quit();
 
@@ -872,7 +877,6 @@ namespace ExportToSPList
             }
         }
 
-        //New
         public ListItemCollection getListDataVal(ClientContext ctx, string appSettingsKey)
         {
             ListItemCollection getListItemsCollection = null;
@@ -884,6 +888,36 @@ namespace ExportToSPList
                 List getList = ctx.Web.Lists.GetByTitle(appSettingsKey);
                 CamlQuery camlQuery = new CamlQuery();
                 camlQuery.ViewXml = "<View><Query></Query></View>";
+                ListItemCollection getListItemsCol = getList.GetItems(camlQuery);
+                ctx.Load(getListItemsCol);
+                ctx.ExecuteQuery();
+
+                if (getListItemsCol != null && getListItemsCol.Count > 0)
+                {
+                    getListItemsCollection = getListItemsCol;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                //Environment.Exit(0);
+                
+            }
+            return getListItemsCollection;
+        }
+
+        public ListItemCollection getListSelectiveDataVal(ClientContext ctx, string appSettingsKey, string searchValue)
+        {
+            ListItemCollection getListItemsCollection = null;
+            try
+            {
+                //GlobalLogic gl = new GlobalLogic();
+                //ClientContext ctx = gl.ConnectSP(tenant, userName, passwordString);
+
+                List getList = ctx.Web.Lists.GetByTitle(appSettingsKey);
+                CamlQuery camlQuery = new CamlQuery();
+                camlQuery.ViewXml = "<View><Query><Where><Eq><FieldRef Name='Title' /><Value Type='Text'>" + searchValue + "</Value></Eq></Where></Query></View>";
+                //camlQuery.ViewXml = "<View><Query><Where><Eq><FieldRef Name='Title' /><Value Type='Text'>" + searchValue + "</Value></Eq></Where></Query><ViewFields><FieldRef Name='Id' /></ViewFields></View>";
                 ListItemCollection getListItemsCol = getList.GetItems(camlQuery);
                 ctx.Load(getListItemsCol);
                 ctx.ExecuteQuery();

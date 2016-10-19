@@ -61,6 +61,7 @@ namespace ExportToSPList
             DataTable dataTable = new DataTable();
             try
             {
+                myCommand.CommandTimeout = 120;
                 //myCommand.CommandType = CommandType.StoredProcedure;   
                 myCommand.Connection = openConnection();
                 myCommand.CommandText = _query;
@@ -90,6 +91,7 @@ namespace ExportToSPList
 
             try
             {
+                myCommand.CommandTimeout = 120;
                 // myCommand.CommandType = CommandType.StoredProcedure;
                 myCommand.Connection = openConnection();
                 myCommand.CommandText = _query;
@@ -129,6 +131,7 @@ namespace ExportToSPList
 
             try
             {
+                myCommand.CommandTimeout = 120;
                 myCommand.CommandType = CommandType.StoredProcedure;
                 myCommand.Connection = openConnection();
                 myCommand.CommandText = _query;
@@ -169,6 +172,7 @@ namespace ExportToSPList
             SqlCommand myCommand = new SqlCommand();
             try
             {
+                myCommand.CommandTimeout = 120;
                 //myCommand.CommandType = CommandType.StoredProcedure;                
                 myCommand.Connection = openConnection();
                 myCommand.CommandText = _query;
@@ -201,6 +205,7 @@ namespace ExportToSPList
             SqlCommand myCommand = new SqlCommand();
             try
             {
+                myCommand.CommandTimeout = 120;
                 myCommand.CommandType = CommandType.StoredProcedure;                
                 myCommand.Connection = openConnection();
                 myCommand.CommandText = _query;
@@ -234,6 +239,7 @@ namespace ExportToSPList
             SqlCommand myCommand = new SqlCommand();
             try
             {
+                myCommand.CommandTimeout = 120;
                 // myCommand.CommandType = CommandType.StoredProcedure;
                 myCommand.Connection = openConnection();
                 myCommand.CommandText = _query;
@@ -263,6 +269,7 @@ namespace ExportToSPList
             SqlCommand myCommand = new SqlCommand();
             try
             {
+                myCommand.CommandTimeout = 120;
                 myCommand.CommandType = CommandType.StoredProcedure;
                 myCommand.Connection = openConnection();
                 myCommand.CommandText = _query;
