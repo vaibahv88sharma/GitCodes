@@ -1,5 +1,7 @@
 var collListItem;
-window.onload = function () {
+
+$( document ).ready(function() {
+//window.onload = function () {
 
 
     var hostweburl = _spPageContextInfo.webAbsoluteUrl;
@@ -9,7 +11,9 @@ window.onload = function () {
     );
 
 
-}
+//}
+});
+
 
 function execOperation() {
     //alert("reached execOperation");	 
@@ -20,7 +24,9 @@ function execOperation() {
         //                       //     "border", "4px solid black"
         //                            );
         $("[id='scriptWPQ1']").addClass('callForward1');
-        //   $(this).addClass('someClass');
+
+        $("td:nth-child(5)").css("color", "red");
+        $("td:nth-child(7)").addClass('columns');
 
         //$( 'span.ms-noWrap' )
     }
