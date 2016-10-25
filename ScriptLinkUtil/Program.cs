@@ -26,19 +26,52 @@ namespace ScriptLinkUtil
             ListScriptLinks(context);
 
             AddScriptLink(context, "~SiteCollection/_catalogs/masterpage/jquery-2.2.4.js", 1300);
-            AddScriptLink(context, "~SiteCollection/_catalogs/masterpage/jQueryInjection.js", 1300);
+            AddScriptLink(context, "~SiteCollection/_catalogs/masterpage/jQueryInjectionNew.js", 1302);
+            AddScriptLink(context, "~SiteCollection/_catalogs/masterpage/jQueryInjection.js", 1304);
+            AddCSSScriptLink(context, "/_catalogs/masterpage/Watersun", 1306);
+
             ClearAllScriptLinks(context);
             ListScriptLinks(context);
+
             AddScriptLink(context, "~SiteCollection/_catalogs/masterpage/jquery-2.2.4.js", 1300);
-            AddScriptLink(context, "~SiteCollection/_catalogs/masterpage/jQueryInjection.js", 1300);
+            AddScriptLink(context, "~SiteCollection/_catalogs/masterpage/jQueryInjectionNew.js", 1302);
+            AddScriptLink(context, "~SiteCollection/_catalogs/masterpage/jQueryInjection.js", 1304);
+            AddCSSScriptLink(context, "/_catalogs/masterpage/Watersun", 1306);
+
             RemoveScriptLink(context, "~SiteCollection/_catalogs/masterpage/jquery-2.2.4.js");
+            RemoveScriptLink(context, "~SiteCollection/_catalogs/masterpage/jQueryInjectionNew.js");
             RemoveScriptLink(context, "~SiteCollection/_catalogs/masterpage/jQueryInjection.js");
+            RemoveScriptLink(context, "~SiteCollection/_catalogs/masterpage/site.css");
+
             AddScriptLink(context, "~SiteCollection/_catalogs/masterpage/jquery-2.2.4.js", 1300);
-            AddScriptLink(context, "~SiteCollection/_catalogs/masterpage/jQueryInjection.js", 1300);
+            AddScriptLink(context, "~SiteCollection/_catalogs/masterpage/jQueryInjectionNew.js", 1302);
+            AddScriptLink(context, "~SiteCollection/_catalogs/masterpage/jQueryInjection.js", 1304);
+            AddCSSScriptLink(context, "/_catalogs/masterpage/Watersun", 1306);
 
             //Console.WriteLine("Press Enter to End");
             //Console.ReadLine();
         }
+
+        /// <summary>
+        /// adds a CSS scriptlink to the site 
+        /// </summary>
+        /// <param name="ctx"></param>
+        /// <param name="file"></param>
+        /// <param name="seq"></param>
+        private static void AddCSSScriptLink(ClientContext ctx, string file, int seq)
+        {
+            // Register Custom Action
+            var customAction = ctx.Site.UserCustomActions.Add();
+            customAction.Location = "ScriptLink";
+            customAction.ScriptBlock = @"document.write('<link rel=""stylesheet"" href=""" + ctx.Url + file + @"/site.css"" />');";
+            customAction.Sequence = seq;
+            customAction.Update();
+            ctx.ExecuteQuery();
+
+            Console.WriteLine("ScriptLink Added : {0}", file);
+        }
+     
+
 
         /// <summary>
         /// adds a scriptlink to the site 
