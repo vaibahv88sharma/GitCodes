@@ -27,7 +27,7 @@ function execOperation() {
 
         $("td:nth-child(5)").css("color", "red");
         $("td:nth-child(7)").addClass('columns');
-
+        $(".ms-cellstyle.ms-vb2").addClass('columnsBorder');
         //$( 'span.ms-noWrap' )
     }
 }
