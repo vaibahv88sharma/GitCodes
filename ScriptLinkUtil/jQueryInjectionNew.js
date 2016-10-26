@@ -32,4 +32,31 @@ function execOperation() {
     }
 }
 
+if ($("a[title*='5921_Data']").length) {
 
+    //_spPageContextInfo.webAbsoluteUrl + "/lists/" + $("a[title*='_Data']").attr("title")
+    //$("a[title*='_Data']").attr("title").split("_")[0]
+
+    var fullUrl = "/_api/web/Lists/GetByTitle('Call Forwards')/Items?$select=JobAddr&$filter=Title eq " + $("a[title*='_Data']").attr("title").split("_")[0];
+
+    $.ajax({
+        url: _spPageContextInfo.webAbsoluteUrl + fullUrl,//"/lists/" + $("a[title*='_Data']").attr("title"),
+        type: "GET",
+        headers: {
+            "accept": "application/json;odata=verbose",
+        },
+        success: function (data) {
+            console.log(data.d.results);
+            console.log(data.d.results[0].JobAddr);
+            //$("a[title*='5921_Data']").title = data.d.results[0].JobAddr;
+            //$("a[title*='5921_Data']").prop('title', data.d.results[0].JobAddr);
+            $("a[title*='_Data']").text(data.d.results[0].JobAddr);
+            //$("a[title*='5921_Data']").val("Replacement text");
+
+
+        },
+        error: function (error) {
+            alert(JSON.stringify(error));
+        }
+    });
+}
