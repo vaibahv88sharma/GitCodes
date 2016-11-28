@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>    <ProjectItemFile Source="index.html" Target="HTML\" Type="ElementFile" />    <ProjectItemFile Source="Templates\angFiles\addBook.html" Target="HTML\Templates\angFiles\" Type="ElementFile" />    <ProjectItemFile Source="Templates\angFiles\books.html" Target="HTML\Templates\angFiles\" Type="ElementFile" />    <ProjectItemFile Source="Templates\angFiles\editBook.html" Target="HTML\Templates\angFiles\" Type="ElementFile" />    <ProjectItemFile Source="Elements.xml" Target="HTML\" Type="ElementManifest" /></Files>
+</ProjectItem>

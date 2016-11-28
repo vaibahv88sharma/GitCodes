@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Scripts">
+    <File Path="Scripts\angular-cookies.js" Url="Scripts/angular-cookies.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular-resource.js" Url="Scripts/angular-resource.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular-resource.min.js" Url="Scripts/angular-resource.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular-resource.min.js.map" Url="Scripts/angular-resource.min.js.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular-route.js" Url="Scripts/angular-route.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular-route.min.js" Url="Scripts/angular-route.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular-route.min.js.map" Url="Scripts/angular-route.min.js.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular.min.js" Url="Scripts/angular.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular.min.js.map" Url="Scripts/angular.min.js.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\App.js" Url="Scripts/App.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\bootstrap.js" Url="Scripts/bootstrap.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\bootstrap.min.js" Url="Scripts/bootstrap.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery-2.1.3.min.js" Url="Scripts/jquery-2.1.3.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\MyScript\angFiles\App.js" Url="Scripts/MyScript/angFiles/App.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\MyScript\angFiles\books.js" Url="Scripts/MyScript/angFiles/books.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\MyScript\angFiles\books\AddBookController.js" Url="Scripts/MyScript/angFiles/books/AddBookController.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\MyScript\angFiles\books\BooksController.js" Url="Scripts/MyScript/angFiles/books/BooksController.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\MyScript\angFiles\books\EditBookController.js" Url="Scripts/MyScript/angFiles/books/EditBookController.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\MyScript\angFiles\index.js" Url="Scripts/MyScript/angFiles/index.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\MyScript\angFiles\readers.js" Url="Scripts/MyScript/angFiles/readers.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\MyScript\angFiles\server.js" Url="Scripts/MyScript/angFiles/server.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\MyScript\angFiles\services\badgeService.js" Url="Scripts/MyScript/angFiles/services/badgeService.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\MyScript\angFiles\services\bookLoggerInterceptor.js" Url="Scripts/MyScript/angFiles/services/bookLoggerInterceptor.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\MyScript\angFiles\services\BooksResource.js" Url="Scripts/MyScript/angFiles/services/BooksResource.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\MyScript\angFiles\services\constantService.js" Url="Scripts/MyScript/angFiles/services/constantService.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\MyScript\angFiles\services\currentUser.js" Url="Scripts/MyScript/angFiles/services/currentUser.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\MyScript\angFiles\services\dataService.js" Url="Scripts/MyScript/angFiles/services/dataService.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\MyScript\angFiles\services\loggerService.js" Url="Scripts/MyScript/angFiles/services/loggerService.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\MyScript\sources\books.json" Url="Scripts/MyScript/sources/books.json" ReplaceContent="TRUE" />
+    <File Path="Scripts\MyScript\sources\package.json" Url="Scripts/MyScript/sources/package.json" ReplaceContent="TRUE" />
+    <File Path="Scripts\MyScript\sources\readers.json" Url="Scripts/MyScript/sources/readers.json" ReplaceContent="TRUE" />
+    <File Path="Scripts\ui-bootstrap-tpls.min.js" Url="Scripts/ui-bootstrap-tpls.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\_references.js" Url="Scripts/_references.js" ReplaceContent="TRUE" />
+</Module>
+</Elements>
