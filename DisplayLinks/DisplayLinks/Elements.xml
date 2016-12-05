@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!--<ClientWebPart Name="DisplayLinks" Title="DisplayLinks" Description="DisplayLinks" DefaultWidth="750" DefaultHeight="900">-->
+  <ClientWebPart Name="DisplayLinks" Title="DisplayLinks" Description="DisplayLinks">
+
+    <!-- Content element identifies the location of the page that will render inside the client web part
+         Properties are referenced on the query string using the pattern _propertyName_
+         Example: Src="~appWebUrl/Pages/ClientWebPart1.aspx?Property1=_property1_" -->
+    <Content Type="html" Src="~appWebUrl/Pages/DisplayLinks.aspx?{StandardTokens}&amp;CategoryListName=_CategoryListName_&amp;ListName=_ListName_&amp;DisplayType=FullScreen" />
+
+    <!-- Define properties in the Properties element.
+         Remember to put Property Name on the Src attribute of the Content element above. -->
+
+    <!-- Define properties in the Properties element.
+         Remember to put Property Name on the Src attribute of the Content element above. -->
+    <Properties>
+      <Property
+          Name="CategoryListName"
+          Type="string"
+          WebBrowsable="true"
+          WebDisplayName="Category List Name"
+          WebDescription="Category List Name"
+          WebCategory="SharepointCustomUser Properties"
+          DefaultValue="DepartmentCategory"
+          RequiresDesignerPermission="false" />
+      <Property
+          Name="ListName"
+          Type="string"
+          WebBrowsable="true"
+          WebDisplayName="Hyperlinks SourceList"
+          WebDescription="Hyperlinks Source List"
+          WebCategory="SharepointCustomUser Properties"
+          DefaultValue="FormsLinks"
+          RequiresDesignerPermission="false" />
+    </Properties>    
+    
+    
+    
+  </ClientWebPart>
+</Elements>

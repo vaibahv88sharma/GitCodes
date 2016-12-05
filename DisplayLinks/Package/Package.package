@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="ecc7b3f3-39a4-4589-8851-9926d233e0c6" 
+        solutionId="ecc7b3f3-39a4-4589-8851-9926d233e0c6" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="DisplayLinks"
+        sharePointProductVersion="16.0">
+  <features>
+        <featureReference itemId="85bd2f18-e215-453e-864a-7434450709e5" />
+  </features>
+</package>

@@ -1,0 +1,39 @@
+﻿<div class="container-fluid" style="padding:10px">
+    <div class="well well-lg">
+        <div class="row">
+            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" style="font-size: 150%; font-weight: bold;">
+                Departments :
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                <div class="btn-group" role="group">
+                    <a href=""
+                       style="border: 2px solid black;"
+                       ng-repeat="category in categories"
+                       ng-class="{'active':isActive(category)}"
+                       ng-click="toggleCategory(category)"
+                       class="btn btn-default">
+                        {{category.DepartmentCategory}}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<div class="container-fluid" style="padding:10px">
+    <div class="row">
+        Departments :
+    </div>
+    <div class="row">
+        <div class="btn-group" role="group">
+            <a href=""
+               style="border: 2px solid #000000;"
+               ng-repeat="category in categories"
+               ng-class="{'active':isActive(category)}"
+               ng-click="toggleCategory(category)"
+               class="btn btn-default">
+                {{category.DepartmentCategory}}
+            </a>
+        </div>
+    </div>
+</div>-->
