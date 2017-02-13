@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="15b86c0f-954b-462a-acd1-5d9674c657c3" 
+        solutionId="15b86c0f-954b-462a-acd1-5d9674c657c3" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="WeatherWidget"
+        sharePointProductVersion="16.0">
+  <features>
+        <featureReference itemId="a3103a3a-c48d-415e-b0b7-5a1e9d8aa1e3" />
+  </features>
+</package>

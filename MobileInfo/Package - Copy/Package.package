@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="0b8b282c-1392-4890-a8d1-ef274b81327c" 
+        solutionId="0b8b282c-1392-4890-a8d1-ef274b81327c" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="MobileInfo"
+        sharePointProductVersion="16.0">
+  <features>
+        <featureReference itemId="9db38e71-78ca-4270-a76f-17ac0df3a1b2" />
+  </features>
+</package>
