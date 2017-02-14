@@ -282,6 +282,7 @@
     <Content Include="Kangan\OtherScripts\publishMasterPageFiles.ps1" />
     <Content Include="Kangan\OtherScripts\WF\Before Install.ps1" />
     <Content Include="Kangan\OtherScripts\WF\WF2016ProdCert.cer" />
+    <Content Include="Kangan\OtherScripts\WF\WFE WebFrontEnd as WFmanager.ps1" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
