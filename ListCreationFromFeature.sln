@@ -81,6 +81,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileInfo", "MobileInfo\Mo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherWidget", "WeatherWidget\WeatherWidget.csproj", "{F4B0A026-76E8-423E-867E-BC35CC5093A1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoteReceiver", "RemoteReceiver\RemoteReceiver.csproj", "{12D4D268-9123-4BEC-A506-F6574B9E703B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoteReceiverWeb", "RemoteReceiverWeb\RemoteReceiverWeb.csproj", "{46FFE65F-E892-446F-87A0-6AE975C7DAFA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -297,6 +301,16 @@ Global
 		{F4B0A026-76E8-423E-867E-BC35CC5093A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4B0A026-76E8-423E-867E-BC35CC5093A1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F4B0A026-76E8-423E-867E-BC35CC5093A1}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{12D4D268-9123-4BEC-A506-F6574B9E703B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12D4D268-9123-4BEC-A506-F6574B9E703B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12D4D268-9123-4BEC-A506-F6574B9E703B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{12D4D268-9123-4BEC-A506-F6574B9E703B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12D4D268-9123-4BEC-A506-F6574B9E703B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12D4D268-9123-4BEC-A506-F6574B9E703B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{46FFE65F-E892-446F-87A0-6AE975C7DAFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46FFE65F-E892-446F-87A0-6AE975C7DAFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46FFE65F-E892-446F-87A0-6AE975C7DAFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46FFE65F-E892-446F-87A0-6AE975C7DAFA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
