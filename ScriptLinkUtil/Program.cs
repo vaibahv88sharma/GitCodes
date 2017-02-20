@@ -13,6 +13,15 @@ namespace ScriptLinkUtil
     {
         static void Main(string[] args)
         {
+
+            // For On-Premise
+            ClientContext context = new ClientContext("http://sp01d-bro/sites/search/");
+            Web web = context.Web;
+            context.Load(web);
+            context.ExecuteQuery();
+            Console.WriteLine(web.Title);
+
+            // For Office-365
             string url = "https://networkintegration.sharepoint.com/sites/development/";
             string logon = "andrew@365build.com.au";
             string passwordString = "187Ch@lleng3r";
