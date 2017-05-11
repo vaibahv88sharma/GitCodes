@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="dea5f887-228c-498a-b2a6-994bceb1f864" 
+        solutionId="dea5f887-228c-498a-b2a6-994bceb1f864" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="DeviceInfo"
+        sharePointProductVersion="16.0">
+  <features>
+        <featureReference itemId="5d63bcb0-082e-4ab8-a52a-20e6a727bd15" />
+  </features>
+</package>
