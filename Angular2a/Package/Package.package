@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="b3f93a6c-2eff-4ba9-9ed4-03d97e285bb8" 
+        solutionId="b3f93a6c-2eff-4ba9-9ed4-03d97e285bb8" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="Angular2a"
+        sharePointProductVersion="16.0">
+  <features>
+        <featureReference itemId="29aee906-e2fc-4ad8-80bf-96cf9fb47cef" />
+  </features>
+</package>
