@@ -1,0 +1,49 @@
+﻿{
+	"id": "0001",
+	"type": "donut",
+	"name": "Cake",
+	"ppu": 0.55,
+	"batters":
+		{
+			"batter":
+				[
+					{ "id": "1001", "type": "Regular" },
+					{ "id": "1002", "type": "Chocolate" },
+					{ "id": "1003", "type": "Blueberry" },
+					{ "id": "1004", "type": "Devil's Food" }
+				]
+		},
+	"tabs":
+		[
+      {
+        "id": "5001",
+        "title": "Accounting",
+        "description1": "We are proud to have highly qualified accountants who are attending regular trainings to keep up and maintain the accounting standards of the firm. Aerry Tax & Accounitng offers a wide range of accounting services and if you would like to know more please talk to one of our accountants.",
+        "description2": "Bookkeeping is done by using MYOB, XERO or Quickbooks. Let us know how often you need your books done and we will arrange it for you. If you would like to do bookkeeping on site, one of our assistant accountants will come to your office and do the work."
+      },
+      {
+        "id": "5002",
+        "title": "Taxation",
+        "description1": "We understand there are many things you would rather be doing than your tax return.",
+        "description2": "Our highly qualified staff in Aerry Tax & Accounting are capable of handling any kind of a return from a simple tax return to very complex returns. They have in depth knowledge in different types of returns so that you will not miss out a single dollar that you are entitled to."
+      },
+      {
+        "id": "5003",
+        "title": "Company Returns",
+        "description1": "We understand there are many things you would rather be doing than your tax return.",
+        "description2": "Our highly qualified staff in Aerry Tax & Accounting are capable of handling any kind of a return from a simple tax return to very complex returns. They have in depth knowledge in different types of returns so that you will not miss out a single dollar that you are entitled to."
+      },
+      {
+        "id": "5004",
+        "title": "Company Structure",
+        "description1": "We understand there are many things you would rather be doing than your tax return.",
+        "description2": "Our highly qualified staff in Aerry Tax & Accounting are capable of handling any kind of a return from a simple tax return to very complex returns. They have in depth knowledge in different types of returns so that you will not miss out a single dollar that you are entitled to."
+      },
+      {
+        "id": "5005",
+        "title": "Bussiness Structure",
+        "description1": "We understand there are many things you would rather be doing than your tax return.",
+        "description2": "Our highly qualified staff in Aerry Tax & Accounting are capable of handling any kind of a return from a simple tax return to very complex returns. They have in depth knowledge in different types of returns so that you will not miss out a single dollar that you are entitle to."
+      }
+		]
+}
