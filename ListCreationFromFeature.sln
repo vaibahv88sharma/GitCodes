@@ -89,6 +89,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angular2a", "Angular2a\Angu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AerryTax", "AerryTax\AerryTax.csproj", "{D778618E-D116-4216-8EF5-5369B2B52B97}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScriptFilesOnly", "ScriptFilesOnly\ScriptFilesOnly.csproj", "{4045F5AC-AA33-4D07-B211-0E40A90986AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -327,6 +329,10 @@ Global
 		{D778618E-D116-4216-8EF5-5369B2B52B97}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D778618E-D116-4216-8EF5-5369B2B52B97}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D778618E-D116-4216-8EF5-5369B2B52B97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4045F5AC-AA33-4D07-B211-0E40A90986AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4045F5AC-AA33-4D07-B211-0E40A90986AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4045F5AC-AA33-4D07-B211-0E40A90986AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4045F5AC-AA33-4D07-B211-0E40A90986AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
