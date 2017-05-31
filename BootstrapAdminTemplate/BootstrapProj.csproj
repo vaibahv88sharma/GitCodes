@@ -320,6 +320,7 @@
     <Content Include="Kangan\KanganTopNav\js\npm.js" />
     <Content Include="Kangan\KanganTopNav\js\respond.min.js" />
     <Content Include="Kangan\KanganTopNav\StaffPortal.html" />
+    <Content Include="Kangan\KanganTopNav\StaffPortalWebpart12231PL.html" />
     <Content Include="Kangan\KanganTopNav\StaffPortalWebpartPL.aspx" />
     <Content Include="Kangan\KanganTopNav\StaffPortalWebpartPL.html" />
     <Content Include="Kangan\OtherScripts\jQuery\ManageData_FilteringAdditionalDeviceInfoColumn.txt" />
@@ -400,6 +401,7 @@
     <Content Include="Kangan\OtherScripts\SP Apps\SubscriptionServiceApplication.ps1" />
     <Content Include="Kangan\OtherScripts\SP Apps\UninstallRemoveApp.ps1" />
     <Content Include="Kangan\OtherScripts\User Profile Service Application\deleteUsers.ps1" />
+    <Content Include="Kangan\OtherScripts\checkinAndPublish.ps1" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
