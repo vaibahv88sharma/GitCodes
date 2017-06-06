@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="RootModule">
+    <File Path="dist\app.css" Url="dist/app.css" ReplaceContent="TRUE" />
+    <File Path="dist\app.js" Url="dist/app.js" ReplaceContent="TRUE" />
+    <File Path="dist\index.html" Url="dist/index.html" ReplaceContent="TRUE" />
+    <File Path="dist\polyfills.js" Url="dist/polyfills.js" ReplaceContent="TRUE" />
+    <File Path="dist\vendor.js" Url="dist/vendor.js" ReplaceContent="TRUE" />
+    <File Path="dist\assets\angular.72e938844d7d3f68edf83a97e34f0859.png" Url="dist/assets/angular.72e938844d7d3f68edf83a97e34f0859.png" ReplaceContent="TRUE" />
+  </Module>
+</Elements>

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26430.6
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListCreationFromFeature", "ListCreationFromFeature\ListCreationFromFeature.csproj", "{C029F9C6-E5AC-4593-B141-3734DD2AE78F}"
 EndProject
@@ -90,6 +90,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angular2Sp1", "Angular2Sp1\Angular2Sp1.csproj", "{3DC97D9D-E761-4068-AC0D-BA1DE82AF1D6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angular2Sp2", "Angular2Sp2\Angular2Sp2.csproj", "{4AED6E68-9C22-4261-9EB2-005AF405DA9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Angular2Webpack", "Angular2Webpack\Angular2Webpack.csproj", "{DDB7BDBE-4D82-48C7-95CC-B57777948EF2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -333,6 +335,12 @@ Global
 		{4AED6E68-9C22-4261-9EB2-005AF405DA9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4AED6E68-9C22-4261-9EB2-005AF405DA9E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4AED6E68-9C22-4261-9EB2-005AF405DA9E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{DDB7BDBE-4D82-48C7-95CC-B57777948EF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDB7BDBE-4D82-48C7-95CC-B57777948EF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDB7BDBE-4D82-48C7-95CC-B57777948EF2}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{DDB7BDBE-4D82-48C7-95CC-B57777948EF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDB7BDBE-4D82-48C7-95CC-B57777948EF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDB7BDBE-4D82-48C7-95CC-B57777948EF2}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
