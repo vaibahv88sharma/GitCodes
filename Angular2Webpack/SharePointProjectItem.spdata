@@ -8,5 +8,8 @@
     <ProjectItemFile Source="dist\polyfills.js" Target="dist\" Type="ElementFile" />
     <ProjectItemFile Source="dist\vendor.js" Target="dist\" Type="ElementFile" />
     <ProjectItemFile Source="dist\assets\angular.72e938844d7d3f68edf83a97e34f0859.png" Target="dist\assets\" Type="ElementFile" />
+    <ProjectItemFile Source="Webpack\command npm run build.PNG" Target="Webpack\" Type="ElementFile" />
+    <ProjectItemFile Source="Webpack\command webpack.PNG" Target="Webpack\" Type="ElementFile" />
+    <ProjectItemFile Source="Webpack\webpack.zip" Target="Webpack\" Type="ElementFile" />
   </Files>
 </ProjectItem>

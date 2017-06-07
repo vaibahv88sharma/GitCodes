@@ -61,6 +61,8 @@
     <Content Include="src\index.html" />
     <Content Include="src\styles.css" />
     <Content Include="webpack.config.js" />
+    <Content Include="Webpack\command npm run build.PNG" />
+    <Content Include="Webpack\command webpack.PNG" />
     <None Include="package.json" />
     <None Include="Pages\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{eab1cbe2-1ce4-4e78-b113-e9611130c4e2}</SharePointProjectItemId>
@@ -71,6 +73,7 @@
       <SharePointProjectItemId>{0c6767d8-c482-4146-955f-dd126df53b43}</SharePointProjectItemId>
     </None>
     <None Include="src\tsconfig.json" />
+    <None Include="Webpack\webpack.zip" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\AppIcon.png">

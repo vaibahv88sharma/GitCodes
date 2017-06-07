@@ -12,7 +12,11 @@
     <SharePoint:ScriptLink name="sp.js" runat="server" OnDemand="true" LoadAfterUI="true" Localizable="false" />
     <meta name="WebPartPageExpansion" content="full" />
 
+    <%--webpack--%>
     <link href="../dist/app.css" rel="stylesheet" />
+
+    <%--npm run build--%>
+    <%--    <link href="../dist/app.23d184000ff182021e74.css" rel="stylesheet" />--%>
 
 
 </asp:Content>
@@ -33,8 +37,14 @@
 
     <script type="text/javascript">window.Zone = undefined;</script>
 
+    <%--webpack--%>
     <script type="text/javascript" src="../dist/polyfills.js"></script>
     <script type="text/javascript" src="../dist/vendor.js"></script>
     <script type="text/javascript" src="../dist/app.js"></script>
+
+    <%--npm run build--%>
+    <%--    <script type="text/javascript" src="../dist/polyfills.23d184000ff182021e74.js"></script>
+    <script type="text/javascript" src="../dist/vendor.23d184000ff182021e74.js"></script>
+    <script type="text/javascript" src="../dist/app.23d184000ff182021e74.js"></script>--%>
 
 </asp:Content>

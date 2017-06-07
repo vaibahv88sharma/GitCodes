@@ -7,5 +7,8 @@
     <File Path="dist\polyfills.js" Url="dist/polyfills.js" ReplaceContent="TRUE" />
     <File Path="dist\vendor.js" Url="dist/vendor.js" ReplaceContent="TRUE" />
     <File Path="dist\assets\angular.72e938844d7d3f68edf83a97e34f0859.png" Url="dist/assets/angular.72e938844d7d3f68edf83a97e34f0859.png" ReplaceContent="TRUE" />
+    <File Path="Webpack\command npm run build.PNG" Url="Webpack/command npm run build.PNG" ReplaceContent="TRUE" />
+    <File Path="Webpack\command webpack.PNG" Url="Webpack/command webpack.PNG" ReplaceContent="TRUE" />
+    <File Path="Webpack\webpack.zip" Url="Webpack/webpack.zip" ReplaceContent="TRUE" />
   </Module>
 </Elements>
