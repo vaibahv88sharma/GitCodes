@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="RootModule">
+    <File Path="dist\app.css" Url="dist/app.css" ReplaceContent="TRUE" />
+    <File Path="dist\app.js" Url="dist/app.js" ReplaceContent="TRUE" />
+    <File Path="dist\index.html" Url="dist/index.html" ReplaceContent="TRUE" />
+    <File Path="dist\polyfills.js" Url="dist/polyfills.js" ReplaceContent="TRUE" />
+    <File Path="dist\vendor.js" Url="dist/vendor.js" ReplaceContent="TRUE" />
+    <File Path="config\helpers.js" Url="config/helpers.js" ReplaceContent="TRUE" />
+    <File Path="config\karma-test-shim.js" Url="config/karma-test-shim.js" ReplaceContent="TRUE" />
+    <File Path="config\karma.conf.js" Url="config/karma.conf.js" ReplaceContent="TRUE" />
+    <File Path="config\webpack.common.js" Url="config/webpack.common.js" ReplaceContent="TRUE" />
+    <File Path="config\webpack.dev.js" Url="config/webpack.dev.js" ReplaceContent="TRUE" />
+    <File Path="config\webpack.prod.js" Url="config/webpack.prod.js" ReplaceContent="TRUE" />
+    <File Path="config\webpack.test.js" Url="config/webpack.test.js" ReplaceContent="TRUE" />
+    <File Path="src\index.html" Url="src/index.html" ReplaceContent="TRUE" />
+    <File Path="src\styles.css" Url="src/styles.css" ReplaceContent="TRUE" />
+    <File Path="src\app\app.component.css" Url="src/app/app.component.css" ReplaceContent="TRUE" />
+    <File Path="src\app\app.component.html" Url="src/app/app.component.html" ReplaceContent="TRUE" />
+    <File Path="src\app\databinding\databinding.component.css" Url="src/app/databinding/databinding.component.css" ReplaceContent="TRUE" />
+    <File Path="src\app\databinding\databinding.component.html" Url="src/app/databinding/databinding.component.html" ReplaceContent="TRUE" />
+    <File Path="src\assets\css\styles.css" Url="src/assets/css/styles.css" ReplaceContent="TRUE" />
+    <File Path="src\assets\images\angular.png" Url="src/assets/images/angular.png" ReplaceContent="TRUE" />
+  </Module>
+</Elements>

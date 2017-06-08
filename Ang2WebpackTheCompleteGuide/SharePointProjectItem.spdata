@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Type="ElementManifest" />
+    <ProjectItemFile Source="dist\app.css" Target="dist\" Type="ElementFile" />
+    <ProjectItemFile Source="dist\app.js" Target="dist\" Type="ElementFile" />
+    <ProjectItemFile Source="dist\index.html" Target="dist\" Type="ElementFile" />
+    <ProjectItemFile Source="dist\polyfills.js" Target="dist\" Type="ElementFile" />
+    <ProjectItemFile Source="dist\vendor.js" Target="dist\" Type="ElementFile" />
+    <ProjectItemFile Source="config\helpers.js" Target="config\" Type="ElementFile" />
+    <ProjectItemFile Source="config\karma-test-shim.js" Target="config\" Type="ElementFile" />
+    <ProjectItemFile Source="config\karma.conf.js" Target="config\" Type="ElementFile" />
+    <ProjectItemFile Source="config\webpack.common.js" Target="config\" Type="ElementFile" />
+    <ProjectItemFile Source="config\webpack.dev.js" Target="config\" Type="ElementFile" />
+    <ProjectItemFile Source="config\webpack.prod.js" Target="config\" Type="ElementFile" />
+    <ProjectItemFile Source="config\webpack.test.js" Target="config\" Type="ElementFile" />
+    <ProjectItemFile Source="src\index.html" Target="src\" Type="ElementFile" />
+    <ProjectItemFile Source="src\styles.css" Target="src\" Type="ElementFile" />
+    <ProjectItemFile Source="src\app\app.component.css" Target="src\app\" Type="ElementFile" />
+    <ProjectItemFile Source="src\app\app.component.html" Target="src\app\" Type="ElementFile" />
+    <ProjectItemFile Source="src\app\databinding\databinding.component.css" Target="src\app\databinding\" Type="ElementFile" />
+    <ProjectItemFile Source="src\app\databinding\databinding.component.html" Target="src\app\databinding\" Type="ElementFile" />
+    <ProjectItemFile Source="src\assets\css\styles.css" Target="src\assets\css\" Type="ElementFile" />
+    <ProjectItemFile Source="src\assets\images\angular.png" Target="src\assets\images\" Type="ElementFile" />
+  </Files>
+</ProjectItem>

@@ -1,0 +1,14 @@
+<main>
+  <h1>Hello from Angular App with Webpack</h1>
+    <br />
+    <fa-databinding></fa-databinding>
+
+    <fa-lifecycle *ngIf="!delete" [bindable]="boundValue">
+      <p #boundContent>{{test}}</p>
+    </fa-lifecycle>
+    <button (click)="delete = true">Click to Delete</button>    
+    <button (click)="test = 'changed value'">Click to Change Content</button>    
+    <button (click)="boundValue = 2000">Click to Change Binding</button>  
+
+  <!--<img src="../assets/images/angular.png">-->
+</main>
