@@ -379,10 +379,12 @@
     <Content Include="Aerry\theme\supersized.shutter.css" />
     <Content Include="Aerry\theme\supersized.shutter.js" />
     <Content Include="Aerry\theme\supersized.shutter.min.js" />
+    <Content Include="css\bootstrap-social.css" />
     <Content Include="css\skyblue\bootstrap.min.css" />
     <Content Include="css\style6.css" />
     <Content Include="css\white\bootstrap.min.css" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\websymbols\websymbols-regular-webfont.svg" />
     <Content Include="img\background1.jpg" />
     <Content Include="img\background2.jpg" />
@@ -475,6 +477,13 @@
     <Content Include="Aerry\sendmail.php" />
     <Content Include="Aerry\show-captcha.php" />
     <Content Include="Aerry\thank-you.php" />
+    <Content Include="scripts\MyScripts\source - Copy.json" />
+    <Content Include="scripts\MyScripts\sourceTaxation - Copy.json" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
