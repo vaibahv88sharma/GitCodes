@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="cd3827b9-1659-400a-bccb-8a5aabc2aca3" 
+        solutionId="cd3827b9-1659-400a-bccb-8a5aabc2aca3" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="Ang2WebpackTheCompleteGuide"
+        sharePointProductVersion="16.0">
+  <features>
+        <featureReference itemId="019d9d0b-09d0-4405-98a7-cc640e7687e2" />
+  </features>
+</package>

@@ -1,0 +1,300 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5CD53132-3852-4B6B-96DA-540E9D9E3820}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ang2WebpackTheCompleteGuide</RootNamespace>
+    <AssemblyName>Ang2WebpackTheCompleteGuide</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetOfficeVersion>16.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <MinimumOfficeToolsVersion>14.0</MinimumOfficeToolsVersion>
+    <IncludeAssemblyInPackage>False</IncludeAssemblyInPackage>
+    <ProjectMode>SharePointApp</ProjectMode>
+    <AppFeaturePartId>{065744b9-3225-417e-8a43-85e66f503e58}</AppFeaturePartId>
+    <WspPartId>{2d2387ff-8f67-49f3-947b-51e85786bbf5}</WspPartId>
+    <WorkflowPartId>{9c848ddf-2718-49d7-a22d-ea2b41579c38}</WorkflowPartId>
+    <CspkgPartId>{eca9bcda-720f-4816-bd53-fd8aac0fdfcd}</CspkgPartId>
+    <SqlPackagePartId>{e3e260fa-3bf5-4b10-8ff0-c0ff969bc7bc}</SqlPackagePartId>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="config\helpers.js" />
+    <Content Include="config\karma-test-shim.js" />
+    <Content Include="config\karma.conf.js" />
+    <Content Include="config\webpack.common.js" />
+    <Content Include="config\webpack.dev.js" />
+    <Content Include="config\webpack.prod.js" />
+    <Content Include="config\webpack.test.js" />
+    <Content Include="dist\app.css" />
+    <Content Include="dist\app.js" />
+    <Content Include="dist\index.html" />
+    <Content Include="dist\polyfills.js" />
+    <Content Include="dist\vendor.js" />
+    <Content Include="karma.webpack.conf.js" />
+    <Content Include="src\app\11_Forms\data-driven\data-driven.component.js" />
+    <Content Include="src\app\11_Forms\data-driven\data-driven.component.spec.js" />
+    <Content Include="src\app\11_Forms\template-driven\template-driven.component.css" />
+    <Content Include="src\app\11_Forms\template-driven\template-driven.component.html" />
+    <Content Include="src\app\11_Forms\template-driven\template-driven.component.js" />
+    <Content Include="src\app\11_Forms\template-driven\template-driven.component.spec.js" />
+    <Content Include="src\app\app.component.css" />
+    <Content Include="src\app\app.component.html" />
+    <Content Include="src\app\app.component.js" />
+    <Content Include="src\app\app.component.spec.js" />
+    <Content Include="src\app\app.module.js" />
+    <Content Include="src\app\app.routing.js" />
+    <Content Include="src\app\11_Forms\data-driven\data-driven.component.css" />
+    <Content Include="src\app\11_Forms\data-driven\data-driven.component.html" />
+    <Content Include="src\app\databinding\databinding.component.css" />
+    <Content Include="src\app\databinding\databinding.component.html" />
+    <Content Include="src\app\databinding\databinding.component.js" />
+    <Content Include="src\app\databinding\event-binding.component.js" />
+    <Content Include="src\app\databinding\property-binding.component.js" />
+    <Content Include="src\app\databinding\two-way-binding.component.js" />
+    <Content Include="src\app\directives\directives.component.css" />
+    <Content Include="src\app\directives\directives.component.html" />
+    <Content Include="src\app\directives\directives.component.js" />
+    <Content Include="src\app\directives\directives.component.spec.js" />
+    <Content Include="src\app\directives\highlight.directive.js" />
+    <Content Include="src\app\directives\unless.directive.js" />
+    <Content Include="src\app\home-component.component.css" />
+    <Content Include="src\app\home-component.component.html" />
+    <Content Include="src\app\home-component.component.js" />
+    <Content Include="src\app\home-component.component.spec.js" />
+    <Content Include="src\app\http\http.component.css" />
+    <Content Include="src\app\http\http.component.html" />
+    <Content Include="src\app\http\http.component.js" />
+    <Content Include="src\app\http\http.component.spec.js" />
+    <Content Include="src\app\http\http.service.js" />
+    <Content Include="src\app\http\http.service.spec.js" />
+    <Content Include="src\app\lifecycle.component.js" />
+    <Content Include="src\app\pipes\double.pipe.js" />
+    <Content Include="src\app\pipes\double.pipe.spec.js" />
+    <Content Include="src\app\pipes\filter.pipe.js" />
+    <Content Include="src\app\pipes\filter.pipe.spec.js" />
+    <Content Include="src\app\pipes\pipes.component.css" />
+    <Content Include="src\app\pipes\pipes.component.html" />
+    <Content Include="src\app\pipes\pipes.component.js" />
+    <Content Include="src\app\pipes\pipes.component.spec.js" />
+    <Content Include="src\app\services\cmp-a.component.css" />
+    <Content Include="src\app\services\cmp-a.component.html" />
+    <Content Include="src\app\services\cmp-a.component.js" />
+    <Content Include="src\app\services\cmp-a.component.spec.js" />
+    <Content Include="src\app\services\cmp-b.component.css" />
+    <Content Include="src\app\services\cmp-b.component.html" />
+    <Content Include="src\app\services\cmp-b.component.js" />
+    <Content Include="src\app\services\cmp-b.component.spec.js" />
+    <Content Include="src\app\services\data.service.js" />
+    <Content Include="src\app\services\data.service.spec.js" />
+    <Content Include="src\app\services\log.service.js" />
+    <Content Include="src\app\services\log.service.spec.js" />
+    <Content Include="src\app\user\user-detail.component.css" />
+    <Content Include="src\app\user\user-detail.component.html" />
+    <Content Include="src\app\user\user-detail.guard.js" />
+    <Content Include="src\app\user\user-edit.component.css" />
+    <Content Include="src\app\user\user-edit.component.html" />
+    <Content Include="src\app\user\user-edit.component.js" />
+    <Content Include="src\app\user\user-edit.component.spec.js" />
+    <Content Include="src\app\user\user-edit.guard.js" />
+    <Content Include="src\app\user\user.component.css" />
+    <Content Include="src\app\user\user.component.html" />
+    <Content Include="src\app\user\user.component.js" />
+    <Content Include="src\app\user\user.component.spec.js" />
+    <Content Include="src\app\user\user.routes.js" />
+    <Content Include="src\assets\css\styles.css" />
+    <Content Include="src\assets\images\angular.png" />
+    <Content Include="src\index.html" />
+    <Content Include="src\main.js" />
+    <Content Include="src\polyfills.js" />
+    <Content Include="src\styles.css" />
+    <Content Include="src\vendor.js" />
+    <Content Include="webpack.config.js" />
+    <None Include="bs-config.json" />
+    <None Include="dist\app.css.map" />
+    <None Include="dist\app.js.map" />
+    <None Include="dist\polyfills.js.map" />
+    <None Include="dist\vendor.js.map" />
+    <None Include="package-lock.json" />
+    <None Include="package.json" />
+    <None Include="Pages\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e2c6d6c2-5762-4e37-b297-cc200ed04ebc}</SharePointProjectItemId>
+    </None>
+    <Content Include="Elements.xml" />
+    <Content Include="Pages\Elements.xml" />
+    <Content Include="Pages\Default.aspx" />
+    <None Include="SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f46f1d27-6cca-454f-aa67-a063469ccd32}</SharePointProjectItemId>
+    </None>
+    <None Include="src\app\11_Forms\data-driven\data-driven.component.js.map" />
+    <None Include="src\app\11_Forms\data-driven\data-driven.component.spec.js.map" />
+    <None Include="src\app\11_Forms\template-driven\template-driven.component.js.map" />
+    <None Include="src\app\11_Forms\template-driven\template-driven.component.spec.js.map" />
+    <None Include="src\app\app.component.js.map" />
+    <None Include="src\app\app.component.spec.js.map" />
+    <None Include="src\app\app.module.js.map" />
+    <None Include="src\app\app.routing.js.map" />
+    <None Include="src\app\databinding\databinding.component.js.map" />
+    <None Include="src\app\databinding\event-binding.component.js.map" />
+    <None Include="src\app\databinding\property-binding.component.js.map" />
+    <None Include="src\app\databinding\two-way-binding.component.js.map" />
+    <None Include="src\app\directives\directives.component.js.map" />
+    <None Include="src\app\directives\directives.component.spec.js.map" />
+    <None Include="src\app\directives\highlight.directive.js.map" />
+    <None Include="src\app\directives\unless.directive.js.map" />
+    <None Include="src\app\home-component.component.js.map" />
+    <None Include="src\app\home-component.component.spec.js.map" />
+    <None Include="src\app\http\http.component.js.map" />
+    <None Include="src\app\http\http.component.spec.js.map" />
+    <None Include="src\app\http\http.service.js.map" />
+    <None Include="src\app\http\http.service.spec.js.map" />
+    <None Include="src\app\lifecycle.component.js.map" />
+    <None Include="src\app\pipes\double.pipe.js.map" />
+    <None Include="src\app\pipes\double.pipe.spec.js.map" />
+    <None Include="src\app\pipes\filter.pipe.js.map" />
+    <None Include="src\app\pipes\filter.pipe.spec.js.map" />
+    <None Include="src\app\pipes\pipes.component.js.map" />
+    <None Include="src\app\pipes\pipes.component.spec.js.map" />
+    <None Include="src\app\services\cmp-a.component.js.map" />
+    <None Include="src\app\services\cmp-a.component.spec.js.map" />
+    <None Include="src\app\services\cmp-b.component.js.map" />
+    <None Include="src\app\services\cmp-b.component.spec.js.map" />
+    <None Include="src\app\services\data.service.js.map" />
+    <None Include="src\app\services\data.service.spec.js.map" />
+    <None Include="src\app\services\log.service.js.map" />
+    <None Include="src\app\services\log.service.spec.js.map" />
+    <None Include="src\app\user\user-detail.guard.js.map" />
+    <None Include="src\app\user\user-edit.component.js.map" />
+    <None Include="src\app\user\user-edit.component.spec.js.map" />
+    <None Include="src\app\user\user-edit.guard.js.map" />
+    <None Include="src\app\user\user.component.js.map" />
+    <None Include="src\app\user\user.component.spec.js.map" />
+    <None Include="src\app\user\user.routes.js.map" />
+    <None Include="src\main.js.map" />
+    <None Include="src\polyfills.js.map" />
+    <None Include="src\tsconfig.json" />
+    <None Include="src\vendor.js.map" />
+    <None Include="tslint.json" />
+    <None Include="typings.json" />
+    <None Include="typings\globals\core-js\typings.json" />
+    <None Include="typings\globals\jasmine\typings.json" />
+    <None Include="typings\globals\node\typings.json" />
+    <None Include="webpack.zip" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\AppIcon.png">
+      <OpcRelationship>manifest-icon</OpcRelationship>
+    </Content>
+    <Content Include="Images\Elements.xml" />
+    <None Include="Images\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{11b53bf7-0649-4f27-919c-3ff55935dafd}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Package\Package.package">
+      <PackageId>{cd3827b9-1659-400a-bccb-8a5aabc2aca3}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="Features\Feature1\Feature1.feature">
+      <FeatureId>{019d9d0b-09d0-4405-98a7-cc640e7687e2}</FeatureId>
+    </None>
+    <None Include="Features\Feature1\Feature1.Template.xml">
+      <DependentUpon>Feature1.feature</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <AppManifestFile Include="AppManifest.xml">
+      <SubType>Designer</SubType>
+    </AppManifestFile>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="src\app\11_Forms\template-driven\template-driven.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\11_Forms\template-driven\template-driven.component.ts" />
+    <TypeScriptCompile Include="src\app\app.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\app.component.ts" />
+    <TypeScriptCompile Include="src\app\app.module.ts" />
+    <TypeScriptCompile Include="src\app\app.routing.ts" />
+    <TypeScriptCompile Include="src\app\11_Forms\data-driven\data-driven.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\11_Forms\data-driven\data-driven.component.ts" />
+    <TypeScriptCompile Include="src\app\databinding\databinding.component.ts" />
+    <TypeScriptCompile Include="src\app\databinding\event-binding.component.ts" />
+    <TypeScriptCompile Include="src\app\databinding\property-binding.component.ts" />
+    <TypeScriptCompile Include="src\app\databinding\two-way-binding.component.ts" />
+    <TypeScriptCompile Include="src\app\directives\directives.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\directives\directives.component.ts" />
+    <TypeScriptCompile Include="src\app\directives\highlight.directive.ts" />
+    <TypeScriptCompile Include="src\app\directives\unless.directive.ts" />
+    <TypeScriptCompile Include="src\app\home-component.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\home-component.component.ts" />
+    <TypeScriptCompile Include="src\app\http\http.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\http\http.component.ts" />
+    <TypeScriptCompile Include="src\app\http\http.service.spec.ts" />
+    <TypeScriptCompile Include="src\app\http\http.service.ts" />
+    <TypeScriptCompile Include="src\app\lifecycle.component.ts" />
+    <TypeScriptCompile Include="src\app\pipes\double.pipe.spec.ts" />
+    <TypeScriptCompile Include="src\app\pipes\double.pipe.ts" />
+    <TypeScriptCompile Include="src\app\pipes\filter.pipe.spec.ts" />
+    <TypeScriptCompile Include="src\app\pipes\filter.pipe.ts" />
+    <TypeScriptCompile Include="src\app\pipes\pipes.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\pipes\pipes.component.ts" />
+    <TypeScriptCompile Include="src\app\services\cmp-a.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\services\cmp-a.component.ts" />
+    <TypeScriptCompile Include="src\app\services\cmp-b.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\services\cmp-b.component.ts" />
+    <TypeScriptCompile Include="src\app\services\data.service.spec.ts" />
+    <TypeScriptCompile Include="src\app\services\data.service.ts" />
+    <TypeScriptCompile Include="src\app\services\log.service.spec.ts" />
+    <TypeScriptCompile Include="src\app\services\log.service.ts" />
+    <TypeScriptCompile Include="src\app\user\user-detail.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\user\user-detail.component.ts" />
+    <TypeScriptCompile Include="src\app\user\user-edit.guard.ts" />
+    <TypeScriptCompile Include="src\app\user\user-detail.guard.ts" />
+    <TypeScriptCompile Include="src\app\user\user-edit.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\user\user-edit.component.ts" />
+    <TypeScriptCompile Include="src\app\user\user.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\user\user.component.ts" />
+    <TypeScriptCompile Include="src\app\user\user.routes.ts" />
+    <TypeScriptCompile Include="src\main.ts" />
+    <TypeScriptCompile Include="src\polyfills.ts" />
+    <TypeScriptCompile Include="src\vendor.ts" />
+    <TypeScriptCompile Include="typings\globals\core-js\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\jasmine\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\node\index.d.ts" />
+    <TypeScriptCompile Include="typings\index.d.ts" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

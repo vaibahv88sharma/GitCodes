@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="well">
+            <p>
+                pipes works!
+            </p>
+            <br />
+            <h2>{{myValue | uppercase}}</h2>
+            <h2>{{myDate | date:"MM/dd/yy"}}</h2>
+            <h2>{{myValue | slice:3:7 | uppercase}}</h2>
+            <hr />
+            <h2>Custom Pipe</h2>
+            <input type="text" #input (keyup)="0"/>
+            <p>{{input.value | double}}</p>
+            <input type="text" #newItem/>
+            <input 
+                   type="button" 
+                   class="btn btn-primary"
+                   (click)="values.push(newItem.value)"
+                   value="Add Item"/>
+            <ul>
+                <li *ngFor="let item of values | filter:'ea'">{{item}}</li>
+            </ul>
+            <hr />
+            <h2>Async Pipe</h2>
+            <p>{{asyncValue | async}}</p>
+        </div>
+    </div>
+</div>

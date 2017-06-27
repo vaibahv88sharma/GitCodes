@@ -1,0 +1,248 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{868CCDEA-C752-41C0-9EE4-8425F97D9BE7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AngSpRecipe</RootNamespace>
+    <AssemblyName>AngSpRecipe</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetOfficeVersion>16.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <MinimumOfficeToolsVersion>14.0</MinimumOfficeToolsVersion>
+    <IncludeAssemblyInPackage>False</IncludeAssemblyInPackage>
+    <ProjectMode>SharePointApp</ProjectMode>
+    <AppFeaturePartId>{5a240001-67f8-4871-89c3-2e9a1f959316}</AppFeaturePartId>
+    <WspPartId>{a4be3556-5970-43d1-b505-2d7c9476ada8}</WspPartId>
+    <WorkflowPartId>{176fd439-596f-45e8-bd9a-bc2960400be0}</WorkflowPartId>
+    <CspkgPartId>{b9c6548a-d521-4ead-a88a-d35792033b0a}</CspkgPartId>
+    <SqlPackagePartId>{1e773948-2f76-4b59-8270-b5ebdbf5d702}</SqlPackagePartId>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="config\helpers.js" />
+    <Content Include="config\karma-test-shim.js" />
+    <Content Include="config\karma.conf.js" />
+    <Content Include="config\webpack.common.js" />
+    <Content Include="config\webpack.dev.js" />
+    <Content Include="config\webpack.prod.js" />
+    <Content Include="config\webpack.test.js" />
+    <Content Include="dist\app.css" />
+    <Content Include="dist\app.js" />
+    <Content Include="dist\assets\angular.72e938844d7d3f68edf83a97e34f0859.png" />
+    <Content Include="dist\index.html" />
+    <Content Include="dist\polyfills.js" />
+    <Content Include="dist\vendor.js" />
+    <Content Include="Elements.xml" />
+    <Content Include="karma.webpack.conf.js" />
+    <Content Include="src\app\app.component.css" />
+    <Content Include="src\app\app.component.html" />
+    <Content Include="src\app\app.component.js" />
+    <Content Include="src\app\app.component.spec.js" />
+    <Content Include="src\app\app.module.js" />
+    <Content Include="src\app\app.routes.js" />
+    <Content Include="src\app\dropdown.directive.js" />
+    <Content Include="src\app\dropdown.directive.spec.js" />
+    <Content Include="src\app\header.component.css" />
+    <Content Include="src\app\header.component.html" />
+    <Content Include="src\app\header.component.js" />
+    <Content Include="src\app\header.component.spec.js" />
+    <Content Include="src\app\recipes\ingredient.js" />
+    <Content Include="src\app\recipes\recipe-detail\recipe-detail.component.css" />
+    <Content Include="src\app\recipes\recipe-detail\recipe-detail.component.html" />
+    <Content Include="src\app\recipes\recipe-detail\recipe-detail.component.js" />
+    <Content Include="src\app\recipes\recipe-detail\recipe-detail.component.spec.js" />
+    <Content Include="src\app\recipes\recipe-edit\recipe-edit.component.html" />
+    <Content Include="src\app\recipes\recipe-edit\recipe-edit.component.js" />
+    <Content Include="src\app\recipes\recipe-edit\recipe-edit.component.spec.js" />
+    <Content Include="src\app\recipes\recipe-list\recipe-item.component.css" />
+    <Content Include="src\app\recipes\recipe-list\recipe-item.component.html" />
+    <Content Include="src\app\recipes\recipe-list\recipe-item.component.js" />
+    <Content Include="src\app\recipes\recipe-list\recipe-item.component.spec.js" />
+    <Content Include="src\app\recipes\recipe-list\recipe-list.component.css" />
+    <Content Include="src\app\recipes\recipe-list\recipe-list.component.html" />
+    <Content Include="src\app\recipes\recipe-list\recipe-list.component.js" />
+    <Content Include="src\app\recipes\recipe-list\recipe-list.component.spec.js" />
+    <Content Include="src\app\recipes\recipe-start.component.js" />
+    <Content Include="src\app\recipes\recipe.js" />
+    <Content Include="src\app\recipes\recipe.service.js" />
+    <Content Include="src\app\recipes\recipe.service.spec.js" />
+    <Content Include="src\app\recipes\recipes.component.css" />
+    <Content Include="src\app\recipes\recipes.component.html" />
+    <Content Include="src\app\recipes\recipes.component.js" />
+    <Content Include="src\app\recipes\recipes.component.spec.js" />
+    <Content Include="src\app\recipes\recipes.routes.js" />
+    <Content Include="src\app\shopping-list\shopping-list-add.component.css" />
+    <Content Include="src\app\shopping-list\shopping-list-add.component.html" />
+    <Content Include="src\app\shopping-list\shopping-list-add.component.js" />
+    <Content Include="src\app\shopping-list\shopping-list-add.component.spec.js" />
+    <Content Include="src\app\shopping-list\shopping-list.component.css" />
+    <Content Include="src\app\shopping-list\shopping-list.component.html" />
+    <Content Include="src\app\shopping-list\shopping-list.component.js" />
+    <Content Include="src\app\shopping-list\shopping-list.component.spec.js" />
+    <Content Include="src\app\shopping-list\shopping-list.service.js" />
+    <Content Include="src\app\shopping-list\shopping-list.service.spec.js" />
+    <Content Include="src\assets\css\styles.css" />
+    <Content Include="src\assets\images\angular.png" />
+    <Content Include="src\index.html" />
+    <Content Include="src\main.js" />
+    <Content Include="src\styles.css" />
+    <Content Include="webpack.config.js" />
+    <None Include="bs-config.json" />
+    <None Include="dist\app.css.map" />
+    <None Include="dist\app.js.map" />
+    <None Include="dist\polyfills.js.map" />
+    <None Include="dist\vendor.js.map" />
+    <None Include="package-lock.json" />
+    <None Include="package.json" />
+    <None Include="Pages\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c2db0155-e0e3-47d2-a7ed-2f43bb0ad4e9}</SharePointProjectItemId>
+    </None>
+    <Content Include="Pages\Elements.xml" />
+    <Content Include="Pages\Default.aspx" />
+    <None Include="SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5c49c7b5-1fa4-4bda-bc85-645977c220c6}</SharePointProjectItemId>
+    </None>
+    <None Include="src\app\app.component.js.map" />
+    <None Include="src\app\app.component.spec.js.map" />
+    <None Include="src\app\app.module.js.map" />
+    <None Include="src\app\app.routes.js.map" />
+    <None Include="src\app\dropdown.directive.js.map" />
+    <None Include="src\app\dropdown.directive.spec.js.map" />
+    <None Include="src\app\header.component.js.map" />
+    <None Include="src\app\header.component.spec.js.map" />
+    <None Include="src\app\recipes\ingredient.js.map" />
+    <None Include="src\app\recipes\recipe-detail\recipe-detail.component.js.map" />
+    <None Include="src\app\recipes\recipe-detail\recipe-detail.component.spec.js.map" />
+    <None Include="src\app\recipes\recipe-edit\recipe-edit.component.js.map" />
+    <None Include="src\app\recipes\recipe-edit\recipe-edit.component.spec.js.map" />
+    <None Include="src\app\recipes\recipe-list\recipe-item.component.js.map" />
+    <None Include="src\app\recipes\recipe-list\recipe-item.component.spec.js.map" />
+    <None Include="src\app\recipes\recipe-list\recipe-list.component.js.map" />
+    <None Include="src\app\recipes\recipe-list\recipe-list.component.spec.js.map" />
+    <None Include="src\app\recipes\recipe-start.component.js.map" />
+    <None Include="src\app\recipes\recipe.js.map" />
+    <None Include="src\app\recipes\recipe.service.js.map" />
+    <None Include="src\app\recipes\recipe.service.spec.js.map" />
+    <None Include="src\app\recipes\recipes.component.js.map" />
+    <None Include="src\app\recipes\recipes.component.spec.js.map" />
+    <None Include="src\app\recipes\recipes.routes.js.map" />
+    <None Include="src\app\shopping-list\shopping-list-add.component.js.map" />
+    <None Include="src\app\shopping-list\shopping-list-add.component.spec.js.map" />
+    <None Include="src\app\shopping-list\shopping-list.component.js.map" />
+    <None Include="src\app\shopping-list\shopping-list.component.spec.js.map" />
+    <None Include="src\app\shopping-list\shopping-list.service.js.map" />
+    <None Include="src\app\shopping-list\shopping-list.service.spec.js.map" />
+    <None Include="src\main.js.map" />
+    <None Include="src\tsconfig.json" />
+    <None Include="tslint.json" />
+    <None Include="typings.json" />
+    <None Include="typings\globals\core-js\typings.json" />
+    <None Include="typings\globals\jasmine\typings.json" />
+    <None Include="typings\globals\node\typings.json" />
+    <None Include="webpack.zip" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\AppIcon.png">
+      <OpcRelationship>manifest-icon</OpcRelationship>
+    </Content>
+    <Content Include="Images\Elements.xml" />
+    <None Include="Images\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d8a2dd12-b984-48cb-8b00-74be0bb3bf94}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Package\Package.package">
+      <PackageId>{06959142-1554-4f50-b6fe-ea01de32f683}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="Features\Feature1\Feature1.feature">
+      <FeatureId>{917da27d-b01b-431d-9ec2-dbc9b1d4dcca}</FeatureId>
+    </None>
+    <None Include="Features\Feature1\Feature1.Template.xml">
+      <DependentUpon>Feature1.feature</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <AppManifestFile Include="AppManifest.xml">
+      <SubType>Designer</SubType>
+    </AppManifestFile>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="src\app\app.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\app.component.ts" />
+    <TypeScriptCompile Include="src\app\app.module.ts" />
+    <TypeScriptCompile Include="src\app\app.routes.ts" />
+    <TypeScriptCompile Include="src\app\dropdown.directive.spec.ts" />
+    <TypeScriptCompile Include="src\app\dropdown.directive.ts" />
+    <TypeScriptCompile Include="src\app\header.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\header.component.ts" />
+    <TypeScriptCompile Include="src\app\recipes\ingredient.ts" />
+    <TypeScriptCompile Include="src\app\recipes\recipe-detail\recipe-detail.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\recipes\recipe-detail\recipe-detail.component.ts" />
+    <TypeScriptCompile Include="src\app\recipes\recipe-edit\recipe-edit.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\recipes\recipe-edit\recipe-edit.component.ts" />
+    <TypeScriptCompile Include="src\app\recipes\recipe-list\recipe-item.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\recipes\recipe-list\recipe-item.component.ts" />
+    <TypeScriptCompile Include="src\app\recipes\recipe-list\recipe-list.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\recipes\recipe-list\recipe-list.component.ts" />
+    <TypeScriptCompile Include="src\app\recipes\recipe-start.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\recipes\recipe-start.component.ts" />
+    <TypeScriptCompile Include="src\app\recipes\recipe.service.spec.ts" />
+    <TypeScriptCompile Include="src\app\recipes\recipe.service.ts" />
+    <TypeScriptCompile Include="src\app\recipes\recipe.ts" />
+    <TypeScriptCompile Include="src\app\recipes\recipes.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\recipes\recipes.component.ts" />
+    <TypeScriptCompile Include="src\app\recipes\recipes.routes.ts" />
+    <TypeScriptCompile Include="src\app\shopping-list\shopping-list-add.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\shopping-list\shopping-list-add.component.ts" />
+    <TypeScriptCompile Include="src\app\shopping-list\shopping-list.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\shopping-list\shopping-list.component.ts" />
+    <TypeScriptCompile Include="src\app\shopping-list\shopping-list.service.spec.ts" />
+    <TypeScriptCompile Include="src\app\shopping-list\shopping-list.service.ts" />
+    <TypeScriptCompile Include="src\main.ts" />
+    <TypeScriptCompile Include="src\polyfills.ts" />
+    <TypeScriptCompile Include="src\vendor.ts" />
+    <TypeScriptCompile Include="typings\globals\core-js\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\jasmine\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\node\index.d.ts" />
+    <TypeScriptCompile Include="typings\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\app\shared\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

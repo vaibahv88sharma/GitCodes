@@ -1,0 +1,18 @@
+<div>
+    <input type="text" #input>
+    <input type='button' (click)="onLog(input.value)" value="Log" />
+    <input type='button' (click)="onStore(input.value)" value="Store" />
+    <!--<button (click)="onLog(input.value)">Log</button>
+    <button (click)="onStore(input.value)">Store</button>-->
+</div>
+<hr>
+<div>
+    <input type='button' (click)="onGet()" value="Refresh Storage" />
+    <!--<button (click)="onGet()">Refresh Storage</button>-->
+    <h3>Storage</h3>
+    <ul>
+        <li *ngFor="let item of items">{{item}}</li>
+    </ul>
+    <h3>Received Value</h3>
+    <p>{{value}}</p>
+</div>

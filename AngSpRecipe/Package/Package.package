@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="06959142-1554-4f50-b6fe-ea01de32f683" 
+        solutionId="06959142-1554-4f50-b6fe-ea01de32f683" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="AngSpRecipe"
+        sharePointProductVersion="16.0">
+  <features>
+        <featureReference itemId="917da27d-b01b-431d-9ec2-dbc9b1d4dcca" />
+  </features>
+</package>

@@ -1,0 +1,28 @@
+<p>
+  http works!
+</p>
+<h1>Post HTTP</h1>
+<br />
+<label for="username">Username</label>
+<input type="text" id="username" #username>
+<label for="email">E-Mail</label>
+<input type="text" id="email" #email>
+<!--<button (click)="onSubmit(username.value, email.value)">Submit</button>-->
+<input 
+       type="button" 
+       class="btn btn-default" 
+       value="Sumit" 
+       (click)="onSubmit(username.value, email.value)"/>
+<br />
+<hr>
+<input type="button"
+       class="btn btn-default"
+       value="Get Data"
+       (click)="onGetData()" />
+<!--<button (click)="onGetData()">Get Data</button>-->
+<ul>
+    <li *ngFor="let item of items">{{item.username}}</li>
+</ul>
+<hr>
+<p>{{asyncString | async}}</p>
+<br />

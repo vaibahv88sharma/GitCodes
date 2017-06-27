@@ -1,0 +1,22 @@
+main {
+  /*padding: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+  display: block;*/
+}
+
+.active {
+    color: red;
+    background-color: blue;
+    border-style: dotted;
+    border: 5px solid yellow;
+}
+
+
+.activeClass {
+    color: blue;
+    background-color: red;
+    border-style: solid;
+    border: 5px solid green;
+}
