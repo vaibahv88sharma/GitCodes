@@ -1,0 +1,156 @@
+<div class="container">
+  <div class="row">
+    <div class="">
+
+      <h3>Employee </h3>
+      <!--<form onsubmit="return false" #form="ngForm">-->
+      <form #form="ngForm" novalidate (submit)="submitForm(form)">
+Model: {{model | json}}
+<br>
+Form: {{form.value | json}}
+        <div class="form-group" [class.has-error]="firstName.invalid && firstName.touched">
+          <label for="firstNameId" class="control-label">First Name</label>
+          <input #firstName="ngModel"
+              type="text" class="form-control"
+              pattern="^Q.*" 
+              id="firstNameId" required placeholder="Name" 
+              name="firstName" [(ngModel)]="model.firstName">
+              <!-- [ngModel]="model.firstName" 
+              (ngModelChange)="firstNameToUppercase($event)">-->
+              <div *ngIf="firstName.invalid && firstName.touched" class="alert alert-danger" role="alert">
+                First Name is required
+              </div>
+        </div>
+        <div class="form-group">
+          <label for="lastNameId">Last Name</label>
+          <input type="text" class="form-control" id="lastNameId" required placeholder="Name" name="lastName" 
+            #lastName="ngModel"
+            [(ngModel)]="model.lastName">
+              <div *ngIf="lastName.invalid && lastName.touched" class="alert alert-danger" role="alert">
+                Last Name is required
+              </div>            
+        </div>
+
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" name="is-full-time"  [(ngModel)]="model.isFullTime" >Full Time Employee
+          </label>
+        </div>
+
+        <label>Payment Type</label>
+        <div class="radio">
+          <label>
+            <input type="radio" name="paymentType" value="w2" [(ngModel)]="model.paymentType">W2
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="paymentType" value="1099" [(ngModel)]="model.paymentType">1099
+          </label>
+        </div>
+        <div class="container">
+        <div class="row">
+          <h1>3rd Party Button Group</h1>
+          <div class="well">
+            <div class="btn-group">
+              <label class="btn btn-primary"
+                name="taxType" [(ngModel)]="taxType" btnRadio="W2">Type W2</label>
+              <label class="btn btn-primary"
+                name="taxType" [(ngModel)]="taxType" btnRadio="1099">Type 1099</label>
+              <label class="btn btn-primary"
+                name="taxType" [(ngModel)]="taxType" btnRadio="Other">Other Type</label>
+            </div>            
+          </div>
+        </div>
+        </div>
+
+
+        <div class="form-group" [class.has-error]="hasPrimaryLanguageError">
+          <label class="control-label">Primary Language</label>
+          <select class="form-control" 
+            #primaryLanguage name="primaryLanguage"
+            [(ngModel)]="model.primaryLanguage" 
+            (blur)="validatePrimaryLanguage(primaryLanguage.value)"
+            (change)="validatePrimaryLanguage(primaryLanguage.value)">
+            <option value="default">Select a Language...</option>
+            <option *ngFor="let lang of languages">
+              {{lang}}
+            </option>
+          </select>
+        </div>
+
+        <button class="btn btn-primary" type="submit" [disabled]="form.invalid">OK</button>
+
+        <hr>
+        <br>
+        <h1>3rd Party Calendar</h1>
+          <div class="form-group" style="display: inline-block"></div>
+            <datepicker 
+              name="startDate"
+              [showWeeks]="false"
+              [minDate]="minDate"
+              [(ngModel)]="startDate">
+            </datepicker>
+            <br>
+            Date:- {{startDate}}
+        <br>
+        <h1>3rd Party Time</h1>
+          <div class="form-group" style="display: inline-block"></div>
+            <timepicker 
+              name="startTime"
+              [minuteStep]="15"
+              [(ngModel)]="startTime">
+            </timepicker>
+            <br>
+            <pre class="alert alert-info">Time is: {{startTime}}</pre>
+        <br>
+        <h1>3rd Party Button</h1>
+          <div class="form-group"></div>
+            <pre class="card card-block card-header">{{onOffSwitch}}</pre>
+            <button type="button" class="btn"
+                    [class.btn-primary]="onOffSwitch === 'On'"
+                    name="onOffSwitch"
+                    [(ngModel)]="onOffSwitch" btnCheckbox
+                    btnCheckboxTrue="On" btnCheckboxFalse="Off">
+              {{onOffSwitch}}
+            </button>
+            <br>
+        <br>    
+        <h1>3rd Party Rating</h1>
+          <div class="form-group"></div>
+          <rating [(ngModel)]="postRating" name="postRating" [max]="10"
+            (onHover)="hover($event)"
+            (onLeave)="leave($event)"
+            [stateOff]="'glyphicon-unchecked'"></rating>
+          <div class="card">
+              <pre class="card-block card-header" style="margin:15px 0;">Rate: <b>{{postRating}}</b> </pre>
+          </div>
+            <br>
+        <br>            
+        <hr>
+      </form>
+
+      {{ form.valid }}
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

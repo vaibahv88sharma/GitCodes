@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="RootModule">
+    <File Path="dist\index.html" Url="dist/index.html" ReplaceContent="TRUE" />
+    <File Path="dist\js\app.js" Url="dist/js/app.js" ReplaceContent="TRUE" />
+    <File Path="dist\js\polyfills.js" Url="dist/js/polyfills.js" ReplaceContent="TRUE" />
+    <File Path="dist\js\vendor.js" Url="dist/js/vendor.js" ReplaceContent="TRUE" />
+    <File Path="dist\js\app.js.map" Url="dist/js/app.js.map" ReplaceContent="TRUE" />
+    <File Path="dist\js\polyfills.js.map" Url="dist/js/polyfills.js.map" ReplaceContent="TRUE" />
+    <File Path="dist\js\vendor.js.map" Url="dist/js/vendor.js.map" ReplaceContent="TRUE" />
+    <File Path="dist_build\index.html" Url="dist_build/index.html" ReplaceContent="TRUE" />
+    <File Path="dist_build\service-worker.js" Url="dist_build/service-worker.js" ReplaceContent="TRUE" />
+    <File Path="dist_build\css\app.036163e093ba386a0490.css" Url="dist_build/css/app.036163e093ba386a0490.css" ReplaceContent="TRUE" />
+    <File Path="dist_build\css\app.036163e093ba386a0490.css.map" Url="dist_build/css/app.036163e093ba386a0490.css.map" ReplaceContent="TRUE" />
+    <File Path="dist_build\img\angular.png" Url="dist_build/img/angular.png" ReplaceContent="TRUE" />
+    <File Path="dist_build\img\favicon.ico" Url="dist_build/img/favicon.ico" ReplaceContent="TRUE" />
+    <File Path="dist_build\js\app.036163e093ba386a0490.js" Url="dist_build/js/app.036163e093ba386a0490.js" ReplaceContent="TRUE" />
+    <File Path="dist_build\js\app.036163e093ba386a0490.js.map" Url="dist_build/js/app.036163e093ba386a0490.js.map" ReplaceContent="TRUE" />
+    <File Path="dist_build\js\polyfills.036163e093ba386a0490.js" Url="dist_build/js/polyfills.036163e093ba386a0490.js" ReplaceContent="TRUE" />
+    <File Path="dist_build\js\polyfills.036163e093ba386a0490.js.map" Url="dist_build/js/polyfills.036163e093ba386a0490.js.map" ReplaceContent="TRUE" />
+    <File Path="dist_build\js\vendor.036163e093ba386a0490.js" Url="dist_build/js/vendor.036163e093ba386a0490.js" ReplaceContent="TRUE" />
+    <File Path="dist_build\js\vendor.036163e093ba386a0490.js.map" Url="dist_build/js/vendor.036163e093ba386a0490.js.map" ReplaceContent="TRUE" />
+  </Module>
+</Elements>

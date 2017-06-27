@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="358b1c56-dbfa-4400-96a5-95ac54f3414d" 
+        solutionId="358b1c56-dbfa-4400-96a5-95ac54f3414d" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="Ang2WebpackPreboot"
+        sharePointProductVersion="16.0">
+  <features>
+        <featureReference itemId="7a4660dc-ec69-4a7a-a35c-20c7501a1305" />
+  </features>
+</package>

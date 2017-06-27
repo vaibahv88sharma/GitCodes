@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Type="ElementManifest" />
+    <ProjectItemFile Source="dist\index.html" Target="dist\" Type="ElementFile" />
+    <ProjectItemFile Source="dist\js\app.js" Target="dist\js\" Type="ElementFile" />
+    <ProjectItemFile Source="dist\js\polyfills.js" Target="dist\js\" Type="ElementFile" />
+    <ProjectItemFile Source="dist\js\vendor.js" Target="dist\js\" Type="ElementFile" />
+    <ProjectItemFile Source="dist\js\app.js.map" Target="dist\js\" Type="ElementFile" />
+    <ProjectItemFile Source="dist\js\polyfills.js.map" Target="dist\js\" Type="ElementFile" />
+    <ProjectItemFile Source="dist\js\vendor.js.map" Target="dist\js\" Type="ElementFile" />
+    <ProjectItemFile Source="dist_build\index.html" Target="dist_build\" Type="ElementFile" />
+    <ProjectItemFile Source="dist_build\service-worker.js" Target="dist_build\" Type="ElementFile" />
+    <ProjectItemFile Source="dist_build\css\app.036163e093ba386a0490.css" Target="dist_build\css\" Type="ElementFile" />
+    <ProjectItemFile Source="dist_build\css\app.036163e093ba386a0490.css.map" Target="dist_build\css\" Type="ElementFile" />
+    <ProjectItemFile Source="dist_build\img\angular.png" Target="dist_build\img\" Type="ElementFile" />
+    <ProjectItemFile Source="dist_build\img\favicon.ico" Target="dist_build\img\" Type="ElementFile" />
+    <ProjectItemFile Source="dist_build\js\app.036163e093ba386a0490.js" Target="dist_build\js\" Type="ElementFile" />
+    <ProjectItemFile Source="dist_build\js\app.036163e093ba386a0490.js.map" Target="dist_build\js\" Type="ElementFile" />
+    <ProjectItemFile Source="dist_build\js\polyfills.036163e093ba386a0490.js" Target="dist_build\js\" Type="ElementFile" />
+    <ProjectItemFile Source="dist_build\js\polyfills.036163e093ba386a0490.js.map" Target="dist_build\js\" Type="ElementFile" />
+    <ProjectItemFile Source="dist_build\js\vendor.036163e093ba386a0490.js" Target="dist_build\js\" Type="ElementFile" />
+    <ProjectItemFile Source="dist_build\js\vendor.036163e093ba386a0490.js.map" Target="dist_build\js\" Type="ElementFile" />
+  </Files>
+</ProjectItem>
