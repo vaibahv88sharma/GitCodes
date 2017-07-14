@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="1482285f-93be-4b8c-8277-73e45166d308" 
+        solutionId="1482285f-93be-4b8c-8277-73e45166d308" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="Hyperlinks"
+        sharePointProductVersion="16.0">
+  <features>
+        <featureReference itemId="8cd1b023-14cc-4bac-a7a6-f453fdbd96e0" />
+  </features>
+</package>

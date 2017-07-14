@@ -1,0 +1,39 @@
+<!--<p>
+  hyperlink works!
+</p>
+<hr />-->
+<div class="container-fluid" #eMainFrame>
+        <table class="table table-hover" id="table1">
+            <thead align="center">
+                <tr>
+                    <th style="font-size: 2em; font-weight: normal;">{{appTitle}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <!--<tr *ngFor="let item of data" (window:resize)="onResize($event)" id="tr1">-->
+                <tr *ngFor="let item of data">
+                    <td>
+                        <a
+                            style="color: blue; display: block; height: 100%; width: 100%;"
+                            [href]="item.hyperlink"
+                            target="item.hyperlinkTarget">{{ item.hyperlinkTitle }}
+                        </a>                        
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+<!--<div class="row123">
+    <div class="well">
+        {{appTitle}}
+        <a href="#" class="alert-link">{{appTitle}}</a>
+    </div>
+-->
+
+
+<!--<app-hyperlink-child></app-hyperlink-child>-->
+
+
+<!--</div>-->
+</div>

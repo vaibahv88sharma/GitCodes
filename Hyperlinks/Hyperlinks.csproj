@@ -1,0 +1,151 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8D56E749-42E1-4E23-895A-461B9CBF6880}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hyperlinks</RootNamespace>
+    <AssemblyName>Hyperlinks</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetOfficeVersion>16.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <MinimumOfficeToolsVersion>14.0</MinimumOfficeToolsVersion>
+    <IncludeAssemblyInPackage>False</IncludeAssemblyInPackage>
+    <ProjectMode>SharePointApp</ProjectMode>
+    <AppFeaturePartId>{ef9c6e84-f94d-41b1-a4ed-65dd420f7c0a}</AppFeaturePartId>
+    <WspPartId>{bc684160-9c70-4e8b-9da6-959aadb6eead}</WspPartId>
+    <WorkflowPartId>{ef07f2c3-9c9e-46f7-bfe1-379070b6cd5a}</WorkflowPartId>
+    <CspkgPartId>{451317fb-e9bf-476d-afaa-6539516f90e3}</CspkgPartId>
+    <SqlPackagePartId>{b724c6ac-f30c-42c8-9900-d41c437ad1e9}</SqlPackagePartId>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="config\helpers.js" />
+    <Content Include="config\karma-test-shim.js" />
+    <Content Include="config\karma.conf.js" />
+    <Content Include="config\webpack.common.js" />
+    <Content Include="config\webpack.dev.js" />
+    <Content Include="config\webpack.prod.js" />
+    <Content Include="config\webpack.test.js" />
+    <Content Include="dist\app.4e0f3fd2325bfbd4605c.css" />
+    <Content Include="dist\app.4e0f3fd2325bfbd4605c.js" />
+    <Content Include="dist\index.html" />
+    <Content Include="dist\polyfills.4e0f3fd2325bfbd4605c.js" />
+    <Content Include="dist\vendor.4e0f3fd2325bfbd4605c.js" />
+    <Content Include="Hyperlinks\Elements.xml">
+      <OpcRelationship>feature-elementmanifest</OpcRelationship>
+    </Content>
+    <Content Include="karma.webpack.conf.js" />
+    <Content Include="Pages\Hyperlinks.aspx" />
+    <Content Include="src\app\app.component.css" />
+    <Content Include="src\app\app.component.html" />
+    <Content Include="src\app\home\home.component.css" />
+    <Content Include="src\app\home\home.component.html" />
+    <Content Include="src\app\hyperlink\hyperlink-child.component.css" />
+    <Content Include="src\app\hyperlink\hyperlink-child.component.html" />
+    <Content Include="src\app\hyperlink\hyperlink.component.css" />
+    <Content Include="src\app\hyperlink\hyperlink.component.html" />
+    <Content Include="src\assets\css\styles.css" />
+    <Content Include="src\assets\images\angular.png" />
+    <Content Include="src\index.html" />
+    <Content Include="src\styles.css" />
+    <Content Include="webpack.config.js" />
+    <None Include="bs-config.json" />
+    <None Include="dist\app.4e0f3fd2325bfbd4605c.css.map" />
+    <None Include="hyperlinks.json" />
+    <None Include="Hyperlinks\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{9a692d2c-9279-4b0c-a197-1acfac0af1a6}</SharePointProjectItemId>
+    </None>
+    <None Include="package-lock.json" />
+    <None Include="package.json" />
+    <None Include="Pages\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e57d6ea0-c0d9-4837-b292-444f361de7bf}</SharePointProjectItemId>
+    </None>
+    <Content Include="Elements.xml" />
+    <Content Include="Pages\Elements.xml" />
+    <Content Include="Pages\Default.aspx" />
+    <None Include="SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{019f38e7-25e8-496b-b687-9f5f9ce400ca}</SharePointProjectItemId>
+    </None>
+    <None Include="src\tsconfig.json" />
+    <None Include="tslint.json" />
+    <None Include="webpack %282%29.zip" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\AppIcon.png">
+      <OpcRelationship>manifest-icon</OpcRelationship>
+    </Content>
+    <Content Include="Images\Elements.xml" />
+    <None Include="Images\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{ea251b31-32bb-4924-bc39-4abd90bc7a94}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Package\Package.package">
+      <PackageId>{1482285f-93be-4b8c-8277-73e45166d308}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="Features\Feature1\Feature1.feature">
+      <FeatureId>{8cd1b023-14cc-4bac-a7a6-f453fdbd96e0}</FeatureId>
+    </None>
+    <None Include="Features\Feature1\Feature1.Template.xml">
+      <DependentUpon>Feature1.feature</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <AppManifestFile Include="AppManifest.xml">
+      <SubType>Designer</SubType>
+    </AppManifestFile>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="e2e-spec.ts" />
+    <TypeScriptCompile Include="src\app\app.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\app.component.ts" />
+    <TypeScriptCompile Include="src\app\app.module.ts" />
+    <TypeScriptCompile Include="src\app\app.routing.ts" />
+    <TypeScriptCompile Include="src\app\home\home.component.ts" />
+    <TypeScriptCompile Include="src\app\hyperlink\hyperlink-child.component.ts" />
+    <TypeScriptCompile Include="src\app\hyperlink\hyperlink.component.ts" />
+    <TypeScriptCompile Include="src\app\shared\data.service.ts" />
+    <TypeScriptCompile Include="src\app\shared\data.ts" />
+    <TypeScriptCompile Include="src\app\shared\sharepoint.ts" />
+    <TypeScriptCompile Include="src\app\shared\sp-app-settings.ts" />
+    <TypeScriptCompile Include="src\main.ts" />
+    <TypeScriptCompile Include="src\polyfills.ts" />
+    <TypeScriptCompile Include="src\vendor.ts" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>
