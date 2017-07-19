@@ -126,6 +126,7 @@
     <Content Include="Kangan OtherScripts\User Profile Service Application\deleteUsers.ps1" />
     <Content Include="Kangan OtherScripts\WF\Before Install.ps1" />
     <Content Include="Kangan OtherScripts\WF\WFE WebFrontEnd as WFmanager.ps1" />
+    <Content Include="Kangan OtherScripts\Search\OutboundHybridSearch.ps1" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
