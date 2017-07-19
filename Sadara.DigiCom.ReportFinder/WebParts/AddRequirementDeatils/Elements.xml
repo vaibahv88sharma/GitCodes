@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Elements xmlns="http://schemas.microsoft.com/sharepoint/" >
-  <Module Name="AddRequirementDeatils" List="113" Url="_catalogs/wp">
-    <File Path="AddRequirementDeatils\AddRequirementDeatils.webpart" Url="Sadara.DigiCom.ReportFinder_AddRequirementDeatils.webpart" Type="GhostableInLibrary" >
-      <Property Name="Group" Value="Request Finder" />
-    </File>
-  </Module>
-</Elements>

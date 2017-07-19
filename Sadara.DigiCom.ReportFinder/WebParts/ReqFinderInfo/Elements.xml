@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Elements xmlns="http://schemas.microsoft.com/sharepoint/" >
-  <Module Name="ReqFinderInfo" List="113" Url="_catalogs/wp">
-    <File Path="ReqFinderInfo\ReqFinderInfo.webpart" Url="Sadara.DigiCom.ReportFinder_ReqFinderInfo.webpart" Type="GhostableInLibrary" >
-      <Property Name="Group" Value="Custom" />
-    </File>
-  </Module>
-</Elements>
