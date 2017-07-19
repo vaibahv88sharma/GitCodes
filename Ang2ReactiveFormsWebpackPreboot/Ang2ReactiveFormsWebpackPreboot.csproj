@@ -1,0 +1,185 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EE30AB12-3BF1-45AB-A524-B23DC8642F2F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ang2ReactiveFormsWebpackPreboot</RootNamespace>
+    <AssemblyName>Ang2ReactiveFormsWebpackPreboot</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetOfficeVersion>16.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <MinimumOfficeToolsVersion>14.0</MinimumOfficeToolsVersion>
+    <IncludeAssemblyInPackage>False</IncludeAssemblyInPackage>
+    <ProjectMode>SharePointApp</ProjectMode>
+    <AppFeaturePartId>{05043ce8-fc97-4ca6-8066-cbd7f51853f3}</AppFeaturePartId>
+    <WspPartId>{00e7a9c8-45d0-4cb8-bf2f-34b0ac66ea0d}</WspPartId>
+    <WorkflowPartId>{11a60b72-ff32-49d4-bc0a-df0b8234af61}</WorkflowPartId>
+    <CspkgPartId>{609f5811-0a1e-4a5a-a9d1-41c036738536}</CspkgPartId>
+    <SqlPackagePartId>{0ce1e196-7cc1-4af5-a78c-8b5b73e99f67}</SqlPackagePartId>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+    <Content Include="dist\index.html" />
+    <Content Include="dist\js\app.js" />
+    <Content Include="dist\js\polyfills.js" />
+    <Content Include="dist\js\vendor.js" />
+    <Content Include="Elements.xml" />
+    <Content Include="karma-shim.js" />
+    <Content Include="karma.conf.js" />
+    <Content Include="Pages\ReactiveForm.aspx" />
+    <Content Include="protractor.conf.js" />
+    <Content Include="ReactiveForm\Elements.xml">
+      <OpcRelationship>feature-elementmanifest</OpcRelationship>
+    </Content>
+    <Content Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="src\app\about\about.component.html" />
+    <Content Include="src\app\app.component.e2e-spec.js" />
+    <Content Include="src\app\app.component.html" />
+    <Content Include="src\app\details\details.component.html" />
+    <Content Include="src\app\home\home.component.e2e-spec.js" />
+    <Content Include="src\app\home\home.component.html" />
+    <Content Include="src\app\products\product-detail.component.html" />
+    <Content Include="src\app\products\product-edit.component.html" />
+    <Content Include="src\app\products\product-list.component.css" />
+    <Content Include="src\app\products\product-list.component.html" />
+    <Content Include="src\app\shared\star.component.css" />
+    <Content Include="src\app\shared\star.component.html" />
+    <Content Include="src\public\img\angular.png" />
+    <Content Include="src\public\img\favicon.ico" />
+    <Content Include="src\public\index.html" />
+    <Content Include="src\public\service-worker.js" />
+    <Content Include="webpack.config.js" />
+    <None Include=".editorconfig" />
+    <None Include="CHANGELOG.md" />
+    <None Include="LICENSE" />
+    <None Include="package-lock.json" />
+    <None Include="package.json" />
+    <None Include="packages.config" />
+    <None Include="Pages\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4b7d1dd9-6420-42f8-809e-331893d6cce9}</SharePointProjectItemId>
+    </None>
+    <Content Include="Pages\Elements.xml" />
+    <Content Include="Pages\Default.aspx" />
+    <None Include="ReactiveForm\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{476e904b-f5d7-4243-944d-dd9b5380cec7}</SharePointProjectItemId>
+    </None>
+    <None Include="README.md" />
+    <None Include="Scripts\jquery-1.9.1.min.map" />
+    <None Include="SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{85750d06-208c-40f7-8859-aee6b79dcf03}</SharePointProjectItemId>
+    </None>
+    <None Include="src\api\products\products.json" />
+    <None Include="src\app\about\about.component.scss" />
+    <None Include="src\app\app.component.scss" />
+    <None Include="src\app\details\details.component.scss" />
+    <None Include="src\app\home\home.component.scss" />
+    <None Include="src\public\products.json" />
+    <None Include="src\style\app.scss" />
+    <None Include="tsconfig.json" />
+    <None Include="tslint.json" />
+    <None Include="typedoc.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{83341cb3-7250-4590-ae10-a455afd11b79}</SharePointProjectItemId>
+    </None>
+    <Content Include="Content\Elements.xml" />
+    <Content Include="Content\App.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\AppIcon.png">
+      <OpcRelationship>manifest-icon</OpcRelationship>
+    </Content>
+    <Content Include="Images\Elements.xml" />
+    <None Include="Images\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{866da044-93e2-4f18-93d1-6d2b77cc2356}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Package\Package.package">
+      <PackageId>{aaf38100-8946-475e-aa2d-9e619ec9e4aa}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="Features\Feature1\Feature1.feature">
+      <FeatureId>{aabcf233-7582-4433-9d8b-0438fddb2425}</FeatureId>
+    </None>
+    <None Include="Features\Feature1\Feature1.Template.xml">
+      <DependentUpon>Feature1.feature</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <AppManifestFile Include="AppManifest.xml">
+      <SubType>Designer</SubType>
+    </AppManifestFile>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="src\app\about\about.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\about\about.component.ts" />
+    <TypeScriptCompile Include="src\app\app.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\app.component.ts" />
+    <TypeScriptCompile Include="src\app\app.module.ts" />
+    <TypeScriptCompile Include="src\app\app.routing.ts" />
+    <TypeScriptCompile Include="src\app\details\details.component.ts" />
+    <TypeScriptCompile Include="src\app\home\home.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\home\home.component.ts" />
+    <TypeScriptCompile Include="src\app\products\product-data.ts" />
+    <TypeScriptCompile Include="src\app\products\product-detail.component.ts" />
+    <TypeScriptCompile Include="src\app\products\product-edit.component.ts" />
+    <TypeScriptCompile Include="src\app\products\product-filter.pipe.ts" />
+    <TypeScriptCompile Include="src\app\products\product-guard.service.ts" />
+    <TypeScriptCompile Include="src\app\products\product-list.component.ts" />
+    <TypeScriptCompile Include="src\app\products\product.module.ts" />
+    <TypeScriptCompile Include="src\app\products\product.service.ts" />
+    <TypeScriptCompile Include="src\app\products\product.ts" />
+    <TypeScriptCompile Include="src\app\shared\api.service.spec.ts" />
+    <TypeScriptCompile Include="src\app\shared\api.service.ts" />
+    <TypeScriptCompile Include="src\app\shared\customer.ts" />
+    <TypeScriptCompile Include="src\app\shared\generic-validator.ts" />
+    <TypeScriptCompile Include="src\app\shared\index.ts" />
+    <TypeScriptCompile Include="src\app\shared\number.validator.ts" />
+    <TypeScriptCompile Include="src\app\shared\shared.module.ts" />
+    <TypeScriptCompile Include="src\app\shared\sharepoint.ts" />
+    <TypeScriptCompile Include="src\app\shared\star.component.ts" />
+    <TypeScriptCompile Include="src\main.ts" />
+    <TypeScriptCompile Include="src\polyfills.ts" />
+    <TypeScriptCompile Include="src\vendor.ts" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

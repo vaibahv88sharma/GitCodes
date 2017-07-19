@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="aaf38100-8946-475e-aa2d-9e619ec9e4aa" 
+        solutionId="aaf38100-8946-475e-aa2d-9e619ec9e4aa" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="Ang2ReactiveFormsWebpackPreboot"
+        sharePointProductVersion="16.0">
+  <features>
+        <featureReference itemId="aabcf233-7582-4433-9d8b-0438fddb2425" />
+  </features>
+</package>

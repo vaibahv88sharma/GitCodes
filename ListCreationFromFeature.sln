@@ -75,6 +75,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ang2WebpackTheCompleteGuide
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hyperlinks", "Hyperlinks\Hyperlinks.csproj", "{8D56E749-42E1-4E23-895A-461B9CBF6880}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ang2ReactiveFormsWebpackPreboot", "Ang2ReactiveFormsWebpackPreboot\Ang2ReactiveFormsWebpackPreboot.csproj", "{EE30AB12-3BF1-45AB-A524-B23DC8642F2F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -281,6 +283,12 @@ Global
 		{8D56E749-42E1-4E23-895A-461B9CBF6880}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D56E749-42E1-4E23-895A-461B9CBF6880}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8D56E749-42E1-4E23-895A-461B9CBF6880}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{EE30AB12-3BF1-45AB-A524-B23DC8642F2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE30AB12-3BF1-45AB-A524-B23DC8642F2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE30AB12-3BF1-45AB-A524-B23DC8642F2F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{EE30AB12-3BF1-45AB-A524-B23DC8642F2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE30AB12-3BF1-45AB-A524-B23DC8642F2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE30AB12-3BF1-45AB-A524-B23DC8642F2F}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

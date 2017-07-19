@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="RootModule">
+    <File Path="dist\index.html" Url="dist/index.html" ReplaceContent="TRUE" />
+    <File Path="dist\js\app.js" Url="dist/js/app.js" ReplaceContent="TRUE" />
+    <File Path="dist\js\polyfills.js" Url="dist/js/polyfills.js" ReplaceContent="TRUE" />
+    <File Path="dist\js\vendor.js" Url="dist/js/vendor.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery-1.9.1.min.map" Url="Scripts/jquery-1.9.1.min.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery-1.9.1.min.js" Url="Scripts/jquery-1.9.1.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery-1.9.1.js" Url="Scripts/jquery-1.9.1.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\jquery-1.9.1.intellisense.js" Url="Scripts/jquery-1.9.1.intellisense.js" ReplaceContent="TRUE" />
+  </Module>
+</Elements>
