@@ -5,4 +5,4 @@ import { RestApiService } from './restapi.service';
 @NgModule({
   providers: [RestApiService]
 })
-export class CommonModule { }
+export class CommonnModule { }

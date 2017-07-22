@@ -4,19 +4,21 @@ import { RouterModule }  from '@angular/router';
 import { FormsModule }  from '@angular/forms';
 
 import { PlayersModule } from './players/players.module';
-import { TeamsModule } from './teams/teams.module';
+//import { TeamsModule } from './teams/teams.module';
 import { AppComponent } from './app.component';
 import { PlayerListComponent } from './players/player-list/player-list.component';
 import { NotFoundComponent } from './not-found.component';
 import { AppRoutingModule } from './app.routing';
+import { CommonnModule } from './common/common.module';
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
     PlayersModule,
-    TeamsModule,
-    AppRoutingModule
+    //TeamsModule,
+    AppRoutingModule,
+    CommonnModule
   ],
   declarations: [
     AppComponent,

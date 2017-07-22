@@ -1,16 +1,18 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule }  from '@angular/platform-browser';
+//import { BrowserModule }  from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { FormsModule }  from '@angular/forms';
 
 import { PlayerListComponent } from './player-list/player-list.component';
 import { PlayersRoutingModule } from './players.routing';
-import { CommonModule } from '../common/common.module';
+import { CommonnModule } from '../common/common.module';
 
 @NgModule({
   imports: [
-    BrowserModule,
+    //BrowserModule,
     FormsModule,
     CommonModule,
+    CommonnModule,
     PlayersRoutingModule
   ],
   declarations: [
