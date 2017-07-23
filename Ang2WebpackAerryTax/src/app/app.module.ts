@@ -10,6 +10,7 @@ import { PlayerListComponent } from './players/player-list/player-list.component
 import { NotFoundComponent } from './not-found.component';
 import { AppRoutingModule } from './app.routing';
 import { CommonnModule } from './common/common.module';
+import { MainNavigationComponent } from './main-navigation/main-navigation.component';
 
 @NgModule({
   imports: [
@@ -24,7 +25,8 @@ import { CommonnModule } from './common/common.module';
     AppComponent,
     //TeamListComponent,
     //PlayerListComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    MainNavigationComponent
   ],
   bootstrap: [ AppComponent ]
 })

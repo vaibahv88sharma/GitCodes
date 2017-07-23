@@ -1,4 +1,4 @@
-import { Player } from './Player';
+import { Player } from './player';
 
 export const MOCK_PLAYERS = [
     new Player('Lebron', 'James', 'SF', '6\'8"', '275'),
