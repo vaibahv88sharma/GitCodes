@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { PlayerListComponent } from './players/player-list/player-list.component';
 import { NotFoundComponent } from './not-found.component';
 import { AppRoutingModule } from './app.routing';
-import { CommonnModule } from './common/common.module';
+import { CommonnModule } from './shared/common.module';
 import { MainNavigationComponent } from './main-navigation/main-navigation.component';
 
 @NgModule({

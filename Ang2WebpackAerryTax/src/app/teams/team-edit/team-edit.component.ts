@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { Team } from '../../common/teams/team';
+import { Team } from '../../shared/teams/team';
 
 @Component({
   selector: 'app-team-edit',

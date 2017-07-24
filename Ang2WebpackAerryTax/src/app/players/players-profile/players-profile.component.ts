@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { Player } from '../../common/players/player';
+import { Player } from '../../shared/players/player';
 
 @Component({
   selector: 'app-players-profile',

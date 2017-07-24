@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Team } from '../../common/teams/team';
-import { RestApiService } from '../../common/restapi.service';
+import { Team } from '../../shared/teams/team';
+import { RestApiService } from '../../shared/restapi.service';
 
 @Component({
   selector: 'app-team-list',
