@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Player } from '../../shared/players/player';
+import { BasketballPlayer } from '../../shared/players/basketball-player';
 import { RestApiService } from '../../shared/restapi.service';
 
 @Component({
@@ -10,14 +10,14 @@ import { RestApiService } from '../../shared/restapi.service';
 export class PlayerListComponent implements OnInit {
 
   constructor(private apiService: RestApiService) { }
-  listOfPlayers: Player[];
-  selectedPlayer: Player;
+  listOfPlayers: BasketballPlayer[];
+  selectedPlayer: BasketballPlayer;
 
   ngOnInit() {
     this.listOfPlayers = this.apiService.getListOfPlayers();
   }
 
-  setSelectedPlayer(selectedPlayer: Player) {
+  setSelectedPlayer(selectedPlayer: BasketballPlayer) {
     this.selectedPlayer = selectedPlayer;
   }
 

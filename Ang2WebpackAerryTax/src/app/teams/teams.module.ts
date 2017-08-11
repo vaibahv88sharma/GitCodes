@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 //import { BrowserModule }  from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
-import { FormsModule }  from '@angular/forms';
+//import { FormsModule }  from '@angular/forms';
+import { ReactiveFormsModule }  from '@angular/forms';
 
 import { TeamListComponent } from './team-list/team-list.component';
 import { TeamsRoutingModule } from './teams.routing';
@@ -11,7 +12,7 @@ import { TeamEditComponent } from './team-edit/team-edit.component';
 @NgModule({
   imports: [
     //BrowserModule,
-    FormsModule,
+    ReactiveFormsModule,
     CommonnModule,
     CommonModule,
     TeamsRoutingModule
