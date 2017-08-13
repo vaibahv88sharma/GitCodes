@@ -305,3 +305,7 @@ $RECYCLE.BIN/
 # Angular2Me
 Angular2Me/node_modules
 Angular2Me/dist
+
+# Angular2Me_LifecycleHook
+Angular2Me/LifecycleHook_OnChanges/node_modules
+Angular2Me/LifecycleHook_OnChanges/dist
