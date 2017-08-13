@@ -1,0 +1,14 @@
+<h2>Old Title: {{oldTitle}}</h2>
+
+<p>{{page.description}}</p>
+
+<h3>First Feature Section</h3>
+Title <br> <input type="text" name="title" [(ngModel)]="page.title"> <br>
+Description <br> <textarea [(ngModel)]="page.description" rows="8" cols="20"></textarea>
+
+<h3>Child Section</h3>
+<p>
+    Child Input Value: <input type="text" name="childInput" [(ngModel)]="childInputValue">
+</p>
+
+<app-child [childInputField]="childInputValue"></app-child>

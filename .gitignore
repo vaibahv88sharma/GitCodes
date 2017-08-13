@@ -309,3 +309,7 @@ Angular2Me/dist
 # Angular2Me_LifecycleHook
 Angular2Me/LifecycleHook_OnChanges/node_modules
 Angular2Me/LifecycleHook_OnChanges/dist
+
+# LifecycleHook_OnInit_DoCheck_OnDestroy
+Angular2Me/LifecycleHook_OnInit_DoCheck_OnDestroy/node_modules
+Angular2Me/LifecycleHook_OnInit_DoCheck_OnDestroy/dist
