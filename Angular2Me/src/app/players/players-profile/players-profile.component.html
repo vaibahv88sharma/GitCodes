@@ -1,4 +1,29 @@
-<div class="card" *ngIf="selectedPlayer">
+<player-profile *ngIf="selectedPlayer">
+  <profile-heading>{{selectedPlayer.firstName}} {{selectedPlayer.lastName}}</profile-heading>
+  <profile-details>
+    <profile-detail-entry>
+      <strong>Position: </strong> 
+      <span [style.display]="getDisplayFlag(!editPosition)">
+        {{selectedPlayer.position}}
+        <a (click)="showEditPosition()">Edit</a>
+      </span>
+      <span [style.display]="getDisplayFlag(editPosition)">
+        <input type="text" [(ngModel)]="selectedPlayer.position">
+        <button type="button" class="btn btn-primary" (click)="savePosition()">Save</button>
+      </span>
+    </profile-detail-entry>
+    <profile-detail-entry>
+      <strong>Height: </strong> {{selectedPlayer.height}}
+    </profile-detail-entry>
+    <profile-detail-entry>
+      <strong>Weight: </strong> {{selectedPlayer.weight}} lbs
+    </profile-detail-entry>
+  </profile-details>
+</player-profile>
+
+
+
+<!-- <div class="card" *ngIf="selectedPlayer">
   <div class="card-block profile-heading">
     <h4>{{selectedPlayer.firstName}} {{selectedPlayer.lastName}}</h4>
   </div>
@@ -7,4 +32,4 @@
     <li class="list-group-item"><strong>Height: </strong> {{selectedPlayer.height}}</li>
     <li class="list-group-item"><strong>Weight: </strong> {{selectedPlayer.weight}} lbs</li>
   </ul>
-</div>
+</div> -->

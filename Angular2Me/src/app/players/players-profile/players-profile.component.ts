@@ -10,13 +10,25 @@ import { BasketballPlayer } from '../../shared/players/basketball-player';
 export class PlayersProfileComponent implements OnInit {
 
   @Input()
-  selectedPlayer: BasketballPlayer
-
+  selectedPlayer: BasketballPlayer;
+  editPosition = false;
 /*   constructor() {
     this.selectedPlayer = new Player("1212","121","212","21","12");
    } */
 
   ngOnInit() {
+  }
+
+  getDisplayFlag(displayFlag: boolean): string {
+    return displayFlag ? 'inline': 'none';
+  }
+
+  showEditPosition() {
+    this.editPosition = true;
+  }
+
+  savePosition() {
+    this.editPosition = false;
   }
 
 }
