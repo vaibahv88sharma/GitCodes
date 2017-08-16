@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, AfterViewInit, AfterViewChecked, OnChanges } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 
 import { Team } from '../../shared/teams/team';
@@ -10,17 +10,20 @@ import { FormFieldsService } from '../../shared/forms/fields/form-fields.service
   templateUrl: './team-edit.component.html',
   styleUrls: ['./team-edit.component.css']
 })
-export class TeamEditComponent {
+export class TeamEditComponent implements OnChanges, AfterViewInit, AfterViewChecked{
   @Input()
   selectedTeam: Team;
   formFields: FormField<any>[];
   teamEditForm: FormGroup;
+  showNotEditing: boolean;
 
-  constructor(private formFieldsService: FormFieldsService) { }
+  constructor(private formFieldsService: FormFieldsService) { 
+  }
 
   ngOnChanges() {
     if(this.selectedTeam)
     {
+      this.showNotEditing = false;
       this.formFields = this.formFieldsService.getFieldsForForm();
 
       if(this.formFields && this.selectedTeam) {
@@ -41,6 +44,13 @@ export class TeamEditComponent {
     }
   }
 
+  ngAfterViewInit(){
+    console.log("TeamEditComponent ngAfterViewInit called.");
+  }
+  ngAfterViewChecked(){
+    console.log("TeamEditComponent ngAfterViewChecked called.");
+  }
+
   saveTeam() {
     // Save to the bound team so the table updates
     this.selectedTeam.teamName = this.teamEditForm.value.teamName;
@@ -48,5 +58,6 @@ export class TeamEditComponent {
     this.selectedTeam.numberOfLosses = this.teamEditForm.value.numberOfLosses;
 
     this.selectedTeam = null;
+    this.showNotEditing = true;
   }
 }
