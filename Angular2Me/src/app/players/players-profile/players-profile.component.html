@@ -1,5 +1,4 @@
 <player-profile *ngIf="selectedPlayer">
-  <profile-heading>{{selectedPlayer.firstName}} {{selectedPlayer.lastName}}</profile-heading>
   <profile-details>
     <profile-detail-entry>
       <strong>Position: </strong> 
@@ -19,6 +18,7 @@
       <strong>Weight: </strong> {{selectedPlayer.weight}} lbs
     </profile-detail-entry>
   </profile-details>
+  <profile-heading>{{selectedPlayer.firstName}} {{selectedPlayer.lastName}}</profile-heading>
 </player-profile>
 
 
