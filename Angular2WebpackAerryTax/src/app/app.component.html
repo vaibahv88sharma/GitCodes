@@ -1,32 +1,41 @@
-<!-- <main> -->
-  <banner-top></banner-top>
+<div class="page-wrap">
+    <!-- <main> -->
+    <banner-top></banner-top>
 
-
-<div class="container">
- <div class="row">
-  <a routerLink="/">Home</a>
-</div>
-<div class="row">
-  <a routerLink="/contact">Contact</a>
-</div>
-<div class="row">
-  <a routerLink="/about">about</a>
-</div>
-<div class="row">
-  <a routerLink="/disclaimer">disclaimer</a>
-</div>
-<div class="row">
-  <a routerLink="/taxation">Services</a>
-</div> 
-</div>
-
-
-
-  <app-main-navigation></app-main-navigation>
 
   <div class="container">
-    <div class="row">
-       <router-outlet></router-outlet>
-    </div>
+  <div class="row">
+    <a routerLink="/">Home</a>
+  </div>
+  <div class="row">
+    <a routerLink="/contact">Contact</a>
+  </div>
+  <div class="row">
+    <a routerLink="/about">about</a>
+  </div>
+  <div class="row">
+    <a routerLink="/disclaimer">disclaimer</a>
+  </div>
+  <div class="row">
+    <a routerLink="/taxation">Services</a>
+  </div> 
   </div>
 
+
+
+    <app-main-navigation></app-main-navigation>
+
+    <div class="container">
+      <div class="row">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+
+  
+</div>
+<div class="site-footer">
+         <div class="container text-center">
+            <!--<p class="text-muted">Place sticky footer content here.</p>-->
+            <small>© Copyright 2016, Aerry Tax & Accounting Pty Ltd</small>
+        </div>
+</div>
