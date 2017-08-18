@@ -12,9 +12,14 @@ const routes: Routes = [
         pathMatch: 'full'
     },
     {
-        path:'contact',
+        path: 'contact',
         loadChildren: './contact/contact.module#ContactModule'
-        //loadChildren: './contact/contact.module#ContactModule?sync=true'
+        //path: 'contact', loadChildren: () => new Promise(resolve => {
+        //    (require as any).ensure([], (require : any) => {
+        //        resolve(require('./contact/contact.module').ContactModule);
+        //    })
+        //})
+
     }//,    
 /*     {
         path:'teams',
