@@ -19,17 +19,28 @@ const routes: Routes = [
         //        resolve(require('./contact/contact.module').ContactModule);
         //    })
         //})
-
-    }//,    
-/*     {
-        path:'teams',
-        loadChildren: './teams/teams.module#TeamsModule'
+    },  
+    {
+        path:'taxation',
+        loadChildren: './taxation/taxation.module#TaxationModule'
         //loadChildren: './teams/teams.module#TeamsModule?sync=true'
-    }, */
+    },
+    {
+        path:'about',
+        loadChildren: './about/about.module#AboutModule'
+    },
+    {
+        path:'disclaimer',
+        loadChildren: './disclaimer/disclaimer.module#DisclaimerModule'
+    },  
+    {
+        path: '**',
+        redirectTo: 'home'
+    }          
 /*     {
         path: '**',
         component: DisclaimerComponent
-    }  */
+    } */
 ];
 
 @NgModule({
