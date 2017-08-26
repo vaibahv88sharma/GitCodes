@@ -1,3 +1,122 @@
-<p>
-  main-navigation works!
-</p>
+<!-- 
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+          <li class="nav-item dropdown" appCustDropdown>
+            <a class="nav-link dropdown-toggle" routerLink="/about" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" routerLink="/about">Action</a>
+              <a class="dropdown-item" routerLink="/about">Another action</a>
+              <a class="dropdown-item" routerLink="/about">Something else here</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav> -->
+
+<!--<nav class="navbar navbar-inverse navbar-fixed-top">-->
+ <!-- <nav class="navbar navbar-default navbar-static-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" (click)="toggleState()">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" routerLink="/">
+        Aerry Tax
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" [ngClass]="{ 'in': isIn }">
+      <ul class="nav navbar-nav">
+        <li class="nav-item" [class.active]="isActive('/')">
+          <a class="nav-link" routerLink="/">Home</a>
+        </li>
+        <li class="nav-item" [class.active]="isActive('/about')">
+          <a class="nav-link" routerLink="/about">About Us</a>
+        </li>		
+        <li class="nav-item dropdown" [class.active]="isActive('/taxation')">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown">Services</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" routerLink="/">Accounting</a> 
+            <a class="dropdown-item" routerLink="/">Taxation</a> 
+            <a class="dropdown-item" routerLink="/">Business Services</a>
+          </div> 		  
+        </li>	
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown">Resources</a>
+		  <div class="dropdown-menu">
+			<a class="dropdown-item" href="https://www.ato.gov.au/Calculators-and-tools/Host/?anchor=STC&anchor=STC#STC/questions">Tax Calculator</a> 
+			<a class="dropdown-item" routerLink="/">Online Tax Return</a> 
+			<a class="dropdown-item" routerLink="/">FAQ</a>
+			<a class="dropdown-item" href="https://www.ato.gov.au/General/Gen/Order-ATO-products-online/">Online Ordering</a> 
+			<a class="dropdown-item" href="https://www.ato.gov.au/Forms/?sorttype=SortByTitle">ATO Forms</a> 
+			<a class="dropdown-item" href="https://www.ato.gov.au/Individuals/Lodging-your-tax-return/Lodge-online/e-tax/">e-tax Essential</a>
+		  </div> 		  
+        </li>
+        <li class="nav-item" [class.active]="isActive('/contact')">
+          <a class="nav-link" routerLink="/contact">Contact</a>
+        </li>
+        <li class="nav-item" [class.active]="isActive('/disclaimer')">
+          <a class="nav-link" routerLink="/disclaimer">Disclaimer</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav> --> 
+
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light"> -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">  
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button (click)="toggleCollapse()" class="navbar-toggler navbar-toggler-right" type="button">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent" [class.show]="show">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item" [class.active]="isActive('/')">
+          <a class="nav-link" routerLink="/">Home</a>
+        </li>
+        <li class="nav-item" [class.active]="isActive('/about')">
+          <a class="nav-link" routerLink="/about">About Us</a>
+        </li>		
+        <li class="nav-item dropdown" ng-dropdown [class.active]="isActive('/taxation')">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" 
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Services
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" routerLink="/">Accounting</a> 
+              <a class="dropdown-item" routerLink="/">Taxation</a> 
+              <a class="dropdown-item" routerLink="/">Business Services</a>
+          </div>
+        </li>
+        <li class="nav-item" [class.active]="isActive('/contact')">
+          <a class="nav-link" routerLink="/contact">Contact</a>
+        </li>
+        <li class="nav-item" [class.active]="isActive('/disclaimer')">
+          <a class="nav-link" routerLink="/disclaimer">Disclaimer</a>
+        </li>
+    </ul>
+  </div>
+</nav>
+

@@ -1,9 +1,16 @@
-html, body {
+@import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+/* @import "../../../node_modules/font-awesome/css/font-awesome.css"; */
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+/* html, body {
 	height: 100%;
 }
 .page-wrap {
   min-height: 100%;
-  /* equal to footer height */
 	margin-bottom: -50px; 
   position: relative;
 }
@@ -12,7 +19,6 @@ html, body {
   display: block;
 }
 .site-footer, .page-wrap:after {
-  /* .push must be the same height as footer */
 	height: 60px; 
 }
 .site-footer {
@@ -22,4 +28,4 @@ html, body {
     margin-top: 2em;
     margin-bottom: 0em;
     padding: 20px;  
-}
+} */

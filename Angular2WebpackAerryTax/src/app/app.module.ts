@@ -10,6 +10,10 @@ import { HomeModule } from './home/home.module';
 import { BannerTopComponent } from './banner-top/banner-top.component';
 //import { AboutComponent } from './about/about.component';
 //import { DisclaimerComponent } from './disclaimer/disclaimer.component';
+//import { CustDropdownDirective } from './main-navigation/cust-dropdown.directive';
+import { NgbDropdownDirective } from './shared/Directives/ngb-dropdown.directive';
+import { NgbDropdownToggleDirective } from './shared/Directives/ngb-dropdown-toggle.directive';
+import { NgDropdownDirective } from './shared/Directives/ng-dropdown.directive';
 
 @NgModule({
   imports: [
@@ -23,6 +27,10 @@ import { BannerTopComponent } from './banner-top/banner-top.component';
     BannerTopComponent,
     //AboutComponent,
     //DisclaimerComponent
+    //CustDropdownDirective
+    NgbDropdownDirective,
+    NgbDropdownToggleDirective,
+    NgDropdownDirective
   ],
   bootstrap: [ AppComponent ]
 })
