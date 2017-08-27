@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { HomeDataService } from '../shared/services/home-data.service';
 
 @Component({
   selector: 'app-main-navigation',
@@ -8,46 +9,20 @@ import { Router } from '@angular/router';
 })
 export class MainNavigationComponent implements OnInit {
 
-    isIn = false;   // store state
+  dropdownMenu: Array<any> = [];
 
-  show:boolean = false;
-
-  toggleCollapse() {
-    this.show = !this.show;
+  constructor(private _router: Router, hds: HomeDataService) { 
+    hds.getNavDropDown('src/app/shared/jsonFiles/navDropdown.json').subscribe(
+      data => {
+        this.dropdownMenu = data.navDropdown;
+      },
+      err => console.log('get error: ', err)
+    );    
   }
-
-    toggleState() { // click handler
-        let bool = this.isIn;
-        this.isIn = bool === false ? true : false; 
-    }
-
-  constructor(private _router: Router) { }
 
   isActive(url: string): boolean {
-    //debugger;
     return url == this._router.url;
   }
-
-  isOpen: boolean = false;
-  
-  dropdownMenu: Array<any> = [
-    {
-      text: 'Dynamic 1',
-    },
-    {
-      text: 'Dynamic 2'
-    }
-  ];
-  
-  toggleDropdown() {
-    this.isOpen = !this.isOpen;
-  }
-
-
-/*             $scope.isPage = function (name) {
-                return new RegExp("/" + name + "($|/)").test($location.path());
-            }; */
-
 
   ngOnInit() {
   }

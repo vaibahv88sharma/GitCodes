@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule }  from '@angular/platform-browser';
+import { HttpModule } from '@angular/http';
 import { RouterModule }  from '@angular/router';
 import { FormsModule }  from '@angular/forms';
 
@@ -11,15 +12,17 @@ import { BannerTopComponent } from './banner-top/banner-top.component';
 //import { AboutComponent } from './about/about.component';
 //import { DisclaimerComponent } from './disclaimer/disclaimer.component';
 //import { CustDropdownDirective } from './main-navigation/cust-dropdown.directive';
-import { NgbDropdownDirective } from './shared/Directives/ngb-dropdown.directive';
-import { NgbDropdownToggleDirective } from './shared/Directives/ngb-dropdown-toggle.directive';
+//import { NgbDropdownDirective } from './shared/Directives/ngb-dropdown.directive';
+//import { NgbDropdownToggleDirective } from './shared/Directives/ngb-dropdown-toggle.directive';
 import { NgDropdownDirective } from './shared/Directives/ng-dropdown.directive';
+import { HomeDataService } from './shared/services/home-data.service';
 
 @NgModule({
   imports: [
     BrowserModule,
+    HttpModule,
     AppRoutingModule,
-    HomeModule
+    HomeModule,
   ],
   declarations: [
     AppComponent,
@@ -28,10 +31,11 @@ import { NgDropdownDirective } from './shared/Directives/ng-dropdown.directive';
     //AboutComponent,
     //DisclaimerComponent
     //CustDropdownDirective
-    NgbDropdownDirective,
-    NgbDropdownToggleDirective,
+    //NgbDropdownDirective,
+    //NgbDropdownToggleDirective,
     NgDropdownDirective
   ],
+  providers: [ HomeDataService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

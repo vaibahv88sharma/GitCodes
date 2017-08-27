@@ -1,0 +1,55 @@
+{
+	"id": "0001",
+	"type": "donut",
+	"name": "Cake",
+	"ppu": 0.55,
+	"batters":
+		{
+			"batter":
+				[
+					{ "id": "1001", "type": "Regular" },
+					{ "id": "1002", "type": "Chocolate" },
+					{ "id": "1003", "type": "Blueberry" },
+					{ "id": "1004", "type": "Devil's Food" }
+				]
+    },
+  	"navDropdown":
+		[
+      {
+        "id": "5001",
+        "title": "Accounting",
+        "navPath": "/taxation"
+      },
+      {
+        "id": "5002",
+        "title": "Taxation",
+        "navPath": "/taxation"
+      },
+      {
+        "id": "5004",
+        "title": "Business Services",
+        "navPath": "/about"
+      }
+		],    
+	"tabs":
+		[
+      {
+        "id": "5001",
+        "title": "Accounting",
+        "image": "img/1.jpg",
+        "description": "We provide the full range of accounting and taxtion services so you can get on with running your business. We help you identify and manage tax risk, maximise opportunities, minimise your tax exposure, take realistic tax positions and comply with all ATO requirements."
+      },
+      {
+        "id": "5002",
+        "title": "Taxation",
+        "image": "img/2a.jpg",
+        "description": "We have been providing range of accounting services to our customers and advising best financial solutions. When you choose Aerry Tax & Accounting as your financial partner, you gain the advantages of a complete financial services solution that is dynamic, flexible and created to satisfy your individual requirements."
+      },
+      {
+        "id": "5004",
+        "title": "Business Services",
+        "image": "img/4a.jpg",
+        "description": "We have been providing range of services to our customers and advise businesses, companies and corporations and not for profit organisations on matters of tax and financial matters. Entities and Business Structures is designed to bridge the gap where the commercial law departs from the taxation treatment of structures, when you are advising on the legal concepts of business organisational structures and their underlying regulations."
+      }
+		]
+}
