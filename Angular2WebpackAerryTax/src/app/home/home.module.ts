@@ -6,6 +6,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HomeRoutingModule } from './home.routing';
 import { HomeDetailsComponent } from './home-details/home-details.component';
 import { HomeDetailsTilesComponent } from './home-details/home-details-tiles/home-details-tiles.component';
+import { HomeDetailsTileTabComponent } from './home-details/home-details-tiles/home-details-tile-tab/home-details-tile-tab.component';
 
 @NgModule({
   imports: [
@@ -16,8 +17,8 @@ import { HomeDetailsTilesComponent } from './home-details/home-details-tiles/hom
   ],
   declarations: [
     HomeDetailsComponent,
-    HomeDetailsTilesComponent
-    
+    HomeDetailsTilesComponent,
+    HomeDetailsTileTabComponent    
   ]
 })
 export class HomeModule { }
