@@ -8,15 +8,14 @@ import { HomeDetailsTilesComponent } from '../home-details-tiles.component';
 })
 export class HomeDetailsTileTabComponent implements OnInit {
 
-   //@Input() tabTitle: string;
+  //@Input('tabTitle') title: string;
+  //@Input() active = false;
+
   @Input() active: boolean; 
-
    @Input('tabTitle') title: string;
-  //@Input() active = false; 
-
-  constructor(tabs: HomeDetailsTilesComponent) {
+   constructor(tabs: HomeDetailsTilesComponent) {
     tabs.addTab(this);
-  }
+  } 
 
   ngOnInit() {
   }

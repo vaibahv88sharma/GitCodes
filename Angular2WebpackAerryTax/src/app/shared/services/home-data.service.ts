@@ -8,7 +8,7 @@ export class HomeDataService {
     constructor(private http: Http) {
     }
 
-    getNavDropDown(url: string) : Observable<any> {
+    getTaxation(url: string) : Observable<any> {
         return this.http.get(
                 url                
             )

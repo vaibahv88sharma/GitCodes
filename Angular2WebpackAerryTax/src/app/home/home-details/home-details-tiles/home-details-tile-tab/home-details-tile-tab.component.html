@@ -1,3 +1,38 @@
-    <div class="jumbotron" [hidden]="!active">
+<!--      <div class="jumbotron" [hidden]="!active">
       <ng-content></ng-content>
-    </div>
+    </div> --> 
+<div class="tab-content">
+     <div [hidden]="!active">
+      <ng-content></ng-content>
+    </div>  
+</div>
+    
+<!--     <div class="row">
+      <div class="tab-content clearfix">
+          <div class="tab-pane fade in " id="tab{{$index + 1}}" ng-repeat="tab in tabs" ng-class="{active: $index == 0}">
+              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <div class="row">
+                      <a href="#/home" class="thumbnail">
+                          <img ng-src="{{tab.image}}" alt="" />
+                      </a>
+                  </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <h2>{{tab.title}}</h2>
+                  <p>
+                      {{tab.description}}
+                  </p>
+                  <a href="#/taxation/{{tab.id}}" class="btn btn-primary pull-right" role="button">More Info</a>
+              </div>
+          </div>
+      </div>      
+    </div> -->
+    
+
+  <!--   "id": "5001",
+        "title": "Accounting",
+        "titleDescription": "We provide the full range of accounting and taxtion services so you can get on with running your business. We help you identify and manage tax risk, maximise opportunities, minimise your tax exposure, take realistic tax positions and comply with all ATO requirements.",        
+        "navPath": "/taxation",
+        "image": "img/1.jpg",
+        "pageDescription1": "We are proud to have highly qualified accountants who are attending regular trainings to keep up and maintain the accounting standards of the firm. Aerry Tax & Accounitng offers a wide range of accounting services and if you would like to know more please talk to one of our accountants.",
+        "pageDescription2 -->

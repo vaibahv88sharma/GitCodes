@@ -12,7 +12,7 @@ export class MainNavigationComponent implements OnInit {
   dropdownMenu: Array<any> = [];
 
   constructor(private _router: Router, hds: HomeDataService) { 
-    hds.getNavDropDown('src/app/shared/jsonFiles/navDropdown.json').subscribe(
+    hds.getTaxation('src/app/shared/jsonFiles/navDropdown.json').subscribe(
       data => {
         this.dropdownMenu = data.navDropdown;
       },

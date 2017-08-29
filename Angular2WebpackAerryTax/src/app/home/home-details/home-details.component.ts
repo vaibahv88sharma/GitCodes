@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HomeDataService } from '../../shared/services/home-data.service';
 
 @Component({
   selector: 'home-details',
@@ -7,7 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeDetailsComponent implements OnInit {
 
-  constructor() { }
+  tabsThumbnails: Array<any> = [];
+
+  constructor(hds: HomeDataService) { 
+    hds.getTaxation('src/app/shared/jsonFiles/navDropdown.json').subscribe(
+      data => {
+        //debugger;;
+        this.tabsThumbnails = data.tabs;
+      },
+      err => console.log('get error: ', err)
+    );    
+  }
 
   ngOnInit() {
   }

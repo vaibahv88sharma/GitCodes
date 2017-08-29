@@ -1,17 +1,42 @@
-<p>
-  home-details works!
-</p>
-
 <div class="row">
-  <!-- <home-details-tiles></home-details-tiles>  -->
-    <home-details-tiles>
+
+    <home-details-tiles *ngIf="tabsThumbnails">
+        
+            <home-details-tile-tab [tabTitle]="tabThumbnail.title" *ngFor="let tabThumbnail of tabsThumbnails; let i = index">
+                <!--  {{tabThumbnail.titleDescription}} -->
+                        
+                    <div class="tab-pane" [id]="'tab_'+i">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                <!-- <div class="row"> -->
+                                    <a href="#" class="thumbnail">
+                                        <img [src]="tabThumbnail.image" alt="" />
+                                    </a>
+                               <!--  </div> -->
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                <h2>{{tabThumbnail.title}}</h2>
+                                <p>
+                                    {{tabThumbnail.titleDescription}}
+                                </p>
+                                <!--<a href="#" class="btn btn-primary pull-right" role="button">More Info</a>-->
+                                <a href="#" class="btn btn-primary pull-right">More Info</a>
+                            </div>
+                        </div>
+                    </div>
+
+            </home-details-tile-tab>
+        
+    </home-details-tiles>
+
+    <!-- <home-details-tiles>
         <home-details-tile-tab tabTitle="Tab 1">
             Here's some content.
         </home-details-tile-tab>
         <home-details-tile-tab tabTitle="Tab 2">
             And here's more in another tab.
         </home-details-tile-tab>
-    </home-details-tiles>  
+    </home-details-tiles> -->  
 </div>
 
 <div class="row">
