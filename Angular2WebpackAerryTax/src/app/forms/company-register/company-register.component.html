@@ -1,0 +1,130 @@
+<!--  <div class="container"> --> 
+
+  <div class="card">
+  <div class="card-header">
+    Company Registeration
+  </div>
+  <div class="card-body">  
+    <form 
+        novalidate autocomplete="off"
+          (ngSubmit)="save()"
+          [formGroup]="crForm">
+
+          <fieldset>
+
+                <div class="form-group row">
+                    <!-- [ngClass]="{'has-danger': (name1Var.touched || name1Var.dirty) && !name1Var.valid }"> -->
+
+                    <label class="col-sm-2 col-md-2 col-lg-2 col-xl-2 col-form-label" 
+                        [ngClass]="{'invalid-feedback': (crForm.get('name1').touched || crForm.get('name1').dirty) && !crForm.get('name1').valid }"
+                           for="name1Id">Name</label>
+
+                    <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10">
+                        <input class="form-control" 
+                              [ngClass]="{'is-invalid': (crForm.get('name1').touched || crForm.get('name1').dirty) && !crForm.get('name1').valid }"
+                               id="name1Id" 
+                               type="text" 
+                               placeholder="Name (required)"
+                               formControlName="name1"/>
+
+                        <span class="form-text" *ngIf="(crForm.get('name1').touched || crForm.get('name1').dirty) && crForm.get('name1').errors"
+                            [ngClass]="{'invalid-feedback': (crForm.get('name1').touched || crForm.get('name1').dirty) && !crForm.get('name1').valid }">
+                            <span *ngIf="crForm.get('name1').errors.required">
+                                Please enter the name.
+                            </span>
+                            <span *ngIf="crForm.get('name1').errors.minlength">
+                                The first name must be longer than 2 characters.
+                            </span>
+                        </span>
+                    </div>
+                </div>
+
+<hr>
+
+                <div class="form-group row">
+                    <label class="col-md-2 col-form-label" 
+                      [ngClass]="{'invalid-feedback': (crForm.get('email').touched || crForm.get('email').dirty) && !crForm.get('email').valid }"
+                        for="emailId">Email</label>
+
+                    <div class="col-md-8">
+                        <input class="form-control" 
+                               id="emailId" 
+                               type="email" 
+                               placeholder="Email (required)" 
+                               formControlName="email"
+                               [ngClass]="{'is-invalid': (crForm.get('email').touched || crForm.get('email').dirty) && !crForm.get('email').valid }" />
+                        <span class="form-text" *ngIf="(crForm.get('email').touched || crForm.get('email').dirty) && crForm.get('email').errors"
+                          [ngClass]="{'invalid-feedback': (crForm.get('email').touched || crForm.get('email').dirty) && !crForm.get('email').valid }">
+                            <span *ngIf="crForm.get('email').errors.required">
+                                Please enter your email address.
+                            </span>
+                            <span *ngIf="crForm.get('email').errors.pattern">
+                                Please enter a valid email address.
+                            </span>
+
+                            <!-- This one does not work -->
+                            <span *ngIf="crForm.get('email').errors.email">
+                                Please enter a valid email address.
+                            </span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-md-2 col-form-label" for="phoneId"
+                        [ngClass]="{'invalid-feedback': !crForm.get('phone').valid }">Phone</label>
+
+                    <div class="col-md-8">
+                        <input class="form-control" 
+                               id="phoneId" 
+                               type="number" 
+                               placeholder="Phone" 
+                               formControlName = "phone" 
+                               [ngClass]="{'is-invalid': !crForm.get('phone').valid }"/>
+                        <span class="form-text" *ngIf="crForm.get('phone').errors"
+                            [ngClass]="{'invalid-feedback': !crForm.get('phone').valid }">
+                            <span *ngIf="crForm.get('phone').errors.required">
+                                Please enter your phone number.
+                            </span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                  <label class="col-md-2 col-form-label">Send Notifications</label>  
+                  <div class="col-md-8">
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="radio" value="email" 
+                            (click) = "setNotification('email')"
+                            formControlName = "notification"> Email
+                      </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="radio" value="text" 
+                            (click) = "setNotification('text')"
+                            formControlName = "notification"> Text
+                      </label>
+                    </div>
+                  </div>
+                </div>
+<hr>
+
+                <div class="form-group">
+                    <div class="col-md-4 col-lg-4">
+                        <span>
+                            <button class="btn btn-primary"
+                                    type="submit"
+                                    [disabled]="!crForm.valid">
+                                Save
+                            </button>
+                        </span>
+                    </div>
+                </div>
+
+          </fieldset>
+    </form>
+    </div> 
+ </div>  
+  <!-- </div>  -->

@@ -1,0 +1,210 @@
+
+      <div class="card">
+      <div class="card-header">
+        Contact Form
+      </div>
+      <div class="card-body">  
+        <form 
+            novalidate autocomplete="off"
+              (ngSubmit)="save()"
+              [formGroup]="contactForm">
+
+              <fieldset>
+                    <div class="form-group row">
+                        <label class="col-md-4 col-lg-4 col-form-label" 
+                            [ngClass]="{'invalid-feedback': (contactForm.get('firstName').touched || contactForm.get('firstName').dirty) && !contactForm.get('firstName').valid }"
+                              for="firstNameId">First Name</label>
+
+                        <div class="col-md-8 col-lg-8">
+                            <input class="form-control" 
+                                  [ngClass]="{'is-invalid': (contactForm.get('firstName').touched || contactForm.get('firstName').dirty) && !contactForm.get('firstName').valid }"
+                                  id="firstNameId" 
+                                  type="text" 
+                                  placeholder="First Name (required)"
+                                  formControlName="firstName"/>
+
+                            <span class="form-text" *ngIf="(contactForm.get('firstName').touched || contactForm.get('firstName').dirty) && contactForm.get('firstName').errors"
+                                [ngClass]="{'invalid-feedback': (contactForm.get('firstName').touched || contactForm.get('firstName').dirty) && !contactForm.get('firstName').valid }">
+                                <span *ngIf="contactForm.get('firstName').errors.required">
+                                    Please enter the First name.
+                                </span>
+                                <span *ngIf="contactForm.get('firstName').errors.minlength">
+                                    The first name must be longer than 1 character.
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                      
+                    <div class="form-group row">
+                        <label class="col-md-4 col-lg-4 col-form-label" 
+                            [ngClass]="{'invalid-feedback': (contactForm.get('lastName').touched || contactForm.get('lastName').dirty) && !contactForm.get('lastName').valid }"
+                              for="lastNameId">Last Name</label>
+
+                        <div class="col-md-8 col-lg-8">
+                            <input class="form-control" 
+                                  [ngClass]="{'is-invalid': (contactForm.get('lastName').touched || contactForm.get('lastName').dirty) && !contactForm.get('lastName').valid }"
+                                  id="lastNameId" 
+                                  type="text" 
+                                  placeholder="Last Name (required)"
+                                  formControlName="lastName"/>
+
+                            <span class="form-text" *ngIf="(contactForm.get('lastName').touched || contactForm.get('lastName').dirty) && contactForm.get('lastName').errors"
+                                [ngClass]="{'invalid-feedback': (contactForm.get('lastName').touched || contactForm.get('lastName').dirty) && !contactForm.get('lastName').valid }">
+                                <span *ngIf="contactForm.get('lastName').errors.required">
+                                    Please enter the last name.
+                                </span>
+                                <span *ngIf="contactForm.get('lastName').errors.minlength">
+                                    The last name must be longer than 2 characters.
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div formGroupName="emailGroup">
+                        <div class="form-group row">
+                            <label class="col-md-4 col-lg-4 col-form-label" 
+                            [ngClass]="{'invalid-feedback': (contactForm.get('emailGroup.email').touched || contactForm.get('emailGroup.email').dirty) 
+                                    && ( !contactForm.get('emailGroup.email').valid || contactForm.get('emailGroup').errors ) }"
+                                for="emailId">Email</label>
+                            <div class="col-md-8 col-lg-8">
+                                <input class="form-control" 
+                                    id="emailId" 
+                                    type="email" 
+                                    placeholder="Email (required)" 
+                                    formControlName="email"
+                                    [ngClass]="{'is-invalid': (contactForm.get('emailGroup.email').touched || contactForm.get('emailGroup.email').dirty) 
+                                    && ( !contactForm.get('emailGroup.email').valid || contactForm.get('emailGroup').errors ) }" />
+                                <span class="form-text" 
+                                        *ngIf="(contactForm.get('emailGroup.email').touched || contactForm.get('emailGroup.email').dirty) 
+                                            && ( contactForm.get('emailGroup.email').errors )"
+                                [ngClass]="{'invalid-feedback': 
+                                        (contactForm.get('emailGroup.email').touched || contactForm.get('emailGroup.email').dirty) 
+                                        && ( !contactForm.get('emailGroup.email').valid ) }">
+                                    <span *ngIf="contactForm.get('emailGroup.email').errors.required">
+                                        Please enter your email address.
+                                    </span>
+                                    <span *ngIf="contactForm.get('emailGroup.email').errors.pattern">
+                                        Please enter a valid email address.
+                                    </span>
+
+                                    <!-- This one does not work -->
+                                    <span *ngIf="contactForm.get('emailGroup.email').errors.email">
+                                        Please enter a valid email address.
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                                   <!--  <span
+                                        [ngClass]="{'invalid-feedback': contactForm.get('emailGroup.confirmEmail').errors.match }"
+                                        >error occured</span> -->
+                        <div class="form-group row">
+                            <label class="col-md-4 col-lg-4 col-form-label" 
+                            [ngClass]="{'invalid-feedback': 
+                                        (contactForm.get('emailGroup.confirmEmail').touched || contactForm.get('emailGroup.confirmEmail').dirty) 
+                                        && ( !contactForm.get('emailGroup.confirmEmail').valid || contactForm.get('emailGroup').errors ) }"
+                                for="confirmEmailId">Confirm Email</label>
+                            <div class="col-md-8 col-lg-8">
+                                <input class="form-control" 
+                                    id="confirmEmailId" 
+                                    type="email" 
+                                    placeholder="Confirm Email (required)"                                 
+                                    [ngClass]="{'is-invalid': (contactForm.get('emailGroup.confirmEmail').touched || contactForm.get('emailGroup.confirmEmail').dirty) 
+                                                && ( !contactForm.get('emailGroup.confirmEmail').valid || contactForm.get('emailGroup').errors ) }" 
+                                    formControlName="confirmEmail"/>
+                                <!-- <span class="form-text" *ngIf="(contactForm.get('emailGroup.confirmEmail').touched || contactForm.get('emailGroup.confirmEmail').dirty) && contactForm.get('emailGroup.confirmEmail').errors"
+                                        [ngClass]="{'invalid-feedback': (contactForm.get('emailGroup.confirmEmail').touched || contactForm.get('emailGroup.confirmEmail').dirty) && !contactForm.get('emailGroup.confirmEmail').valid }"> -->
+                                    <span class="form-text" 
+                                            *ngIf="(contactForm.get('emailGroup.confirmEmail').touched || contactForm.get('emailGroup.confirmEmail').dirty) 
+                                                    && (contactForm.get('emailGroup.confirmEmail').errors || contactForm.get('emailGroup').errors)"
+                                        [ngClass]="{'invalid-feedback': (contactForm.get('emailGroup.confirmEmail').touched || contactForm.get('emailGroup.confirmEmail').dirty) 
+                                                && (!contactForm.get('emailGroup.confirmEmail').valid || contactForm.get('emailGroup').errors) }">                                        
+                                    <span *ngIf="contactForm.get('emailGroup.confirmEmail').errors?.required">
+                                        Please confirm your email address.
+                                    </span>
+                                    <span *ngIf="contactForm.get('emailGroup').errors?.match">
+                                        The confirmation does not match the email address.
+                                    </span>                                    
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="form-group row">
+                    <label class="col-md-4 col-lg-4 col-form-label" 
+                          for="ratingId"
+                           [ngClass]="{'invalid-feedback': (contactForm.get('rating').touched || contactForm.get('rating').dirty) && !contactForm.get('rating').valid }" 
+                            >Rating</label>                        
+                    <div class="col-md-8 col-lg-8">
+                        <input class="form-control" 
+                               id="ratingId" 
+                               type="number" 
+                               placeholder="Rating"
+                               formControlName = "rating"
+                              [ngClass]="{'is-invalid': (contactForm.get('rating').touched || contactForm.get('rating').dirty) && !contactForm.get('rating').valid }" /> 
+                        <span class="form-text" 
+                             *ngIf="(contactForm.get('rating').touched || contactForm.get('rating').dirty) && contactForm.get('rating').errors"
+                            [ngClass]="{'invalid-feedback': (contactForm.get('rating').touched || contactForm.get('rating').dirty) && !contactForm.get('rating').valid }"> 
+                             <span  *ngIf="contactForm.get('rating').errors.range">  
+                                Please rate your experience from 1 to 5.
+                            </span>
+                       </span>
+                    </div>
+                </div>
+
+                    <div class="form-group row">
+                        <label class="col-md-4 col-lg-4 col-form-label" for="phoneId"
+                            [ngClass]="{'invalid-feedback': !contactForm.get('phone').valid }">Phone</label>
+
+                        <div class="col-md-8 col-lg-8">
+                            <input class="form-control" 
+                                  id="phoneId" 
+                                  type="number" 
+                                  placeholder="Phone" 
+                                  formControlName = "phone" 
+                                  [ngClass]="{'is-invalid': !contactForm.get('phone').valid }"/>
+                            <span class="form-text" *ngIf="contactForm.get('phone').errors"
+                                [ngClass]="{'invalid-feedback': !contactForm.get('phone').valid }">
+                                <span *ngIf="contactForm.get('phone').errors.required">
+                                    Please enter your phone number.
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-md-4 col-lg-4 col-form-label">Send Notifications</label>  
+                      <div class="col-md-8 col-lg-8">
+                        <div class="form-check form-check-inline">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="radio" value="email" 
+                                (click) = "setNotification('email')"
+                                formControlName = "notification"> Email
+                          </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="radio" value="text" 
+                                (click) = "setNotification('text')"
+                                formControlName = "notification"> Text
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+    
+
+                    <div class="form-group">
+                        <div class="col-md-12 col-lg-12">
+                            <span>
+                                <button class="btn btn-primary"
+                                        type="submit"
+                                        [disabled]="!contactForm.valid">
+                                    Save
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+
+              </fieldset>
+        </form>
+        </div> 
+    </div>

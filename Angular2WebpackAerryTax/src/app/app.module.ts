@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule }  from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { RouterModule }  from '@angular/router';
-import { FormsModule }  from '@angular/forms';
+import { FormsModule }  from '@angular/forms'; // Template Driven Forms
+import { ReactiveFormsModule }  from '@angular/forms'; // Reactive Forms
 
 import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
@@ -23,6 +24,8 @@ import { HomeDataService } from './shared/services/home-data.service';
     HttpModule,
     AppRoutingModule,
     HomeModule,
+    FormsModule, // Template Driven Forms
+    ReactiveFormsModule, // Reactive Forms
   ],
   declarations: [
     AppComponent,

@@ -1,11 +1,13 @@
-@import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+ @import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css"; 
 /* @import "../../../node_modules/font-awesome/css/font-awesome.css"; */
 
 html {
   position: relative;
   min-height: 100%;
 }
-
+.invalid-feedback {
+    display: block;
+  }
 /* html, body {
 	height: 100%;
 }
