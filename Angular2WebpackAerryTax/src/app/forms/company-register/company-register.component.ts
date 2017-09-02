@@ -18,10 +18,18 @@ export class CompanyRegisterComponent implements OnInit {
 
   ngOnInit(): void {
     this.crForm = this.fb.group({
-      name1:['',[Validators.required, Validators.minLength(3)]],
-      email: ['',[Validators.required, Validators.pattern("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?")]],
-      phone: '',
-      notification: 'email',
+        nameGroup : this.fb.group({
+          name1:['',[Validators.required, Validators.minLength(2)]],
+          name2:['',[Validators.required, Validators.minLength(2)]],
+          //name3:['',[Validators.required, Validators.minLength(2)]],
+        }),
+        commencementDate: ['', Validators.required],
+        companyType: 'public',
+        directorInfoGroup: this.fb.group({
+            surname: ["", Validators.required],
+            directorEmail: ['',[Validators.required, Validators.pattern("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?")]],
+            directorPhone: ['', Validators.required]
+        })
     });
   }
 
