@@ -132,7 +132,25 @@
                                     </span>
                                 </div>
                             </div>
-                            <div class="form-group row">
+                             <div class="form-group row">
+                                <label class="col-md-4 col-lg-4 col-form-label" 
+                                [ngClass]="{'invalid-feedback': emailMessage }"
+                                    for="directorEmailId">Director's Email</label>
+                                <div class="col-md-8 col-lg-8">
+                                    <input class="form-control" 
+                                        id="directorEmailId" 
+                                        type="email" 
+                                        placeholder="Email (required)" 
+                                        formControlName="directorEmail"
+                                        [ngClass]="{'is-invalid': emailMessage }" />
+                                    <span class="form-text" 
+                                            *ngIf="emailMessage"
+                                            [ngClass]="{'invalid-feedback': emailMessage }">
+                                        {{emailMessage}}
+                                    </span>
+                                </div>
+                            </div>                             
+                             <!-- <div class="form-group row">
                                 <label class="col-md-4 col-lg-4 col-form-label" 
                                 [ngClass]="{'invalid-feedback': (crForm.get('directorInfoGroup.directorEmail').touched || crForm.get('directorInfoGroup.directorEmail').dirty) 
                                         && ( !crForm.get('directorInfoGroup.directorEmail').valid ) }"
@@ -159,7 +177,7 @@
                                         </span>
                                     </span>
                                 </div>
-                            </div>
+                            </div> --> 
                             <div class="form-group row">
                                 <label class="col-md-4 col-lg-4 col-form-label" for="directorPhoneId"
                                 [ngClass]="{'invalid-feedback': (crForm.get('directorInfoGroup.directorPhone').touched || crForm.get('directorInfoGroup.directorPhone').dirty) 
