@@ -119,7 +119,7 @@
                                         id="surnameId" 
                                         type="text" 
                                         placeholder="Surname (required)"
-                                        formControlName="directorSurname"/>
+                                        formControlName="surname"/>
 
                                     <span class="form-text" *ngIf="(crForm.get('directorInfoGroup.directorSurname').touched || crForm.get('directorInfoGroup.directorSurname').dirty) && crForm.get('directorInfoGroup.directorSurname').errors"
                                         [ngClass]="{'invalid-feedback': (crForm.get('directorInfoGroup.directorSurname').touched || crForm.get('directorInfoGroup.directorSurname').dirty) && !crForm.get('directorInfoGroup.directorSurname').valid }">
