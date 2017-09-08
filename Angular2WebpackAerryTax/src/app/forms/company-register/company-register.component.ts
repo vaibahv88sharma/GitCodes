@@ -13,7 +13,8 @@ import { CompanyRegister } from './company-register';
 export class CompanyRegisterComponent implements OnInit {
 
   crForm :FormGroup;
-  cr: CompanyRegister = new CompanyRegister();
+  public cr: CompanyRegister = new CompanyRegister();
+
   emailMessage: string;
 
     private validationMessages = {
@@ -25,15 +26,30 @@ export class CompanyRegisterComponent implements OnInit {
     private formControlNames = { 
                                 name1 : {
                                     required: 'Please enter an name1 address',
-                                    pattern: 'Please enter a valid name1 address'                                  
+                                    minlength: 'Minimum Length Should be 2'                                  
                                 },
                                 name2 : {
                                     required: 'Please enter an name2 address',
-                                    pattern: 'Please enter a valid name2 address'                                  
-                                },                                
+                                    minlength: 'Minimum Length Should be 2'                                 
+                                },
+                                commencementDate:{
+                                    required: "Please enter the Commencement Date."
+                                },
+                                directorEmail : {
+                                    required: 'Please enter an email address',
+                                    pattern: 'Please enter a valid email address',                               
+                                },
+                                directorSurname : {
+                                    required: "Please enter Surname."
+                                },
+                                directorPhone : {
+                                    required: "Please enter phone number."
+                                }                                
                             };
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder) { 
+      //cr = new CompanyRegister();
+  }
 
 //https://stackoverflow.com/questions/40361799/how-to-get-name-of-input-field-from-angular2-formcontrol-object
 //https://kfarst.github.io/angular/2016/12/12/subscribing-to-form-value-changes-in-angular-2/
@@ -89,7 +105,7 @@ export class CompanyRegisterComponent implements OnInit {
                 //debugger;
                 if(name != "companyType"){
                     //debugger;
-                    formControl.valueChanges.subscribe(value => 
+                    formControl.valueChanges.debounceTime(1000).subscribe(value => 
                         {
                             //debugger;
                             this.setMessageOnControl(formControl, name);
@@ -103,14 +119,23 @@ export class CompanyRegisterComponent implements OnInit {
 
     }
 
+  //  private errorMessage = {};
     setMessageOnControl(c: AbstractControl, controlName:string): void {
-        debugger;
+        //debugger;
+        
         Object.keys(this.formControlNames).forEach((name) =>
         {
-            debugger;
+            //debugger;
             if (controlName === name)
             {
                 debugger;
+                //var i = this.formControlNames[name];
+                this.cr[name] = "";
+                if ((c.touched || c.dirty) && c.errors) {
+                this.cr[name] = Object.keys(c.errors).map(key =>
+                    this.formControlNames[name][key]).join(' '); 
+                }
+                //console.log(this.cr[name]);              
             }
         });        
         //this.emailMessage = '';

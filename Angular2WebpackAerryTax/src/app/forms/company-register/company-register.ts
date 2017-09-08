@@ -2,7 +2,7 @@ export class CompanyRegister {
     
     constructor(
         public name1 = '',
-        /* public dateCommencement = '',
+        public dateCommencement = '',
         public companyType = 'Pty',// Propreitory or Public
         public liability = 'Shares',//Shares or Gaurantee
         public coyBeTrustee = 'Yes', //Yes or No
@@ -30,7 +30,7 @@ export class CompanyRegister {
         public payRoyalty = 'Yes', // Yes, No
         public isImporting = 'Yes', // Yes, No
         public fuelTaxCredit = 'Yes', // Yes, No
-         */                                       
+                                              
     ){}
 
 }

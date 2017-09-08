@@ -4,7 +4,7 @@
   <div class="card-header">
     Company Registeration
   </div>
-  <div class="card-body">  
+  <div class="card-body"> 
     <form 
         novalidate autocomplete="off"
           (ngSubmit)="save()"
@@ -14,46 +14,36 @@
                     <div formGroupName="nameGroup"> 
                         <div class="form-group row">
                             <label class="col-md-4 col-lg-4 col-form-label" 
-                                [ngClass]="{'invalid-feedback': (crForm.get('nameGroup.name1').touched || crForm.get('nameGroup.name1').dirty) && !crForm.get('nameGroup.name1').valid }"
+                                [ngClass]="{'invalid-feedback': cr.name1 }"
                                 for="name1Id">First Name</label>
                             <div class="col-md-8 col-lg-8">
                                 <input class="form-control" 
-                                    [ngClass]="{'is-invalid': (crForm.get('nameGroup.name1').touched || crForm.get('nameGroup.name1').dirty) && !crForm.get('nameGroup.name1').valid }"
+                                    [ngClass]="{'is-invalid': cr.name1 }"
                                     id="name1Id" 
                                     type="text" 
                                     placeholder="Name (required)"
                                     formControlName="name1"/>
 
-                                <span class="form-text" *ngIf="(crForm.get('nameGroup.name1').touched || crForm.get('nameGroup.name1').dirty) && crForm.get('nameGroup.name1').errors"
-                                    [ngClass]="{'invalid-feedback': (crForm.get('nameGroup.name1').touched || crForm.get('nameGroup.name1').dirty) && !crForm.get('nameGroup.name1').valid }">
-                                    <span *ngIf="crForm.get('nameGroup.name1').errors.required">
-                                        Please enter the First name.
-                                    </span>
-                                    <span *ngIf="crForm.get('nameGroup.name1').errors.minlength">
-                                        The name must be longer than 2 character.
-                                    </span>
+                                <span class="form-text" *ngIf="cr.name1"
+                                    [ngClass]="{'invalid-feedback': cr.name1 }">
+                                    {{cr.name1}}
                                 </span>
                             </div>
                         </div>                                               
                           <div class="form-group row">
                             <label class="col-md-4 col-lg-4 col-form-label" 
-                                [ngClass]="{'invalid-feedback': (crForm.get('nameGroup.name2').touched || crForm.get('nameGroup.name2').dirty) && !crForm.get('nameGroup.name2').valid }"
+                                [ngClass]="{'invalid-feedback': cr.name2 }"
                                 for="name2Id">Second Name</label>
                             <div class="col-md-8 col-lg-8">
                                 <input class="form-control" 
-                                    [ngClass]="{'is-invalid': (crForm.get('nameGroup.name2').touched || crForm.get('nameGroup.name2').dirty) && !crForm.get('nameGroup.name2').valid }"
+                                    [ngClass]="{'is-invalid': cr.name2 }"
                                     id="name2Id" 
                                     type="text" 
                                     placeholder="Name (required)"
                                     formControlName="name2"/>
-                                <span class="form-text" *ngIf="(crForm.get('nameGroup.name2').touched || crForm.get('nameGroup.name2').dirty) && crForm.get('nameGroup.name2').errors"
-                                    [ngClass]="{'invalid-feedback': (crForm.get('nameGroup.name2').touched || crForm.get('nameGroup.name2').dirty) && !crForm.get('nameGroup.name2').valid }">
-                                    <span *ngIf="crForm.get('nameGroup.name2').errors.required">
-                                        Please enter the Second name.
-                                    </span>
-                                    <span *ngIf="crForm.get('nameGroup.name2').errors.minlength">
-                                        The name must be longer than 2 character.
-                                    </span>
+                                <span class="form-text" *ngIf="cr.name2"
+                                    [ngClass]="{'invalid-feedback': cr.name2 }">
+                                    {{cr.name2}}
                                 </span>
                             </div>
                         </div>
@@ -61,24 +51,18 @@
 
                     <div class="form-group row">
                         <label class="col-md-4 col-lg-4 col-form-label" 
-                            [ngClass]="{'invalid-feedback': (crForm.get('commencementDate').touched || crForm.get('commencementDate').dirty) 
-                                        && !crForm.get('commencementDate').valid }"
+                            [ngClass]="{'invalid-feedback': cr.commencementDate }"
                             for="commencementDateId">Date</label>
                         <div class="col-md-8 col-lg-8">
                             <input class="form-control" 
-                                [ngClass]="{'is-invalid': (crForm.get('commencementDate').touched || crForm.get('commencementDate').dirty) 
-                                            && !crForm.get('commencementDate').valid }"
+                                [ngClass]="{'is-invalid': cr.commencementDate }"
                                 id="commencementDateId" 
                                 type="text" 
                                 placeholder="Date (required)"
                                 formControlName="commencementDate"/>
-                            <span class="form-text" *ngIf="(crForm.get('commencementDate').touched || crForm.get('commencementDate').dirty) 
-                                        && crForm.get('commencementDate').errors"
-                                [ngClass]="{'invalid-feedback': (crForm.get('commencementDate').touched || crForm.get('commencementDate').dirty) 
-                                            && !crForm.get('commencementDate').valid }">
-                                <span *ngIf="crForm.get('commencementDate').errors.required">
-                                    Please enter the Commencement Date.
-                                </span>
+                            <span class="form-text" *ngIf="cr.commencementDate"
+                                [ngClass]="{'invalid-feedback': cr.commencementDate }">
+                                {{cr.commencementDate}}
 <!--                                 <span *ngIf="crForm.get('commencementDate').errors.greaterThanToday">
                                     The first name must be longer than 2 character.
                                 </span> -->
@@ -111,28 +95,41 @@
                         <div formGroupName="directorInfoGroup"> 
                             <div class="form-group row">
                                 <label class="col-md-4 col-lg-4 col-form-label" 
-                                    [ngClass]="{'invalid-feedback': (crForm.get('directorInfoGroup.directorSurname').touched || crForm.get('directorInfoGroup.directorSurname').dirty) && !crForm.get('directorInfoGroup.directorSurname').valid }"
+                                    [ngClass]="{'invalid-feedback': cr.directorSurname }"
                                     for="surnameId">Surname</label>
                                 <div class="col-md-8 col-lg-8">
                                     <input class="form-control" 
-                                        [ngClass]="{'is-invalid': (crForm.get('directorInfoGroup.directorSurname').touched || crForm.get('directorInfoGroup.directorSurname').dirty) && !crForm.get('directorInfoGroup.directorSurname').valid }"
+                                        [ngClass]="{'is-invalid': cr.directorSurname }"
                                         id="surnameId" 
                                         type="text" 
                                         placeholder="Surname (required)"
                                         formControlName="directorSurname"/>
 
-                                    <span class="form-text" *ngIf="(crForm.get('directorInfoGroup.directorSurname').touched || crForm.get('directorInfoGroup.directorSurname').dirty) && crForm.get('directorInfoGroup.directorSurname').errors"
-                                        [ngClass]="{'invalid-feedback': (crForm.get('directorInfoGroup.directorSurname').touched || crForm.get('directorInfoGroup.directorSurname').dirty) && !crForm.get('directorInfoGroup.directorSurname').valid }">
-                                        <span *ngIf="crForm.get('directorInfoGroup.directorSurname').errors.required">
-                                            Please enter Surname.
-                                        </span>
-                                        <span *ngIf="crForm.get('directorInfoGroup.directorSurname').errors.minlength">
-                                            The name must be longer than 2 character.
-                                        </span>
+                                    <span class="form-text" *ngIf="cr.directorSurname"
+                                        [ngClass]="{'invalid-feedback': cr.directorSurname }">
+                                        {{cr.directorSurname}}
                                     </span>
                                 </div>
                             </div>
                              <div class="form-group row">
+                                <label class="col-md-4 col-lg-4 col-form-label" 
+                                [ngClass]="{'invalid-feedback': cr.directorEmail }"
+                                    for="directorEmailId">Director's Email</label>
+                                <div class="col-md-8 col-lg-8">
+                                    <input class="form-control" 
+                                        id="directorEmailId" 
+                                        type="email" 
+                                        placeholder="Email (required)" 
+                                        formControlName="directorEmail"
+                                        [ngClass]="{'is-invalid': cr.directorEmail }" />
+                                    <span class="form-text" 
+                                            *ngIf="cr.directorEmail"
+                                            [ngClass]="{'invalid-feedback': cr.directorEmail }">
+                                        {{cr.directorEmail}}
+                                    </span>
+                                </div>
+                            </div>                            
+<!--                              <div class="form-group row">
                                 <label class="col-md-4 col-lg-4 col-form-label" 
                                 [ngClass]="{'invalid-feedback': emailMessage }"
                                     for="directorEmailId">Director's Email</label>
@@ -149,39 +146,10 @@
                                         {{emailMessage}}
                                     </span>
                                 </div>
-                            </div>                             
-                             <!-- <div class="form-group row">
-                                <label class="col-md-4 col-lg-4 col-form-label" 
-                                [ngClass]="{'invalid-feedback': (crForm.get('directorInfoGroup.directorEmail').touched || crForm.get('directorInfoGroup.directorEmail').dirty) 
-                                        && ( !crForm.get('directorInfoGroup.directorEmail').valid ) }"
-                                    for="directorEmailId">Director's Email</label>
-                                <div class="col-md-8 col-lg-8">
-                                    <input class="form-control" 
-                                        id="directorEmailId" 
-                                        type="email" 
-                                        placeholder="Email (required)" 
-                                        formControlName="directorEmail"
-                                        [ngClass]="{'is-invalid': (crForm.get('directorInfoGroup.directorEmail').touched || crForm.get('directorInfoGroup.directorEmail').dirty) 
-                                        && ( !crForm.get('directorInfoGroup.directorEmail').valid ) }" />
-                                    <span class="form-text" 
-                                            *ngIf="(crForm.get('directorInfoGroup.directorEmail').touched || crForm.get('directorInfoGroup.directorEmail').dirty) 
-                                                && ( crForm.get('directorInfoGroup.directorEmail').errors )"
-                                    [ngClass]="{'invalid-feedback': 
-                                            (crForm.get('directorInfoGroup.directorEmail').touched || crForm.get('directorInfoGroup.directorEmail').dirty) 
-                                            && ( !crForm.get('directorInfoGroup.directorEmail').valid ) }">
-                                        <span *ngIf="crForm.get('directorInfoGroup.directorEmail').errors.required">
-                                            Please enter director's email address.
-                                        </span>
-                                        <span *ngIf="crForm.get('directorInfoGroup.directorEmail').errors.pattern">
-                                            Please enter a valid email address.
-                                        </span>
-                                    </span>
-                                </div>
-                            </div> --> 
+                            </div>                              -->
                             <div class="form-group row">
                                 <label class="col-md-4 col-lg-4 col-form-label" for="directorPhoneId"
-                                [ngClass]="{'invalid-feedback': (crForm.get('directorInfoGroup.directorPhone').touched || crForm.get('directorInfoGroup.directorPhone').dirty) 
-                                        && ( !crForm.get('directorInfoGroup.directorPhone').valid ) }"                                
+                                [ngClass]="{'invalid-feedback': cr.directorPhone }"                                
                                     >Director's Phone
                                 </label>
                                 <div class="col-md-8 col-lg-8">
@@ -190,14 +158,11 @@
                                         type="number" 
                                         placeholder="Director's Phone" 
                                         formControlName = "directorPhone" 
-                                        [ngClass]="{'is-invalid': (crForm.get('directorInfoGroup.directorPhone').touched || crForm.get('directorInfoGroup.directorPhone').dirty) 
-                                                && ( !crForm.get('directorInfoGroup.directorPhone').valid ) }"/>
+                                        [ngClass]="{'is-invalid': cr.directorPhone }"/>
                                     <span class="form-text" *ngIf="(crForm.get('directorInfoGroup.directorPhone').touched || crForm.get('directorInfoGroup.directorPhone').dirty) 
                                         && ( crForm.get('directorInfoGroup.directorPhone').errors )"
-                                        [ngClass]="{'invalid-feedback': !crForm.get('directorInfoGroup.directorPhone').valid }">
-                                        <span *ngIf="crForm.get('directorInfoGroup.directorPhone').errors.required">
-                                            Please enter Director's phone number.
-                                        </span>
+                                        [ngClass]="{'invalid-feedback': cr.directorPhone }">
+                                        {{cr.directorPhone}}
                                     </span>
                                 </div>
                             </div>                                                      
