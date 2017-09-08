@@ -159,8 +159,7 @@
                                         placeholder="Director's Phone" 
                                         formControlName = "directorPhone" 
                                         [ngClass]="{'is-invalid': cr.directorPhone }"/>
-                                    <span class="form-text" *ngIf="(crForm.get('directorInfoGroup.directorPhone').touched || crForm.get('directorInfoGroup.directorPhone').dirty) 
-                                        && ( crForm.get('directorInfoGroup.directorPhone').errors )"
+                                    <span class="form-text" *ngIf="cr.directorPhone"
                                         [ngClass]="{'invalid-feedback': cr.directorPhone }">
                                         {{cr.directorPhone}}
                                     </span>
