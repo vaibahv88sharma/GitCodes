@@ -132,7 +132,6 @@ export class CompanyRegisterComponent implements OnInit {
 
     }
 
-  //  private errorMessage = {};
     setMessageOnControl(c: AbstractControl, controlName:string): void {
         //debugger;
         
@@ -142,7 +141,6 @@ export class CompanyRegisterComponent implements OnInit {
             if (controlName === name)
             {
                 debugger;
-                //var i = this.formControlNames[name];
                 this.cr[name] = "";
                 if ((c.touched || c.dirty) && c.errors) {
 
@@ -152,13 +150,7 @@ export class CompanyRegisterComponent implements OnInit {
                 //console.log(this.formValidation[name]);
                 //console.log(this.cr[name]);              
             }
-        });        
-        //this.emailMessage = '';
-        //if ((c.touched || c.dirty) && c.errors) {
-        //    this.emailMessage = Object.keys(c.errors).map(key =>
-        //        this.validationMessages[key]).join(' ');
-        //}
-
+        });
     }
 
     setMessage(c: AbstractControl): void {

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HomeDataService } from '../shared/services/home-data.service';
+import { AppSettings } from "../shared/app.settings";
 
 @Component({
   selector: 'app-main-navigation',
@@ -12,7 +13,7 @@ export class MainNavigationComponent implements OnInit {
   dropdownMenu: Array<any> = [];
 
   constructor(private _router: Router, hds: HomeDataService) { 
-    hds.getTaxation('src/app/shared/jsonFiles/navDropdown.json').subscribe(
+    hds.getTaxation(AppSettings.SERVICES_PROVIDED).subscribe( //'src/app/shared/jsonFiles/navDropdown.json'
       data => {
         this.dropdownMenu = data.navDropdown;
       },

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HomeDataService } from '../../shared/services/home-data.service';
+import { AppSettings } from "../../shared/app.settings";
 
 @Component({
   selector: 'home-details',
@@ -11,7 +12,7 @@ export class HomeDetailsComponent implements OnInit {
   tabsThumbnails: Array<any> = [];
 
   constructor(hds: HomeDataService) { 
-    hds.getTaxation('src/app/shared/jsonFiles/navDropdown.json').subscribe(
+    hds.getTaxation(AppSettings.SERVICES_PROVIDED).subscribe( //'src/app/shared/jsonFiles/navDropdown.json'
       data => {
         //debugger;;
         this.tabsThumbnails = data.tabs;
