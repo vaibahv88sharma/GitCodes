@@ -16,6 +16,16 @@ export class HomeDataService {
             .map(this.handleSuccess)
             .catch(this.handleError)
     }
+
+    getData(url: string) : Observable<any> {
+        return this.http.get(
+                url                
+            )
+            //.delay(5000)
+            .map(this.handleSuccess)
+            .catch(this.handleError)
+    }
+
     private handleSuccess(res: Response) {
       //debugger;
         let body = res.json();
@@ -43,6 +53,7 @@ export class HomeDataService {
     }
 
     private handleError(error: any) {
+        debugger;
         console.log(error);
         return Observable.throw(error.json());
     }

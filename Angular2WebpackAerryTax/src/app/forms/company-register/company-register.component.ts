@@ -4,6 +4,8 @@ import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/fo
 import 'rxjs/add/operator/debounceTime';
 
 import { CompanyRegister } from './company-register';
+import { AppSettings } from "../../shared/app.settings";
+import { HomeDataService } from "../../shared/services/home-data.service";
 
 @Component({
   selector: 'app-company-register',
@@ -14,6 +16,7 @@ export class CompanyRegisterComponent implements OnInit {
 
   crForm :FormGroup;
   public cr: CompanyRegister = new CompanyRegister();
+  private crRef : CompanyRegister;
 
   emailMessage: string;
 
@@ -23,6 +26,7 @@ export class CompanyRegisterComponent implements OnInit {
     };
 
     //private formControlNames = ['name1', 'name2', 'commencementDate', 'directorSurname', 'directorEmail', 'directorPhone' ];
+    private formValidation : Array<any> = [];
     private formControlNames = { 
                                 name1 : {
                                     required: 'Please enter an name1 address',
@@ -47,7 +51,7 @@ export class CompanyRegisterComponent implements OnInit {
                                 }                                
                             };
 
-  constructor(private fb: FormBuilder) { 
+  constructor(private fb: FormBuilder, private appSettings: AppSettings, private hds: HomeDataService) { 
       //cr = new CompanyRegister();
   }
 
@@ -82,7 +86,16 @@ export class CompanyRegisterComponent implements OnInit {
         //);
 
         this.setMessageOnForm(this.crForm); //hecking Group Validation  
-                        
+
+        //this.hds.getTaxation("src/app/shared/jsonFiles/navDropdown.json").subscribe( //AppSettings.SERVICES_PROVIDED
+        this.hds.getTaxation(AppSettings.SERVICES_PROVIDED).subscribe(
+            data => {
+                //debugger;
+                this.formValidation = data.formValidation;
+            },
+            err => {debugger; console.log('get error: ', err)}
+        ); 
+
     }
 
     save() {
@@ -123,7 +136,7 @@ export class CompanyRegisterComponent implements OnInit {
     setMessageOnControl(c: AbstractControl, controlName:string): void {
         //debugger;
         
-        Object.keys(this.formControlNames).forEach((name) =>
+        Object.keys(this.formValidation).forEach((name) => //formControlNames
         {
             //debugger;
             if (controlName === name)
@@ -132,9 +145,11 @@ export class CompanyRegisterComponent implements OnInit {
                 //var i = this.formControlNames[name];
                 this.cr[name] = "";
                 if ((c.touched || c.dirty) && c.errors) {
+
                 this.cr[name] = Object.keys(c.errors).map(key =>
-                    this.formControlNames[name][key]).join(' '); 
+                    this.formValidation[name][key]).join(' '); //formControlNames
                 }
+                //console.log(this.formValidation[name]);
                 //console.log(this.cr[name]);              
             }
         });        

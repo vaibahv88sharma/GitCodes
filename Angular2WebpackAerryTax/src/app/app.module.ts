@@ -18,6 +18,9 @@ import { BannerTopComponent } from './banner-top/banner-top.component';
 import { NgDropdownDirective } from './shared/Directives/ng-dropdown.directive';
 import { HomeDataService } from './shared/services/home-data.service';
 
+import { AppSettings } from './shared/app.settings';
+
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -38,7 +41,7 @@ import { HomeDataService } from './shared/services/home-data.service';
     //NgbDropdownToggleDirective,
     NgDropdownDirective
   ],
-  providers: [ HomeDataService ],
+  providers: [ HomeDataService, AppSettings ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

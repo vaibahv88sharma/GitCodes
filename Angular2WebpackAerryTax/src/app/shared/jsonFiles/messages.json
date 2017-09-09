@@ -13,7 +13,7 @@
 					{ "id": "1004", "type": "Devil's Food" }
 				]
     },
-  "navDropdown":
+  	"navDropdown":
 		[
       {
         "id": "5001",
@@ -60,60 +60,5 @@
         "pageDescription1": "We understand there are many things you would rather be doing than your tax return.",
         "pageDescription2": "Our highly qualified staff in Aerry Tax & Accounting are capable of handling any kind of a return from a simple tax return to very complex returns. They have in depth knowledge in different types of returns so that you will not miss out a single dollar that you are entitled to."
       }
-    ],
-	"formControlNames":
-		{
-			"name1":
-				[
-					{ "required": "Please enter name" },
-          { "minlength": "Minimum Length Should be 2" }
-        ],
-			"name2":
-				[
-					{ "required": "Please enter name" },
-          { "minlength": "Minimum Length Should be 2" }
-        ],
-			"commencementDate":
-				[
-					{ "required": "Please enter the Commencement Date." }
-        ],
-			"directorEmail":
-				[
-					{ "required": "Please enter an email address" },
-          { "minlength": "Please enter a valid email address" }
-        ],
-			"directorSurname":
-				[
-					{ "required": "Please enter Surname." }
-        ],
-			"directorPhone":
-				[
-					{ "required": "Please enter phone number." }
-        ]                
-    },
-  "formValidation": 
-    { 
-      "name1" : {
-          "required": "Please enter an name1 address",
-          "minlength": "Minimum Length Should be 2"                                  
-      },
-      "name2" : {
-          "required": "Please enter an name2 address",
-          "minlength": "Minimum Length Should be 2"                                 
-      },
-      "commencementDate":{
-          "required": "Please enter the Commencement Date."
-      },
-      "directorEmail" : {
-          "required": "Please enter an email address",
-          "pattern": "Please enter a valid email address"                              
-      },
-      "directorSurname" : {
-          "required": "Please enter Surname."
-      },
-      "directorPhone" : {
-          "required": "Please enter phone number."
-      }
-    }                                
-                                  
+		]
 }
