@@ -29,7 +29,7 @@ export class HomeDataService {
     private handleSuccess(res: Response) {
       //debugger;
         let body = res.json();
-        console.log(body);
+        //console.log(body);
 
         //let products: IProduct[] =[];
         //for(let i in body.d.results){

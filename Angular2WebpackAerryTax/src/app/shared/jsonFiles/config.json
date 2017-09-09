@@ -113,6 +113,9 @@
       },
       "directorPhone" : {
           "required": "Please enter phone number."
+      },
+      "sharesNo" : {
+          "required": "Please enter number of shares"
       }
     }                                
                                   

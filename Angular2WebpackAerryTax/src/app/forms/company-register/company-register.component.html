@@ -5,7 +5,11 @@
     Company Registeration
   </div>
   <div class="card-body"> 
+      
       <!-- {{this.formValidation | json}} -->
+     <!-- {{getShareHoldersArray.get('0.sharesNo')?.value}}
+     {{shareHoldersArray.get('0.sharesNo')?.value}}   -->    
+
     <form 
         novalidate autocomplete="off"
           (ngSubmit)="save()"
@@ -91,113 +95,158 @@
                       </div>
                     </div>
 
-
-                    <div class="">
-                        <div formGroupName="directorInfoGroup"> 
-                            <div class="form-group row">
-                                <label class="col-md-4 col-lg-4 col-form-label" 
-                                    [ngClass]="{'invalid-feedback': cr.directorSurname }"
-                                    for="surnameId">Surname</label>
-                                <div class="col-md-8 col-lg-8">
-                                    <input class="form-control" 
-                                        [ngClass]="{'is-invalid': cr.directorSurname }"
-                                        id="surnameId" 
-                                        type="text" 
-                                        placeholder="Surname (required)"
-                                        formControlName="directorSurname"/>
-
-                                    <span class="form-text" *ngIf="cr.directorSurname"
-                                        [ngClass]="{'invalid-feedback': cr.directorSurname }">
-                                        {{cr.directorSurname}}
-                                    </span>
-                                </div>
-                            </div>
-                             <div class="form-group row">
-                                <label class="col-md-4 col-lg-4 col-form-label" 
-                                [ngClass]="{'invalid-feedback': cr.directorEmail }"
-                                    for="directorEmailId">Director's Email</label>
-                                <div class="col-md-8 col-lg-8">
-                                    <input class="form-control" 
-                                        id="directorEmailId" 
-                                        type="email" 
-                                        placeholder="Email (required)" 
-                                        formControlName="directorEmail"
-                                        [ngClass]="{'is-invalid': cr.directorEmail }" />
-                                    <span class="form-text" 
-                                            *ngIf="cr.directorEmail"
-                                            [ngClass]="{'invalid-feedback': cr.directorEmail }">
-                                        {{cr.directorEmail}}
-                                    </span>
-                                </div>
-                            </div>                            
-<!--                              <div class="form-group row">
-                                <label class="col-md-4 col-lg-4 col-form-label" 
-                                [ngClass]="{'invalid-feedback': emailMessage }"
-                                    for="directorEmailId">Director's Email</label>
-                                <div class="col-md-8 col-lg-8">
-                                    <input class="form-control" 
-                                        id="directorEmailId" 
-                                        type="email" 
-                                        placeholder="Email (required)" 
-                                        formControlName="directorEmail"
-                                        [ngClass]="{'is-invalid': emailMessage }" />
-                                    <span class="form-text" 
-                                            *ngIf="emailMessage"
-                                            [ngClass]="{'invalid-feedback': emailMessage }">
-                                        {{emailMessage}}
-                                    </span>
-                                </div>
-                            </div>                              -->
-                            <div class="form-group row">
-                                <label class="col-md-4 col-lg-4 col-form-label" for="directorPhoneId"
-                                [ngClass]="{'invalid-feedback': cr.directorPhone }"                                
-                                    >Director's Phone
-                                </label>
-                                <div class="col-md-8 col-lg-8">
-                                    <input class="form-control" 
-                                        id="directorPhoneId" 
-                                        type="number" 
-                                        placeholder="Director's Phone" 
-                                        formControlName = "directorPhone" 
-                                        [ngClass]="{'is-invalid': cr.directorPhone }"/>
-                                    <span class="form-text" *ngIf="cr.directorPhone"
-                                        [ngClass]="{'invalid-feedback': cr.directorPhone }">
-                                        {{cr.directorPhone}}
-                                    </span>
-                                </div>
-                            </div>                                                      
+                    <div formArrayName="directorInfoGroupArray" *ngFor="let shareHolder of getDirectorArray.controls; let i=index">
+                    <div [formGroupName]="i"> <!-- directorInfoGroup -->
+						<div class="form-row">
+							<div class="form-group col-md-4 col-lg-4 col-xl-4">
+								<label class="col-form-label" attr.for="{{ 'directorSurnameId-' + i }}">Surname</label>
+									<input class="form-control" id="{{ 'directorSurnameId-' + i }}" type="text" placeholder="Surname"
+										formControlName="directorSurname"/>
+							</div>
+							<div class="form-group col-md-4 col-lg-4 col-xl-4">
+								<label class="col-form-label" attr.for="{{ 'directorFirstnameId-' + i }}">First and Middle name</label>
+									<input class="form-control" id="{{ 'directorFirstnameId-' + i }}" type="text" placeholder="First and Middle Name"
+										formControlName="directorFirstname"/>
+							</div>	
+							<div class="form-group col-md-4 col-lg-4 col-xl-4">
+								<label class="col-form-label" attr.for="{{ 'directorTfnId-' + i }}">Tax File Number (TFN)</label>
+									<input class="form-control" id="{{ 'directorTfnId-' + i }}" type="text" placeholder="Tax File Number"
+										formControlName="directorTfn"/>
+							</div>
+							<div class="form-group col-md-4 col-lg-4 col-xl-4">
+								<label class="col-form-label" attr.for="{{ 'directorDobId-' + i }}">Date of Birth</label>
+									<input class="form-control" id="{{ 'directorDobId-' + i }}" type="text" placeholder="DOB" 
+										formControlName = "directorDob" />
+							</div>  
+							<div class="form-group col-md-4 col-lg-4 col-xl-4">
+								<label class="col-form-label" attr.for="{{ 'directorBirthPlaceId-' + i }}">Place of Birth(Town and Country)</label>
+									<input class="form-control" id="{{ 'directorBirthPlaceId-' + i }}" type="text" placeholder="Place of Birth" 
+										formControlName = "directorBirthPlace" />
+							</div> 							
+							 <div class="form-group col-md-4 col-lg-4 col-xl-4">
+								<label class="col-form-label" attr.for="{{ 'directorAddressId-' + i }}">Residential Address</label>
+									<input class="form-control" id="{{ 'directorAddressId-' + i }}" type="text" placeholder="Residential Address" 
+										formControlName="directorAddress"/>
+							</div>       
+							<div class="form-group col-md-4 col-lg-4 col-xl-4">
+								<label class="col-form-label" attr.for="{{ 'directorPhoneId-' + i }}">Contact Number</label>
+									<input class="form-control" id="{{ 'directorPhoneId-' + i }}" type="number" placeholder="Phone" 
+										formControlName = "directorPhone" />
+							</div>  							
+							 <div class="form-group col-md-4 col-lg-4 col-xl-4">
+								<label class="col-form-label" attr.for="{{ 'directorEmailId-' + i }}">Email Address</label>
+									<input class="form-control" id="{{ 'directorEmailId-' + i }}" type="email" placeholder="Email" 
+										formControlName="directorEmail"/>
+							</div>
+							<div class="form-group col-md-4 col-lg-4 col-xl-4">
+								<label class="col-form-label" attr.for="{{ 'directorDlId-' + i }}">Driver's License & State of Issue</label>
+									<input class="form-control" id="{{ 'directorDlId-' + i }}" type="text" placeholder="Driving License" 
+										formControlName = "directorDl" />
+							</div>   							
                         </div>
+                        <hr>
                     </div>
-
-                    
+                    </div>
                     <button type="button" name="" id="" class="btn btn-primary btn-sm"
-                        [disabled]="!getShareHoldersArray.valid" (click)="addShareholder()">
-                        Add Shareholder</button>
+                        [disabled]="!getDirectorArray.valid" (click)="addDirector()">
+                        Add Director</button>                       
+<!--                     <div formGroupName="directorInfoGroup"> 
+                        <div class="form-group row">
+                            <label class="col-md-4 col-lg-4 col-form-label" 
+                                [ngClass]="{'invalid-feedback': cr.directorSurname }"
+                                for="surnameId">Surname</label>
+                            <div class="col-md-8 col-lg-8">
+                                <input class="form-control" 
+                                    [ngClass]="{'is-invalid': cr.directorSurname }"
+                                    id="surnameId" 
+                                    type="text" 
+                                    placeholder="Surname (required)"
+                                    formControlName="directorSurname"/>
+
+                                <span class="form-text" *ngIf="cr.directorSurname"
+                                    [ngClass]="{'invalid-feedback': cr.directorSurname }">
+                                    {{cr.directorSurname}}
+                                </span>
+                            </div>
+                        </div>
+                         <div class="form-group row">
+                            <label class="col-md-4 col-lg-4 col-form-label" 
+                            [ngClass]="{'invalid-feedback': cr.directorEmail }"
+                                for="directorEmailId">Director's Email</label>
+                            <div class="col-md-8 col-lg-8">
+                                <input class="form-control" 
+                                    id="directorEmailId" 
+                                    type="email" 
+                                    placeholder="Email (required)" 
+                                    formControlName="directorEmail"
+                                    [ngClass]="{'is-invalid': cr.directorEmail }" />
+                                <span class="form-text" 
+                                        *ngIf="cr.directorEmail"
+                                        [ngClass]="{'invalid-feedback': cr.directorEmail }">
+                                    {{cr.directorEmail}}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-4 col-lg-4 col-form-label" for="directorPhoneId"
+                            [ngClass]="{'invalid-feedback': cr.directorPhone }"                                
+                                >Director's Phone
+                            </label>
+                            <div class="col-md-8 col-lg-8">
+                                <input class="form-control" 
+                                    id="directorPhoneId" 
+                                    type="number" 
+                                    placeholder="Director's Phone" 
+                                    formControlName = "directorPhone" 
+                                    [ngClass]="{'is-invalid': cr.directorPhone }"/>
+                                <span class="form-text" *ngIf="cr.directorPhone"
+                                    [ngClass]="{'invalid-feedback': cr.directorPhone }">
+                                    {{cr.directorPhone}}
+                                </span>
+                            </div>
+                        </div>                                                      
+                    </div> -->
+
                     <div formArrayName="shareHoldersArray" *ngFor="let shareHolder of getShareHoldersArray.controls; let i=index">
                         <div [formGroupName]="i"> <!-- <div formGroupName="shareHoldersGroup">  -->
-                            <div class="form-group row">
-                                <label class="col-md-4 col-lg-4 col-form-label"
+<!--                        SHOWS DYNAMIC ERROR MESSAGE, JUST LIKE ABOVE CONTROLS
+                             <div class="form-group row">
+                                <label class="col-md-4 col-lg-4 col-form-label" [ngClass]="{'invalid-feedback': cr.sharesNo }"      
                                     attr.for="{{ 'sharesNoId-' + i }}">No of shares of each applicant</label>
                                 <div class="col-md-8 col-lg-8">
-                                    <input class="form-control" id="{{ 'sharesNoId-' + i }}" type="number" placeholder="No of shares" formControlName="sharesNo"/>
+                                    <input class="form-control" id="{{ 'sharesNoId-' + i }}" type="number" placeholder="No of shares" 
+                                    formControlName="sharesNo"
+                                    [ngClass]="{'is-invalid': cr.sharesNo }"/>
+                                    <span class="form-text" *ngIf="cr.sharesNo"
+                                        [ngClass]="{'invalid-feedback': cr.sharesNo }">
+                                        {{cr.sharesNo}}
+                                    </span>                                    
                                 </div>
-                            </div> 
-                            <div class="form-group row">
-                                <label class="col-md-4 col-lg-4 col-form-label"
-                                    attr.for="{{ 'shareHolderNameId-' + i }}">Name of proposed Shareholder</label>
-                                <div class="col-md-8 col-lg-8">
-                                    <input class="form-control" id="{{ 'shareHolderNameId-' + i }}" type="text" placeholder="Shareholder's name" formControlName="shareHolderName"/>
-                                </div>
-                            </div>    
-                            <div class="form-group row">
-                                <label class="col-md-4 col-lg-4 col-form-label"
-                                    attr.for="{{ 'shareHolderAddressId-' + i }}">Residential Address of proposed Shareholder(s)</label>
-                                <div class="col-md-8 col-lg-8">
-                                    <input class="form-control" id="{{ 'shareHolderAddressId-' + i }}" type="text" placeholder="Residential Address" formControlName="shareHolderAddress"/>
-                                </div>
-                            </div>                                            
+                            </div>    -->  
+                            <div class="form-row">
+                                <div class="form-group col-md-4 col-lg-4 col-xl-4">
+                                    <label class="col-form-label"
+                                        attr.for="{{ 'sharesNoId-' + i }}">No of shares of each applicant</label>
+                                        <input class="form-control" id="{{ 'sharesNoId-' + i }}" type="number" placeholder="No of shares" formControlName="sharesNo"/>
+                                </div> 
+                                <div class="form-group col-md-4 col-lg-4 col-xl-4">
+                                    <label class="col-form-label"
+                                        attr.for="{{ 'shareHolderNameId-' + i }}">Name of proposed Shareholder</label>
+                                        <input class="form-control" id="{{ 'shareHolderNameId-' + i }}" type="text" placeholder="Shareholder's name" formControlName="shareHolderName"/>
+                                </div>    
+                                <div class="form-group col-md-4 col-lg-4 col-xl-4">
+                                    <label class="col-form-label"
+                                        attr.for="{{ 'shareHolderAddressId-' + i }}">Residential Address of proposed Shareholder(s)</label>
+                                        <input class="form-control" id="{{ 'shareHolderAddressId-' + i }}" type="text" placeholder="Residential Address" formControlName="shareHolderAddress"/>
+                                </div>                                
+                            </div>  
+                            <hr>                                                                                         
                         </div>
                     </div>
+                    <button type="button" name="" id="" class="btn btn-primary btn-sm"
+                        [disabled]="!getShareHoldersArray.valid" (click)="addShareholder()">
+                        Add Shareholder</button>     
+                        <hr>               
                     <div class="form-group">
                         <div class="col-md-12 col-lg-12">
                             <span>

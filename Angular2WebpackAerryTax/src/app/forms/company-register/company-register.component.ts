@@ -21,6 +21,9 @@ export class CompanyRegisterComponent implements OnInit {
     get getShareHoldersArray(): FormArray{
         return <FormArray>this.crForm.get('shareHoldersArray');
     }
+    get getDirectorArray(): FormArray{
+        return <FormArray>this.crForm.get('directorInfoGroupArray');
+    }    
 
   emailMessage: string;
 
@@ -28,6 +31,8 @@ export class CompanyRegisterComponent implements OnInit {
         required: 'Please enter an email address',
         pattern: 'Please enter a valid email address',
     };
+    // {{getShareHoldersArray.get('0.sharesNo')?.value}}
+    // {{shareHoldersArray.get('0.sharesNo')?.value}}
 
     //private formControlNames = ['name1', 'name2', 'commencementDate', 'directorSurname', 'directorEmail', 'directorPhone' ];
     private formValidation : Array<any> = [];
@@ -72,11 +77,7 @@ export class CompanyRegisterComponent implements OnInit {
             }),
             commencementDate: ['', Validators.required],
             companyType: 'public',
-            directorInfoGroup: this.fb.group({
-                directorSurname: ["", Validators.required],
-                directorEmail: ['',[Validators.required, Validators.pattern("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?")]],
-                directorPhone: ['', Validators.required]
-            }),
+            directorInfoGroupArray: this.fb.array([ this.buildDirector() ]),
             shareHoldersArray: this.fb.array([ this.buildShareholder() ])
         });
 
@@ -110,6 +111,22 @@ export class CompanyRegisterComponent implements OnInit {
         console.log('Saved: ' + JSON.stringify(this.crForm.value));
     }
 
+    addDirector(): void{
+        this.getDirectorArray.push(this.buildDirector());
+    }    
+    buildDirector(): FormGroup{
+        return this.fb.group({
+                directorFirstname: "",
+                directorSurname: "",
+                directorTfn: "",
+                directorPhone: "",  
+                directorEmail: "",                              
+                directorDl: "",
+                directorDob: "",
+                directorBirthPlace: "",
+                directorAddress: ""          
+        })
+    }
 
     addShareholder(): void{
         this.getShareHoldersArray.push(this.buildShareholder());
@@ -117,6 +134,7 @@ export class CompanyRegisterComponent implements OnInit {
     buildShareholder(): FormGroup{
         return this.fb.group({
             sharesNo: "",
+            //sharesNo: ["", Validators.required],
             shareHolderName: "",
             shareHolderAddress: ""            
         })
@@ -130,18 +148,23 @@ export class CompanyRegisterComponent implements OnInit {
             let formControl = c.controls[name];
             if (formControl instanceof FormGroup) {
                 this.setMessageOnForm(formControl);
-            } else {                
+            } else {           
+                if (formControl instanceof FormArray) {
+                    //debugger;
+                    //console.log(formControl.controls[0]);
+                    this.setMessageOnForm(<FormGroup>formControl.controls[0]);
+                }
                 //debugger;
-                if(name != "companyType"){
+                //if(name != "companyType"){
                     //debugger;
                     formControl.valueChanges.debounceTime(1000).subscribe(value => 
                         {
                             //debugger;
                             this.setMessageOnControl(formControl, name);
-                            console.log(value);
+                            //console.log(value);
                         }
                     );
-                }       
+                //}       
             }
         });
         
@@ -156,12 +179,12 @@ export class CompanyRegisterComponent implements OnInit {
             //debugger;
             if (controlName === name)
             {
-                debugger;
+               // debugger;
                 this.cr[name] = "";
                 if ((c.touched || c.dirty) && c.errors) {
-
-                this.cr[name] = Object.keys(c.errors).map(key =>
-                    this.formValidation[name][key]).join(' '); //formControlNames
+                    //debugger;
+                    this.cr[name] = Object.keys(c.errors).map(key =>
+                        this.formValidation[name][key]).join(' '); //formControlNames
                 }
                 //console.log(this.formValidation[name]);
                 //console.log(this.cr[name]);              
