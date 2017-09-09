@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 //import { NgForm } from '@angular/forms';  // Template Forms
-import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';  //Reactive Forms
+import { FormGroup, FormBuilder, Validators, AbstractControl, FormArray } from '@angular/forms';  //Reactive Forms
 import 'rxjs/add/operator/debounceTime';
 
 import { CompanyRegister } from './company-register';
@@ -17,6 +17,10 @@ export class CompanyRegisterComponent implements OnInit {
   crForm :FormGroup;
   public cr: CompanyRegister = new CompanyRegister();
   private crRef : CompanyRegister;
+
+    get getShareHoldersArray(): FormArray{
+        return <FormArray>this.crForm.get('shareHoldersArray');
+    }
 
   emailMessage: string;
 
@@ -72,7 +76,8 @@ export class CompanyRegisterComponent implements OnInit {
                 directorSurname: ["", Validators.required],
                 directorEmail: ['',[Validators.required, Validators.pattern("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?")]],
                 directorPhone: ['', Validators.required]
-            })
+            }),
+            shareHoldersArray: this.fb.array([ this.buildShareholder() ])
         });
 
         //const emailControl = this.crForm.get('directorInfoGroup.directorEmail');
@@ -105,6 +110,17 @@ export class CompanyRegisterComponent implements OnInit {
         console.log('Saved: ' + JSON.stringify(this.crForm.value));
     }
 
+
+    addShareholder(): void{
+        this.getShareHoldersArray.push(this.buildShareholder());
+    }
+    buildShareholder(): FormGroup{
+        return this.fb.group({
+            sharesNo: "",
+            shareHolderName: "",
+            shareHolderAddress: ""            
+        })
+    }
 
     setMessageOnForm(c: FormGroup): void {
         //debugger;

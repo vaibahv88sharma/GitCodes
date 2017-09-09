@@ -11,7 +11,11 @@ import { AppSettings } from "../shared/app.settings";
 export class MainNavigationComponent implements OnInit {
 
   dropdownMenu: Array<any> = [];
-
+  show:boolean = false;
+  
+  toggleCollapse() {
+    this.show = !this.show
+  }
   constructor(private _router: Router, hds: HomeDataService) { 
     hds.getTaxation(AppSettings.SERVICES_PROVIDED).subscribe( //'src/app/shared/jsonFiles/navDropdown.json'
       data => {
