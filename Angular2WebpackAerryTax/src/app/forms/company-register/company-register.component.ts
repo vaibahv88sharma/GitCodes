@@ -77,6 +77,7 @@ export class CompanyRegisterComponent implements OnInit {
             }),
             commencementDate: ['', Validators.required],
             companyType: 'public',
+            liability: 'shares',
             directorInfoGroupArray: this.fb.array([ this.buildDirector() ]),
             shareHoldersArray: this.fb.array([ this.buildShareholder() ])
         });
@@ -113,7 +114,11 @@ export class CompanyRegisterComponent implements OnInit {
 
     addDirector(): void{
         this.getDirectorArray.push(this.buildDirector());
-    }    
+    }   
+    removeDirector(i: number) {
+        this.getDirectorArray.controls.splice(i,1);
+    }
+
     buildDirector(): FormGroup{
         return this.fb.group({
                 directorFirstname: "",
@@ -124,9 +129,18 @@ export class CompanyRegisterComponent implements OnInit {
                 directorDl: "",
                 directorDob: "",
                 directorBirthPlace: "",
-                directorAddress: ""          
+                directorAddress: "",
+                //directorPosition: this.fb.array([ this.buildDirectorPosition() ])//""          
         })
     }
+
+    buildDirectorPosition(): FormGroup{
+        return this.fb.group({
+                posDirector: "",
+                posSecretary: "",
+                posPublicOfficer: "",      
+        })
+    }    
 
     addShareholder(): void{
         this.getShareHoldersArray.push(this.buildShareholder());

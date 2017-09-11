@@ -118,28 +118,86 @@
                       </div>
                     </div>
 
-                    <div formArrayName="directorInfoGroupArray" *ngFor="let shareHolder of getDirectorArray.controls; let i=index"  class="card">                  
-                        <div class="card-header">
-                            <span>Director {{i+1}}</span>
-                            <button type="button" name="rmDirector" id="rmDirector" class="btn btn-primary float-right"
-                                *ngIf="getDirectorArray.controls.length > 1" (click)="removeDirector(i)">
-                                <i class="fa fa-window-close" aria-hidden="true" ></i> 
-                            </button>
-                        </div>
-                        <div class="card-body">
-                            <div [formGroupName]="i">
-                                <director-array [group]="shareHolder"></director-array>
+                    <div formArrayName="directorInfoGroupArray" *ngFor="let shareHolder of getDirectorArray.controls; let i=index">
+                    <div [formGroupName]="i"> <!-- directorInfoGroup -->
+						<div class="form-row">
+							<div class="form-group col">
+								<label class="col-form-label" attr.for="{{ 'directorSurnameId-' + i }}">Surname</label>
+									<input class="form-control" id="{{ 'directorSurnameId-' + i }}" type="text" placeholder="Surname"
+										formControlName="directorSurname"/>
+							</div>
+							<div class="form-group col">
+								<label class="col-form-label" attr.for="{{ 'directorFirstnameId-' + i }}">First and Middle name</label>
+									<input class="form-control" id="{{ 'directorFirstnameId-' + i }}" type="text" placeholder="First and Middle Name"
+										formControlName="directorFirstname"/>
+							</div>	
+							<div class="form-group col">
+								<label class="col-form-label" attr.for="{{ 'directorTfnId-' + i }}">Tax File Number (TFN)</label>
+									<input class="form-control" id="{{ 'directorTfnId-' + i }}" type="text" placeholder="Tax File Number"
+										formControlName="directorTfn"/>
                             </div>
+                            <div class="w-100"></div>        
+							<div class="form-group col">
+								<label class="col-form-label" attr.for="{{ 'directorDobId-' + i }}">Date of Birth</label>
+									<input class="form-control" id="{{ 'directorDobId-' + i }}" type="date" placeholder="DOB" 
+										formControlName = "directorDob" />
+							</div>  
+							<div class="form-group col">
+								<label class="col-form-label" attr.for="{{ 'directorBirthPlaceId-' + i }}">Place of Birth(Town and Country)</label>
+									<input class="form-control" id="{{ 'directorBirthPlaceId-' + i }}" type="text" placeholder="Place of Birth" 
+										formControlName = "directorBirthPlace" />
+							</div> 							
+							 <div class="form-group col">
+								<label class="col-form-label" attr.for="{{ 'directorAddressId-' + i }}">Residential Address</label>
+									<input class="form-control" id="{{ 'directorAddressId-' + i }}" type="text" placeholder="Residential Address" 
+										formControlName="directorAddress"/>
+                            </div> 
+                            <div class="w-100"></div>                          
+							<div class="form-group col">
+								<label class="col-form-label" attr.for="{{ 'directorPhoneId-' + i }}">Contact Number</label>
+									<input class="form-control" id="{{ 'directorPhoneId-' + i }}" type="number" placeholder="Phone" 
+										formControlName = "directorPhone" />
+							</div>  							
+							 <div class="form-group col">
+								<label class="col-form-label" attr.for="{{ 'directorEmailId-' + i }}">Email Address</label>
+									<input class="form-control" id="{{ 'directorEmailId-' + i }}" type="email" placeholder="Email" 
+										formControlName="directorEmail"/>
+							</div>
+							<div class="form-group col">
+								<label class="col-form-label" attr.for="{{ 'directorDlId-' + i }}">Driver's License & State of Issue</label>
+									<input class="form-control" id="{{ 'directorDlId-' + i }}" type="text" placeholder="Driving License" 
+										formControlName = "directorDl" />
+                            </div> 
+                            <div class="w-100"></div>      
+                            <div class="form-group row col">
+                                <!-- https://stackoverflow.com/questions/43423333/angular-how-to-get-the-multiple-checkbox-value/43424244#43424244 -->
+                                <div class="col-md-2 col-lg-2 col-xl-2">Checkbox</div>
+                                <div class="col-md-10 col-lg-10 col-xl-10">
+                                    <div class="form-check form-check-inline">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> 1
+                                    </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> 2
+                                    </label>
+                                    </div>
+                                    <div class="form-check form-check-inline disabled">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3"> 3
+                                    </label>
+                                    </div>
+                                </div>                       
+                            </div>                             							
                         </div>
+                        <hr>
                     </div>
-
-
-                    <br>
+                    </div>
                     <button type="button" name="" id="" class="btn btn-primary btn-sm"
                         [disabled]="!getDirectorArray.valid" (click)="addDirector()">
                         Add Director</button>                       
-<!--   with errors
-                    <div formGroupName="directorInfoGroup"> 
+<!--                     <div formGroupName="directorInfoGroup"> 
                         <div class="form-group row">
                             <label class="col-md-4 col-lg-4 col-form-label" 
                                 [ngClass]="{'invalid-feedback': cr.directorSurname }"
