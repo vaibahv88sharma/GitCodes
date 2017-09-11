@@ -128,7 +128,9 @@
                         </div>
                         <div class="card-body">
                             <div [formGroupName]="i">
-                                <director-array [group]="shareHolder"></director-array>
+                                <!-- {{getDirectorArray}} <br> a:{{shareHolder.get('directorPositionArray')}} -->
+                                <!-- <director-array [group]="shareHolder" [directorPositionFG]="getDirectorPosition"></director-array> -->
+                                <director-array [group]="shareHolder" [directorPositionFG]="shareHolder.get('directorPositionArray')"></director-array>
                             </div>
                         </div>
                     </div>

@@ -24,6 +24,10 @@ export class CompanyRegisterComponent implements OnInit {
     get getDirectorArray(): FormArray{
         return <FormArray>this.crForm.get('directorInfoGroupArray');
     }    
+    get getDirectorPosition(): FormArray{
+        //debugger;
+        return <FormArray>this.crForm.get('directorPositionArray');
+    } 
 
   emailMessage: string;
 
@@ -130,11 +134,17 @@ export class CompanyRegisterComponent implements OnInit {
                 directorDob: "",
                 directorBirthPlace: "",
                 directorAddress: "",
-                //directorPosition: this.fb.array([ this.buildDirectorPosition() ])//""          
+                //directorPositionArray: this.fb.array([ this.buildDirectorPosition() ])//""          
+                directorPositionArray: this.fb.group({
+                                                posDirector: "",
+                                                posSecretary: "",
+                                                posPublicOfficer: "",      
+                                        })
         })
     }
 
     buildDirectorPosition(): FormGroup{
+        //debugger;
         return this.fb.group({
                 posDirector: "",
                 posSecretary: "",
