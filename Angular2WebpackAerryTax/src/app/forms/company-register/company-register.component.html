@@ -237,7 +237,7 @@
                         [disabled]="!getShareHoldersArray.valid" (click)="addShareholder()">
                         Add Shareholder</button>     
                         <hr> 
-                    <div class="row">
+<!--                     <div class="row">
                     <div class="col-12">
                         <p class="h3">Declaration</p>
                     </div>
@@ -247,16 +247,17 @@
                             authorise A.T. Accounting Services to complete and lodge this application for incorporation of company with ASIC on my / our behalf.
                         </p>
                         <p>
-                            
+
                         </p>
                     </div>                        
                         
-                    </div>             
+                    </div>   -->           
                     <div class="form-group row">
                         <div class="col-md-12 col-lg-12">
                             <span>
                                 <button class="btn btn-primary float-right"
                                         type="submit"
+                                        (click)="saveForm(crForm)"
                                         [disabled]="!crForm.valid">
                                     Save
                                 </button>

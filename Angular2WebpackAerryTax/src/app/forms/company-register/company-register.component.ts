@@ -87,7 +87,7 @@ export class CompanyRegisterComponent implements OnInit {
             liability: 'shares',
             directorInfoGroupArray: this.fb.array([ this.buildDirector() ]),
             shareHoldersArray: this.fb.array([ this.buildShareholder() ]),
-            declarationName: ""
+            //declarationName: ""
         });
 
         //const emailControl = this.crForm.get('directorInfoGroup.directorEmail');
@@ -252,6 +252,11 @@ export class CompanyRegisterComponent implements OnInit {
             phoneControl.clearValidators();
         }
         phoneControl.updateValueAndValidity();
+    }
+
+    saveForm(formSubmitted :FormGroup): void{
+        debugger;
+        console.log(formSubmitted);
     }
 
 /*  // .patchValue   --  Partial Array value 
