@@ -18,7 +18,7 @@ export class CompanyRegisterNestedFormComponent implements OnInit,OnChanges {
 
   ngOnInit() {
     //debugger;
-    console.log(this.directorPositionChildArray);
+   // console.log(this.directorPositionChildArray);
   }
   ngOnChanges() {
     //debugger;

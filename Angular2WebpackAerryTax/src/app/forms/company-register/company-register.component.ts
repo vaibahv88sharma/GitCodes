@@ -22,10 +22,13 @@ export class CompanyRegisterComponent implements OnInit {
         return <FormArray>this.crForm.get('shareHoldersArray');
     }
     get getDirectorArray(): FormArray{
+        /* debugger;
+        console.log(this.crForm.get('directorPositionArray'));
+        console.log(this.crForm.get('directorInfoGroupArray'));
+        console.log(this.crForm.get('directorInfoGroupArray.directorPositionArray'));   */      
         return <FormArray>this.crForm.get('directorInfoGroupArray');
     }    
     get getDirectorPosition(): FormArray{
-        //debugger;
         return <FormArray>this.crForm.get('directorPositionArray');
     } 
 
@@ -83,7 +86,8 @@ export class CompanyRegisterComponent implements OnInit {
             companyType: 'public',
             liability: 'shares',
             directorInfoGroupArray: this.fb.array([ this.buildDirector() ]),
-            shareHoldersArray: this.fb.array([ this.buildShareholder() ])
+            shareHoldersArray: this.fb.array([ this.buildShareholder() ]),
+            declarationName: ""
         });
 
         //const emailControl = this.crForm.get('directorInfoGroup.directorEmail');
@@ -135,16 +139,15 @@ export class CompanyRegisterComponent implements OnInit {
                 directorBirthPlace: "",
                 directorAddress: "",
                 //directorPositionArray: this.fb.array([ this.buildDirectorPosition() ])//""          
-                directorPositionArray: this.fb.group({
-                                                posDirector: "",
-                                                posSecretary: "",
-                                                posPublicOfficer: "",      
-                                        })
+               directorPositionArray: this.fb.group({
+                                               posDirector: "",
+                                               posSecretary: "",
+                                               posPublicOfficer: "",      
+                                       })
         })
     }
 
     buildDirectorPosition(): FormGroup{
-        //debugger;
         return this.fb.group({
                 posDirector: "",
                 posSecretary: "",
